@@ -25,6 +25,15 @@
         public Login()
         {
             this.InitializeComponent();
+            /*if (!File.Exists("user.xml"))
+            {
+                XmlDocument document = new XmlDocument();
+                File.Create("user.xml");
+                document.CreateXmlDeclaration("1.0", "UTF-8", null);
+                XmlElement xmlele = document.CreateElement("", "users");
+                document.CreateNode(XmlNodeType.Element, "", "user");
+                document.CreateNode(XmlNodeType.EndElement, "", "users");
+            }*/
         }
 
         private void btn_login_Click(object sender, EventArgs e)

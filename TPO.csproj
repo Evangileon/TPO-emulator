@@ -32,6 +32,33 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <EmbeddedResource Include="TPO\Properties\Resources.resx">
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\CoverForm.resx">
+      <DependentUpon>CoverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\ExplanationUI.resx">
+      <DependentUpon>ExplanationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\File2Acces.resx">
+      <DependentUpon>File2Acces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\TestBaseForm.resx">
+      <DependentUpon>TestBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPO\UI\TranslationUI.resx">
+      <DependentUpon>TranslationUI.cs</DependentUpon>
+    </EmbeddedResource>
     <Reference Include="System.Data.SQLite">
       <HintPath>TPO\SQLite\System.Data.SQLite.dll</HintPath>
     </Reference>
@@ -43,59 +70,55 @@
     <Reference Include="System.Management" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Global.cs" />
-    <Compile Include="TPO\UI\TranslationUI.cs">
+    <Compile Include="TPO\Common\FTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TPO\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TPO\Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPO\TPOFile\LyricsReader.cs" />
+    <Compile Include="TPO\Common\MD5Generate.cs" />
+    <Compile Include="TPO\UI\CoverForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\TestBaseForm.cs">
+    <Compile Include="TPO\UI\ExplanationUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\MainForm.cs">
+    <Compile Include="TPO\UI\File2Acces.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TPO\UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\Common\FTabControl.cs">
-      <SubType>Component</SubType>
+    <Compile Include="TPO\UI\MainForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\TPOFile\LyricsReader.cs" />
-    <Compile Include="TPO\Common\MD5Generate.cs" />
+    <Compile Include="TPO\UI\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPO\UI\TestBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPO\UI\TranslationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TPO\Utility\TestingSection.cs" />
-    <Compile Include="TPO\UI\ExplanationUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TPO\Quiz\TPOQuestions.cs" />
-    <Compile Include="TPO\UI\CoverForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TPO\Common\Question.cs" />
     <Compile Include="TPO\Properties\Settings.cs" />
-    <Compile Include="TPO\Properties\Resources.cs" />
     <Compile Include="TPO\Media\MP3Record.cs" />
     <Compile Include="TPO\Utility\QuestionType.cs" />
     <Compile Include="TPO\Utility\ConstantValues.cs" />
     <Compile Include="TPO\Media\MP3MCI.cs" />
     <Compile Include="TPO\Media\APIClass.cs" />
-    <Compile Include="TPO\UI\RegisterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TPO\Quiz\TPOPassage.cs" />
     <Compile Include="TPO\TPOFile\XMLFileReader.cs" />
     <Compile Include="TPO\Common\Encode.cs" />
-    <Compile Include="TPO\UI\File2Acces.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TPO\Program.cs" />
     <Compile Include="TPO\TPOFile\RtfReader.cs" />
-    <EmbeddedResource Include="TPO.UI.MainForm.resources" />
-    <EmbeddedResource Include="TPO.UI.TranslationUI.resources" />
-    <EmbeddedResource Include="TPO.UI.Login.resources" />
-    <EmbeddedResource Include="TPO.UI.TestBaseForm.resources" />
-    <EmbeddedResource Include="TPO.Properties.Resources.resources" />
-    <EmbeddedResource Include="TPO.UI.File2Acces.resources" />
-    <EmbeddedResource Include="TPO.UI.ExplanationUI.resources" />
-    <EmbeddedResource Include="TPO.UI.RegisterForm.resources" />
-    <EmbeddedResource Include="TPO.UI.CoverForm.resources" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

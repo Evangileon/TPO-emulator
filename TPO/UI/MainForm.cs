@@ -2284,349 +2284,349 @@
 
         private void InitializeComponent()
         {
-            this.components = new Container();
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(MainForm));
-            this.openMp3File = new OpenFileDialog();
-            this.Timer_Listening = new Timer(this.components);
-            this.tabf_test = new TabControl();
-            this.tab_CoverForm = new TabPage();
-            this.tabf_tposelection = new TabControl();
-            this.TPO10 = new TabPage();
-            this.btn_Review10 = new Button();
-            this.btn_Review09 = new Button();
-            this.btn_Review08 = new Button();
-            this.btn_Review07 = new Button();
-            this.btn_Review06 = new Button();
-            this.btn_Review05 = new Button();
-            this.btn_Review04 = new Button();
-            this.btn_Review03 = new Button();
-            this.btn_Review02 = new Button();
-            this.btn_Review01 = new Button();
-            this.btn_Answer10 = new Button();
-            this.btn_Answer09 = new Button();
-            this.btn_Answer08 = new Button();
-            this.btn_Answer07 = new Button();
-            this.btn_Answer06 = new Button();
-            this.btn_Answer05 = new Button();
-            this.btn_Answer04 = new Button();
-            this.btn_Answer03 = new Button();
-            this.btn_Answer02 = new Button();
-            this.btn_Answer01 = new Button();
-            this.btn_LoadSpeaking10 = new Button();
-            this.btn_LoadWriting10 = new Button();
-            this.btn_LoadListening10 = new Button();
-            this.btn_LoadReading10 = new Button();
-            this.btn_LoadSpeaking09 = new Button();
-            this.btn_LoadWriting09 = new Button();
-            this.btn_LoadListening09 = new Button();
-            this.btn_LoadReading09 = new Button();
-            this.btn_LoadSpeaking08 = new Button();
-            this.btn_LoadWriting08 = new Button();
-            this.btn_LoadListening08 = new Button();
-            this.btn_LoadReading08 = new Button();
-            this.btn_LoadSpeaking07 = new Button();
-            this.btn_LoadWriting07 = new Button();
-            this.btn_LoadListening07 = new Button();
-            this.btn_LoadReading07 = new Button();
-            this.btn_LoadSpeaking06 = new Button();
-            this.btn_LoadWriting06 = new Button();
-            this.btn_LoadListening06 = new Button();
-            this.btn_LoadReading06 = new Button();
-            this.btn_LoadSpeaking05 = new Button();
-            this.btn_LoadWriting05 = new Button();
-            this.btn_LoadListening05 = new Button();
-            this.btn_LoadReading05 = new Button();
-            this.btn_LoadSpeaking04 = new Button();
-            this.btn_LoadWriting04 = new Button();
-            this.btn_LoadListening04 = new Button();
-            this.btn_LoadReading04 = new Button();
-            this.btn_LoadSpeaking03 = new Button();
-            this.btn_LoadWriting03 = new Button();
-            this.btn_LoadListening03 = new Button();
-            this.btn_LoadReading03 = new Button();
-            this.btn_LoadSpeaking02 = new Button();
-            this.btn_LoadWriting02 = new Button();
-            this.btn_LoadListening02 = new Button();
-            this.btn_LoadReading02 = new Button();
-            this.btn_LoadSpeaking01 = new Button();
-            this.btn_LoadWriting01 = new Button();
-            this.btn_LoadListening01 = new Button();
-            this.btn_LoadReading01 = new Button();
-            this.lbl_top5 = new Label();
-            this.lbl_top8 = new Label();
-            this.lbl_top10 = new Label();
-            this.lbl_top9 = new Label();
-            this.lbl_top7 = new Label();
-            this.lbl_top6 = new Label();
-            this.lbl_top4 = new Label();
-            this.lbl_top3 = new Label();
-            this.lbl_top2 = new Label();
-            this.lbl_top1 = new Label();
-            this.tab_Reading = new TabPage();
-            this.tabf_Reading = new TabControl();
-            this.rtab_Direction = new TabPage();
-            this.pictureBox2 = new PictureBox();
-            this.rtab_NormalQuestion = new TabPage();
-            this.tb_reading = new TrackBar();
-            this.rtb_Passage = new RichTextBox();
-            this.flowLayoutPanel1 = new FlowLayoutPanel();
-            this.rtb_question = new RichTextBox();
-            this.tlp_answers = new TableLayoutPanel();
-            this.rtb_answerE = new RichTextBox();
-            this.rtb_answerD = new RichTextBox();
-            this.rtb_answerC = new RichTextBox();
-            this.rtb_answerB = new RichTextBox();
-            this.ckb_A = new CheckBox();
-            this.ckb_B = new CheckBox();
-            this.ckb_C = new CheckBox();
-            this.ckb_D = new CheckBox();
-            this.ckb_E = new CheckBox();
-            this.rtb_answerA = new RichTextBox();
-            this.ckb_F = new CheckBox();
-            this.ckb_G = new CheckBox();
-            this.ckb_H = new CheckBox();
-            this.rtb_answerF = new RichTextBox();
-            this.rtb_answerG = new RichTextBox();
-            this.rtb_answerH = new RichTextBox();
-            this.btn_stopReading = new Button();
-            this.bn_readText = new Button();
-            this.lbl_readingIndication = new Label();
-            this.rtab_SumQuestion = new TabPage();
-            this.llbl_rightAnswer = new Label();
-            this.flowLayoutPanel2 = new FlowLayoutPanel();
-            this.rtb_sumPassage = new RichTextBox();
-            this.rtb_sumQuestion = new RichTextBox();
-            this.tlp_sumAnswers = new TableLayoutPanel();
-            this.rtb_SumSelected5 = new RichTextBox();
-            this.rtb_SumSelected1 = new RichTextBox();
-            this.rtb_SumSelected2 = new RichTextBox();
-            this.rtb_SumSelected3 = new RichTextBox();
-            this.rtb_SumSelected4 = new RichTextBox();
-            this.ckb_SumSelected1 = new CheckBox();
-            this.ckb_SumSelected2 = new CheckBox();
-            this.ckb_SumSelected3 = new CheckBox();
-            this.ckb_SumSelected4 = new CheckBox();
-            this.ckb_SumSelected5 = new CheckBox();
-            this.tlp_Summary = new TableLayoutPanel();
-            this.rtb_sumAnswer5 = new RichTextBox();
-            this.rtb_sumAnswer1 = new RichTextBox();
-            this.rtb_sumAnswer2 = new RichTextBox();
-            this.rtb_sumAnswer3 = new RichTextBox();
-            this.rtb_sumAnswer4 = new RichTextBox();
-            this.ckb_sumAnswer1 = new CheckBox();
-            this.ckb_sumAnswer2 = new CheckBox();
-            this.ckb_sumAnswer3 = new CheckBox();
-            this.ckb_sumAnswer4 = new CheckBox();
-            this.ckb_sumAnswer5 = new CheckBox();
-            this.ckb_sumAnswer6 = new CheckBox();
-            this.rtb_sumAnswer6 = new RichTextBox();
-            this.ckb_sumAnswer7 = new CheckBox();
-            this.ckb_sumAnswer8 = new CheckBox();
-            this.rtb_sumAnswer7 = new RichTextBox();
-            this.rtb_sumAnswer8 = new RichTextBox();
-            this.ckb_sumAnswer9 = new CheckBox();
-            this.ckb_sumAnswer10 = new CheckBox();
-            this.rtb_sumAnswer9 = new RichTextBox();
-            this.rtb_sumAnswer10 = new RichTextBox();
-            this.rtab_Review = new TabPage();
-            this.lbl_scoreReport = new Label();
-            this.lbl_wrongAnswered = new Label();
-            this.pb_wrongAnswered = new PictureBox();
-            this.lbl_rightAnswered = new Label();
-            this.pb_rightAnswered = new PictureBox();
-            this.label1 = new Label();
-            this.pictureBox5 = new PictureBox();
-            this.dgv_readingReview = new DataGridView();
-            this.tab_Listening = new TabPage();
-            this.tabf_Listening = new TabControl();
-            this.ltab_Direction1 = new TabPage();
-            this.pictureBox1 = new PictureBox();
-            this.ltab_Direction2 = new TabPage();
-            this.ltab_Materials = new TabPage();
-            this.l_splitContainer = new SplitContainer();
-            this.pb_currentpos = new ProgressBar();
-            this.tb_currentpos = new TrackBar();
-            this.PlayFileName = new Label();
-            this.pb_ListenScene = new PictureBox();
-            this.panel1 = new Panel();
-            this.flp_passage = new FlowLayoutPanel();
-            this.lnk_passage = new LinkLabel();
-            this.lMaterials1 = new TabPage();
-            this.tb_currentpos1 = new TrackBar();
-            this.pb_currentpos1 = new ProgressBar();
-            this.pb_ListenScene1 = new PictureBox();
-            this.ltab_Question = new TabPage();
-            this.tableLayoutPanel1 = new TableLayoutPanel();
-            this.lrtb_question = new RichTextBox();
-            this.lrtb_answerE = new RichTextBox();
-            this.lrtb_answerD = new RichTextBox();
-            this.lrtb_answerC = new RichTextBox();
-            this.lrtb_answerB = new RichTextBox();
-            this.lckb_A = new CheckBox();
-            this.lckb_B = new CheckBox();
-            this.lckb_C = new CheckBox();
-            this.lckb_D = new CheckBox();
-            this.lckb_E = new CheckBox();
-            this.lckb_F = new CheckBox();
-            this.lckb_G = new CheckBox();
-            this.lckb_H = new CheckBox();
-            this.lrtb_answerF = new RichTextBox();
-            this.lrtb_answerG = new RichTextBox();
-            this.lrtb_answerH = new RichTextBox();
-            this.lrtb_answerA = new RichTextBox();
-            this.lTableQuestion = new TabPage();
-            this.lbl_tableAnswer = new Label();
-            this.lrtbTableQuestion = new RichTextBox();
-            this.ltlp_table = new TableLayoutPanel();
-            this.lckbTable11 = new CheckBox();
-            this.lckbTable12 = new CheckBox();
-            this.lckbTable13 = new CheckBox();
-            this.lckbTable14 = new CheckBox();
-            this.lckbTable15 = new CheckBox();
-            this.lckbTable25 = new CheckBox();
-            this.lckbTable24 = new CheckBox();
-            this.lckbTable23 = new CheckBox();
-            this.lckbTable22 = new CheckBox();
-            this.lckbTable21 = new CheckBox();
-            this.lckbTable32 = new CheckBox();
-            this.lckbTable33 = new CheckBox();
-            this.lckbTable34 = new CheckBox();
-            this.lckbTable35 = new CheckBox();
-            this.lckbTable43 = new CheckBox();
-            this.lckbTable41 = new CheckBox();
-            this.lckbTable31 = new CheckBox();
-            this.lckbTable42 = new CheckBox();
-            this.lckbTable44 = new CheckBox();
-            this.lckbTable45 = new CheckBox();
-            this.lckbTable55 = new CheckBox();
-            this.lckbTable54 = new CheckBox();
-            this.lckbTable53 = new CheckBox();
-            this.lckbTable52 = new CheckBox();
-            this.lckbTable51 = new CheckBox();
-            this.lckbTable61 = new CheckBox();
-            this.lckbTable62 = new CheckBox();
-            this.lckbTable63 = new CheckBox();
-            this.lckbTable64 = new CheckBox();
-            this.lckbTable65 = new CheckBox();
-            this.lckbTable71 = new CheckBox();
-            this.lckbTable72 = new CheckBox();
-            this.lckbTable73 = new CheckBox();
-            this.lckbTable74 = new CheckBox();
-            this.lckbTable75 = new CheckBox();
-            this.lckbTable85 = new CheckBox();
-            this.lckbTable84 = new CheckBox();
-            this.lckbTable83 = new CheckBox();
-            this.lckbTable82 = new CheckBox();
-            this.lckbTable81 = new CheckBox();
-            this.lckbTable91 = new CheckBox();
-            this.lckbTable92 = new CheckBox();
-            this.lckbTable93 = new CheckBox();
-            this.lckbTable94 = new CheckBox();
-            this.lckbTable95 = new CheckBox();
-            this.lrtbTableCol1 = new RichTextBox();
-            this.lrtbTableCol2 = new RichTextBox();
-            this.lrtbTableCol3 = new RichTextBox();
-            this.lrtbTableCol5 = new RichTextBox();
-            this.lrtbTableRow1 = new RichTextBox();
-            this.lrtbTableRow2 = new RichTextBox();
-            this.lrtbTableRow3 = new RichTextBox();
-            this.lrtbTableRow4 = new RichTextBox();
-            this.lrtbTableRow5 = new RichTextBox();
-            this.lrtbTableRow6 = new RichTextBox();
-            this.lrtbTableRow7 = new RichTextBox();
-            this.lrtbTableRow8 = new RichTextBox();
-            this.lrtbTableRow9 = new RichTextBox();
-            this.lrtbTableCol4 = new RichTextBox();
-            this.tab_Speaking = new TabPage();
-            this.tabf_speaking = new TabControl();
-            this.sDirection = new TabPage();
-            this.pictureBox3 = new PictureBox();
-            this.sNormalQuestions = new TabPage();
-            this.spb = new ProgressBar();
-            this.tableLayoutPanel3 = new TableLayoutPanel();
-            this.srtb_timer = new Label();
-            this.srtb_timeindicator = new Label();
-            this.srtb_introduction = new RichTextBox();
-            this.pb_speakingScene = new PictureBox();
-            this.tab_Writing = new TabPage();
-            this.tabf_writing = new TabControl();
-            this.wDirection = new TabPage();
-            this.pictureBox4 = new PictureBox();
-            this.wReading = new TabPage();
-            this.wrtb_writing1 = new RichTextBox();
-            this.wrtb_reading = new RichTextBox();
-            this.wSpeakingPassage = new TabPage();
-            this.wpb_speak = new ProgressBar();
-            this.wtb_speak = new TrackBar();
-            this.pb_writingScene = new PictureBox();
-            this.wWriting2 = new TabPage();
-            this.lbl_writeDirection = new Label();
-            this.wrtb_writing2 = new RichTextBox();
-            this.wrtbQuestion2 = new RichTextBox();
-            this.wpanel = new Panel();
-            this.wlbl_wordcount = new Label();
-            this.wbtn_wordcount = new Button();
-            this.wbtn_redo = new Button();
-            this.wbtn_undo = new Button();
-            this.wbtn_paste = new Button();
-            this.wbtn_cut = new Button();
-            this.tabPage1 = new TabPage();
-            this.tabf_answer = new TabControl();
-            this.tab_readinganswer = new TabPage();
-            this.label2 = new Label();
-            this.lbl_readingscorereport = new Label();
-            this.label3 = new Label();
-            this.pictureBox6 = new PictureBox();
-            this.label4 = new Label();
-            this.pictureBox7 = new PictureBox();
-            this.label5 = new Label();
-            this.pictureBox8 = new PictureBox();
-            this.dgv_readinganswers = new DataGridView();
-            this.tab_listeninganswers = new TabPage();
-            this.label16 = new Label();
-            this.dgv_listeninganswers = new DataGridView();
-            this.lbl_listeningScorereport = new Label();
-            this.label7 = new Label();
-            this.pictureBox9 = new PictureBox();
-            this.label8 = new Label();
-            this.pictureBox10 = new PictureBox();
-            this.label9 = new Label();
-            this.pictureBox11 = new PictureBox();
-            this.tab_speakinganswers = new TabPage();
-            this.tableLayoutPanel2 = new TableLayoutPanel();
-            this.label10 = new Label();
-            this.label11 = new Label();
-            this.label12 = new Label();
-            this.label13 = new Label();
-            this.label14 = new Label();
-            this.label15 = new Label();
-            this.btn_speakinganswer1 = new Button();
-            this.btn_speakinganswer2 = new Button();
-            this.btn_speakinganswer3 = new Button();
-            this.btn_speakinganswer4 = new Button();
-            this.btn_speakinganswer5 = new Button();
-            this.btn_speakinganswer6 = new Button();
-            this.tab_writinganswers = new TabPage();
-            this.rtb_writinganswers = new RichTextBox();
-            this.rtb_writing2 = new RadioButton();
-            this.rtb_writing1 = new RadioButton();
-            this.btn_ShowText = new Button();
-            this.flash_timer = new Timer(this.components);
-            this.Timer_Speaking = new Timer(this.components);
-            this.ckb_viewSpeakingText = new CheckBox();
-            this.lbl_testingSection = new Label();
-            this.btn_LastPage = new Button();
-            this.btn_NexPage = new Button();
-            this.rb_PracticeMode = new RadioButton();
-            this.rb_TestMode = new RadioButton();
-            this.ckb_ShowAnswer = new CheckBox();
-            this.btn_pause = new Button();
-            this.btn_QUITapp = new Button();
-            this.bgimagelist = new ImageList(this.components);
-            this.btn_showexplanation = new Button();
-            this.btn_showtranslation = new Button();
-            this.Timer_reading = new Timer(this.components);
-            base.tb_sound.BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.openMp3File = new System.Windows.Forms.OpenFileDialog();
+            this.Timer_Listening = new System.Windows.Forms.Timer(this.components);
+            this.tabf_test = new System.Windows.Forms.TabControl();
+            this.tab_CoverForm = new System.Windows.Forms.TabPage();
+            this.tabf_tposelection = new System.Windows.Forms.TabControl();
+            this.TPO10 = new System.Windows.Forms.TabPage();
+            this.btn_Review10 = new System.Windows.Forms.Button();
+            this.btn_Review09 = new System.Windows.Forms.Button();
+            this.btn_Review08 = new System.Windows.Forms.Button();
+            this.btn_Review07 = new System.Windows.Forms.Button();
+            this.btn_Review06 = new System.Windows.Forms.Button();
+            this.btn_Review05 = new System.Windows.Forms.Button();
+            this.btn_Review04 = new System.Windows.Forms.Button();
+            this.btn_Review03 = new System.Windows.Forms.Button();
+            this.btn_Review02 = new System.Windows.Forms.Button();
+            this.btn_Review01 = new System.Windows.Forms.Button();
+            this.btn_Answer10 = new System.Windows.Forms.Button();
+            this.btn_Answer09 = new System.Windows.Forms.Button();
+            this.btn_Answer08 = new System.Windows.Forms.Button();
+            this.btn_Answer07 = new System.Windows.Forms.Button();
+            this.btn_Answer06 = new System.Windows.Forms.Button();
+            this.btn_Answer05 = new System.Windows.Forms.Button();
+            this.btn_Answer04 = new System.Windows.Forms.Button();
+            this.btn_Answer03 = new System.Windows.Forms.Button();
+            this.btn_Answer02 = new System.Windows.Forms.Button();
+            this.btn_Answer01 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking10 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting10 = new System.Windows.Forms.Button();
+            this.btn_LoadListening10 = new System.Windows.Forms.Button();
+            this.btn_LoadReading10 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking09 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting09 = new System.Windows.Forms.Button();
+            this.btn_LoadListening09 = new System.Windows.Forms.Button();
+            this.btn_LoadReading09 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking08 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting08 = new System.Windows.Forms.Button();
+            this.btn_LoadListening08 = new System.Windows.Forms.Button();
+            this.btn_LoadReading08 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking07 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting07 = new System.Windows.Forms.Button();
+            this.btn_LoadListening07 = new System.Windows.Forms.Button();
+            this.btn_LoadReading07 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking06 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting06 = new System.Windows.Forms.Button();
+            this.btn_LoadListening06 = new System.Windows.Forms.Button();
+            this.btn_LoadReading06 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking05 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting05 = new System.Windows.Forms.Button();
+            this.btn_LoadListening05 = new System.Windows.Forms.Button();
+            this.btn_LoadReading05 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking04 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting04 = new System.Windows.Forms.Button();
+            this.btn_LoadListening04 = new System.Windows.Forms.Button();
+            this.btn_LoadReading04 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking03 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting03 = new System.Windows.Forms.Button();
+            this.btn_LoadListening03 = new System.Windows.Forms.Button();
+            this.btn_LoadReading03 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking02 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting02 = new System.Windows.Forms.Button();
+            this.btn_LoadListening02 = new System.Windows.Forms.Button();
+            this.btn_LoadReading02 = new System.Windows.Forms.Button();
+            this.btn_LoadSpeaking01 = new System.Windows.Forms.Button();
+            this.btn_LoadWriting01 = new System.Windows.Forms.Button();
+            this.btn_LoadListening01 = new System.Windows.Forms.Button();
+            this.btn_LoadReading01 = new System.Windows.Forms.Button();
+            this.lbl_top5 = new System.Windows.Forms.Label();
+            this.lbl_top8 = new System.Windows.Forms.Label();
+            this.lbl_top10 = new System.Windows.Forms.Label();
+            this.lbl_top9 = new System.Windows.Forms.Label();
+            this.lbl_top7 = new System.Windows.Forms.Label();
+            this.lbl_top6 = new System.Windows.Forms.Label();
+            this.lbl_top4 = new System.Windows.Forms.Label();
+            this.lbl_top3 = new System.Windows.Forms.Label();
+            this.lbl_top2 = new System.Windows.Forms.Label();
+            this.lbl_top1 = new System.Windows.Forms.Label();
+            this.tab_Reading = new System.Windows.Forms.TabPage();
+            this.tabf_Reading = new System.Windows.Forms.TabControl();
+            this.rtab_Direction = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rtab_NormalQuestion = new System.Windows.Forms.TabPage();
+            this.tb_reading = new System.Windows.Forms.TrackBar();
+            this.rtb_Passage = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rtb_question = new System.Windows.Forms.RichTextBox();
+            this.tlp_answers = new System.Windows.Forms.TableLayoutPanel();
+            this.rtb_answerE = new System.Windows.Forms.RichTextBox();
+            this.rtb_answerD = new System.Windows.Forms.RichTextBox();
+            this.rtb_answerC = new System.Windows.Forms.RichTextBox();
+            this.rtb_answerB = new System.Windows.Forms.RichTextBox();
+            this.ckb_A = new System.Windows.Forms.CheckBox();
+            this.ckb_B = new System.Windows.Forms.CheckBox();
+            this.ckb_C = new System.Windows.Forms.CheckBox();
+            this.ckb_D = new System.Windows.Forms.CheckBox();
+            this.ckb_E = new System.Windows.Forms.CheckBox();
+            this.rtb_answerA = new System.Windows.Forms.RichTextBox();
+            this.ckb_F = new System.Windows.Forms.CheckBox();
+            this.ckb_G = new System.Windows.Forms.CheckBox();
+            this.ckb_H = new System.Windows.Forms.CheckBox();
+            this.rtb_answerF = new System.Windows.Forms.RichTextBox();
+            this.rtb_answerG = new System.Windows.Forms.RichTextBox();
+            this.rtb_answerH = new System.Windows.Forms.RichTextBox();
+            this.btn_stopReading = new System.Windows.Forms.Button();
+            this.bn_readText = new System.Windows.Forms.Button();
+            this.lbl_readingIndication = new System.Windows.Forms.Label();
+            this.rtab_SumQuestion = new System.Windows.Forms.TabPage();
+            this.llbl_rightAnswer = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rtb_sumPassage = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumQuestion = new System.Windows.Forms.RichTextBox();
+            this.tlp_sumAnswers = new System.Windows.Forms.TableLayoutPanel();
+            this.rtb_SumSelected5 = new System.Windows.Forms.RichTextBox();
+            this.rtb_SumSelected1 = new System.Windows.Forms.RichTextBox();
+            this.rtb_SumSelected2 = new System.Windows.Forms.RichTextBox();
+            this.rtb_SumSelected3 = new System.Windows.Forms.RichTextBox();
+            this.rtb_SumSelected4 = new System.Windows.Forms.RichTextBox();
+            this.ckb_SumSelected1 = new System.Windows.Forms.CheckBox();
+            this.ckb_SumSelected2 = new System.Windows.Forms.CheckBox();
+            this.ckb_SumSelected3 = new System.Windows.Forms.CheckBox();
+            this.ckb_SumSelected4 = new System.Windows.Forms.CheckBox();
+            this.ckb_SumSelected5 = new System.Windows.Forms.CheckBox();
+            this.tlp_Summary = new System.Windows.Forms.TableLayoutPanel();
+            this.rtb_sumAnswer5 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer1 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer2 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer3 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer4 = new System.Windows.Forms.RichTextBox();
+            this.ckb_sumAnswer1 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer2 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer3 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer4 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer5 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer6 = new System.Windows.Forms.CheckBox();
+            this.rtb_sumAnswer6 = new System.Windows.Forms.RichTextBox();
+            this.ckb_sumAnswer7 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer8 = new System.Windows.Forms.CheckBox();
+            this.rtb_sumAnswer7 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer8 = new System.Windows.Forms.RichTextBox();
+            this.ckb_sumAnswer9 = new System.Windows.Forms.CheckBox();
+            this.ckb_sumAnswer10 = new System.Windows.Forms.CheckBox();
+            this.rtb_sumAnswer9 = new System.Windows.Forms.RichTextBox();
+            this.rtb_sumAnswer10 = new System.Windows.Forms.RichTextBox();
+            this.rtab_Review = new System.Windows.Forms.TabPage();
+            this.lbl_scoreReport = new System.Windows.Forms.Label();
+            this.lbl_wrongAnswered = new System.Windows.Forms.Label();
+            this.pb_wrongAnswered = new System.Windows.Forms.PictureBox();
+            this.lbl_rightAnswered = new System.Windows.Forms.Label();
+            this.pb_rightAnswered = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dgv_readingReview = new System.Windows.Forms.DataGridView();
+            this.tab_Listening = new System.Windows.Forms.TabPage();
+            this.tabf_Listening = new System.Windows.Forms.TabControl();
+            this.ltab_Direction1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ltab_Direction2 = new System.Windows.Forms.TabPage();
+            this.ltab_Materials = new System.Windows.Forms.TabPage();
+            this.l_splitContainer = new System.Windows.Forms.SplitContainer();
+            this.pb_currentpos = new System.Windows.Forms.ProgressBar();
+            this.tb_currentpos = new System.Windows.Forms.TrackBar();
+            this.PlayFileName = new System.Windows.Forms.Label();
+            this.pb_ListenScene = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flp_passage = new System.Windows.Forms.FlowLayoutPanel();
+            this.lnk_passage = new System.Windows.Forms.LinkLabel();
+            this.lMaterials1 = new System.Windows.Forms.TabPage();
+            this.tb_currentpos1 = new System.Windows.Forms.TrackBar();
+            this.pb_currentpos1 = new System.Windows.Forms.ProgressBar();
+            this.pb_ListenScene1 = new System.Windows.Forms.PictureBox();
+            this.ltab_Question = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lrtb_question = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerE = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerD = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerC = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerB = new System.Windows.Forms.RichTextBox();
+            this.lckb_A = new System.Windows.Forms.CheckBox();
+            this.lckb_B = new System.Windows.Forms.CheckBox();
+            this.lckb_C = new System.Windows.Forms.CheckBox();
+            this.lckb_D = new System.Windows.Forms.CheckBox();
+            this.lckb_E = new System.Windows.Forms.CheckBox();
+            this.lckb_F = new System.Windows.Forms.CheckBox();
+            this.lckb_G = new System.Windows.Forms.CheckBox();
+            this.lckb_H = new System.Windows.Forms.CheckBox();
+            this.lrtb_answerF = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerG = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerH = new System.Windows.Forms.RichTextBox();
+            this.lrtb_answerA = new System.Windows.Forms.RichTextBox();
+            this.lTableQuestion = new System.Windows.Forms.TabPage();
+            this.lbl_tableAnswer = new System.Windows.Forms.Label();
+            this.lrtbTableQuestion = new System.Windows.Forms.RichTextBox();
+            this.ltlp_table = new System.Windows.Forms.TableLayoutPanel();
+            this.lckbTable11 = new System.Windows.Forms.CheckBox();
+            this.lckbTable12 = new System.Windows.Forms.CheckBox();
+            this.lckbTable13 = new System.Windows.Forms.CheckBox();
+            this.lckbTable14 = new System.Windows.Forms.CheckBox();
+            this.lckbTable15 = new System.Windows.Forms.CheckBox();
+            this.lckbTable25 = new System.Windows.Forms.CheckBox();
+            this.lckbTable24 = new System.Windows.Forms.CheckBox();
+            this.lckbTable23 = new System.Windows.Forms.CheckBox();
+            this.lckbTable22 = new System.Windows.Forms.CheckBox();
+            this.lckbTable21 = new System.Windows.Forms.CheckBox();
+            this.lckbTable32 = new System.Windows.Forms.CheckBox();
+            this.lckbTable33 = new System.Windows.Forms.CheckBox();
+            this.lckbTable34 = new System.Windows.Forms.CheckBox();
+            this.lckbTable35 = new System.Windows.Forms.CheckBox();
+            this.lckbTable43 = new System.Windows.Forms.CheckBox();
+            this.lckbTable41 = new System.Windows.Forms.CheckBox();
+            this.lckbTable31 = new System.Windows.Forms.CheckBox();
+            this.lckbTable42 = new System.Windows.Forms.CheckBox();
+            this.lckbTable44 = new System.Windows.Forms.CheckBox();
+            this.lckbTable45 = new System.Windows.Forms.CheckBox();
+            this.lckbTable55 = new System.Windows.Forms.CheckBox();
+            this.lckbTable54 = new System.Windows.Forms.CheckBox();
+            this.lckbTable53 = new System.Windows.Forms.CheckBox();
+            this.lckbTable52 = new System.Windows.Forms.CheckBox();
+            this.lckbTable51 = new System.Windows.Forms.CheckBox();
+            this.lckbTable61 = new System.Windows.Forms.CheckBox();
+            this.lckbTable62 = new System.Windows.Forms.CheckBox();
+            this.lckbTable63 = new System.Windows.Forms.CheckBox();
+            this.lckbTable64 = new System.Windows.Forms.CheckBox();
+            this.lckbTable65 = new System.Windows.Forms.CheckBox();
+            this.lckbTable71 = new System.Windows.Forms.CheckBox();
+            this.lckbTable72 = new System.Windows.Forms.CheckBox();
+            this.lckbTable73 = new System.Windows.Forms.CheckBox();
+            this.lckbTable74 = new System.Windows.Forms.CheckBox();
+            this.lckbTable75 = new System.Windows.Forms.CheckBox();
+            this.lckbTable85 = new System.Windows.Forms.CheckBox();
+            this.lckbTable84 = new System.Windows.Forms.CheckBox();
+            this.lckbTable83 = new System.Windows.Forms.CheckBox();
+            this.lckbTable82 = new System.Windows.Forms.CheckBox();
+            this.lckbTable81 = new System.Windows.Forms.CheckBox();
+            this.lckbTable91 = new System.Windows.Forms.CheckBox();
+            this.lckbTable92 = new System.Windows.Forms.CheckBox();
+            this.lckbTable93 = new System.Windows.Forms.CheckBox();
+            this.lckbTable94 = new System.Windows.Forms.CheckBox();
+            this.lckbTable95 = new System.Windows.Forms.CheckBox();
+            this.lrtbTableCol1 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableCol2 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableCol3 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableCol5 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow1 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow2 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow3 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow4 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow5 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow6 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow7 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow8 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableRow9 = new System.Windows.Forms.RichTextBox();
+            this.lrtbTableCol4 = new System.Windows.Forms.RichTextBox();
+            this.tab_Speaking = new System.Windows.Forms.TabPage();
+            this.tabf_speaking = new System.Windows.Forms.TabControl();
+            this.sDirection = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.sNormalQuestions = new System.Windows.Forms.TabPage();
+            this.spb = new System.Windows.Forms.ProgressBar();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.srtb_timer = new System.Windows.Forms.Label();
+            this.srtb_timeindicator = new System.Windows.Forms.Label();
+            this.srtb_introduction = new System.Windows.Forms.RichTextBox();
+            this.pb_speakingScene = new System.Windows.Forms.PictureBox();
+            this.tab_Writing = new System.Windows.Forms.TabPage();
+            this.tabf_writing = new System.Windows.Forms.TabControl();
+            this.wDirection = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.wReading = new System.Windows.Forms.TabPage();
+            this.wrtb_writing1 = new System.Windows.Forms.RichTextBox();
+            this.wrtb_reading = new System.Windows.Forms.RichTextBox();
+            this.wSpeakingPassage = new System.Windows.Forms.TabPage();
+            this.wpb_speak = new System.Windows.Forms.ProgressBar();
+            this.wtb_speak = new System.Windows.Forms.TrackBar();
+            this.pb_writingScene = new System.Windows.Forms.PictureBox();
+            this.wWriting2 = new System.Windows.Forms.TabPage();
+            this.lbl_writeDirection = new System.Windows.Forms.Label();
+            this.wrtb_writing2 = new System.Windows.Forms.RichTextBox();
+            this.wrtbQuestion2 = new System.Windows.Forms.RichTextBox();
+            this.wpanel = new System.Windows.Forms.Panel();
+            this.wlbl_wordcount = new System.Windows.Forms.Label();
+            this.wbtn_wordcount = new System.Windows.Forms.Button();
+            this.wbtn_redo = new System.Windows.Forms.Button();
+            this.wbtn_undo = new System.Windows.Forms.Button();
+            this.wbtn_paste = new System.Windows.Forms.Button();
+            this.wbtn_cut = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabf_answer = new System.Windows.Forms.TabControl();
+            this.tab_readinganswer = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_readingscorereport = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.dgv_readinganswers = new System.Windows.Forms.DataGridView();
+            this.tab_listeninganswers = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dgv_listeninganswers = new System.Windows.Forms.DataGridView();
+            this.lbl_listeningScorereport = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.tab_speakinganswers = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btn_speakinganswer1 = new System.Windows.Forms.Button();
+            this.btn_speakinganswer2 = new System.Windows.Forms.Button();
+            this.btn_speakinganswer3 = new System.Windows.Forms.Button();
+            this.btn_speakinganswer4 = new System.Windows.Forms.Button();
+            this.btn_speakinganswer5 = new System.Windows.Forms.Button();
+            this.btn_speakinganswer6 = new System.Windows.Forms.Button();
+            this.tab_writinganswers = new System.Windows.Forms.TabPage();
+            this.rtb_writinganswers = new System.Windows.Forms.RichTextBox();
+            this.rtb_writing2 = new System.Windows.Forms.RadioButton();
+            this.rtb_writing1 = new System.Windows.Forms.RadioButton();
+            this.btn_ShowText = new System.Windows.Forms.Button();
+            this.flash_timer = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Speaking = new System.Windows.Forms.Timer(this.components);
+            this.ckb_viewSpeakingText = new System.Windows.Forms.CheckBox();
+            this.lbl_testingSection = new System.Windows.Forms.Label();
+            this.btn_LastPage = new System.Windows.Forms.Button();
+            this.btn_NexPage = new System.Windows.Forms.Button();
+            this.rb_PracticeMode = new System.Windows.Forms.RadioButton();
+            this.rb_TestMode = new System.Windows.Forms.RadioButton();
+            this.ckb_ShowAnswer = new System.Windows.Forms.CheckBox();
+            this.btn_pause = new System.Windows.Forms.Button();
+            this.btn_QUITapp = new System.Windows.Forms.Button();
+            this.bgimagelist = new System.Windows.Forms.ImageList(this.components);
+            this.btn_showexplanation = new System.Windows.Forms.Button();
+            this.btn_showtranslation = new System.Windows.Forms.Button();
+            this.Timer_reading = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tb_sound)).BeginInit();
             this.tabf_test.SuspendLayout();
             this.tab_CoverForm.SuspendLayout();
             this.tabf_tposelection.SuspendLayout();
@@ -2634,9 +2634,9 @@
             this.tab_Reading.SuspendLayout();
             this.tabf_Reading.SuspendLayout();
             this.rtab_Direction.SuspendLayout();
-            ((ISupportInitialize) this.pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.rtab_NormalQuestion.SuspendLayout();
-            this.tb_reading.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_reading)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tlp_answers.SuspendLayout();
             this.rtab_SumQuestion.SuspendLayout();
@@ -2644,25 +2644,25 @@
             this.tlp_sumAnswers.SuspendLayout();
             this.tlp_Summary.SuspendLayout();
             this.rtab_Review.SuspendLayout();
-            ((ISupportInitialize) this.pb_wrongAnswered).BeginInit();
-            ((ISupportInitialize) this.pb_rightAnswered).BeginInit();
-            ((ISupportInitialize) this.pictureBox5).BeginInit();
-            ((ISupportInitialize) this.dgv_readingReview).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_wrongAnswered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightAnswered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingReview)).BeginInit();
             this.tab_Listening.SuspendLayout();
             this.tabf_Listening.SuspendLayout();
             this.ltab_Direction1.SuspendLayout();
-            ((ISupportInitialize) this.pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ltab_Materials.SuspendLayout();
             this.l_splitContainer.Panel1.SuspendLayout();
             this.l_splitContainer.Panel2.SuspendLayout();
             this.l_splitContainer.SuspendLayout();
-            this.tb_currentpos.BeginInit();
-            ((ISupportInitialize) this.pb_ListenScene).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene)).BeginInit();
             this.panel1.SuspendLayout();
             this.flp_passage.SuspendLayout();
             this.lMaterials1.SuspendLayout();
-            this.tb_currentpos1.BeginInit();
-            ((ISupportInitialize) this.pb_ListenScene1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene1)).BeginInit();
             this.ltab_Question.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.lTableQuestion.SuspendLayout();
@@ -2670,173 +2670,227 @@
             this.tab_Speaking.SuspendLayout();
             this.tabf_speaking.SuspendLayout();
             this.sDirection.SuspendLayout();
-            ((ISupportInitialize) this.pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.sNormalQuestions.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((ISupportInitialize) this.pb_speakingScene).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).BeginInit();
             this.tab_Writing.SuspendLayout();
             this.tabf_writing.SuspendLayout();
             this.wDirection.SuspendLayout();
-            ((ISupportInitialize) this.pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.wReading.SuspendLayout();
             this.wSpeakingPassage.SuspendLayout();
-            this.wtb_speak.BeginInit();
-            ((ISupportInitialize) this.pb_writingScene).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).BeginInit();
             this.wWriting2.SuspendLayout();
             this.wpanel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabf_answer.SuspendLayout();
             this.tab_readinganswer.SuspendLayout();
-            ((ISupportInitialize) this.pictureBox6).BeginInit();
-            ((ISupportInitialize) this.pictureBox7).BeginInit();
-            ((ISupportInitialize) this.pictureBox8).BeginInit();
-            ((ISupportInitialize) this.dgv_readinganswers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).BeginInit();
             this.tab_listeninganswers.SuspendLayout();
-            ((ISupportInitialize) this.dgv_listeninganswers).BeginInit();
-            ((ISupportInitialize) this.pictureBox9).BeginInit();
-            ((ISupportInitialize) this.pictureBox10).BeginInit();
-            ((ISupportInitialize) this.pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.tab_speakinganswers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tab_writinganswers.SuspendLayout();
-            base.SuspendLayout();
-            base.btn_mainmenu.BackgroundImage = (Image) manager.GetObject("btn_mainmenu.BackgroundImage");
-            base.btn_mainmenu.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_mainmenu.FlatAppearance.BorderSize = 0;
-            base.btn_mainmenu.FlatStyle = FlatStyle.Flat;
-            base.btn_mainmenu.Location = new Point(3, 0x1d);
-            base.btn_mainmenu.TabStop = false;
-            base.btn_mainmenu.Text = "";
-            base.btn_mainmenu.Visible = false;
-            base.btn_mainmenu.Click += new EventHandler(this.btn_mainmenu_Click);
-            base.btn_quit.BackgroundImage = (Image) manager.GetObject("btn_quit.BackgroundImage");
-            base.btn_quit.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_quit.FlatAppearance.BorderSize = 0;
-            base.btn_quit.FlatStyle = FlatStyle.Flat;
-            base.btn_quit.Location = new Point(0x34, 0x1d);
-            base.btn_quit.TabStop = false;
-            base.btn_quit.Text = "";
-            base.btn_quit.Visible = false;
-            base.btn_quit.Click += new EventHandler(this.btn_quit_Click);
-            base.tb_sound.BackColor = Color.Silver;
-            base.tb_sound.Location = new Point(490, 0x2e);
-            base.tb_sound.Maximum = 0x7d0;
-            base.tb_sound.Size = new Size(110, 0x20);
-            base.tb_sound.SmallChange = 100;
-            base.tb_sound.TickFrequency = 10;
-            base.tb_sound.TickStyle = TickStyle.None;
-            base.tb_sound.Value = 0x3e8;
-            base.tb_sound.Visible = false;
-            base.tb_sound.Scroll += new EventHandler(this.tb_sound_Scroll);
-            base.Sound_icon.BackgroundImage = (Image) manager.GetObject("Sound_icon.BackgroundImage");
-            base.Sound_icon.Location = new Point(0x255, 0x27);
-            base.Sound_icon.Size = new Size(0x4a, 0x27);
-            base.Sound_icon.Visible = false;
-            base.Sound_icon.MouseClick += new MouseEventHandler(this.Sound_icon_MouseClick);
-            base.lbl_mode.BackColor = Color.Transparent;
-            base.lbl_mode.BorderStyle = BorderStyle.None;
-            base.lbl_mode.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            base.lbl_mode.Location = new Point(0x151, 0x2b);
-            base.lbl_mode.Size = new Size(0x6f, 0x11);
-            base.lbl_mode.Visible = false;
-            base.lbl_questionNO.BackColor = Color.Transparent;
-            base.lbl_questionNO.BorderStyle = BorderStyle.None;
-            base.lbl_questionNO.Font = new Font("SimSun", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            base.lbl_questionNO.Location = new Point(0x155, 60);
-            base.lbl_questionNO.Text = "";
-            base.lbl_questionNO.Visible = false;
-            base.button1.BackgroundImage = (Image) manager.GetObject("button1.BackgroundImage");
-            base.button1.BackgroundImageLayout = ImageLayout.Stretch;
-            base.button1.FlatAppearance.BorderSize = 0;
-            base.button1.FlatStyle = FlatStyle.Flat;
-            base.button1.Location = new Point(0x28c, 0x2e);
-            base.button1.Size = new Size(90, 0x20);
-            base.button1.TabStop = false;
-            base.button1.Text = "";
-            base.button1.Visible = false;
-            base.button1.Click += new EventHandler(this.button1_Click);
-            base.lbl_timeremain.BackColor = Color.Transparent;
-            base.lbl_timeremain.BorderStyle = BorderStyle.None;
-            base.lbl_timeremain.Location = new Point(0x2d2, 0x36);
-            base.lbl_timeremain.Size = new Size(50, 0x11);
-            base.lbl_timeremain.Visible = false;
-            base.btn_continue.BackgroundImage = (Image) manager.GetObject("btn_continue.BackgroundImage");
-            base.btn_continue.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_continue.FlatAppearance.BorderSize = 0;
-            base.btn_continue.FlatStyle = FlatStyle.Flat;
-            base.btn_continue.Location = new Point(0x2bd, 1);
-            base.btn_continue.Size = new Size(0x56, 0x25);
-            base.btn_continue.TabStop = false;
-            base.btn_continue.Text = "";
-            base.btn_continue.Visible = false;
-            base.btn_continue.Click += new EventHandler(this.btn_continue_Click);
-            base.btn_review.BackgroundImage = (Image) manager.GetObject("btn_review.BackgroundImage");
-            base.btn_review.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_review.FlatAppearance.BorderSize = 0;
-            base.btn_review.FlatStyle = FlatStyle.Flat;
-            base.btn_review.Location = new Point(0x24a, 1);
-            base.btn_review.Size = new Size(80, 0x30);
-            base.btn_review.TabStop = false;
-            base.btn_review.Text = "";
-            base.btn_review.Visible = false;
-            base.btn_review.Click += new EventHandler(this.btn_review_Click);
-            base.btn_preQuestion.BackgroundImage = (Image) manager.GetObject("btn_preQuestion.BackgroundImage");
-            base.btn_preQuestion.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_preQuestion.FlatAppearance.BorderSize = 0;
-            base.btn_preQuestion.FlatStyle = FlatStyle.Flat;
-            base.btn_preQuestion.Location = new Point(0x289, 1);
-            base.btn_preQuestion.Size = new Size(80, 0x30);
-            base.btn_preQuestion.TabStop = false;
-            base.btn_preQuestion.Text = "";
-            base.btn_preQuestion.Visible = false;
-            base.btn_preQuestion.Click += new EventHandler(this.btn_preQuestion_Click);
-            base.btn_nextQuestion.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            base.btn_nextQuestion.BackColor = Color.White;
-            base.btn_nextQuestion.BackgroundImage = (Image) manager.GetObject("btn_nextQuestion.BackgroundImage");
-            base.btn_nextQuestion.BackgroundImageLayout = ImageLayout.Stretch;
-            base.btn_nextQuestion.FlatAppearance.BorderSize = 0;
-            base.btn_nextQuestion.FlatStyle = FlatStyle.Flat;
-            base.btn_nextQuestion.ForeColor = Color.Black;
-            base.btn_nextQuestion.Location = new Point(0x2c3, 1);
-            base.btn_nextQuestion.Size = new Size(80, 0x30);
-            base.btn_nextQuestion.TabStop = false;
-            base.btn_nextQuestion.Text = "";
-            base.btn_nextQuestion.UseVisualStyleBackColor = false;
-            base.btn_nextQuestion.Visible = false;
-            base.btn_nextQuestion.Click += new EventHandler(this.btn_nextQuestion_Click);
+            this.SuspendLayout();
+            // 
+            // btn_continue
+            // 
+            this.btn_continue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_continue.BackgroundImage")));
+            this.btn_continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_continue.FlatAppearance.BorderSize = 0;
+            this.btn_continue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_continue.Location = new System.Drawing.Point(701, 1);
+            this.btn_continue.Size = new System.Drawing.Size(86, 34);
+            this.btn_continue.TabStop = false;
+            this.btn_continue.Text = "";
+            this.btn_continue.Visible = false;
+            this.btn_continue.Click += new System.EventHandler(this.btn_continue_Click);
+            // 
+            // btn_mainmenu
+            // 
+            this.btn_mainmenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mainmenu.BackgroundImage")));
+            this.btn_mainmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_mainmenu.FlatAppearance.BorderSize = 0;
+            this.btn_mainmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mainmenu.Location = new System.Drawing.Point(3, 27);
+            this.btn_mainmenu.TabStop = false;
+            this.btn_mainmenu.Text = "";
+            this.btn_mainmenu.Visible = false;
+            this.btn_mainmenu.Click += new System.EventHandler(this.btn_mainmenu_Click);
+            // 
+            // btn_nextQuestion
+            // 
+            this.btn_nextQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_nextQuestion.BackColor = System.Drawing.Color.White;
+            this.btn_nextQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nextQuestion.BackgroundImage")));
+            this.btn_nextQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nextQuestion.FlatAppearance.BorderSize = 0;
+            this.btn_nextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nextQuestion.ForeColor = System.Drawing.Color.Black;
+            this.btn_nextQuestion.Location = new System.Drawing.Point(707, 1);
+            this.btn_nextQuestion.Size = new System.Drawing.Size(80, 44);
+            this.btn_nextQuestion.TabStop = false;
+            this.btn_nextQuestion.Text = "";
+            this.btn_nextQuestion.UseVisualStyleBackColor = false;
+            this.btn_nextQuestion.Visible = false;
+            this.btn_nextQuestion.Click += new System.EventHandler(this.btn_nextQuestion_Click);
+            // 
+            // btn_preQuestion
+            // 
+            this.btn_preQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_preQuestion.BackgroundImage")));
+            this.btn_preQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_preQuestion.FlatAppearance.BorderSize = 0;
+            this.btn_preQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_preQuestion.Location = new System.Drawing.Point(649, 1);
+            this.btn_preQuestion.Size = new System.Drawing.Size(80, 44);
+            this.btn_preQuestion.TabStop = false;
+            this.btn_preQuestion.Text = "";
+            this.btn_preQuestion.Visible = false;
+            this.btn_preQuestion.Click += new System.EventHandler(this.btn_preQuestion_Click);
+            // 
+            // btn_quit
+            // 
+            this.btn_quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_quit.BackgroundImage")));
+            this.btn_quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_quit.FlatAppearance.BorderSize = 0;
+            this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_quit.Location = new System.Drawing.Point(52, 27);
+            this.btn_quit.TabStop = false;
+            this.btn_quit.Text = "";
+            this.btn_quit.Visible = false;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            // 
+            // btn_review
+            // 
+            this.btn_review.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_review.BackgroundImage")));
+            this.btn_review.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_review.FlatAppearance.BorderSize = 0;
+            this.btn_review.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_review.Location = new System.Drawing.Point(586, 1);
+            this.btn_review.Size = new System.Drawing.Size(80, 44);
+            this.btn_review.TabStop = false;
+            this.btn_review.Text = "";
+            this.btn_review.Visible = false;
+            this.btn_review.Click += new System.EventHandler(this.btn_review_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(652, 42);
+            this.button1.Size = new System.Drawing.Size(90, 30);
+            this.button1.TabStop = false;
+            this.button1.Text = "";
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbl_mode
+            // 
+            this.lbl_mode.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_mode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_mode.Location = new System.Drawing.Point(337, 40);
+            this.lbl_mode.Size = new System.Drawing.Size(111, 17);
+            this.lbl_mode.Visible = false;
+            // 
+            // lbl_questionNO
+            // 
+            this.lbl_questionNO.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_questionNO.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_questionNO.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_questionNO.Location = new System.Drawing.Point(341, 55);
+            this.lbl_questionNO.Size = new System.Drawing.Size(115, 15);
+            this.lbl_questionNO.Text = "";
+            this.lbl_questionNO.Visible = false;
+            // 
+            // lbl_timeremain
+            // 
+            this.lbl_timeremain.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_timeremain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_timeremain.Location = new System.Drawing.Point(722, 50);
+            this.lbl_timeremain.Size = new System.Drawing.Size(50, 16);
+            this.lbl_timeremain.Visible = false;
+            // 
+            // Sound_icon
+            // 
+            this.Sound_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sound_icon.BackgroundImage")));
+            this.Sound_icon.Location = new System.Drawing.Point(597, 36);
+            this.Sound_icon.Size = new System.Drawing.Size(74, 36);
+            this.Sound_icon.Visible = false;
+            this.Sound_icon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Sound_icon_MouseClick);
+            // 
+            // tb_sound
+            // 
+            this.tb_sound.BackColor = System.Drawing.Color.Silver;
+            this.tb_sound.Location = new System.Drawing.Point(490, 42);
+            this.tb_sound.Maximum = 2000;
+            this.tb_sound.SmallChange = 100;
+            this.tb_sound.TickFrequency = 10;
+            this.tb_sound.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tb_sound.Value = 1000;
+            this.tb_sound.Visible = false;
+            this.tb_sound.Scroll += new System.EventHandler(this.tb_sound_Scroll);
+            // 
+            // openMp3File
+            // 
             this.openMp3File.FileName = "openMp3File";
-            this.Timer_Listening.Interval = 0x3e8;
-            this.Timer_Listening.Tick += new EventHandler(this.Timer_Listening_Tick);
+            // 
+            // Timer_Listening
+            // 
+            this.Timer_Listening.Interval = 1000;
+            this.Timer_Listening.Tick += new System.EventHandler(this.Timer_Listening_Tick);
+            // 
+            // tabf_test
+            // 
             this.tabf_test.Controls.Add(this.tab_CoverForm);
             this.tabf_test.Controls.Add(this.tab_Reading);
             this.tabf_test.Controls.Add(this.tab_Listening);
             this.tabf_test.Controls.Add(this.tab_Speaking);
             this.tabf_test.Controls.Add(this.tab_Writing);
             this.tabf_test.Controls.Add(this.tabPage1);
-            this.tabf_test.DrawMode = TabDrawMode.OwnerDrawFixed;
-            this.tabf_test.Location = new Point(-1, 0x4f);
+            this.tabf_test.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabf_test.Location = new System.Drawing.Point(-1, 73);
             this.tabf_test.Multiline = true;
             this.tabf_test.Name = "tabf_test";
             this.tabf_test.SelectedIndex = 0;
-            this.tabf_test.Size = new Size(0x314, 0x229);
+            this.tabf_test.Size = new System.Drawing.Size(788, 510);
             this.tabf_test.TabIndex = 15;
             this.tabf_test.TabStop = false;
+            // 
+            // tab_CoverForm
+            // 
             this.tab_CoverForm.Controls.Add(this.tabf_tposelection);
-            this.tab_CoverForm.Location = new Point(4, 0x16);
+            this.tab_CoverForm.Location = new System.Drawing.Point(4, 22);
             this.tab_CoverForm.Name = "tab_CoverForm";
-            this.tab_CoverForm.Padding = new Padding(3);
-            this.tab_CoverForm.Size = new Size(780, 0x20f);
+            this.tab_CoverForm.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_CoverForm.Size = new System.Drawing.Size(780, 484);
             this.tab_CoverForm.TabIndex = 4;
             this.tab_CoverForm.Text = "CoverForm";
+            // 
+            // tabf_tposelection
+            // 
             this.tabf_tposelection.Controls.Add(this.TPO10);
-            this.tabf_tposelection.Location = new Point(-4, -22);
+            this.tabf_tposelection.Location = new System.Drawing.Point(-4, -20);
             this.tabf_tposelection.Name = "tabf_tposelection";
             this.tabf_tposelection.SelectedIndex = 0;
-            this.tabf_tposelection.Size = new Size(790, 0x21d);
+            this.tabf_tposelection.Size = new System.Drawing.Size(790, 499);
             this.tabf_tposelection.TabIndex = 1;
             this.tabf_tposelection.TabStop = false;
-            this.TPO10.BackColor = Color.White;
-            this.TPO10.BackgroundImageLayout = ImageLayout.Stretch;
+            // 
+            // TPO10
+            // 
+            this.TPO10.BackColor = System.Drawing.Color.White;
+            this.TPO10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TPO10.Controls.Add(this.btn_Review10);
             this.TPO10.Controls.Add(this.btn_Review09);
             this.TPO10.Controls.Add(this.btn_Review08);
@@ -2907,957 +2961,1199 @@
             this.TPO10.Controls.Add(this.lbl_top3);
             this.TPO10.Controls.Add(this.lbl_top2);
             this.TPO10.Controls.Add(this.lbl_top1);
-            this.TPO10.Location = new Point(4, 0x16);
+            this.TPO10.Location = new System.Drawing.Point(4, 22);
             this.TPO10.Name = "TPO10";
-            this.TPO10.Padding = new Padding(3);
-            this.TPO10.Size = new Size(0x30e, 0x203);
+            this.TPO10.Padding = new System.Windows.Forms.Padding(3);
+            this.TPO10.Size = new System.Drawing.Size(782, 473);
             this.TPO10.TabIndex = 0;
             this.TPO10.Text = "TPO1-10";
-            this.btn_Review10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review10.FlatStyle = FlatStyle.Flat;
-            this.btn_Review10.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review10.Location = new Point(0x215, 0x1ca);
+            // 
+            // btn_Review10
+            // 
+            this.btn_Review10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review10.Location = new System.Drawing.Point(533, 423);
             this.btn_Review10.Name = "btn_Review10";
-            this.btn_Review10.Size = new Size(100, 0x21);
-            this.btn_Review10.TabIndex = 0x39;
+            this.btn_Review10.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review10.TabIndex = 57;
             this.btn_Review10.TabStop = false;
             this.btn_Review10.Text = "START TEST";
             this.btn_Review10.UseVisualStyleBackColor = true;
-            this.btn_Review10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review09.FlatStyle = FlatStyle.Flat;
-            this.btn_Review09.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review09.Location = new Point(0x215, 0x1a0);
+            this.btn_Review10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review09
+            // 
+            this.btn_Review09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review09.Location = new System.Drawing.Point(533, 384);
             this.btn_Review09.Name = "btn_Review09";
-            this.btn_Review09.Size = new Size(100, 0x21);
-            this.btn_Review09.TabIndex = 0x38;
+            this.btn_Review09.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review09.TabIndex = 56;
             this.btn_Review09.TabStop = false;
             this.btn_Review09.Text = "START TEST";
             this.btn_Review09.UseVisualStyleBackColor = true;
-            this.btn_Review09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review08.FlatStyle = FlatStyle.Flat;
-            this.btn_Review08.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review08.Location = new Point(0x215, 0x170);
+            this.btn_Review09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review08
+            // 
+            this.btn_Review08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review08.Location = new System.Drawing.Point(533, 340);
             this.btn_Review08.Name = "btn_Review08";
-            this.btn_Review08.Size = new Size(100, 0x21);
-            this.btn_Review08.TabIndex = 0x37;
+            this.btn_Review08.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review08.TabIndex = 55;
             this.btn_Review08.TabStop = false;
             this.btn_Review08.Text = "START TEST";
             this.btn_Review08.UseVisualStyleBackColor = true;
-            this.btn_Review08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review07.FlatStyle = FlatStyle.Flat;
-            this.btn_Review07.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review07.Location = new Point(0x215, 0x13f);
+            this.btn_Review08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review07
+            // 
+            this.btn_Review07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review07.Location = new System.Drawing.Point(533, 294);
             this.btn_Review07.Name = "btn_Review07";
-            this.btn_Review07.Size = new Size(100, 0x21);
-            this.btn_Review07.TabIndex = 0x36;
+            this.btn_Review07.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review07.TabIndex = 54;
             this.btn_Review07.TabStop = false;
             this.btn_Review07.Text = "START TEST";
             this.btn_Review07.UseVisualStyleBackColor = true;
-            this.btn_Review07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review06.FlatStyle = FlatStyle.Flat;
-            this.btn_Review06.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review06.Location = new Point(0x215, 0x10d);
+            this.btn_Review07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review06
+            // 
+            this.btn_Review06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review06.Location = new System.Drawing.Point(533, 248);
             this.btn_Review06.Name = "btn_Review06";
-            this.btn_Review06.Size = new Size(100, 0x21);
-            this.btn_Review06.TabIndex = 0x35;
+            this.btn_Review06.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review06.TabIndex = 53;
             this.btn_Review06.TabStop = false;
             this.btn_Review06.Text = "START TEST";
             this.btn_Review06.UseVisualStyleBackColor = true;
-            this.btn_Review06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review05.FlatStyle = FlatStyle.Flat;
-            this.btn_Review05.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review05.Location = new Point(0x215, 0xdb);
+            this.btn_Review06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review05
+            // 
+            this.btn_Review05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review05.Location = new System.Drawing.Point(533, 202);
             this.btn_Review05.Name = "btn_Review05";
-            this.btn_Review05.Size = new Size(100, 0x21);
-            this.btn_Review05.TabIndex = 0x34;
+            this.btn_Review05.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review05.TabIndex = 52;
             this.btn_Review05.TabStop = false;
             this.btn_Review05.Text = "START TEST";
             this.btn_Review05.UseVisualStyleBackColor = true;
-            this.btn_Review05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review04.FlatStyle = FlatStyle.Flat;
-            this.btn_Review04.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review04.Location = new Point(0x215, 0xac);
+            this.btn_Review05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review04
+            // 
+            this.btn_Review04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review04.Location = new System.Drawing.Point(533, 159);
             this.btn_Review04.Name = "btn_Review04";
-            this.btn_Review04.Size = new Size(100, 0x21);
-            this.btn_Review04.TabIndex = 0x33;
+            this.btn_Review04.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review04.TabIndex = 51;
             this.btn_Review04.TabStop = false;
             this.btn_Review04.Text = "START TEST";
             this.btn_Review04.UseVisualStyleBackColor = true;
-            this.btn_Review04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review03.FlatStyle = FlatStyle.Flat;
-            this.btn_Review03.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review03.Location = new Point(0x215, 0x76);
+            this.btn_Review04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review03
+            // 
+            this.btn_Review03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review03.Location = new System.Drawing.Point(533, 109);
             this.btn_Review03.Name = "btn_Review03";
-            this.btn_Review03.Size = new Size(100, 0x21);
+            this.btn_Review03.Size = new System.Drawing.Size(100, 30);
             this.btn_Review03.TabIndex = 50;
             this.btn_Review03.TabStop = false;
             this.btn_Review03.Text = "START TEST";
             this.btn_Review03.UseVisualStyleBackColor = true;
-            this.btn_Review03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review02.FlatStyle = FlatStyle.Flat;
-            this.btn_Review02.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review02.Location = new Point(0x215, 0x3f);
+            this.btn_Review03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review02
+            // 
+            this.btn_Review02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review02.Location = new System.Drawing.Point(533, 58);
             this.btn_Review02.Name = "btn_Review02";
-            this.btn_Review02.Size = new Size(100, 0x21);
-            this.btn_Review02.TabIndex = 0x31;
+            this.btn_Review02.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review02.TabIndex = 49;
             this.btn_Review02.TabStop = false;
             this.btn_Review02.Text = "START TEST";
             this.btn_Review02.UseVisualStyleBackColor = true;
-            this.btn_Review02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Review01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Review01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Review01.FlatStyle = FlatStyle.Flat;
-            this.btn_Review01.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Review01.Location = new Point(0x215, 0x12);
+            this.btn_Review02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Review01
+            // 
+            this.btn_Review01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Review01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Review01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Review01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Review01.Location = new System.Drawing.Point(533, 17);
             this.btn_Review01.Name = "btn_Review01";
-            this.btn_Review01.Size = new Size(100, 0x21);
-            this.btn_Review01.TabIndex = 0x30;
+            this.btn_Review01.Size = new System.Drawing.Size(100, 30);
+            this.btn_Review01.TabIndex = 48;
             this.btn_Review01.TabStop = false;
             this.btn_Review01.Text = "START TEST";
             this.btn_Review01.UseVisualStyleBackColor = true;
-            this.btn_Review01.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer10.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer10.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer10.Location = new Point(0x282, 0x1ca);
+            this.btn_Review01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer10
+            // 
+            this.btn_Answer10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer10.Location = new System.Drawing.Point(642, 423);
             this.btn_Answer10.Name = "btn_Answer10";
-            this.btn_Answer10.Size = new Size(80, 0x21);
-            this.btn_Answer10.TabIndex = 0x2f;
+            this.btn_Answer10.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer10.TabIndex = 47;
             this.btn_Answer10.TabStop = false;
             this.btn_Answer10.Text = "VIEW ANSWERS";
             this.btn_Answer10.UseVisualStyleBackColor = true;
-            this.btn_Answer10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer09.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer09.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer09.Location = new Point(0x282, 0x1a0);
+            this.btn_Answer10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer09
+            // 
+            this.btn_Answer09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer09.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer09.Location = new System.Drawing.Point(642, 384);
             this.btn_Answer09.Name = "btn_Answer09";
-            this.btn_Answer09.Size = new Size(80, 0x21);
-            this.btn_Answer09.TabIndex = 0x2e;
+            this.btn_Answer09.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer09.TabIndex = 46;
             this.btn_Answer09.TabStop = false;
             this.btn_Answer09.Text = "VIEW ANSWERS";
             this.btn_Answer09.UseVisualStyleBackColor = true;
-            this.btn_Answer09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer08.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer08.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer08.Location = new Point(0x282, 0x170);
+            this.btn_Answer09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer08
+            // 
+            this.btn_Answer08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer08.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer08.Location = new System.Drawing.Point(642, 340);
             this.btn_Answer08.Name = "btn_Answer08";
-            this.btn_Answer08.Size = new Size(80, 0x21);
-            this.btn_Answer08.TabIndex = 0x2d;
+            this.btn_Answer08.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer08.TabIndex = 45;
             this.btn_Answer08.TabStop = false;
             this.btn_Answer08.Text = "VIEW ANSWERS";
             this.btn_Answer08.UseVisualStyleBackColor = true;
-            this.btn_Answer08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer07.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer07.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer07.Location = new Point(0x282, 0x13f);
+            this.btn_Answer08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer07
+            // 
+            this.btn_Answer07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer07.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer07.Location = new System.Drawing.Point(642, 294);
             this.btn_Answer07.Name = "btn_Answer07";
-            this.btn_Answer07.Size = new Size(80, 0x21);
-            this.btn_Answer07.TabIndex = 0x2c;
+            this.btn_Answer07.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer07.TabIndex = 44;
             this.btn_Answer07.TabStop = false;
             this.btn_Answer07.Text = "VIEW ANSWERS";
             this.btn_Answer07.UseVisualStyleBackColor = true;
-            this.btn_Answer07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer06.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer06.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer06.Location = new Point(0x282, 0x10d);
+            this.btn_Answer07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer06
+            // 
+            this.btn_Answer06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer06.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer06.Location = new System.Drawing.Point(642, 248);
             this.btn_Answer06.Name = "btn_Answer06";
-            this.btn_Answer06.Size = new Size(80, 0x21);
-            this.btn_Answer06.TabIndex = 0x2b;
+            this.btn_Answer06.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer06.TabIndex = 43;
             this.btn_Answer06.TabStop = false;
             this.btn_Answer06.Text = "VIEW ANSWERS";
             this.btn_Answer06.UseVisualStyleBackColor = true;
-            this.btn_Answer06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer05.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer05.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer05.Location = new Point(0x282, 0xdb);
+            this.btn_Answer06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer05
+            // 
+            this.btn_Answer05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer05.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer05.Location = new System.Drawing.Point(642, 202);
             this.btn_Answer05.Name = "btn_Answer05";
-            this.btn_Answer05.Size = new Size(80, 0x21);
-            this.btn_Answer05.TabIndex = 0x2a;
+            this.btn_Answer05.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer05.TabIndex = 42;
             this.btn_Answer05.TabStop = false;
             this.btn_Answer05.Text = "VIEW ANSWERS";
             this.btn_Answer05.UseVisualStyleBackColor = true;
-            this.btn_Answer05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer04.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer04.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer04.Location = new Point(0x282, 0xac);
+            this.btn_Answer05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer04
+            // 
+            this.btn_Answer04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer04.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer04.Location = new System.Drawing.Point(642, 159);
             this.btn_Answer04.Name = "btn_Answer04";
-            this.btn_Answer04.Size = new Size(80, 0x21);
-            this.btn_Answer04.TabIndex = 0x29;
+            this.btn_Answer04.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer04.TabIndex = 41;
             this.btn_Answer04.TabStop = false;
             this.btn_Answer04.Text = "VIEW ANSWERS";
             this.btn_Answer04.UseVisualStyleBackColor = true;
-            this.btn_Answer04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer03.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer03.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer03.Location = new Point(0x282, 0x76);
+            this.btn_Answer04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer03
+            // 
+            this.btn_Answer03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer03.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer03.Location = new System.Drawing.Point(642, 109);
             this.btn_Answer03.Name = "btn_Answer03";
-            this.btn_Answer03.Size = new Size(80, 0x21);
+            this.btn_Answer03.Size = new System.Drawing.Size(80, 30);
             this.btn_Answer03.TabIndex = 40;
             this.btn_Answer03.TabStop = false;
             this.btn_Answer03.Text = "VIEW ANSWERS";
             this.btn_Answer03.UseVisualStyleBackColor = true;
-            this.btn_Answer03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer02.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer02.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer02.Location = new Point(0x282, 0x3f);
+            this.btn_Answer03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer02
+            // 
+            this.btn_Answer02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer02.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer02.Location = new System.Drawing.Point(642, 58);
             this.btn_Answer02.Name = "btn_Answer02";
-            this.btn_Answer02.Size = new Size(80, 0x21);
-            this.btn_Answer02.TabIndex = 0x27;
+            this.btn_Answer02.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer02.TabIndex = 39;
             this.btn_Answer02.TabStop = false;
             this.btn_Answer02.Text = "VIEW ANSWERS";
             this.btn_Answer02.UseVisualStyleBackColor = true;
-            this.btn_Answer02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_Answer01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_Answer01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_Answer01.FlatStyle = FlatStyle.Flat;
-            this.btn_Answer01.Font = new Font("Microsoft Sans Serif", 6f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_Answer01.Location = new Point(0x282, 0x12);
+            this.btn_Answer02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_Answer01
+            // 
+            this.btn_Answer01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Answer01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Answer01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Answer01.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Answer01.Location = new System.Drawing.Point(642, 17);
             this.btn_Answer01.Name = "btn_Answer01";
-            this.btn_Answer01.Size = new Size(80, 0x21);
-            this.btn_Answer01.TabIndex = 0x26;
+            this.btn_Answer01.Size = new System.Drawing.Size(80, 30);
+            this.btn_Answer01.TabIndex = 38;
             this.btn_Answer01.TabStop = false;
             this.btn_Answer01.Text = "VIEW ANSWERS";
             this.btn_Answer01.UseVisualStyleBackColor = true;
-            this.btn_Answer01.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking10.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking10.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking10.Location = new Point(310, 0x1ca);
+            this.btn_Answer01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking10
+            // 
+            this.btn_LoadSpeaking10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking10.Location = new System.Drawing.Point(310, 423);
             this.btn_LoadSpeaking10.Name = "btn_LoadSpeaking10";
-            this.btn_LoadSpeaking10.Size = new Size(80, 0x21);
-            this.btn_LoadSpeaking10.TabIndex = 0x24;
+            this.btn_LoadSpeaking10.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadSpeaking10.TabIndex = 36;
             this.btn_LoadSpeaking10.TabStop = false;
             this.btn_LoadSpeaking10.Text = "SPEAKING";
             this.btn_LoadSpeaking10.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting10.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting10.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting10.Location = new Point(0x1a7, 0x1ca);
+            this.btn_LoadSpeaking10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting10
+            // 
+            this.btn_LoadWriting10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting10.Location = new System.Drawing.Point(423, 423);
             this.btn_LoadWriting10.Name = "btn_LoadWriting10";
-            this.btn_LoadWriting10.Size = new Size(80, 0x21);
-            this.btn_LoadWriting10.TabIndex = 0x25;
+            this.btn_LoadWriting10.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting10.TabIndex = 37;
             this.btn_LoadWriting10.TabStop = false;
             this.btn_LoadWriting10.Text = "WRITING";
             this.btn_LoadWriting10.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening10.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening10.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening10.Location = new Point(0xc5, 0x1ca);
+            this.btn_LoadWriting10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening10
+            // 
+            this.btn_LoadListening10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening10.Location = new System.Drawing.Point(197, 423);
             this.btn_LoadListening10.Name = "btn_LoadListening10";
-            this.btn_LoadListening10.Size = new Size(80, 0x21);
-            this.btn_LoadListening10.TabIndex = 0x22;
+            this.btn_LoadListening10.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadListening10.TabIndex = 34;
             this.btn_LoadListening10.TabStop = false;
             this.btn_LoadListening10.Text = "LISTENING";
             this.btn_LoadListening10.UseVisualStyleBackColor = true;
-            this.btn_LoadListening10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading10.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading10.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading10.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading10.Location = new Point(80, 0x1ca);
+            this.btn_LoadListening10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading10
+            // 
+            this.btn_LoadReading10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading10.Location = new System.Drawing.Point(80, 423);
             this.btn_LoadReading10.Name = "btn_LoadReading10";
-            this.btn_LoadReading10.Size = new Size(80, 0x21);
-            this.btn_LoadReading10.TabIndex = 0x23;
+            this.btn_LoadReading10.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadReading10.TabIndex = 35;
             this.btn_LoadReading10.TabStop = false;
             this.btn_LoadReading10.Text = "READING";
             this.btn_LoadReading10.UseVisualStyleBackColor = true;
-            this.btn_LoadReading10.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking09.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking09.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking09.Location = new Point(310, 0x1a0);
+            this.btn_LoadReading10.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking09
+            // 
+            this.btn_LoadSpeaking09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking09.Location = new System.Drawing.Point(310, 384);
             this.btn_LoadSpeaking09.Name = "btn_LoadSpeaking09";
-            this.btn_LoadSpeaking09.Size = new Size(80, 0x21);
-            this.btn_LoadSpeaking09.TabIndex = 0x20;
+            this.btn_LoadSpeaking09.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadSpeaking09.TabIndex = 32;
             this.btn_LoadSpeaking09.TabStop = false;
             this.btn_LoadSpeaking09.Text = "SPEAKING";
             this.btn_LoadSpeaking09.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting09.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting09.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting09.Location = new Point(0x1a7, 0x1a0);
+            this.btn_LoadSpeaking09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting09
+            // 
+            this.btn_LoadWriting09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting09.Location = new System.Drawing.Point(423, 384);
             this.btn_LoadWriting09.Name = "btn_LoadWriting09";
-            this.btn_LoadWriting09.Size = new Size(80, 0x21);
-            this.btn_LoadWriting09.TabIndex = 0x21;
+            this.btn_LoadWriting09.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting09.TabIndex = 33;
             this.btn_LoadWriting09.TabStop = false;
             this.btn_LoadWriting09.Text = "WRITING";
             this.btn_LoadWriting09.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening09.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening09.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening09.Location = new Point(0xc5, 0x1a0);
+            this.btn_LoadWriting09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening09
+            // 
+            this.btn_LoadListening09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening09.Location = new System.Drawing.Point(197, 384);
             this.btn_LoadListening09.Name = "btn_LoadListening09";
-            this.btn_LoadListening09.Size = new Size(80, 0x21);
+            this.btn_LoadListening09.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening09.TabIndex = 30;
             this.btn_LoadListening09.TabStop = false;
             this.btn_LoadListening09.Text = "LISTENING";
             this.btn_LoadListening09.UseVisualStyleBackColor = true;
-            this.btn_LoadListening09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading09.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading09.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading09.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading09.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading09.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading09.Location = new Point(80, 0x1a0);
+            this.btn_LoadListening09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading09
+            // 
+            this.btn_LoadReading09.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading09.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading09.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading09.Location = new System.Drawing.Point(80, 384);
             this.btn_LoadReading09.Name = "btn_LoadReading09";
-            this.btn_LoadReading09.Size = new Size(80, 0x21);
-            this.btn_LoadReading09.TabIndex = 0x1f;
+            this.btn_LoadReading09.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadReading09.TabIndex = 31;
             this.btn_LoadReading09.TabStop = false;
             this.btn_LoadReading09.Text = "READING";
             this.btn_LoadReading09.UseVisualStyleBackColor = true;
-            this.btn_LoadReading09.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking08.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking08.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking08.Location = new Point(310, 0x170);
+            this.btn_LoadReading09.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking08
+            // 
+            this.btn_LoadSpeaking08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking08.Location = new System.Drawing.Point(310, 340);
             this.btn_LoadSpeaking08.Name = "btn_LoadSpeaking08";
-            this.btn_LoadSpeaking08.Size = new Size(80, 0x21);
-            this.btn_LoadSpeaking08.TabIndex = 0x1c;
+            this.btn_LoadSpeaking08.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadSpeaking08.TabIndex = 28;
             this.btn_LoadSpeaking08.TabStop = false;
             this.btn_LoadSpeaking08.Text = "SPEAKING";
             this.btn_LoadSpeaking08.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting08.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting08.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting08.Location = new Point(0x1a7, 0x170);
+            this.btn_LoadSpeaking08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting08
+            // 
+            this.btn_LoadWriting08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting08.Location = new System.Drawing.Point(423, 340);
             this.btn_LoadWriting08.Name = "btn_LoadWriting08";
-            this.btn_LoadWriting08.Size = new Size(80, 0x21);
-            this.btn_LoadWriting08.TabIndex = 0x1d;
+            this.btn_LoadWriting08.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting08.TabIndex = 29;
             this.btn_LoadWriting08.TabStop = false;
             this.btn_LoadWriting08.Text = "WRITING";
             this.btn_LoadWriting08.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening08.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening08.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening08.Location = new Point(0xc5, 0x170);
+            this.btn_LoadWriting08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening08
+            // 
+            this.btn_LoadListening08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening08.Location = new System.Drawing.Point(197, 340);
             this.btn_LoadListening08.Name = "btn_LoadListening08";
-            this.btn_LoadListening08.Size = new Size(80, 0x21);
-            this.btn_LoadListening08.TabIndex = 0x1a;
+            this.btn_LoadListening08.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadListening08.TabIndex = 26;
             this.btn_LoadListening08.TabStop = false;
             this.btn_LoadListening08.Text = "LISTENING";
             this.btn_LoadListening08.UseVisualStyleBackColor = true;
-            this.btn_LoadListening08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading08.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading08.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading08.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading08.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading08.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading08.Location = new Point(80, 0x170);
+            this.btn_LoadListening08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading08
+            // 
+            this.btn_LoadReading08.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading08.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading08.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading08.Location = new System.Drawing.Point(80, 340);
             this.btn_LoadReading08.Name = "btn_LoadReading08";
-            this.btn_LoadReading08.Size = new Size(80, 0x21);
-            this.btn_LoadReading08.TabIndex = 0x1b;
+            this.btn_LoadReading08.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadReading08.TabIndex = 27;
             this.btn_LoadReading08.TabStop = false;
             this.btn_LoadReading08.Text = "READING";
             this.btn_LoadReading08.UseVisualStyleBackColor = true;
-            this.btn_LoadReading08.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking07.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking07.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking07.Location = new Point(310, 0x13f);
+            this.btn_LoadReading08.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking07
+            // 
+            this.btn_LoadSpeaking07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking07.Location = new System.Drawing.Point(310, 294);
             this.btn_LoadSpeaking07.Name = "btn_LoadSpeaking07";
-            this.btn_LoadSpeaking07.Size = new Size(80, 0x21);
-            this.btn_LoadSpeaking07.TabIndex = 0x18;
+            this.btn_LoadSpeaking07.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadSpeaking07.TabIndex = 24;
             this.btn_LoadSpeaking07.TabStop = false;
             this.btn_LoadSpeaking07.Text = "SPEAKING";
             this.btn_LoadSpeaking07.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting07.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting07.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting07.Location = new Point(0x1a7, 0x13f);
+            this.btn_LoadSpeaking07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting07
+            // 
+            this.btn_LoadWriting07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting07.Location = new System.Drawing.Point(423, 294);
             this.btn_LoadWriting07.Name = "btn_LoadWriting07";
-            this.btn_LoadWriting07.Size = new Size(80, 0x21);
-            this.btn_LoadWriting07.TabIndex = 0x19;
+            this.btn_LoadWriting07.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting07.TabIndex = 25;
             this.btn_LoadWriting07.TabStop = false;
             this.btn_LoadWriting07.Text = "WRITING";
             this.btn_LoadWriting07.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening07.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening07.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening07.Location = new Point(0xc5, 0x13f);
+            this.btn_LoadWriting07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening07
+            // 
+            this.btn_LoadListening07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening07.Location = new System.Drawing.Point(197, 294);
             this.btn_LoadListening07.Name = "btn_LoadListening07";
-            this.btn_LoadListening07.Size = new Size(80, 0x21);
-            this.btn_LoadListening07.TabIndex = 0x16;
+            this.btn_LoadListening07.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadListening07.TabIndex = 22;
             this.btn_LoadListening07.TabStop = false;
             this.btn_LoadListening07.Text = "LISTENING";
             this.btn_LoadListening07.UseVisualStyleBackColor = true;
-            this.btn_LoadListening07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading07.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading07.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading07.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading07.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading07.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading07.Location = new Point(80, 0x13f);
+            this.btn_LoadListening07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading07
+            // 
+            this.btn_LoadReading07.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading07.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading07.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading07.Location = new System.Drawing.Point(80, 294);
             this.btn_LoadReading07.Name = "btn_LoadReading07";
-            this.btn_LoadReading07.Size = new Size(80, 0x21);
-            this.btn_LoadReading07.TabIndex = 0x17;
+            this.btn_LoadReading07.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadReading07.TabIndex = 23;
             this.btn_LoadReading07.TabStop = false;
             this.btn_LoadReading07.Text = "READING";
             this.btn_LoadReading07.UseVisualStyleBackColor = true;
-            this.btn_LoadReading07.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking06.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking06.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking06.Location = new Point(310, 0x10d);
+            this.btn_LoadReading07.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking06
+            // 
+            this.btn_LoadSpeaking06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking06.Location = new System.Drawing.Point(310, 248);
             this.btn_LoadSpeaking06.Name = "btn_LoadSpeaking06";
-            this.btn_LoadSpeaking06.Size = new Size(80, 0x21);
+            this.btn_LoadSpeaking06.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadSpeaking06.TabIndex = 20;
             this.btn_LoadSpeaking06.TabStop = false;
             this.btn_LoadSpeaking06.Text = "SPEAKING";
             this.btn_LoadSpeaking06.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting06.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting06.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting06.Location = new Point(0x1a7, 0x10d);
+            this.btn_LoadSpeaking06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting06
+            // 
+            this.btn_LoadWriting06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting06.Location = new System.Drawing.Point(423, 248);
             this.btn_LoadWriting06.Name = "btn_LoadWriting06";
-            this.btn_LoadWriting06.Size = new Size(80, 0x21);
-            this.btn_LoadWriting06.TabIndex = 0x15;
+            this.btn_LoadWriting06.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting06.TabIndex = 21;
             this.btn_LoadWriting06.TabStop = false;
             this.btn_LoadWriting06.Text = "WRITING";
             this.btn_LoadWriting06.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening06.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening06.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening06.Location = new Point(0xc5, 0x10d);
+            this.btn_LoadWriting06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening06
+            // 
+            this.btn_LoadListening06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening06.Location = new System.Drawing.Point(197, 248);
             this.btn_LoadListening06.Name = "btn_LoadListening06";
-            this.btn_LoadListening06.Size = new Size(80, 0x21);
-            this.btn_LoadListening06.TabIndex = 0x12;
+            this.btn_LoadListening06.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadListening06.TabIndex = 18;
             this.btn_LoadListening06.TabStop = false;
             this.btn_LoadListening06.Text = "LISTENING";
             this.btn_LoadListening06.UseVisualStyleBackColor = true;
-            this.btn_LoadListening06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading06.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading06.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading06.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading06.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading06.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading06.Location = new Point(80, 0x10d);
+            this.btn_LoadListening06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading06
+            // 
+            this.btn_LoadReading06.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading06.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading06.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading06.Location = new System.Drawing.Point(80, 248);
             this.btn_LoadReading06.Name = "btn_LoadReading06";
-            this.btn_LoadReading06.Size = new Size(80, 0x21);
-            this.btn_LoadReading06.TabIndex = 0x13;
+            this.btn_LoadReading06.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadReading06.TabIndex = 19;
             this.btn_LoadReading06.TabStop = false;
             this.btn_LoadReading06.Text = "READING";
             this.btn_LoadReading06.UseVisualStyleBackColor = true;
-            this.btn_LoadReading06.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking05.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking05.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking05.Location = new Point(310, 0xdb);
+            this.btn_LoadReading06.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking05
+            // 
+            this.btn_LoadSpeaking05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking05.Location = new System.Drawing.Point(310, 202);
             this.btn_LoadSpeaking05.Name = "btn_LoadSpeaking05";
-            this.btn_LoadSpeaking05.Size = new Size(80, 0x21);
-            this.btn_LoadSpeaking05.TabIndex = 0x10;
+            this.btn_LoadSpeaking05.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadSpeaking05.TabIndex = 16;
             this.btn_LoadSpeaking05.TabStop = false;
             this.btn_LoadSpeaking05.Text = "SPEAKING";
             this.btn_LoadSpeaking05.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting05.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting05.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting05.Location = new Point(0x1a7, 0xdb);
+            this.btn_LoadSpeaking05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting05
+            // 
+            this.btn_LoadWriting05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting05.Location = new System.Drawing.Point(423, 202);
             this.btn_LoadWriting05.Name = "btn_LoadWriting05";
-            this.btn_LoadWriting05.Size = new Size(80, 0x21);
-            this.btn_LoadWriting05.TabIndex = 0x11;
+            this.btn_LoadWriting05.Size = new System.Drawing.Size(80, 30);
+            this.btn_LoadWriting05.TabIndex = 17;
             this.btn_LoadWriting05.TabStop = false;
             this.btn_LoadWriting05.Text = "WRITING";
             this.btn_LoadWriting05.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening05.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening05.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening05.Location = new Point(0xc5, 0xdb);
+            this.btn_LoadWriting05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening05
+            // 
+            this.btn_LoadListening05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening05.Location = new System.Drawing.Point(197, 202);
             this.btn_LoadListening05.Name = "btn_LoadListening05";
-            this.btn_LoadListening05.Size = new Size(80, 0x21);
+            this.btn_LoadListening05.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening05.TabIndex = 14;
             this.btn_LoadListening05.TabStop = false;
             this.btn_LoadListening05.Text = "LISTENING";
             this.btn_LoadListening05.UseVisualStyleBackColor = true;
-            this.btn_LoadListening05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading05.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading05.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading05.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading05.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading05.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading05.Location = new Point(80, 0xdb);
+            this.btn_LoadListening05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading05
+            // 
+            this.btn_LoadReading05.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading05.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading05.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading05.Location = new System.Drawing.Point(80, 202);
             this.btn_LoadReading05.Name = "btn_LoadReading05";
-            this.btn_LoadReading05.Size = new Size(80, 0x21);
+            this.btn_LoadReading05.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadReading05.TabIndex = 15;
             this.btn_LoadReading05.TabStop = false;
             this.btn_LoadReading05.Text = "READING";
             this.btn_LoadReading05.UseVisualStyleBackColor = true;
-            this.btn_LoadReading05.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking04.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking04.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking04.Location = new Point(310, 0xac);
+            this.btn_LoadReading05.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking04
+            // 
+            this.btn_LoadSpeaking04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking04.Location = new System.Drawing.Point(310, 159);
             this.btn_LoadSpeaking04.Name = "btn_LoadSpeaking04";
-            this.btn_LoadSpeaking04.Size = new Size(80, 0x21);
+            this.btn_LoadSpeaking04.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadSpeaking04.TabIndex = 12;
             this.btn_LoadSpeaking04.TabStop = false;
             this.btn_LoadSpeaking04.Text = "SPEAKING";
             this.btn_LoadSpeaking04.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting04.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting04.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting04.Location = new Point(0x1a7, 0xac);
+            this.btn_LoadSpeaking04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting04
+            // 
+            this.btn_LoadWriting04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting04.Location = new System.Drawing.Point(423, 159);
             this.btn_LoadWriting04.Name = "btn_LoadWriting04";
-            this.btn_LoadWriting04.Size = new Size(80, 0x21);
+            this.btn_LoadWriting04.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadWriting04.TabIndex = 13;
             this.btn_LoadWriting04.TabStop = false;
             this.btn_LoadWriting04.Text = "WRITING";
             this.btn_LoadWriting04.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening04.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening04.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening04.Location = new Point(0xc5, 0xac);
+            this.btn_LoadWriting04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening04
+            // 
+            this.btn_LoadListening04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening04.Location = new System.Drawing.Point(197, 159);
             this.btn_LoadListening04.Name = "btn_LoadListening04";
-            this.btn_LoadListening04.Size = new Size(80, 0x21);
+            this.btn_LoadListening04.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening04.TabIndex = 10;
             this.btn_LoadListening04.TabStop = false;
             this.btn_LoadListening04.Text = "LISTENING";
             this.btn_LoadListening04.UseVisualStyleBackColor = true;
-            this.btn_LoadListening04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading04.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading04.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading04.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading04.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading04.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading04.Location = new Point(80, 0xac);
+            this.btn_LoadListening04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading04
+            // 
+            this.btn_LoadReading04.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading04.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading04.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading04.Location = new System.Drawing.Point(80, 159);
             this.btn_LoadReading04.Name = "btn_LoadReading04";
-            this.btn_LoadReading04.Size = new Size(80, 0x21);
+            this.btn_LoadReading04.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadReading04.TabIndex = 11;
             this.btn_LoadReading04.TabStop = false;
             this.btn_LoadReading04.Text = "READING";
             this.btn_LoadReading04.UseVisualStyleBackColor = true;
-            this.btn_LoadReading04.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking03.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking03.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking03.Location = new Point(310, 0x76);
+            this.btn_LoadReading04.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking03
+            // 
+            this.btn_LoadSpeaking03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking03.Location = new System.Drawing.Point(310, 109);
             this.btn_LoadSpeaking03.Name = "btn_LoadSpeaking03";
-            this.btn_LoadSpeaking03.Size = new Size(80, 0x21);
+            this.btn_LoadSpeaking03.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadSpeaking03.TabIndex = 8;
             this.btn_LoadSpeaking03.TabStop = false;
             this.btn_LoadSpeaking03.Text = "SPEAKING";
             this.btn_LoadSpeaking03.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting03.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting03.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting03.Location = new Point(0x1a7, 0x76);
+            this.btn_LoadSpeaking03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting03
+            // 
+            this.btn_LoadWriting03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting03.Location = new System.Drawing.Point(423, 109);
             this.btn_LoadWriting03.Name = "btn_LoadWriting03";
-            this.btn_LoadWriting03.Size = new Size(80, 0x21);
+            this.btn_LoadWriting03.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadWriting03.TabIndex = 9;
             this.btn_LoadWriting03.TabStop = false;
             this.btn_LoadWriting03.Text = "WRITING";
             this.btn_LoadWriting03.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening03.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening03.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening03.Location = new Point(0xc5, 0x76);
+            this.btn_LoadWriting03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening03
+            // 
+            this.btn_LoadListening03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening03.Location = new System.Drawing.Point(197, 109);
             this.btn_LoadListening03.Name = "btn_LoadListening03";
-            this.btn_LoadListening03.Size = new Size(80, 0x21);
+            this.btn_LoadListening03.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening03.TabIndex = 6;
             this.btn_LoadListening03.TabStop = false;
             this.btn_LoadListening03.Text = "LISTENING";
             this.btn_LoadListening03.UseVisualStyleBackColor = true;
-            this.btn_LoadListening03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading03.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading03.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading03.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading03.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading03.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading03.Location = new Point(80, 0x76);
+            this.btn_LoadListening03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading03
+            // 
+            this.btn_LoadReading03.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading03.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading03.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading03.Location = new System.Drawing.Point(80, 109);
             this.btn_LoadReading03.Name = "btn_LoadReading03";
-            this.btn_LoadReading03.Size = new Size(80, 0x21);
+            this.btn_LoadReading03.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadReading03.TabIndex = 7;
             this.btn_LoadReading03.TabStop = false;
             this.btn_LoadReading03.Text = "READING";
             this.btn_LoadReading03.UseVisualStyleBackColor = true;
-            this.btn_LoadReading03.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking02.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking02.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking02.Location = new Point(310, 0x3f);
+            this.btn_LoadReading03.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking02
+            // 
+            this.btn_LoadSpeaking02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking02.Location = new System.Drawing.Point(310, 58);
             this.btn_LoadSpeaking02.Name = "btn_LoadSpeaking02";
-            this.btn_LoadSpeaking02.Size = new Size(80, 0x21);
+            this.btn_LoadSpeaking02.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadSpeaking02.TabIndex = 4;
             this.btn_LoadSpeaking02.TabStop = false;
             this.btn_LoadSpeaking02.Text = "SPEAKING";
             this.btn_LoadSpeaking02.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting02.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting02.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting02.Location = new Point(0x1a7, 0x3f);
+            this.btn_LoadSpeaking02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting02
+            // 
+            this.btn_LoadWriting02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting02.Location = new System.Drawing.Point(423, 58);
             this.btn_LoadWriting02.Name = "btn_LoadWriting02";
-            this.btn_LoadWriting02.Size = new Size(80, 0x21);
+            this.btn_LoadWriting02.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadWriting02.TabIndex = 5;
             this.btn_LoadWriting02.TabStop = false;
             this.btn_LoadWriting02.Text = "WRITING";
             this.btn_LoadWriting02.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening02.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening02.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening02.Location = new Point(0xc5, 0x3f);
+            this.btn_LoadWriting02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening02
+            // 
+            this.btn_LoadListening02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening02.Location = new System.Drawing.Point(197, 58);
             this.btn_LoadListening02.Name = "btn_LoadListening02";
-            this.btn_LoadListening02.Size = new Size(80, 0x21);
+            this.btn_LoadListening02.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening02.TabIndex = 2;
             this.btn_LoadListening02.TabStop = false;
             this.btn_LoadListening02.Text = "LISTENING";
             this.btn_LoadListening02.UseVisualStyleBackColor = true;
-            this.btn_LoadListening02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading02.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading02.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading02.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading02.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading02.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading02.Location = new Point(80, 0x3f);
+            this.btn_LoadListening02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading02
+            // 
+            this.btn_LoadReading02.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading02.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading02.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading02.Location = new System.Drawing.Point(80, 58);
             this.btn_LoadReading02.Name = "btn_LoadReading02";
-            this.btn_LoadReading02.Size = new Size(80, 0x21);
+            this.btn_LoadReading02.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadReading02.TabIndex = 3;
             this.btn_LoadReading02.TabStop = false;
             this.btn_LoadReading02.Text = "READING";
             this.btn_LoadReading02.UseVisualStyleBackColor = true;
-            this.btn_LoadReading02.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadSpeaking01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadSpeaking01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadSpeaking01.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadSpeaking01.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadSpeaking01.Location = new Point(310, 0x12);
+            this.btn_LoadReading02.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadSpeaking01
+            // 
+            this.btn_LoadSpeaking01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadSpeaking01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadSpeaking01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadSpeaking01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadSpeaking01.Location = new System.Drawing.Point(310, 17);
             this.btn_LoadSpeaking01.Name = "btn_LoadSpeaking01";
-            this.btn_LoadSpeaking01.Size = new Size(80, 0x21);
+            this.btn_LoadSpeaking01.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadSpeaking01.TabIndex = 1;
             this.btn_LoadSpeaking01.TabStop = false;
             this.btn_LoadSpeaking01.Text = "SPEAKING";
             this.btn_LoadSpeaking01.UseVisualStyleBackColor = true;
-            this.btn_LoadSpeaking01.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadWriting01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadWriting01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadWriting01.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadWriting01.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadWriting01.Location = new Point(0x1a7, 0x12);
+            this.btn_LoadSpeaking01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadWriting01
+            // 
+            this.btn_LoadWriting01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadWriting01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadWriting01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadWriting01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadWriting01.Location = new System.Drawing.Point(423, 17);
             this.btn_LoadWriting01.Name = "btn_LoadWriting01";
-            this.btn_LoadWriting01.Size = new Size(80, 0x21);
+            this.btn_LoadWriting01.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadWriting01.TabIndex = 1;
             this.btn_LoadWriting01.TabStop = false;
             this.btn_LoadWriting01.Text = "WRITING";
             this.btn_LoadWriting01.UseVisualStyleBackColor = true;
-            this.btn_LoadWriting01.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadListening01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadListening01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadListening01.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadListening01.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadListening01.Location = new Point(0xc5, 0x12);
+            this.btn_LoadWriting01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadListening01
+            // 
+            this.btn_LoadListening01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadListening01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadListening01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadListening01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadListening01.Location = new System.Drawing.Point(197, 17);
             this.btn_LoadListening01.Name = "btn_LoadListening01";
-            this.btn_LoadListening01.Size = new Size(80, 0x21);
+            this.btn_LoadListening01.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadListening01.TabIndex = 1;
             this.btn_LoadListening01.TabStop = false;
             this.btn_LoadListening01.Text = "LISTENING";
             this.btn_LoadListening01.UseVisualStyleBackColor = true;
-            this.btn_LoadListening01.Click += new EventHandler(this.btn_LoadTest_Click);
-            this.btn_LoadReading01.FlatAppearance.BorderColor = Color.Black;
-            this.btn_LoadReading01.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading01.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x40, 0x40, 0x40);
-            this.btn_LoadReading01.FlatStyle = FlatStyle.Flat;
-            this.btn_LoadReading01.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.btn_LoadReading01.Location = new Point(80, 0x12);
+            this.btn_LoadListening01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // btn_LoadReading01
+            // 
+            this.btn_LoadReading01.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_LoadReading01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_LoadReading01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LoadReading01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_LoadReading01.Location = new System.Drawing.Point(80, 17);
             this.btn_LoadReading01.Name = "btn_LoadReading01";
-            this.btn_LoadReading01.Size = new Size(80, 0x21);
+            this.btn_LoadReading01.Size = new System.Drawing.Size(80, 30);
             this.btn_LoadReading01.TabIndex = 0;
             this.btn_LoadReading01.TabStop = false;
             this.btn_LoadReading01.Text = "READING";
             this.btn_LoadReading01.UseVisualStyleBackColor = true;
-            this.btn_LoadReading01.Click += new EventHandler(this.btn_LoadTest_Click);
+            this.btn_LoadReading01.Click += new System.EventHandler(this.btn_LoadTest_Click);
+            // 
+            // lbl_top5
+            // 
             this.lbl_top5.AutoSize = true;
-            this.lbl_top5.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top5.Location = new Point(0x11, 0xdf);
+            this.lbl_top5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top5.Location = new System.Drawing.Point(17, 206);
             this.lbl_top5.Name = "lbl_top5";
-            this.lbl_top5.Size = new Size(0x40, 0x13);
+            this.lbl_top5.Size = new System.Drawing.Size(64, 19);
             this.lbl_top5.TabIndex = 0;
             this.lbl_top5.Text = "TPO 05";
+            // 
+            // lbl_top8
+            // 
             this.lbl_top8.AutoSize = true;
-            this.lbl_top8.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top8.Location = new Point(0x11, 0x174);
+            this.lbl_top8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top8.Location = new System.Drawing.Point(17, 343);
             this.lbl_top8.Name = "lbl_top8";
-            this.lbl_top8.Size = new Size(0x40, 0x13);
+            this.lbl_top8.Size = new System.Drawing.Size(64, 19);
             this.lbl_top8.TabIndex = 0;
             this.lbl_top8.Text = "TPO 08";
+            // 
+            // lbl_top10
+            // 
             this.lbl_top10.AutoSize = true;
-            this.lbl_top10.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top10.Location = new Point(0x11, 0x1d3);
+            this.lbl_top10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top10.Location = new System.Drawing.Point(17, 431);
             this.lbl_top10.Name = "lbl_top10";
-            this.lbl_top10.Size = new Size(0x40, 0x13);
+            this.lbl_top10.Size = new System.Drawing.Size(64, 19);
             this.lbl_top10.TabIndex = 0;
             this.lbl_top10.Text = "TPO 10";
+            // 
+            // lbl_top9
+            // 
             this.lbl_top9.AutoSize = true;
-            this.lbl_top9.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top9.Location = new Point(0x11, 420);
+            this.lbl_top9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top9.Location = new System.Drawing.Point(17, 388);
             this.lbl_top9.Name = "lbl_top9";
-            this.lbl_top9.Size = new Size(0x40, 0x13);
+            this.lbl_top9.Size = new System.Drawing.Size(64, 19);
             this.lbl_top9.TabIndex = 0;
             this.lbl_top9.Text = "TPO 09";
+            // 
+            // lbl_top7
+            // 
             this.lbl_top7.AutoSize = true;
-            this.lbl_top7.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top7.Location = new Point(0x11, 0x143);
+            this.lbl_top7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top7.Location = new System.Drawing.Point(17, 298);
             this.lbl_top7.Name = "lbl_top7";
-            this.lbl_top7.Size = new Size(0x40, 0x13);
+            this.lbl_top7.Size = new System.Drawing.Size(64, 19);
             this.lbl_top7.TabIndex = 0;
             this.lbl_top7.Text = "TPO 07";
+            // 
+            // lbl_top6
+            // 
             this.lbl_top6.AutoSize = true;
-            this.lbl_top6.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top6.Location = new Point(0x11, 0x111);
+            this.lbl_top6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top6.Location = new System.Drawing.Point(17, 252);
             this.lbl_top6.Name = "lbl_top6";
-            this.lbl_top6.Size = new Size(0x40, 0x13);
+            this.lbl_top6.Size = new System.Drawing.Size(64, 19);
             this.lbl_top6.TabIndex = 0;
             this.lbl_top6.Text = "TPO 06";
+            // 
+            // lbl_top4
+            // 
             this.lbl_top4.AutoSize = true;
-            this.lbl_top4.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top4.Location = new Point(0x11, 0xb0);
+            this.lbl_top4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top4.Location = new System.Drawing.Point(17, 162);
             this.lbl_top4.Name = "lbl_top4";
-            this.lbl_top4.Size = new Size(0x40, 0x13);
+            this.lbl_top4.Size = new System.Drawing.Size(64, 19);
             this.lbl_top4.TabIndex = 0;
             this.lbl_top4.Text = "TPO 04";
+            // 
+            // lbl_top3
+            // 
             this.lbl_top3.AutoSize = true;
-            this.lbl_top3.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top3.Location = new Point(0x11, 0x7e);
+            this.lbl_top3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top3.Location = new System.Drawing.Point(17, 116);
             this.lbl_top3.Name = "lbl_top3";
-            this.lbl_top3.Size = new Size(0x40, 0x13);
+            this.lbl_top3.Size = new System.Drawing.Size(64, 19);
             this.lbl_top3.TabIndex = 0;
             this.lbl_top3.Text = "TPO 03";
+            // 
+            // lbl_top2
+            // 
             this.lbl_top2.AutoSize = true;
-            this.lbl_top2.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top2.Location = new Point(0x11, 0x47);
+            this.lbl_top2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top2.Location = new System.Drawing.Point(17, 66);
             this.lbl_top2.Name = "lbl_top2";
-            this.lbl_top2.Size = new Size(0x40, 0x13);
+            this.lbl_top2.Size = new System.Drawing.Size(64, 19);
             this.lbl_top2.TabIndex = 0;
             this.lbl_top2.Text = "TPO 02";
+            // 
+            // lbl_top1
+            // 
             this.lbl_top1.AutoSize = true;
-            this.lbl_top1.Font = new Font("Arial", 12f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_top1.Location = new Point(0x11, 0x1a);
+            this.lbl_top1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_top1.Location = new System.Drawing.Point(17, 24);
             this.lbl_top1.Name = "lbl_top1";
-            this.lbl_top1.Size = new Size(0x40, 0x13);
+            this.lbl_top1.Size = new System.Drawing.Size(64, 19);
             this.lbl_top1.TabIndex = 0;
             this.lbl_top1.Text = "TPO 01";
+            // 
+            // tab_Reading
+            // 
             this.tab_Reading.Controls.Add(this.tabf_Reading);
-            this.tab_Reading.Location = new Point(4, 0x16);
+            this.tab_Reading.Location = new System.Drawing.Point(4, 22);
             this.tab_Reading.Name = "tab_Reading";
-            this.tab_Reading.Padding = new Padding(3);
-            this.tab_Reading.Size = new Size(780, 0x20f);
+            this.tab_Reading.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Reading.Size = new System.Drawing.Size(780, 484);
             this.tab_Reading.TabIndex = 0;
             this.tab_Reading.Text = "Reading";
             this.tab_Reading.UseVisualStyleBackColor = true;
-            this.tabf_Reading.Appearance = TabAppearance.Buttons;
+            // 
+            // tabf_Reading
+            // 
+            this.tabf_Reading.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabf_Reading.Controls.Add(this.rtab_Direction);
             this.tabf_Reading.Controls.Add(this.rtab_NormalQuestion);
             this.tabf_Reading.Controls.Add(this.rtab_SumQuestion);
             this.tabf_Reading.Controls.Add(this.rtab_Review);
-            this.tabf_Reading.DrawMode = TabDrawMode.OwnerDrawFixed;
-            this.tabf_Reading.Location = new Point(3, -20);
+            this.tabf_Reading.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabf_Reading.Location = new System.Drawing.Point(3, -18);
             this.tabf_Reading.Name = "tabf_Reading";
             this.tabf_Reading.SelectedIndex = 0;
-            this.tabf_Reading.Size = new Size(0x303, 0x229);
+            this.tabf_Reading.Size = new System.Drawing.Size(771, 510);
             this.tabf_Reading.TabIndex = 0;
             this.tabf_Reading.TabStop = false;
-            this.rtab_Direction.BackColor = Color.White;
+            // 
+            // rtab_Direction
+            // 
+            this.rtab_Direction.BackColor = System.Drawing.Color.White;
             this.rtab_Direction.Controls.Add(this.pictureBox2);
-            this.rtab_Direction.Location = new Point(4, 0x19);
+            this.rtab_Direction.Location = new System.Drawing.Point(4, 25);
             this.rtab_Direction.Name = "rtab_Direction";
-            this.rtab_Direction.Size = new Size(0x2fb, 0x20c);
+            this.rtab_Direction.Size = new System.Drawing.Size(763, 481);
             this.rtab_Direction.TabIndex = 3;
             this.rtab_Direction.Text = "rDirection";
-            this.pictureBox2.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
-            this.pictureBox2.Image = (Image) manager.GetObject("pictureBox2.Image");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new Point(30, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new Size(0x445, 0x1fa);
-            this.pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0x11;
+            this.pictureBox2.Size = new System.Drawing.Size(1093, 506);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
+            // 
+            // rtab_NormalQuestion
+            // 
             this.rtab_NormalQuestion.Controls.Add(this.tb_reading);
             this.rtab_NormalQuestion.Controls.Add(this.rtb_Passage);
             this.rtab_NormalQuestion.Controls.Add(this.flowLayoutPanel1);
             this.rtab_NormalQuestion.Controls.Add(this.btn_stopReading);
             this.rtab_NormalQuestion.Controls.Add(this.bn_readText);
             this.rtab_NormalQuestion.Controls.Add(this.lbl_readingIndication);
-            this.rtab_NormalQuestion.Location = new Point(4, 0x19);
+            this.rtab_NormalQuestion.Location = new System.Drawing.Point(4, 25);
             this.rtab_NormalQuestion.Name = "rtab_NormalQuestion";
-            this.rtab_NormalQuestion.Padding = new Padding(3);
-            this.rtab_NormalQuestion.Size = new Size(0x2fb, 0x20c);
+            this.rtab_NormalQuestion.Padding = new System.Windows.Forms.Padding(3);
+            this.rtab_NormalQuestion.Size = new System.Drawing.Size(763, 481);
             this.rtab_NormalQuestion.TabIndex = 0;
             this.rtab_NormalQuestion.Text = "rNormalQuestions";
             this.rtab_NormalQuestion.UseVisualStyleBackColor = true;
+            // 
+            // tb_reading
+            // 
             this.tb_reading.AutoSize = false;
-            this.tb_reading.Location = new Point(0x1aa, 0);
+            this.tb_reading.Location = new System.Drawing.Point(426, 0);
             this.tb_reading.Name = "tb_reading";
-            this.tb_reading.Size = new Size(0x11a, 0x15);
-            this.tb_reading.TabIndex = 0x19;
-            this.tb_reading.TickStyle = TickStyle.None;
+            this.tb_reading.Size = new System.Drawing.Size(282, 19);
+            this.tb_reading.TabIndex = 25;
+            this.tb_reading.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tb_reading.Visible = false;
-            this.tb_reading.Scroll += new EventHandler(this.tb_reading_Scroll);
-            this.rtb_Passage.BackColor = SystemColors.ButtonHighlight;
+            this.tb_reading.Scroll += new System.EventHandler(this.tb_reading_Scroll);
+            // 
+            // rtb_Passage
+            // 
+            this.rtb_Passage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rtb_Passage.EnableAutoDragDrop = true;
-            this.rtb_Passage.Location = new Point(0x15c, 0x15);
+            this.rtb_Passage.Location = new System.Drawing.Point(348, 19);
             this.rtb_Passage.Name = "rtb_Passage";
             this.rtb_Passage.ReadOnly = true;
-            this.rtb_Passage.ScrollBars = RichTextBoxScrollBars.Vertical;
+            this.rtb_Passage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.rtb_Passage.ShortcutsEnabled = false;
-            this.rtb_Passage.Size = new Size(0x19c, 0x1d8);
+            this.rtb_Passage.Size = new System.Drawing.Size(412, 436);
             this.rtb_Passage.TabIndex = 4;
             this.rtb_Passage.TabStop = false;
             this.rtb_Passage.Text = "";
-            this.rtb_Passage.MouseClick += new MouseEventHandler(this.rtb_Passage_MouseClick);
-            this.rtb_Passage.MouseMove += new MouseEventHandler(this.rtb_Passage_MouseMove);
+            this.rtb_Passage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseClick);
+            this.rtb_Passage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseMove);
+            // 
+            // flowLayoutPanel1
+            // 
             this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = SystemColors.ControlLight;
-            this.flowLayoutPanel1.BorderStyle = BorderStyle.Fixed3D;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Controls.Add(this.rtb_question);
             this.flowLayoutPanel1.Controls.Add(this.tlp_answers);
-            this.flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new Point(4, 0x12);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 17);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new Size(0x15a, 0x213);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 490);
             this.flowLayoutPanel1.TabIndex = 3;
-            this.rtb_question.BackColor = SystemColors.ControlLight;
-            this.rtb_question.BorderStyle = BorderStyle.None;
-            this.rtb_question.Location = new Point(3, 3);
+            // 
+            // rtb_question
+            // 
+            this.rtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_question.Location = new System.Drawing.Point(3, 3);
             this.rtb_question.Name = "rtb_question";
             this.rtb_question.ReadOnly = true;
-            this.rtb_question.ScrollBars = RichTextBoxScrollBars.None;
-            this.rtb_question.Size = new Size(0x14b, 0x2f);
+            this.rtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.rtb_question.Size = new System.Drawing.Size(331, 43);
             this.rtb_question.TabIndex = 0;
             this.rtb_question.TabStop = false;
             this.rtb_question.Text = "";
+            // 
+            // tlp_answers
+            // 
             this.tlp_answers.AutoSize = true;
-            this.tlp_answers.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.tlp_answers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlp_answers.ColumnCount = 2;
-            this.tlp_answers.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40f));
-            this.tlp_answers.ColumnStyles.Add(new ColumnStyle());
+            this.tlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlp_answers.Controls.Add(this.rtb_answerE, 1, 4);
             this.tlp_answers.Controls.Add(this.rtb_answerD, 1, 3);
             this.tlp_answers.Controls.Add(this.rtb_answerC, 1, 2);
@@ -3874,293 +4170,368 @@
             this.tlp_answers.Controls.Add(this.rtb_answerF, 1, 5);
             this.tlp_answers.Controls.Add(this.rtb_answerG, 1, 6);
             this.tlp_answers.Controls.Add(this.rtb_answerH, 1, 7);
-            this.tlp_answers.Location = new Point(3, 0x38);
+            this.tlp_answers.Location = new System.Drawing.Point(3, 52);
             this.tlp_answers.Name = "tlp_answers";
             this.tlp_answers.RowCount = 8;
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.RowStyles.Add(new RowStyle());
-            this.tlp_answers.Size = new Size(0x150, 0x188);
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_answers.Size = new System.Drawing.Size(336, 368);
             this.tlp_answers.TabIndex = 1;
-            this.rtb_answerE.BackColor = SystemColors.ControlLight;
-            this.rtb_answerE.BorderStyle = BorderStyle.None;
-            this.rtb_answerE.Location = new Point(0x2b, 0xc7);
+            // 
+            // rtb_answerE
+            // 
+            this.rtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerE.Location = new System.Drawing.Point(43, 187);
             this.rtb_answerE.Name = "rtb_answerE";
             this.rtb_answerE.ReadOnly = true;
             this.rtb_answerE.ShortcutsEnabled = false;
-            this.rtb_answerE.Size = new Size(290, 0x2b);
+            this.rtb_answerE.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerE.TabIndex = 9;
             this.rtb_answerE.TabStop = false;
             this.rtb_answerE.Text = "";
             this.rtb_answerE.Visible = false;
-            this.rtb_answerD.BackColor = SystemColors.ControlLight;
-            this.rtb_answerD.BorderStyle = BorderStyle.None;
-            this.rtb_answerD.Location = new Point(0x2b, 150);
+            // 
+            // rtb_answerD
+            // 
+            this.rtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerD.Location = new System.Drawing.Point(43, 141);
             this.rtb_answerD.Name = "rtb_answerD";
             this.rtb_answerD.ReadOnly = true;
             this.rtb_answerD.ShortcutsEnabled = false;
-            this.rtb_answerD.Size = new Size(290, 0x2b);
+            this.rtb_answerD.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerD.TabIndex = 8;
             this.rtb_answerD.TabStop = false;
             this.rtb_answerD.Text = "";
             this.rtb_answerD.Visible = false;
-            this.rtb_answerC.BackColor = SystemColors.ControlLight;
-            this.rtb_answerC.BorderStyle = BorderStyle.None;
-            this.rtb_answerC.Location = new Point(0x2b, 0x65);
+            // 
+            // rtb_answerC
+            // 
+            this.rtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerC.Location = new System.Drawing.Point(43, 95);
             this.rtb_answerC.Name = "rtb_answerC";
             this.rtb_answerC.ReadOnly = true;
             this.rtb_answerC.ShortcutsEnabled = false;
-            this.rtb_answerC.Size = new Size(290, 0x2b);
+            this.rtb_answerC.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerC.TabIndex = 7;
             this.rtb_answerC.TabStop = false;
             this.rtb_answerC.Text = "";
             this.rtb_answerC.Visible = false;
-            this.rtb_answerB.BackColor = SystemColors.ControlLight;
-            this.rtb_answerB.BorderStyle = BorderStyle.None;
-            this.rtb_answerB.Location = new Point(0x2b, 0x34);
+            // 
+            // rtb_answerB
+            // 
+            this.rtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerB.Location = new System.Drawing.Point(43, 49);
             this.rtb_answerB.Name = "rtb_answerB";
             this.rtb_answerB.ReadOnly = true;
             this.rtb_answerB.ShortcutsEnabled = false;
-            this.rtb_answerB.Size = new Size(290, 0x2b);
+            this.rtb_answerB.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerB.TabIndex = 6;
             this.rtb_answerB.TabStop = false;
             this.rtb_answerB.Text = "";
             this.rtb_answerB.Visible = false;
-            this.ckb_A.Appearance = Appearance.Button;
+            // 
+            // ckb_A
+            // 
+            this.ckb_A.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_A.AutoSize = true;
-            this.ckb_A.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_A.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_A.FlatStyle = FlatStyle.Flat;
-            this.ckb_A.Location = new Point(3, 3);
+            this.ckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_A.Location = new System.Drawing.Point(3, 3);
             this.ckb_A.Name = "ckb_A";
-            this.ckb_A.Size = new Size(0x18, 0x17);
+            this.ckb_A.Size = new System.Drawing.Size(21, 22);
             this.ckb_A.TabIndex = 0;
             this.ckb_A.TabStop = false;
             this.ckb_A.Text = "A";
             this.ckb_A.UseVisualStyleBackColor = true;
             this.ckb_A.Visible = false;
-            this.ckb_B.Appearance = Appearance.Button;
+            // 
+            // ckb_B
+            // 
+            this.ckb_B.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_B.AutoSize = true;
-            this.ckb_B.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_B.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_B.FlatStyle = FlatStyle.Flat;
-            this.ckb_B.Location = new Point(3, 0x34);
+            this.ckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_B.Location = new System.Drawing.Point(3, 49);
             this.ckb_B.Name = "ckb_B";
-            this.ckb_B.Size = new Size(0x18, 0x17);
+            this.ckb_B.Size = new System.Drawing.Size(21, 22);
             this.ckb_B.TabIndex = 1;
             this.ckb_B.TabStop = false;
             this.ckb_B.Text = "B";
             this.ckb_B.UseVisualStyleBackColor = true;
             this.ckb_B.Visible = false;
-            this.ckb_C.Appearance = Appearance.Button;
+            // 
+            // ckb_C
+            // 
+            this.ckb_C.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_C.AutoSize = true;
-            this.ckb_C.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_C.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_C.FlatStyle = FlatStyle.Flat;
-            this.ckb_C.Location = new Point(3, 0x65);
+            this.ckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_C.Location = new System.Drawing.Point(3, 95);
             this.ckb_C.Name = "ckb_C";
-            this.ckb_C.Size = new Size(0x18, 0x17);
+            this.ckb_C.Size = new System.Drawing.Size(21, 22);
             this.ckb_C.TabIndex = 2;
             this.ckb_C.TabStop = false;
             this.ckb_C.Text = "C";
             this.ckb_C.UseVisualStyleBackColor = true;
             this.ckb_C.Visible = false;
-            this.ckb_D.Appearance = Appearance.Button;
+            // 
+            // ckb_D
+            // 
+            this.ckb_D.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_D.AutoSize = true;
-            this.ckb_D.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_D.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_D.FlatStyle = FlatStyle.Flat;
-            this.ckb_D.Location = new Point(3, 150);
+            this.ckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_D.Location = new System.Drawing.Point(3, 141);
             this.ckb_D.Name = "ckb_D";
-            this.ckb_D.Size = new Size(0x19, 0x17);
+            this.ckb_D.Size = new System.Drawing.Size(21, 22);
             this.ckb_D.TabIndex = 3;
             this.ckb_D.TabStop = false;
             this.ckb_D.Text = "D";
             this.ckb_D.UseVisualStyleBackColor = true;
             this.ckb_D.Visible = false;
-            this.ckb_E.Appearance = Appearance.Button;
+            // 
+            // ckb_E
+            // 
+            this.ckb_E.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_E.AutoSize = true;
-            this.ckb_E.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_E.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_E.FlatStyle = FlatStyle.Flat;
-            this.ckb_E.Location = new Point(3, 0xc7);
+            this.ckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_E.Location = new System.Drawing.Point(3, 187);
             this.ckb_E.Name = "ckb_E";
-            this.ckb_E.Size = new Size(0x18, 0x17);
+            this.ckb_E.Size = new System.Drawing.Size(21, 22);
             this.ckb_E.TabIndex = 4;
             this.ckb_E.TabStop = false;
             this.ckb_E.Text = "E";
             this.ckb_E.UseVisualStyleBackColor = true;
             this.ckb_E.Visible = false;
-            this.rtb_answerA.BackColor = SystemColors.ControlLight;
-            this.rtb_answerA.BorderStyle = BorderStyle.None;
-            this.rtb_answerA.Location = new Point(0x2b, 3);
+            // 
+            // rtb_answerA
+            // 
+            this.rtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerA.Location = new System.Drawing.Point(43, 3);
             this.rtb_answerA.Name = "rtb_answerA";
             this.rtb_answerA.ReadOnly = true;
             this.rtb_answerA.ShortcutsEnabled = false;
-            this.rtb_answerA.Size = new Size(290, 0x2b);
+            this.rtb_answerA.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerA.TabIndex = 5;
             this.rtb_answerA.TabStop = false;
             this.rtb_answerA.Text = "";
             this.rtb_answerA.Visible = false;
-            this.ckb_F.Appearance = Appearance.Button;
+            // 
+            // ckb_F
+            // 
+            this.ckb_F.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_F.AutoSize = true;
-            this.ckb_F.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_F.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_F.FlatStyle = FlatStyle.Flat;
-            this.ckb_F.Location = new Point(3, 0xf8);
+            this.ckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_F.Location = new System.Drawing.Point(3, 233);
             this.ckb_F.Name = "ckb_F";
-            this.ckb_F.Size = new Size(0x17, 0x17);
+            this.ckb_F.Size = new System.Drawing.Size(21, 22);
             this.ckb_F.TabIndex = 4;
             this.ckb_F.TabStop = false;
             this.ckb_F.Text = "F";
             this.ckb_F.UseVisualStyleBackColor = true;
             this.ckb_F.Visible = false;
-            this.ckb_G.Appearance = Appearance.Button;
+            // 
+            // ckb_G
+            // 
+            this.ckb_G.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_G.AutoSize = true;
-            this.ckb_G.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_G.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_G.FlatStyle = FlatStyle.Flat;
-            this.ckb_G.Location = new Point(3, 0x129);
+            this.ckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_G.Location = new System.Drawing.Point(3, 279);
             this.ckb_G.Name = "ckb_G";
-            this.ckb_G.Size = new Size(0x19, 0x17);
+            this.ckb_G.Size = new System.Drawing.Size(21, 22);
             this.ckb_G.TabIndex = 4;
             this.ckb_G.TabStop = false;
             this.ckb_G.Text = "G";
             this.ckb_G.UseVisualStyleBackColor = true;
             this.ckb_G.Visible = false;
-            this.ckb_H.Appearance = Appearance.Button;
+            // 
+            // ckb_H
+            // 
+            this.ckb_H.Appearance = System.Windows.Forms.Appearance.Button;
             this.ckb_H.AutoSize = true;
-            this.ckb_H.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.ckb_H.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.ckb_H.FlatStyle = FlatStyle.Flat;
-            this.ckb_H.Location = new Point(3, 0x15a);
+            this.ckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.ckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.ckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ckb_H.Location = new System.Drawing.Point(3, 325);
             this.ckb_H.Name = "ckb_H";
-            this.ckb_H.Size = new Size(0x19, 0x17);
+            this.ckb_H.Size = new System.Drawing.Size(21, 22);
             this.ckb_H.TabIndex = 4;
             this.ckb_H.TabStop = false;
             this.ckb_H.Text = "H";
             this.ckb_H.UseVisualStyleBackColor = true;
             this.ckb_H.Visible = false;
-            this.rtb_answerF.BackColor = SystemColors.ControlLight;
-            this.rtb_answerF.BorderStyle = BorderStyle.None;
-            this.rtb_answerF.Location = new Point(0x2b, 0xf8);
+            // 
+            // rtb_answerF
+            // 
+            this.rtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerF.Location = new System.Drawing.Point(43, 233);
             this.rtb_answerF.Name = "rtb_answerF";
             this.rtb_answerF.ReadOnly = true;
             this.rtb_answerF.ShortcutsEnabled = false;
-            this.rtb_answerF.Size = new Size(290, 0x2b);
+            this.rtb_answerF.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerF.TabIndex = 9;
             this.rtb_answerF.TabStop = false;
             this.rtb_answerF.Text = "";
             this.rtb_answerF.Visible = false;
-            this.rtb_answerG.BackColor = SystemColors.ControlLight;
-            this.rtb_answerG.BorderStyle = BorderStyle.None;
-            this.rtb_answerG.Location = new Point(0x2b, 0x129);
+            // 
+            // rtb_answerG
+            // 
+            this.rtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerG.Location = new System.Drawing.Point(43, 279);
             this.rtb_answerG.Name = "rtb_answerG";
             this.rtb_answerG.ReadOnly = true;
             this.rtb_answerG.ShortcutsEnabled = false;
-            this.rtb_answerG.Size = new Size(290, 0x2b);
+            this.rtb_answerG.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerG.TabIndex = 9;
             this.rtb_answerG.TabStop = false;
             this.rtb_answerG.Text = "";
             this.rtb_answerG.Visible = false;
-            this.rtb_answerH.BackColor = SystemColors.ControlLight;
-            this.rtb_answerH.BorderStyle = BorderStyle.None;
-            this.rtb_answerH.Location = new Point(0x2b, 0x15a);
+            // 
+            // rtb_answerH
+            // 
+            this.rtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_answerH.Location = new System.Drawing.Point(43, 325);
             this.rtb_answerH.Name = "rtb_answerH";
             this.rtb_answerH.ReadOnly = true;
             this.rtb_answerH.ShortcutsEnabled = false;
-            this.rtb_answerH.Size = new Size(290, 0x2b);
+            this.rtb_answerH.Size = new System.Drawing.Size(290, 40);
             this.rtb_answerH.TabIndex = 9;
             this.rtb_answerH.TabStop = false;
             this.rtb_answerH.Text = "";
             this.rtb_answerH.Visible = false;
-            this.btn_stopReading.BackColor = Color.Transparent;
-            this.btn_stopReading.FlatStyle = FlatStyle.Popup;
-            this.btn_stopReading.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.btn_stopReading.Location = new Point(0x2c7, 0);
+            // 
+            // btn_stopReading
+            // 
+            this.btn_stopReading.BackColor = System.Drawing.Color.Transparent;
+            this.btn_stopReading.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_stopReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_stopReading.Location = new System.Drawing.Point(711, 0);
             this.btn_stopReading.Name = "btn_stopReading";
-            this.btn_stopReading.Size = new Size(0x37, 0x15);
-            this.btn_stopReading.TabIndex = 0x18;
+            this.btn_stopReading.Size = new System.Drawing.Size(55, 19);
+            this.btn_stopReading.TabIndex = 24;
             this.btn_stopReading.Text = "Stop";
             this.btn_stopReading.UseVisualStyleBackColor = false;
             this.btn_stopReading.Visible = false;
-            this.btn_stopReading.Click += new EventHandler(this.btn_stopReading_Click);
-            this.bn_readText.BackColor = Color.Transparent;
-            this.bn_readText.FlatStyle = FlatStyle.Popup;
-            this.bn_readText.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.bn_readText.Location = new Point(0x15c, -1);
+            this.btn_stopReading.Click += new System.EventHandler(this.btn_stopReading_Click);
+            // 
+            // bn_readText
+            // 
+            this.bn_readText.BackColor = System.Drawing.Color.Transparent;
+            this.bn_readText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bn_readText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bn_readText.Location = new System.Drawing.Point(348, -1);
             this.bn_readText.Name = "bn_readText";
-            this.bn_readText.Size = new Size(0x4b, 0x15);
-            this.bn_readText.TabIndex = 0x18;
+            this.bn_readText.Size = new System.Drawing.Size(75, 19);
+            this.bn_readText.TabIndex = 24;
             this.bn_readText.Text = "ReadText";
             this.bn_readText.UseVisualStyleBackColor = false;
-            this.bn_readText.Click += new EventHandler(this.bn_readText_Click);
-            this.lbl_readingIndication.BackColor = Color.Teal;
-            this.lbl_readingIndication.BorderStyle = BorderStyle.Fixed3D;
-            this.lbl_readingIndication.Font = new Font("SimSun", 12f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lbl_readingIndication.ForeColor = SystemColors.ActiveCaptionText;
-            this.lbl_readingIndication.Location = new Point(0x15c, -1);
+            this.bn_readText.Click += new System.EventHandler(this.bn_readText_Click);
+            // 
+            // lbl_readingIndication
+            // 
+            this.lbl_readingIndication.BackColor = System.Drawing.Color.Teal;
+            this.lbl_readingIndication.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_readingIndication.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_readingIndication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_readingIndication.Location = new System.Drawing.Point(348, -1);
             this.lbl_readingIndication.Name = "lbl_readingIndication";
-            this.lbl_readingIndication.RightToLeft = RightToLeft.Yes;
-            this.lbl_readingIndication.Size = new Size(0x1a0, 0x16);
+            this.lbl_readingIndication.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_readingIndication.Size = new System.Drawing.Size(416, 20);
             this.lbl_readingIndication.TabIndex = 5;
             this.lbl_readingIndication.Text = "Beginning";
+            // 
+            // rtab_SumQuestion
+            // 
             this.rtab_SumQuestion.Controls.Add(this.llbl_rightAnswer);
             this.rtab_SumQuestion.Controls.Add(this.flowLayoutPanel2);
-            this.rtab_SumQuestion.Location = new Point(4, 0x19);
+            this.rtab_SumQuestion.Location = new System.Drawing.Point(4, 25);
             this.rtab_SumQuestion.Name = "rtab_SumQuestion";
-            this.rtab_SumQuestion.Padding = new Padding(3);
-            this.rtab_SumQuestion.Size = new Size(0x2fb, 0x20c);
+            this.rtab_SumQuestion.Padding = new System.Windows.Forms.Padding(3);
+            this.rtab_SumQuestion.Size = new System.Drawing.Size(763, 481);
             this.rtab_SumQuestion.TabIndex = 1;
             this.rtab_SumQuestion.Text = "rSumQuestion";
             this.rtab_SumQuestion.UseVisualStyleBackColor = true;
+            // 
+            // llbl_rightAnswer
+            // 
             this.llbl_rightAnswer.AutoSize = true;
-            this.llbl_rightAnswer.Location = new Point(7, 0x68);
+            this.llbl_rightAnswer.Location = new System.Drawing.Point(7, 96);
             this.llbl_rightAnswer.Name = "llbl_rightAnswer";
-            this.llbl_rightAnswer.Size = new Size(0x3e, 13);
+            this.llbl_rightAnswer.Size = new System.Drawing.Size(71, 12);
             this.llbl_rightAnswer.TabIndex = 2;
             this.llbl_rightAnswer.Text = "rightAnswer";
             this.llbl_rightAnswer.Visible = false;
+            // 
+            // flowLayoutPanel2
+            // 
             this.flowLayoutPanel2.Controls.Add(this.rtb_sumPassage);
             this.flowLayoutPanel2.Controls.Add(this.rtb_sumQuestion);
             this.flowLayoutPanel2.Controls.Add(this.tlp_sumAnswers);
             this.flowLayoutPanel2.Controls.Add(this.tlp_Summary);
-            this.flowLayoutPanel2.Location = new Point(0x4d, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(77, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new Size(0x26b, 0x202);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(619, 474);
             this.flowLayoutPanel2.TabIndex = 1;
-            this.rtb_sumPassage.BackColor = SystemColors.Window;
-            this.rtb_sumPassage.BorderStyle = BorderStyle.None;
-            this.rtb_sumPassage.Location = new Point(3, 3);
+            // 
+            // rtb_sumPassage
+            // 
+            this.rtb_sumPassage.BackColor = System.Drawing.SystemColors.Window;
+            this.rtb_sumPassage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumPassage.Location = new System.Drawing.Point(3, 3);
             this.rtb_sumPassage.Name = "rtb_sumPassage";
             this.rtb_sumPassage.ReadOnly = true;
             this.rtb_sumPassage.ShortcutsEnabled = false;
-            this.rtb_sumPassage.Size = new Size(0x265, 0x16);
+            this.rtb_sumPassage.Size = new System.Drawing.Size(613, 20);
             this.rtb_sumPassage.TabIndex = 5;
             this.rtb_sumPassage.TabStop = false;
             this.rtb_sumPassage.Text = "";
             this.rtb_sumPassage.Visible = false;
-            this.rtb_sumQuestion.BackColor = SystemColors.Window;
-            this.rtb_sumQuestion.BorderStyle = BorderStyle.None;
-            this.rtb_sumQuestion.Location = new Point(3, 0x1f);
+            // 
+            // rtb_sumQuestion
+            // 
+            this.rtb_sumQuestion.BackColor = System.Drawing.SystemColors.Window;
+            this.rtb_sumQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumQuestion.Location = new System.Drawing.Point(3, 29);
             this.rtb_sumQuestion.Name = "rtb_sumQuestion";
             this.rtb_sumQuestion.ReadOnly = true;
-            this.rtb_sumQuestion.Size = new Size(0x265, 0x12);
+            this.rtb_sumQuestion.Size = new System.Drawing.Size(613, 17);
             this.rtb_sumQuestion.TabIndex = 2;
             this.rtb_sumQuestion.TabStop = false;
             this.rtb_sumQuestion.Text = "";
             this.rtb_sumQuestion.Visible = false;
+            // 
+            // tlp_sumAnswers
+            // 
             this.tlp_sumAnswers.AutoSize = true;
-            this.tlp_sumAnswers.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            this.tlp_sumAnswers.BackColor = Color.Transparent;
+            this.tlp_sumAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlp_sumAnswers.BackColor = System.Drawing.Color.Transparent;
             this.tlp_sumAnswers.ColumnCount = 2;
-            this.tlp_sumAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40f));
-            this.tlp_sumAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+            this.tlp_sumAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlp_sumAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected5, 1, 4);
             this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected1, 1, 0);
             this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected2, 1, 1);
@@ -4171,136 +4542,169 @@
             this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected3, 0, 2);
             this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected4, 0, 3);
             this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected5, 0, 4);
-            this.tlp_sumAnswers.Location = new Point(3, 0x37);
+            this.tlp_sumAnswers.Location = new System.Drawing.Point(3, 52);
             this.tlp_sumAnswers.Name = "tlp_sumAnswers";
             this.tlp_sumAnswers.RowCount = 5;
-            this.tlp_sumAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            this.tlp_sumAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            this.tlp_sumAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            this.tlp_sumAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            this.tlp_sumAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            this.tlp_sumAnswers.Size = new Size(0x265, 140);
+            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlp_sumAnswers.Size = new System.Drawing.Size(613, 130);
             this.tlp_sumAnswers.TabIndex = 3;
-            this.rtb_SumSelected5.BackColor = Color.LightGray;
-            this.rtb_SumSelected5.BorderStyle = BorderStyle.None;
-            this.rtb_SumSelected5.Cursor = Cursors.Hand;
-            this.rtb_SumSelected5.Location = new Point(0x2b, 0x73);
+            // 
+            // rtb_SumSelected5
+            // 
+            this.rtb_SumSelected5.BackColor = System.Drawing.Color.LightGray;
+            this.rtb_SumSelected5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_SumSelected5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rtb_SumSelected5.Location = new System.Drawing.Point(43, 107);
             this.rtb_SumSelected5.Name = "rtb_SumSelected5";
             this.rtb_SumSelected5.ReadOnly = true;
             this.rtb_SumSelected5.ShortcutsEnabled = false;
-            this.rtb_SumSelected5.Size = new Size(0x237, 0x16);
+            this.rtb_SumSelected5.Size = new System.Drawing.Size(567, 20);
             this.rtb_SumSelected5.TabIndex = 1;
             this.rtb_SumSelected5.TabStop = false;
             this.rtb_SumSelected5.Text = "";
             this.rtb_SumSelected5.Visible = false;
-            this.rtb_SumSelected1.BackColor = Color.LightGray;
-            this.rtb_SumSelected1.BorderStyle = BorderStyle.None;
-            this.rtb_SumSelected1.Cursor = Cursors.Hand;
-            this.rtb_SumSelected1.Location = new Point(0x2b, 3);
+            // 
+            // rtb_SumSelected1
+            // 
+            this.rtb_SumSelected1.BackColor = System.Drawing.Color.LightGray;
+            this.rtb_SumSelected1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_SumSelected1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rtb_SumSelected1.Location = new System.Drawing.Point(43, 3);
             this.rtb_SumSelected1.Name = "rtb_SumSelected1";
             this.rtb_SumSelected1.ReadOnly = true;
             this.rtb_SumSelected1.ShortcutsEnabled = false;
-            this.rtb_SumSelected1.Size = new Size(0x237, 0x12);
+            this.rtb_SumSelected1.Size = new System.Drawing.Size(567, 17);
             this.rtb_SumSelected1.TabIndex = 0;
             this.rtb_SumSelected1.TabStop = false;
             this.rtb_SumSelected1.Text = "";
             this.rtb_SumSelected1.Visible = false;
-            this.rtb_SumSelected2.BackColor = Color.LightGray;
-            this.rtb_SumSelected2.BorderStyle = BorderStyle.None;
-            this.rtb_SumSelected2.Cursor = Cursors.Hand;
-            this.rtb_SumSelected2.Location = new Point(0x2b, 0x1f);
+            // 
+            // rtb_SumSelected2
+            // 
+            this.rtb_SumSelected2.BackColor = System.Drawing.Color.LightGray;
+            this.rtb_SumSelected2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_SumSelected2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rtb_SumSelected2.Location = new System.Drawing.Point(43, 29);
             this.rtb_SumSelected2.Name = "rtb_SumSelected2";
             this.rtb_SumSelected2.ReadOnly = true;
             this.rtb_SumSelected2.ShortcutsEnabled = false;
-            this.rtb_SumSelected2.Size = new Size(0x237, 0x12);
+            this.rtb_SumSelected2.Size = new System.Drawing.Size(567, 17);
             this.rtb_SumSelected2.TabIndex = 0;
             this.rtb_SumSelected2.TabStop = false;
             this.rtb_SumSelected2.Text = "";
             this.rtb_SumSelected2.Visible = false;
-            this.rtb_SumSelected3.BackColor = Color.LightGray;
-            this.rtb_SumSelected3.BorderStyle = BorderStyle.None;
-            this.rtb_SumSelected3.Cursor = Cursors.Hand;
-            this.rtb_SumSelected3.Location = new Point(0x2b, 0x3b);
+            // 
+            // rtb_SumSelected3
+            // 
+            this.rtb_SumSelected3.BackColor = System.Drawing.Color.LightGray;
+            this.rtb_SumSelected3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_SumSelected3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rtb_SumSelected3.Location = new System.Drawing.Point(43, 55);
             this.rtb_SumSelected3.Name = "rtb_SumSelected3";
             this.rtb_SumSelected3.ReadOnly = true;
             this.rtb_SumSelected3.ShortcutsEnabled = false;
-            this.rtb_SumSelected3.Size = new Size(0x237, 0x12);
+            this.rtb_SumSelected3.Size = new System.Drawing.Size(567, 17);
             this.rtb_SumSelected3.TabIndex = 0;
             this.rtb_SumSelected3.TabStop = false;
             this.rtb_SumSelected3.Text = "";
             this.rtb_SumSelected3.Visible = false;
-            this.rtb_SumSelected4.BackColor = Color.LightGray;
-            this.rtb_SumSelected4.BorderStyle = BorderStyle.None;
-            this.rtb_SumSelected4.Cursor = Cursors.Hand;
-            this.rtb_SumSelected4.Location = new Point(0x2b, 0x57);
+            // 
+            // rtb_SumSelected4
+            // 
+            this.rtb_SumSelected4.BackColor = System.Drawing.Color.LightGray;
+            this.rtb_SumSelected4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_SumSelected4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rtb_SumSelected4.Location = new System.Drawing.Point(43, 81);
             this.rtb_SumSelected4.Name = "rtb_SumSelected4";
             this.rtb_SumSelected4.ReadOnly = true;
             this.rtb_SumSelected4.ShortcutsEnabled = false;
-            this.rtb_SumSelected4.Size = new Size(0x237, 0x12);
+            this.rtb_SumSelected4.Size = new System.Drawing.Size(567, 17);
             this.rtb_SumSelected4.TabIndex = 0;
             this.rtb_SumSelected4.TabStop = false;
             this.rtb_SumSelected4.Text = "";
             this.rtb_SumSelected4.Visible = false;
+            // 
+            // ckb_SumSelected1
+            // 
             this.ckb_SumSelected1.AutoSize = true;
-            this.ckb_SumSelected1.BackColor = Color.LightGray;
+            this.ckb_SumSelected1.BackColor = System.Drawing.Color.LightGray;
             this.ckb_SumSelected1.Checked = true;
-            this.ckb_SumSelected1.CheckState = CheckState.Checked;
-            this.ckb_SumSelected1.Location = new Point(3, 3);
+            this.ckb_SumSelected1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_SumSelected1.Location = new System.Drawing.Point(3, 3);
             this.ckb_SumSelected1.Name = "ckb_SumSelected1";
-            this.ckb_SumSelected1.Size = new Size(15, 14);
+            this.ckb_SumSelected1.Size = new System.Drawing.Size(15, 14);
             this.ckb_SumSelected1.TabIndex = 2;
             this.ckb_SumSelected1.TabStop = false;
             this.ckb_SumSelected1.UseVisualStyleBackColor = false;
             this.ckb_SumSelected1.Visible = false;
+            // 
+            // ckb_SumSelected2
+            // 
             this.ckb_SumSelected2.AutoSize = true;
-            this.ckb_SumSelected2.BackColor = Color.LightGray;
+            this.ckb_SumSelected2.BackColor = System.Drawing.Color.LightGray;
             this.ckb_SumSelected2.Checked = true;
-            this.ckb_SumSelected2.CheckState = CheckState.Checked;
-            this.ckb_SumSelected2.Location = new Point(3, 0x1f);
+            this.ckb_SumSelected2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_SumSelected2.Location = new System.Drawing.Point(3, 29);
             this.ckb_SumSelected2.Name = "ckb_SumSelected2";
-            this.ckb_SumSelected2.Size = new Size(15, 14);
+            this.ckb_SumSelected2.Size = new System.Drawing.Size(15, 14);
             this.ckb_SumSelected2.TabIndex = 2;
             this.ckb_SumSelected2.TabStop = false;
             this.ckb_SumSelected2.UseVisualStyleBackColor = false;
             this.ckb_SumSelected2.Visible = false;
+            // 
+            // ckb_SumSelected3
+            // 
             this.ckb_SumSelected3.AutoSize = true;
-            this.ckb_SumSelected3.BackColor = Color.LightGray;
+            this.ckb_SumSelected3.BackColor = System.Drawing.Color.LightGray;
             this.ckb_SumSelected3.Checked = true;
-            this.ckb_SumSelected3.CheckState = CheckState.Checked;
-            this.ckb_SumSelected3.Location = new Point(3, 0x3b);
+            this.ckb_SumSelected3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_SumSelected3.Location = new System.Drawing.Point(3, 55);
             this.ckb_SumSelected3.Name = "ckb_SumSelected3";
-            this.ckb_SumSelected3.Size = new Size(15, 14);
+            this.ckb_SumSelected3.Size = new System.Drawing.Size(15, 14);
             this.ckb_SumSelected3.TabIndex = 2;
             this.ckb_SumSelected3.TabStop = false;
             this.ckb_SumSelected3.UseVisualStyleBackColor = false;
             this.ckb_SumSelected3.Visible = false;
+            // 
+            // ckb_SumSelected4
+            // 
             this.ckb_SumSelected4.AutoSize = true;
-            this.ckb_SumSelected4.BackColor = Color.LightGray;
+            this.ckb_SumSelected4.BackColor = System.Drawing.Color.LightGray;
             this.ckb_SumSelected4.Checked = true;
-            this.ckb_SumSelected4.CheckState = CheckState.Checked;
-            this.ckb_SumSelected4.Location = new Point(3, 0x57);
+            this.ckb_SumSelected4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_SumSelected4.Location = new System.Drawing.Point(3, 81);
             this.ckb_SumSelected4.Name = "ckb_SumSelected4";
-            this.ckb_SumSelected4.Size = new Size(15, 14);
+            this.ckb_SumSelected4.Size = new System.Drawing.Size(15, 14);
             this.ckb_SumSelected4.TabIndex = 2;
             this.ckb_SumSelected4.TabStop = false;
             this.ckb_SumSelected4.UseVisualStyleBackColor = false;
             this.ckb_SumSelected4.Visible = false;
+            // 
+            // ckb_SumSelected5
+            // 
             this.ckb_SumSelected5.AutoSize = true;
-            this.ckb_SumSelected5.BackColor = Color.LightGray;
+            this.ckb_SumSelected5.BackColor = System.Drawing.Color.LightGray;
             this.ckb_SumSelected5.Checked = true;
-            this.ckb_SumSelected5.CheckState = CheckState.Checked;
-            this.ckb_SumSelected5.Location = new Point(3, 0x73);
+            this.ckb_SumSelected5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_SumSelected5.Location = new System.Drawing.Point(3, 107);
             this.ckb_SumSelected5.Name = "ckb_SumSelected5";
-            this.ckb_SumSelected5.Size = new Size(15, 14);
+            this.ckb_SumSelected5.Size = new System.Drawing.Size(15, 14);
             this.ckb_SumSelected5.TabIndex = 2;
             this.ckb_SumSelected5.TabStop = false;
             this.ckb_SumSelected5.UseVisualStyleBackColor = false;
             this.ckb_SumSelected5.Visible = false;
+            // 
+            // tlp_Summary
+            // 
             this.tlp_Summary.AutoSize = true;
-            this.tlp_Summary.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.tlp_Summary.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlp_Summary.ColumnCount = 2;
-            this.tlp_Summary.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40f));
-            this.tlp_Summary.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+            this.tlp_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlp_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_Summary.Controls.Add(this.rtb_sumAnswer5, 1, 4);
             this.tlp_Summary.Controls.Add(this.rtb_sumAnswer1, 1, 0);
             this.tlp_Summary.Controls.Add(this.rtb_sumAnswer2, 1, 1);
@@ -4321,229 +4725,292 @@
             this.tlp_Summary.Controls.Add(this.ckb_sumAnswer10, 0, 9);
             this.tlp_Summary.Controls.Add(this.rtb_sumAnswer9, 1, 8);
             this.tlp_Summary.Controls.Add(this.rtb_sumAnswer10, 1, 9);
-            this.tlp_Summary.Location = new Point(3, 0xc9);
+            this.tlp_Summary.Location = new System.Drawing.Point(3, 188);
             this.tlp_Summary.Name = "tlp_Summary";
             this.tlp_Summary.RowCount = 10;
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
-            this.tlp_Summary.Size = new Size(0x265, 280);
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlp_Summary.Size = new System.Drawing.Size(613, 260);
             this.tlp_Summary.TabIndex = 4;
-            this.rtb_sumAnswer5.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer5.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer5.Location = new Point(0x2b, 0x73);
+            // 
+            // rtb_sumAnswer5
+            // 
+            this.rtb_sumAnswer5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer5.Location = new System.Drawing.Point(43, 107);
             this.rtb_sumAnswer5.Name = "rtb_sumAnswer5";
             this.rtb_sumAnswer5.ReadOnly = true;
             this.rtb_sumAnswer5.ShortcutsEnabled = false;
-            this.rtb_sumAnswer5.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer5.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer5.TabIndex = 1;
             this.rtb_sumAnswer5.TabStop = false;
             this.rtb_sumAnswer5.Text = "";
             this.rtb_sumAnswer5.Visible = false;
-            this.rtb_sumAnswer1.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer1.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer1.Location = new Point(0x2b, 3);
+            // 
+            // rtb_sumAnswer1
+            // 
+            this.rtb_sumAnswer1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer1.Location = new System.Drawing.Point(43, 3);
             this.rtb_sumAnswer1.Name = "rtb_sumAnswer1";
             this.rtb_sumAnswer1.ReadOnly = true;
             this.rtb_sumAnswer1.ShortcutsEnabled = false;
-            this.rtb_sumAnswer1.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer1.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer1.TabIndex = 0;
             this.rtb_sumAnswer1.TabStop = false;
             this.rtb_sumAnswer1.Text = "";
             this.rtb_sumAnswer1.Visible = false;
-            this.rtb_sumAnswer2.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer2.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer2.Location = new Point(0x2b, 0x1f);
+            // 
+            // rtb_sumAnswer2
+            // 
+            this.rtb_sumAnswer2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer2.Location = new System.Drawing.Point(43, 29);
             this.rtb_sumAnswer2.Name = "rtb_sumAnswer2";
             this.rtb_sumAnswer2.ReadOnly = true;
             this.rtb_sumAnswer2.ShortcutsEnabled = false;
-            this.rtb_sumAnswer2.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer2.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer2.TabIndex = 0;
             this.rtb_sumAnswer2.TabStop = false;
             this.rtb_sumAnswer2.Text = "";
             this.rtb_sumAnswer2.Visible = false;
-            this.rtb_sumAnswer3.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer3.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer3.Location = new Point(0x2b, 0x3b);
+            // 
+            // rtb_sumAnswer3
+            // 
+            this.rtb_sumAnswer3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer3.Location = new System.Drawing.Point(43, 55);
             this.rtb_sumAnswer3.Name = "rtb_sumAnswer3";
             this.rtb_sumAnswer3.ReadOnly = true;
             this.rtb_sumAnswer3.ShortcutsEnabled = false;
-            this.rtb_sumAnswer3.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer3.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer3.TabIndex = 0;
             this.rtb_sumAnswer3.TabStop = false;
             this.rtb_sumAnswer3.Text = "";
             this.rtb_sumAnswer3.Visible = false;
-            this.rtb_sumAnswer4.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer4.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer4.Location = new Point(0x2b, 0x57);
+            // 
+            // rtb_sumAnswer4
+            // 
+            this.rtb_sumAnswer4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer4.Location = new System.Drawing.Point(43, 81);
             this.rtb_sumAnswer4.Name = "rtb_sumAnswer4";
             this.rtb_sumAnswer4.ReadOnly = true;
             this.rtb_sumAnswer4.ShortcutsEnabled = false;
-            this.rtb_sumAnswer4.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer4.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer4.TabIndex = 0;
             this.rtb_sumAnswer4.TabStop = false;
             this.rtb_sumAnswer4.Text = "";
             this.rtb_sumAnswer4.Visible = false;
+            // 
+            // ckb_sumAnswer1
+            // 
             this.ckb_sumAnswer1.AutoSize = true;
             this.ckb_sumAnswer1.Enabled = false;
-            this.ckb_sumAnswer1.Location = new Point(3, 3);
+            this.ckb_sumAnswer1.Location = new System.Drawing.Point(3, 3);
             this.ckb_sumAnswer1.Name = "ckb_sumAnswer1";
-            this.ckb_sumAnswer1.Size = new Size(0x21, 0x11);
+            this.ckb_sumAnswer1.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer1.TabIndex = 2;
             this.ckb_sumAnswer1.TabStop = false;
             this.ckb_sumAnswer1.Text = "A";
             this.ckb_sumAnswer1.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer1.Visible = false;
+            // 
+            // ckb_sumAnswer2
+            // 
             this.ckb_sumAnswer2.AutoSize = true;
             this.ckb_sumAnswer2.Enabled = false;
-            this.ckb_sumAnswer2.Location = new Point(3, 0x1f);
+            this.ckb_sumAnswer2.Location = new System.Drawing.Point(3, 29);
             this.ckb_sumAnswer2.Name = "ckb_sumAnswer2";
-            this.ckb_sumAnswer2.Size = new Size(0x21, 0x11);
+            this.ckb_sumAnswer2.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer2.TabIndex = 2;
             this.ckb_sumAnswer2.TabStop = false;
             this.ckb_sumAnswer2.Text = "B";
             this.ckb_sumAnswer2.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer2.Visible = false;
+            // 
+            // ckb_sumAnswer3
+            // 
             this.ckb_sumAnswer3.AutoSize = true;
             this.ckb_sumAnswer3.Enabled = false;
-            this.ckb_sumAnswer3.Location = new Point(3, 0x3b);
+            this.ckb_sumAnswer3.Location = new System.Drawing.Point(3, 55);
             this.ckb_sumAnswer3.Name = "ckb_sumAnswer3";
-            this.ckb_sumAnswer3.Size = new Size(0x21, 0x11);
+            this.ckb_sumAnswer3.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer3.TabIndex = 2;
             this.ckb_sumAnswer3.TabStop = false;
             this.ckb_sumAnswer3.Text = "C";
             this.ckb_sumAnswer3.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer3.Visible = false;
+            // 
+            // ckb_sumAnswer4
+            // 
             this.ckb_sumAnswer4.AutoSize = true;
             this.ckb_sumAnswer4.Enabled = false;
-            this.ckb_sumAnswer4.Location = new Point(3, 0x57);
+            this.ckb_sumAnswer4.Location = new System.Drawing.Point(3, 81);
             this.ckb_sumAnswer4.Name = "ckb_sumAnswer4";
-            this.ckb_sumAnswer4.Size = new Size(0x22, 0x11);
+            this.ckb_sumAnswer4.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer4.TabIndex = 2;
             this.ckb_sumAnswer4.TabStop = false;
             this.ckb_sumAnswer4.Text = "D";
             this.ckb_sumAnswer4.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer4.Visible = false;
+            // 
+            // ckb_sumAnswer5
+            // 
             this.ckb_sumAnswer5.AutoSize = true;
             this.ckb_sumAnswer5.Enabled = false;
-            this.ckb_sumAnswer5.Location = new Point(3, 0x73);
+            this.ckb_sumAnswer5.Location = new System.Drawing.Point(3, 107);
             this.ckb_sumAnswer5.Name = "ckb_sumAnswer5";
-            this.ckb_sumAnswer5.Size = new Size(0x21, 0x11);
+            this.ckb_sumAnswer5.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer5.TabIndex = 2;
             this.ckb_sumAnswer5.TabStop = false;
             this.ckb_sumAnswer5.Text = "E";
             this.ckb_sumAnswer5.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer5.Visible = false;
+            // 
+            // ckb_sumAnswer6
+            // 
             this.ckb_sumAnswer6.AutoSize = true;
             this.ckb_sumAnswer6.Enabled = false;
-            this.ckb_sumAnswer6.Location = new Point(3, 0x8f);
+            this.ckb_sumAnswer6.Location = new System.Drawing.Point(3, 133);
             this.ckb_sumAnswer6.Name = "ckb_sumAnswer6";
-            this.ckb_sumAnswer6.Size = new Size(0x20, 0x11);
+            this.ckb_sumAnswer6.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer6.TabIndex = 2;
             this.ckb_sumAnswer6.TabStop = false;
             this.ckb_sumAnswer6.Text = "F";
             this.ckb_sumAnswer6.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer6.Visible = false;
-            this.rtb_sumAnswer6.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer6.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer6.Location = new Point(0x2b, 0x8f);
+            // 
+            // rtb_sumAnswer6
+            // 
+            this.rtb_sumAnswer6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer6.Location = new System.Drawing.Point(43, 133);
             this.rtb_sumAnswer6.Name = "rtb_sumAnswer6";
             this.rtb_sumAnswer6.ReadOnly = true;
             this.rtb_sumAnswer6.ShortcutsEnabled = false;
-            this.rtb_sumAnswer6.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer6.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer6.TabIndex = 1;
             this.rtb_sumAnswer6.TabStop = false;
             this.rtb_sumAnswer6.Text = "";
             this.rtb_sumAnswer6.Visible = false;
+            // 
+            // ckb_sumAnswer7
+            // 
             this.ckb_sumAnswer7.AutoSize = true;
             this.ckb_sumAnswer7.Enabled = false;
-            this.ckb_sumAnswer7.Location = new Point(3, 0xab);
+            this.ckb_sumAnswer7.Location = new System.Drawing.Point(3, 159);
             this.ckb_sumAnswer7.Name = "ckb_sumAnswer7";
-            this.ckb_sumAnswer7.Size = new Size(0x22, 0x11);
+            this.ckb_sumAnswer7.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer7.TabIndex = 2;
             this.ckb_sumAnswer7.TabStop = false;
             this.ckb_sumAnswer7.Text = "G";
             this.ckb_sumAnswer7.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer7.Visible = false;
+            // 
+            // ckb_sumAnswer8
+            // 
             this.ckb_sumAnswer8.AutoSize = true;
             this.ckb_sumAnswer8.Enabled = false;
-            this.ckb_sumAnswer8.Location = new Point(3, 0xc7);
+            this.ckb_sumAnswer8.Location = new System.Drawing.Point(3, 185);
             this.ckb_sumAnswer8.Name = "ckb_sumAnswer8";
-            this.ckb_sumAnswer8.Size = new Size(0x22, 0x11);
+            this.ckb_sumAnswer8.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer8.TabIndex = 2;
             this.ckb_sumAnswer8.TabStop = false;
             this.ckb_sumAnswer8.Text = "H";
             this.ckb_sumAnswer8.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer8.Visible = false;
-            this.rtb_sumAnswer7.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer7.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer7.Location = new Point(0x2b, 0xab);
+            // 
+            // rtb_sumAnswer7
+            // 
+            this.rtb_sumAnswer7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer7.Location = new System.Drawing.Point(43, 159);
             this.rtb_sumAnswer7.Name = "rtb_sumAnswer7";
             this.rtb_sumAnswer7.ReadOnly = true;
             this.rtb_sumAnswer7.ShortcutsEnabled = false;
-            this.rtb_sumAnswer7.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer7.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer7.TabIndex = 1;
             this.rtb_sumAnswer7.TabStop = false;
             this.rtb_sumAnswer7.Text = "";
             this.rtb_sumAnswer7.Visible = false;
-            this.rtb_sumAnswer8.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer8.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer8.Location = new Point(0x2b, 0xc7);
+            // 
+            // rtb_sumAnswer8
+            // 
+            this.rtb_sumAnswer8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer8.Location = new System.Drawing.Point(43, 185);
             this.rtb_sumAnswer8.Name = "rtb_sumAnswer8";
             this.rtb_sumAnswer8.ReadOnly = true;
             this.rtb_sumAnswer8.ShortcutsEnabled = false;
-            this.rtb_sumAnswer8.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer8.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer8.TabIndex = 1;
             this.rtb_sumAnswer8.TabStop = false;
             this.rtb_sumAnswer8.Text = "";
             this.rtb_sumAnswer8.Visible = false;
+            // 
+            // ckb_sumAnswer9
+            // 
             this.ckb_sumAnswer9.AutoSize = true;
             this.ckb_sumAnswer9.Enabled = false;
-            this.ckb_sumAnswer9.Location = new Point(3, 0xe3);
+            this.ckb_sumAnswer9.Location = new System.Drawing.Point(3, 211);
             this.ckb_sumAnswer9.Name = "ckb_sumAnswer9";
-            this.ckb_sumAnswer9.Size = new Size(0x1d, 0x11);
+            this.ckb_sumAnswer9.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer9.TabIndex = 2;
             this.ckb_sumAnswer9.TabStop = false;
             this.ckb_sumAnswer9.Text = "I";
             this.ckb_sumAnswer9.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer9.Visible = false;
+            // 
+            // ckb_sumAnswer10
+            // 
             this.ckb_sumAnswer10.AutoSize = true;
             this.ckb_sumAnswer10.Enabled = false;
-            this.ckb_sumAnswer10.Location = new Point(3, 0xff);
+            this.ckb_sumAnswer10.Location = new System.Drawing.Point(3, 237);
             this.ckb_sumAnswer10.Name = "ckb_sumAnswer10";
-            this.ckb_sumAnswer10.Size = new Size(0x1f, 0x11);
+            this.ckb_sumAnswer10.Size = new System.Drawing.Size(30, 16);
             this.ckb_sumAnswer10.TabIndex = 2;
             this.ckb_sumAnswer10.Text = "J";
             this.ckb_sumAnswer10.UseVisualStyleBackColor = true;
             this.ckb_sumAnswer10.Visible = false;
-            this.rtb_sumAnswer9.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer9.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer9.Location = new Point(0x2b, 0xe3);
+            // 
+            // rtb_sumAnswer9
+            // 
+            this.rtb_sumAnswer9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer9.Location = new System.Drawing.Point(43, 211);
             this.rtb_sumAnswer9.Name = "rtb_sumAnswer9";
             this.rtb_sumAnswer9.ReadOnly = true;
             this.rtb_sumAnswer9.ShortcutsEnabled = false;
-            this.rtb_sumAnswer9.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer9.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer9.TabIndex = 1;
             this.rtb_sumAnswer9.TabStop = false;
             this.rtb_sumAnswer9.Text = "";
             this.rtb_sumAnswer9.Visible = false;
-            this.rtb_sumAnswer10.BackColor = SystemColors.ControlLightLight;
-            this.rtb_sumAnswer10.BorderStyle = BorderStyle.None;
-            this.rtb_sumAnswer10.Location = new Point(0x2b, 0xff);
+            // 
+            // rtb_sumAnswer10
+            // 
+            this.rtb_sumAnswer10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtb_sumAnswer10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_sumAnswer10.Location = new System.Drawing.Point(43, 237);
             this.rtb_sumAnswer10.Name = "rtb_sumAnswer10";
             this.rtb_sumAnswer10.ReadOnly = true;
             this.rtb_sumAnswer10.ShortcutsEnabled = false;
-            this.rtb_sumAnswer10.Size = new Size(0x237, 0x16);
+            this.rtb_sumAnswer10.Size = new System.Drawing.Size(567, 20);
             this.rtb_sumAnswer10.TabIndex = 1;
             this.rtb_sumAnswer10.Text = "";
             this.rtb_sumAnswer10.Visible = false;
+            // 
+            // rtab_Review
+            // 
             this.rtab_Review.Controls.Add(this.lbl_scoreReport);
             this.rtab_Review.Controls.Add(this.lbl_wrongAnswered);
             this.rtab_Review.Controls.Add(this.pb_wrongAnswered);
@@ -4552,233 +5019,325 @@
             this.rtab_Review.Controls.Add(this.label1);
             this.rtab_Review.Controls.Add(this.pictureBox5);
             this.rtab_Review.Controls.Add(this.dgv_readingReview);
-            this.rtab_Review.Location = new Point(4, 0x19);
+            this.rtab_Review.Location = new System.Drawing.Point(4, 25);
             this.rtab_Review.Name = "rtab_Review";
-            this.rtab_Review.Size = new Size(0x2fb, 0x20c);
+            this.rtab_Review.Size = new System.Drawing.Size(763, 481);
             this.rtab_Review.TabIndex = 2;
             this.rtab_Review.Text = "rReview";
             this.rtab_Review.UseVisualStyleBackColor = true;
+            // 
+            // lbl_scoreReport
+            // 
             this.lbl_scoreReport.AutoSize = true;
-            this.lbl_scoreReport.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.lbl_scoreReport.Location = new Point(0x44, 0x15);
+            this.lbl_scoreReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_scoreReport.Location = new System.Drawing.Point(68, 19);
             this.lbl_scoreReport.Name = "lbl_scoreReport";
-            this.lbl_scoreReport.Size = new Size(0x61, 0x11);
+            this.lbl_scoreReport.Size = new System.Drawing.Size(97, 17);
             this.lbl_scoreReport.TabIndex = 5;
             this.lbl_scoreReport.Text = "scoreReport";
+            // 
+            // lbl_wrongAnswered
+            // 
             this.lbl_wrongAnswered.AutoSize = true;
-            this.lbl_wrongAnswered.Location = new Point(0x153, 0x39);
+            this.lbl_wrongAnswered.Location = new System.Drawing.Point(339, 53);
             this.lbl_wrongAnswered.Name = "lbl_wrongAnswered";
-            this.lbl_wrongAnswered.Size = new Size(0x59, 13);
+            this.lbl_wrongAnswered.Size = new System.Drawing.Size(89, 12);
             this.lbl_wrongAnswered.TabIndex = 4;
             this.lbl_wrongAnswered.Text = "Wrong Answered";
-            this.pb_wrongAnswered.BackColor = Color.Yellow;
-            this.pb_wrongAnswered.Location = new Point(0x132, 0x30);
+            // 
+            // pb_wrongAnswered
+            // 
+            this.pb_wrongAnswered.BackColor = System.Drawing.Color.Yellow;
+            this.pb_wrongAnswered.Location = new System.Drawing.Point(306, 44);
             this.pb_wrongAnswered.Name = "pb_wrongAnswered";
-            this.pb_wrongAnswered.Size = new Size(0x1b, 0x16);
+            this.pb_wrongAnswered.Size = new System.Drawing.Size(27, 20);
             this.pb_wrongAnswered.TabIndex = 3;
             this.pb_wrongAnswered.TabStop = false;
+            // 
+            // lbl_rightAnswered
+            // 
             this.lbl_rightAnswered.AutoSize = true;
-            this.lbl_rightAnswered.Location = new Point(0xde, 0x39);
+            this.lbl_rightAnswered.Location = new System.Drawing.Point(222, 53);
             this.lbl_rightAnswered.Name = "lbl_rightAnswered";
-            this.lbl_rightAnswered.Size = new Size(0x52, 13);
+            this.lbl_rightAnswered.Size = new System.Drawing.Size(89, 12);
             this.lbl_rightAnswered.TabIndex = 4;
             this.lbl_rightAnswered.Text = "Right Answered";
-            this.pb_rightAnswered.BackColor = Color.Green;
-            this.pb_rightAnswered.Location = new Point(0xbd, 0x30);
+            // 
+            // pb_rightAnswered
+            // 
+            this.pb_rightAnswered.BackColor = System.Drawing.Color.Green;
+            this.pb_rightAnswered.Location = new System.Drawing.Point(189, 44);
             this.pb_rightAnswered.Name = "pb_rightAnswered";
-            this.pb_rightAnswered.Size = new Size(0x1b, 0x16);
+            this.pb_rightAnswered.Size = new System.Drawing.Size(27, 20);
             this.pb_rightAnswered.TabIndex = 3;
             this.pb_rightAnswered.TabStop = false;
+            // 
+            // label1
+            // 
             this.label1.AutoSize = true;
-            this.label1.Location = new Point(0x68, 0x39);
+            this.label1.Location = new System.Drawing.Point(104, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new Size(0x4a, 13);
+            this.label1.Size = new System.Drawing.Size(77, 12);
             this.label1.TabIndex = 4;
             this.label1.Text = "Not Answered";
-            this.pictureBox5.BackColor = Color.Red;
-            this.pictureBox5.Location = new Point(0x47, 0x30);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Red;
+            this.pictureBox5.Location = new System.Drawing.Point(71, 44);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new Size(0x1b, 0x16);
+            this.pictureBox5.Size = new System.Drawing.Size(27, 20);
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
+            // 
+            // dgv_readingReview
+            // 
             this.dgv_readingReview.AllowUserToAddRows = false;
             this.dgv_readingReview.AllowUserToDeleteRows = false;
             this.dgv_readingReview.AllowUserToResizeColumns = false;
             this.dgv_readingReview.AllowUserToResizeRows = false;
-            this.dgv_readingReview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_readingReview.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_readingReview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_readingReview.Location = new Point(0x47, 0x4c);
+            this.dgv_readingReview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_readingReview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgv_readingReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_readingReview.Location = new System.Drawing.Point(71, 70);
             this.dgv_readingReview.MultiSelect = false;
             this.dgv_readingReview.Name = "dgv_readingReview";
             this.dgv_readingReview.ReadOnly = true;
             this.dgv_readingReview.RowHeadersVisible = false;
-            this.dgv_readingReview.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_readingReview.RowTemplate.Height = 0x17;
+            this.dgv_readingReview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_readingReview.RowTemplate.Height = 23;
             this.dgv_readingReview.RowTemplate.ReadOnly = true;
-            this.dgv_readingReview.RowTemplate.Resizable = DataGridViewTriState.False;
-            this.dgv_readingReview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_readingReview.Size = new Size(0x284, 0x153);
+            this.dgv_readingReview.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_readingReview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_readingReview.Size = new System.Drawing.Size(644, 313);
             this.dgv_readingReview.TabIndex = 2;
             this.dgv_readingReview.TabStop = false;
-            this.dgv_readingReview.CellContentClick += new DataGridViewCellEventHandler(this.dgv_readingReview_CellContentClick);
-            this.dgv_readingReview.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(this.dgv_readingReview_ColumnHeaderMouseClick);
-            this.dgv_readingReview.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.dgv_readingReview_DataBindingComplete);
+            this.dgv_readingReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_readingReview_CellContentClick);
+            this.dgv_readingReview.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_readingReview_ColumnHeaderMouseClick);
+            this.dgv_readingReview.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readingReview_DataBindingComplete);
+            // 
+            // tab_Listening
+            // 
             this.tab_Listening.Controls.Add(this.tabf_Listening);
-            this.tab_Listening.Location = new Point(4, 0x16);
+            this.tab_Listening.Location = new System.Drawing.Point(4, 22);
             this.tab_Listening.Name = "tab_Listening";
-            this.tab_Listening.Padding = new Padding(3);
-            this.tab_Listening.Size = new Size(780, 0x20f);
+            this.tab_Listening.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Listening.Size = new System.Drawing.Size(780, 484);
             this.tab_Listening.TabIndex = 1;
             this.tab_Listening.Text = "Listening";
             this.tab_Listening.UseVisualStyleBackColor = true;
-            this.tabf_Listening.Appearance = TabAppearance.Buttons;
+            // 
+            // tabf_Listening
+            // 
+            this.tabf_Listening.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabf_Listening.Controls.Add(this.ltab_Direction1);
             this.tabf_Listening.Controls.Add(this.ltab_Direction2);
             this.tabf_Listening.Controls.Add(this.ltab_Materials);
             this.tabf_Listening.Controls.Add(this.lMaterials1);
             this.tabf_Listening.Controls.Add(this.ltab_Question);
             this.tabf_Listening.Controls.Add(this.lTableQuestion);
-            this.tabf_Listening.Location = new Point(4, -26);
+            this.tabf_Listening.Location = new System.Drawing.Point(4, -24);
             this.tabf_Listening.Name = "tabf_Listening";
             this.tabf_Listening.SelectedIndex = 0;
-            this.tabf_Listening.Size = new Size(780, 0x22d);
+            this.tabf_Listening.Size = new System.Drawing.Size(780, 514);
             this.tabf_Listening.TabIndex = 1;
             this.tabf_Listening.TabStop = false;
+            // 
+            // ltab_Direction1
+            // 
             this.ltab_Direction1.Controls.Add(this.pictureBox1);
-            this.ltab_Direction1.Location = new Point(4, 0x19);
+            this.ltab_Direction1.Location = new System.Drawing.Point(4, 25);
             this.ltab_Direction1.Name = "ltab_Direction1";
-            this.ltab_Direction1.Padding = new Padding(3);
-            this.ltab_Direction1.Size = new Size(0x304, 0x210);
+            this.ltab_Direction1.Padding = new System.Windows.Forms.Padding(3);
+            this.ltab_Direction1.Size = new System.Drawing.Size(772, 485);
             this.ltab_Direction1.TabIndex = 0;
             this.ltab_Direction1.Text = "lDirection1";
             this.ltab_Direction1.UseVisualStyleBackColor = true;
-            this.pictureBox1.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
-            this.pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            this.pictureBox1.Image = (Image) manager.GetObject("pictureBox1.Image");
-            this.pictureBox1.Location = new Point(0x1c, 10);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new Size(0x466, 0x215);
-            this.pictureBox1.TabIndex = 0x13;
+            this.pictureBox1.Size = new System.Drawing.Size(1126, 492);
+            this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            this.ltab_Direction2.Location = new Point(4, 0x19);
+            // 
+            // ltab_Direction2
+            // 
+            this.ltab_Direction2.Location = new System.Drawing.Point(4, 25);
             this.ltab_Direction2.Name = "ltab_Direction2";
-            this.ltab_Direction2.Size = new Size(0x304, 0x210);
+            this.ltab_Direction2.Size = new System.Drawing.Size(772, 485);
             this.ltab_Direction2.TabIndex = 3;
             this.ltab_Direction2.Text = "lDirection2";
             this.ltab_Direction2.UseVisualStyleBackColor = true;
+            // 
+            // ltab_Materials
+            // 
             this.ltab_Materials.Controls.Add(this.l_splitContainer);
-            this.ltab_Materials.Location = new Point(4, 0x19);
+            this.ltab_Materials.Location = new System.Drawing.Point(4, 25);
             this.ltab_Materials.Name = "ltab_Materials";
-            this.ltab_Materials.Padding = new Padding(3);
-            this.ltab_Materials.Size = new Size(0x304, 0x210);
+            this.ltab_Materials.Padding = new System.Windows.Forms.Padding(3);
+            this.ltab_Materials.Size = new System.Drawing.Size(772, 485);
             this.ltab_Materials.TabIndex = 1;
             this.ltab_Materials.Text = "lMaterials";
             this.ltab_Materials.UseVisualStyleBackColor = true;
-            this.l_splitContainer.Dock = DockStyle.Fill;
+            // 
+            // l_splitContainer
+            // 
+            this.l_splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.l_splitContainer.IsSplitterFixed = true;
-            this.l_splitContainer.Location = new Point(3, 3);
+            this.l_splitContainer.Location = new System.Drawing.Point(3, 3);
             this.l_splitContainer.Name = "l_splitContainer";
+            // 
+            // l_splitContainer.Panel1
+            // 
             this.l_splitContainer.Panel1.Controls.Add(this.pb_currentpos);
             this.l_splitContainer.Panel1.Controls.Add(this.tb_currentpos);
             this.l_splitContainer.Panel1.Controls.Add(this.PlayFileName);
             this.l_splitContainer.Panel1.Controls.Add(this.pb_ListenScene);
+            // 
+            // l_splitContainer.Panel2
+            // 
             this.l_splitContainer.Panel2.AutoScroll = true;
-            this.l_splitContainer.Panel2.AutoScrollMargin = new Size(10, 10);
+            this.l_splitContainer.Panel2.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.l_splitContainer.Panel2.Controls.Add(this.panel1);
-            this.l_splitContainer.Size = new Size(0x2fe, 0x20a);
-            this.l_splitContainer.SplitterDistance = 0x156;
+            this.l_splitContainer.Size = new System.Drawing.Size(766, 482);
+            this.l_splitContainer.SplitterDistance = 342;
             this.l_splitContainer.TabIndex = 1;
-            this.pb_currentpos.Location = new Point(0x12, 0x19c);
+            // 
+            // pb_currentpos
+            // 
+            this.pb_currentpos.Location = new System.Drawing.Point(18, 380);
             this.pb_currentpos.Name = "pb_currentpos";
-            this.pb_currentpos.Size = new Size(0x134, 0x17);
-            this.pb_currentpos.TabIndex = 0x26;
+            this.pb_currentpos.Size = new System.Drawing.Size(308, 21);
+            this.pb_currentpos.TabIndex = 38;
+            // 
+            // tb_currentpos
+            // 
             this.tb_currentpos.AutoSize = false;
-            this.tb_currentpos.Location = new Point(0x12, 8);
+            this.tb_currentpos.Location = new System.Drawing.Point(18, 7);
             this.tb_currentpos.Name = "tb_currentpos";
-            this.tb_currentpos.Size = new Size(0x134, 20);
-            this.tb_currentpos.TabIndex = 0x24;
+            this.tb_currentpos.Size = new System.Drawing.Size(308, 18);
+            this.tb_currentpos.TabIndex = 36;
             this.tb_currentpos.TabStop = false;
-            this.tb_currentpos.TickStyle = TickStyle.None;
+            this.tb_currentpos.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tb_currentpos.Visible = false;
-            this.tb_currentpos.Scroll += new EventHandler(this.tb_currentpos_Scroll);
+            this.tb_currentpos.Scroll += new System.EventHandler(this.tb_currentpos_Scroll);
+            // 
+            // PlayFileName
+            // 
             this.PlayFileName.AutoSize = true;
-            this.PlayFileName.Location = new Point(-25, 480);
+            this.PlayFileName.Location = new System.Drawing.Point(-25, 443);
             this.PlayFileName.Name = "PlayFileName";
-            this.PlayFileName.Size = new Size(0x23, 13);
-            this.PlayFileName.TabIndex = 0x23;
+            this.PlayFileName.Size = new System.Drawing.Size(41, 12);
+            this.PlayFileName.TabIndex = 35;
             this.PlayFileName.Text = "label1";
-            this.pb_ListenScene.Location = new Point(0x12, 0x33);
+            // 
+            // pb_ListenScene
+            // 
+            this.pb_ListenScene.Location = new System.Drawing.Point(18, 47);
             this.pb_ListenScene.Name = "pb_ListenScene";
-            this.pb_ListenScene.Size = new Size(0x134, 0x135);
-            this.pb_ListenScene.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.pb_ListenScene.TabIndex = 0x25;
+            this.pb_ListenScene.Size = new System.Drawing.Size(308, 285);
+            this.pb_ListenScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ListenScene.TabIndex = 37;
             this.pb_ListenScene.TabStop = false;
+            // 
+            // panel1
+            // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.flp_passage);
-            this.panel1.Location = new Point(4, 4);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new Size(0x18c, 0x1c8);
-            this.panel1.TabIndex = 0x1d;
+            this.panel1.Size = new System.Drawing.Size(396, 421);
+            this.panel1.TabIndex = 29;
+            // 
+            // flp_passage
+            // 
             this.flp_passage.Controls.Add(this.lnk_passage);
-            this.flp_passage.FlowDirection = FlowDirection.TopDown;
-            this.flp_passage.Location = new Point(3, 12);
+            this.flp_passage.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_passage.Location = new System.Drawing.Point(3, 11);
             this.flp_passage.Name = "flp_passage";
-            this.flp_passage.Size = new Size(0x176, 0x4b0);
-            this.flp_passage.TabIndex = 0x1c;
-            this.lnk_passage.ActiveLinkColor = Color.Black;
+            this.flp_passage.Size = new System.Drawing.Size(374, 1108);
+            this.flp_passage.TabIndex = 28;
+            // 
+            // lnk_passage
+            // 
+            this.lnk_passage.ActiveLinkColor = System.Drawing.Color.Black;
             this.lnk_passage.AutoSize = true;
-            this.lnk_passage.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lnk_passage.LinkBehavior = LinkBehavior.NeverUnderline;
-            this.lnk_passage.LinkColor = Color.Black;
-            this.lnk_passage.Location = new Point(3, 0);
+            this.lnk_passage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_passage.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_passage.LinkColor = System.Drawing.Color.Black;
+            this.lnk_passage.Location = new System.Drawing.Point(3, 0);
             this.lnk_passage.Name = "lnk_passage";
-            this.lnk_passage.Size = new Size(0x1a, 0x11);
+            this.lnk_passage.Size = new System.Drawing.Size(26, 16);
             this.lnk_passage.TabIndex = 0;
             this.lnk_passage.TabStop = true;
             this.lnk_passage.Text = "lnk\r\n";
+            // 
+            // lMaterials1
+            // 
             this.lMaterials1.Controls.Add(this.tb_currentpos1);
             this.lMaterials1.Controls.Add(this.pb_currentpos1);
             this.lMaterials1.Controls.Add(this.pb_ListenScene1);
-            this.lMaterials1.Location = new Point(4, 0x19);
+            this.lMaterials1.Location = new System.Drawing.Point(4, 25);
             this.lMaterials1.Name = "lMaterials1";
-            this.lMaterials1.Size = new Size(0x304, 0x210);
+            this.lMaterials1.Size = new System.Drawing.Size(772, 485);
             this.lMaterials1.TabIndex = 5;
             this.lMaterials1.Text = "lMaterials1";
             this.lMaterials1.UseVisualStyleBackColor = true;
+            // 
+            // tb_currentpos1
+            // 
             this.tb_currentpos1.AutoSize = false;
             this.tb_currentpos1.LargeChange = 1;
-            this.tb_currentpos1.Location = new Point(0xcc, 12);
+            this.tb_currentpos1.Location = new System.Drawing.Point(204, 11);
             this.tb_currentpos1.Name = "tb_currentpos1";
-            this.tb_currentpos1.Size = new Size(400, 20);
-            this.tb_currentpos1.TabIndex = 0x26;
+            this.tb_currentpos1.Size = new System.Drawing.Size(400, 18);
+            this.tb_currentpos1.TabIndex = 38;
             this.tb_currentpos1.TabStop = false;
-            this.tb_currentpos1.TickStyle = TickStyle.None;
+            this.tb_currentpos1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tb_currentpos1.Visible = false;
-            this.tb_currentpos1.Scroll += new EventHandler(this.tb_currentpos1_Scroll);
-            this.pb_currentpos1.Location = new Point(0xcc, 0x1b7);
+            this.tb_currentpos1.Scroll += new System.EventHandler(this.tb_currentpos1_Scroll);
+            // 
+            // pb_currentpos1
+            // 
+            this.pb_currentpos1.Location = new System.Drawing.Point(204, 405);
             this.pb_currentpos1.Name = "pb_currentpos1";
-            this.pb_currentpos1.Size = new Size(400, 0x17);
-            this.pb_currentpos1.Style = ProgressBarStyle.Continuous;
+            this.pb_currentpos1.Size = new System.Drawing.Size(400, 21);
+            this.pb_currentpos1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pb_currentpos1.TabIndex = 40;
-            this.pb_ListenScene1.Location = new Point(0xcc, 0x21);
+            // 
+            // pb_ListenScene1
+            // 
+            this.pb_ListenScene1.Location = new System.Drawing.Point(204, 30);
             this.pb_ListenScene1.Name = "pb_ListenScene1";
-            this.pb_ListenScene1.Size = new Size(400, 400);
-            this.pb_ListenScene1.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.pb_ListenScene1.TabIndex = 0x27;
+            this.pb_ListenScene1.Size = new System.Drawing.Size(400, 369);
+            this.pb_ListenScene1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ListenScene1.TabIndex = 39;
             this.pb_ListenScene1.TabStop = false;
-            this.ltab_Question.BackColor = SystemColors.ControlLight;
+            // 
+            // ltab_Question
+            // 
+            this.ltab_Question.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ltab_Question.Controls.Add(this.tableLayoutPanel1);
-            this.ltab_Question.Location = new Point(4, 0x19);
+            this.ltab_Question.Location = new System.Drawing.Point(4, 25);
             this.ltab_Question.Name = "ltab_Question";
-            this.ltab_Question.Size = new Size(0x304, 0x210);
+            this.ltab_Question.Size = new System.Drawing.Size(772, 485);
             this.ltab_Question.TabIndex = 2;
             this.ltab_Question.Text = "lQuestion";
+            // 
+            // tableLayoutPanel1
+            // 
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40f));
-            this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.lrtb_question, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lrtb_answerE, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lrtb_answerD, 1, 4);
@@ -4796,259 +5355,322 @@
             this.tableLayoutPanel1.Controls.Add(this.lrtb_answerG, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lrtb_answerH, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.lrtb_answerA, 1, 1);
-            this.tableLayoutPanel1.Location = new Point(0x57, 10);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(87, 9);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.Size = new Size(620, 0x1cf);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(620, 434);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.lrtb_question.BackColor = SystemColors.ControlLight;
-            this.lrtb_question.BorderStyle = BorderStyle.None;
-            this.lrtb_question.Location = new Point(0x2b, 3);
+            // 
+            // lrtb_question
+            // 
+            this.lrtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_question.Location = new System.Drawing.Point(43, 3);
             this.lrtb_question.Name = "lrtb_question";
             this.lrtb_question.ReadOnly = true;
-            this.lrtb_question.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtb_question.ShortcutsEnabled = false;
-            this.lrtb_question.Size = new Size(0x23e, 0x41);
+            this.lrtb_question.Size = new System.Drawing.Size(574, 60);
             this.lrtb_question.TabIndex = 3;
             this.lrtb_question.TabStop = false;
             this.lrtb_question.Text = "";
-            this.lrtb_answerE.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerE.BorderStyle = BorderStyle.None;
-            this.lrtb_answerE.Location = new Point(0x2b, 270);
+            // 
+            // lrtb_answerE
+            // 
+            this.lrtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerE.Location = new System.Drawing.Point(43, 253);
             this.lrtb_answerE.Name = "lrtb_answerE";
             this.lrtb_answerE.ReadOnly = true;
             this.lrtb_answerE.ShortcutsEnabled = false;
-            this.lrtb_answerE.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerE.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerE.TabIndex = 9;
             this.lrtb_answerE.TabStop = false;
             this.lrtb_answerE.Text = "";
             this.lrtb_answerE.Visible = false;
-            this.lrtb_answerD.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerD.BorderStyle = BorderStyle.None;
-            this.lrtb_answerD.Location = new Point(0x2b, 0xdd);
+            // 
+            // lrtb_answerD
+            // 
+            this.lrtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerD.Location = new System.Drawing.Point(43, 207);
             this.lrtb_answerD.Name = "lrtb_answerD";
             this.lrtb_answerD.ReadOnly = true;
             this.lrtb_answerD.ShortcutsEnabled = false;
-            this.lrtb_answerD.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerD.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerD.TabIndex = 8;
             this.lrtb_answerD.TabStop = false;
             this.lrtb_answerD.Text = "";
             this.lrtb_answerD.Visible = false;
-            this.lrtb_answerC.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerC.BorderStyle = BorderStyle.None;
-            this.lrtb_answerC.Location = new Point(0x2b, 0xac);
+            // 
+            // lrtb_answerC
+            // 
+            this.lrtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerC.Location = new System.Drawing.Point(43, 161);
             this.lrtb_answerC.Name = "lrtb_answerC";
             this.lrtb_answerC.ReadOnly = true;
             this.lrtb_answerC.ShortcutsEnabled = false;
-            this.lrtb_answerC.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerC.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerC.TabIndex = 7;
             this.lrtb_answerC.TabStop = false;
             this.lrtb_answerC.Text = "";
             this.lrtb_answerC.Visible = false;
-            this.lrtb_answerB.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerB.BorderStyle = BorderStyle.None;
-            this.lrtb_answerB.Location = new Point(0x2b, 0x7b);
+            // 
+            // lrtb_answerB
+            // 
+            this.lrtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerB.Location = new System.Drawing.Point(43, 115);
             this.lrtb_answerB.Name = "lrtb_answerB";
             this.lrtb_answerB.ReadOnly = true;
             this.lrtb_answerB.ShortcutsEnabled = false;
-            this.lrtb_answerB.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerB.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerB.TabIndex = 6;
             this.lrtb_answerB.TabStop = false;
             this.lrtb_answerB.Text = "";
             this.lrtb_answerB.Visible = false;
-            this.lckb_A.Appearance = Appearance.Button;
+            // 
+            // lckb_A
+            // 
+            this.lckb_A.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_A.AutoSize = true;
-            this.lckb_A.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_A.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_A.FlatStyle = FlatStyle.Flat;
-            this.lckb_A.Location = new Point(3, 0x4a);
+            this.lckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_A.Location = new System.Drawing.Point(3, 69);
             this.lckb_A.Name = "lckb_A";
-            this.lckb_A.Size = new Size(0x18, 0x17);
+            this.lckb_A.Size = new System.Drawing.Size(21, 22);
             this.lckb_A.TabIndex = 0;
             this.lckb_A.TabStop = false;
             this.lckb_A.Text = "A";
             this.lckb_A.UseVisualStyleBackColor = true;
             this.lckb_A.Visible = false;
-            this.lckb_B.Appearance = Appearance.Button;
+            // 
+            // lckb_B
+            // 
+            this.lckb_B.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_B.AutoSize = true;
-            this.lckb_B.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_B.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_B.FlatStyle = FlatStyle.Flat;
-            this.lckb_B.Location = new Point(3, 0x7b);
+            this.lckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_B.Location = new System.Drawing.Point(3, 115);
             this.lckb_B.Name = "lckb_B";
-            this.lckb_B.Size = new Size(0x18, 0x17);
+            this.lckb_B.Size = new System.Drawing.Size(21, 22);
             this.lckb_B.TabIndex = 1;
             this.lckb_B.TabStop = false;
             this.lckb_B.Text = "B";
             this.lckb_B.UseVisualStyleBackColor = true;
             this.lckb_B.Visible = false;
-            this.lckb_C.Appearance = Appearance.Button;
+            // 
+            // lckb_C
+            // 
+            this.lckb_C.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_C.AutoSize = true;
-            this.lckb_C.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_C.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_C.FlatStyle = FlatStyle.Flat;
-            this.lckb_C.Location = new Point(3, 0xac);
+            this.lckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_C.Location = new System.Drawing.Point(3, 161);
             this.lckb_C.Name = "lckb_C";
-            this.lckb_C.Size = new Size(0x18, 0x17);
+            this.lckb_C.Size = new System.Drawing.Size(21, 22);
             this.lckb_C.TabIndex = 2;
             this.lckb_C.TabStop = false;
             this.lckb_C.Text = "C";
             this.lckb_C.UseVisualStyleBackColor = true;
             this.lckb_C.Visible = false;
-            this.lckb_D.Appearance = Appearance.Button;
+            // 
+            // lckb_D
+            // 
+            this.lckb_D.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_D.AutoSize = true;
-            this.lckb_D.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_D.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_D.FlatStyle = FlatStyle.Flat;
-            this.lckb_D.Location = new Point(3, 0xdd);
+            this.lckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_D.Location = new System.Drawing.Point(3, 207);
             this.lckb_D.Name = "lckb_D";
-            this.lckb_D.Size = new Size(0x19, 0x17);
+            this.lckb_D.Size = new System.Drawing.Size(21, 22);
             this.lckb_D.TabIndex = 3;
             this.lckb_D.TabStop = false;
             this.lckb_D.Text = "D";
             this.lckb_D.UseVisualStyleBackColor = true;
             this.lckb_D.Visible = false;
-            this.lckb_E.Appearance = Appearance.Button;
+            // 
+            // lckb_E
+            // 
+            this.lckb_E.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_E.AutoSize = true;
-            this.lckb_E.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_E.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_E.FlatStyle = FlatStyle.Flat;
-            this.lckb_E.Location = new Point(3, 270);
+            this.lckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_E.Location = new System.Drawing.Point(3, 253);
             this.lckb_E.Name = "lckb_E";
-            this.lckb_E.Size = new Size(0x18, 0x17);
+            this.lckb_E.Size = new System.Drawing.Size(21, 22);
             this.lckb_E.TabIndex = 4;
             this.lckb_E.TabStop = false;
             this.lckb_E.Text = "E";
             this.lckb_E.UseVisualStyleBackColor = true;
             this.lckb_E.Visible = false;
-            this.lckb_F.Appearance = Appearance.Button;
+            // 
+            // lckb_F
+            // 
+            this.lckb_F.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_F.AutoSize = true;
-            this.lckb_F.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_F.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_F.FlatStyle = FlatStyle.Flat;
-            this.lckb_F.Location = new Point(3, 0x13f);
+            this.lckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_F.Location = new System.Drawing.Point(3, 299);
             this.lckb_F.Name = "lckb_F";
-            this.lckb_F.Size = new Size(0x17, 0x17);
+            this.lckb_F.Size = new System.Drawing.Size(21, 22);
             this.lckb_F.TabIndex = 4;
             this.lckb_F.TabStop = false;
             this.lckb_F.Text = "F";
             this.lckb_F.UseVisualStyleBackColor = true;
             this.lckb_F.Visible = false;
-            this.lckb_G.Appearance = Appearance.Button;
+            // 
+            // lckb_G
+            // 
+            this.lckb_G.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_G.AutoSize = true;
-            this.lckb_G.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_G.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_G.FlatStyle = FlatStyle.Flat;
-            this.lckb_G.Location = new Point(3, 0x170);
+            this.lckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_G.Location = new System.Drawing.Point(3, 345);
             this.lckb_G.Name = "lckb_G";
-            this.lckb_G.Size = new Size(0x19, 0x17);
+            this.lckb_G.Size = new System.Drawing.Size(21, 22);
             this.lckb_G.TabIndex = 4;
             this.lckb_G.TabStop = false;
             this.lckb_G.Text = "G";
             this.lckb_G.UseVisualStyleBackColor = true;
             this.lckb_G.Visible = false;
-            this.lckb_H.Appearance = Appearance.Button;
+            // 
+            // lckb_H
+            // 
+            this.lckb_H.Appearance = System.Windows.Forms.Appearance.Button;
             this.lckb_H.AutoSize = true;
-            this.lckb_H.FlatAppearance.CheckedBackColor = Color.Gray;
-            this.lckb_H.FlatAppearance.MouseOverBackColor = Color.Gray;
-            this.lckb_H.FlatStyle = FlatStyle.Flat;
-            this.lckb_H.Location = new Point(3, 0x1a1);
+            this.lckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.lckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.lckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckb_H.Location = new System.Drawing.Point(3, 391);
             this.lckb_H.Name = "lckb_H";
-            this.lckb_H.Size = new Size(0x19, 0x17);
+            this.lckb_H.Size = new System.Drawing.Size(21, 22);
             this.lckb_H.TabIndex = 4;
             this.lckb_H.TabStop = false;
             this.lckb_H.Text = "H";
             this.lckb_H.UseVisualStyleBackColor = true;
             this.lckb_H.Visible = false;
-            this.lrtb_answerF.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerF.BorderStyle = BorderStyle.None;
-            this.lrtb_answerF.Location = new Point(0x2b, 0x13f);
+            // 
+            // lrtb_answerF
+            // 
+            this.lrtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerF.Location = new System.Drawing.Point(43, 299);
             this.lrtb_answerF.Name = "lrtb_answerF";
             this.lrtb_answerF.ReadOnly = true;
             this.lrtb_answerF.ShortcutsEnabled = false;
-            this.lrtb_answerF.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerF.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerF.TabIndex = 9;
             this.lrtb_answerF.TabStop = false;
             this.lrtb_answerF.Text = "";
             this.lrtb_answerF.Visible = false;
-            this.lrtb_answerG.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerG.BorderStyle = BorderStyle.None;
-            this.lrtb_answerG.Location = new Point(0x2b, 0x170);
+            // 
+            // lrtb_answerG
+            // 
+            this.lrtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerG.Location = new System.Drawing.Point(43, 345);
             this.lrtb_answerG.Name = "lrtb_answerG";
             this.lrtb_answerG.ReadOnly = true;
             this.lrtb_answerG.ShortcutsEnabled = false;
-            this.lrtb_answerG.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerG.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerG.TabIndex = 9;
             this.lrtb_answerG.TabStop = false;
             this.lrtb_answerG.Text = "";
             this.lrtb_answerG.Visible = false;
-            this.lrtb_answerH.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerH.BorderStyle = BorderStyle.None;
-            this.lrtb_answerH.Location = new Point(0x2b, 0x1a1);
+            // 
+            // lrtb_answerH
+            // 
+            this.lrtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerH.Location = new System.Drawing.Point(43, 391);
             this.lrtb_answerH.Name = "lrtb_answerH";
             this.lrtb_answerH.ReadOnly = true;
             this.lrtb_answerH.ShortcutsEnabled = false;
-            this.lrtb_answerH.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerH.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerH.TabIndex = 9;
             this.lrtb_answerH.TabStop = false;
             this.lrtb_answerH.Text = "";
             this.lrtb_answerH.Visible = false;
-            this.lrtb_answerA.BackColor = SystemColors.ControlLight;
-            this.lrtb_answerA.BorderStyle = BorderStyle.None;
-            this.lrtb_answerA.Location = new Point(0x2b, 0x4a);
+            // 
+            // lrtb_answerA
+            // 
+            this.lrtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtb_answerA.Location = new System.Drawing.Point(43, 69);
             this.lrtb_answerA.Name = "lrtb_answerA";
             this.lrtb_answerA.ReadOnly = true;
-            this.lrtb_answerA.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtb_answerA.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtb_answerA.ShortcutsEnabled = false;
-            this.lrtb_answerA.Size = new Size(0x23e, 0x2b);
+            this.lrtb_answerA.Size = new System.Drawing.Size(574, 40);
             this.lrtb_answerA.TabIndex = 5;
             this.lrtb_answerA.TabStop = false;
             this.lrtb_answerA.Text = "";
             this.lrtb_answerA.Visible = false;
+            // 
+            // lTableQuestion
+            // 
             this.lTableQuestion.Controls.Add(this.lbl_tableAnswer);
             this.lTableQuestion.Controls.Add(this.lrtbTableQuestion);
             this.lTableQuestion.Controls.Add(this.ltlp_table);
-            this.lTableQuestion.Location = new Point(4, 0x19);
+            this.lTableQuestion.Location = new System.Drawing.Point(4, 25);
             this.lTableQuestion.Name = "lTableQuestion";
-            this.lTableQuestion.Padding = new Padding(3);
-            this.lTableQuestion.Size = new Size(0x304, 0x210);
+            this.lTableQuestion.Padding = new System.Windows.Forms.Padding(3);
+            this.lTableQuestion.Size = new System.Drawing.Size(772, 485);
             this.lTableQuestion.TabIndex = 4;
             this.lTableQuestion.Text = "lTableQuestion";
             this.lTableQuestion.UseVisualStyleBackColor = true;
+            // 
+            // lbl_tableAnswer
+            // 
             this.lbl_tableAnswer.AutoSize = true;
-            this.lbl_tableAnswer.Location = new Point(13, 7);
+            this.lbl_tableAnswer.Location = new System.Drawing.Point(13, 6);
             this.lbl_tableAnswer.Name = "lbl_tableAnswer";
-            this.lbl_tableAnswer.Size = new Size(0x23, 13);
+            this.lbl_tableAnswer.Size = new System.Drawing.Size(41, 12);
             this.lbl_tableAnswer.TabIndex = 5;
             this.lbl_tableAnswer.Text = "label6";
-            this.lrtbTableQuestion.BackColor = SystemColors.ControlLight;
-            this.lrtbTableQuestion.BorderStyle = BorderStyle.None;
-            this.lrtbTableQuestion.Location = new Point(13, 0x18);
+            // 
+            // lrtbTableQuestion
+            // 
+            this.lrtbTableQuestion.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableQuestion.Location = new System.Drawing.Point(13, 22);
             this.lrtbTableQuestion.Name = "lrtbTableQuestion";
             this.lrtbTableQuestion.ReadOnly = true;
-            this.lrtbTableQuestion.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableQuestion.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableQuestion.ShortcutsEnabled = false;
-            this.lrtbTableQuestion.Size = new Size(0x2f1, 0x30);
+            this.lrtbTableQuestion.Size = new System.Drawing.Size(753, 44);
             this.lrtbTableQuestion.TabIndex = 4;
             this.lrtbTableQuestion.TabStop = false;
             this.lrtbTableQuestion.Text = "";
-            this.ltlp_table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            // 
+            // ltlp_table
+            // 
+            this.ltlp_table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.ltlp_table.ColumnCount = 6;
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.83333f));
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.83333f));
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.83333f));
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.83333f));
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 8.333332f));
-            this.ltlp_table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 8.333332f));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
+            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
             this.ltlp_table.Controls.Add(this.lckbTable11, 1, 1);
             this.ltlp_table.Controls.Add(this.lckbTable12, 2, 1);
             this.ltlp_table.Controls.Add(this.lckbTable13, 3, 1);
@@ -5108,897 +5730,1186 @@
             this.ltlp_table.Controls.Add(this.lrtbTableRow8, 0, 8);
             this.ltlp_table.Controls.Add(this.lrtbTableRow9, 0, 9);
             this.ltlp_table.Controls.Add(this.lrtbTableCol4, 4, 0);
-            this.ltlp_table.Location = new Point(12, 0x4c);
+            this.ltlp_table.Location = new System.Drawing.Point(12, 70);
             this.ltlp_table.Name = "ltlp_table";
             this.ltlp_table.RowCount = 10;
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 11.90476f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 7.142857f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 7.142857f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 7.142857f));
-            this.ltlp_table.RowStyles.Add(new RowStyle(SizeType.Percent, 7.142857f));
-            this.ltlp_table.Size = new Size(0x2f2, 0x18f);
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.ltlp_table.Size = new System.Drawing.Size(754, 368);
             this.ltlp_table.TabIndex = 0;
-            this.lckbTable11.FlatStyle = FlatStyle.Flat;
-            this.lckbTable11.Location = new Point(160, 0x33);
+            // 
+            // lckbTable11
+            // 
+            this.lckbTable11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable11.Location = new System.Drawing.Point(160, 47);
             this.lckbTable11.Name = "lckbTable11";
-            this.lckbTable11.Size = new Size(0x5e, 30);
+            this.lckbTable11.Size = new System.Drawing.Size(94, 28);
             this.lckbTable11.TabIndex = 0;
             this.lckbTable11.TabStop = false;
             this.lckbTable11.UseVisualStyleBackColor = false;
             this.lckbTable11.Visible = false;
-            this.lckbTable11.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable12.FlatStyle = FlatStyle.Flat;
-            this.lckbTable12.Location = new Point(0x13c, 0x33);
+            this.lckbTable11.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable12
+            // 
+            this.lckbTable12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable12.Location = new System.Drawing.Point(316, 47);
             this.lckbTable12.Name = "lckbTable12";
-            this.lckbTable12.Size = new Size(0x5e, 30);
+            this.lckbTable12.Size = new System.Drawing.Size(94, 28);
             this.lckbTable12.TabIndex = 0;
             this.lckbTable12.TabStop = false;
             this.lckbTable12.UseVisualStyleBackColor = false;
             this.lckbTable12.Visible = false;
-            this.lckbTable12.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable13.FlatStyle = FlatStyle.Flat;
-            this.lckbTable13.Location = new Point(0x1d8, 0x33);
+            this.lckbTable12.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable13
+            // 
+            this.lckbTable13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable13.Location = new System.Drawing.Point(472, 47);
             this.lckbTable13.Name = "lckbTable13";
-            this.lckbTable13.Size = new Size(0x3e, 0x1b);
+            this.lckbTable13.Size = new System.Drawing.Size(62, 25);
             this.lckbTable13.TabIndex = 0;
             this.lckbTable13.TabStop = false;
             this.lckbTable13.UseVisualStyleBackColor = false;
             this.lckbTable13.Visible = false;
-            this.lckbTable13.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable14.FlatStyle = FlatStyle.Flat;
-            this.lckbTable14.Location = new Point(0x274, 0x33);
+            this.lckbTable13.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable14
+            // 
+            this.lckbTable14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable14.Location = new System.Drawing.Point(628, 47);
             this.lckbTable14.Name = "lckbTable14";
-            this.lckbTable14.Size = new Size(0x38, 30);
+            this.lckbTable14.Size = new System.Drawing.Size(56, 28);
             this.lckbTable14.TabIndex = 0;
             this.lckbTable14.TabStop = false;
             this.lckbTable14.UseVisualStyleBackColor = false;
             this.lckbTable14.Visible = false;
-            this.lckbTable14.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable15.FlatStyle = FlatStyle.Flat;
-            this.lckbTable15.Location = new Point(0x2b3, 0x33);
+            this.lckbTable14.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable15
+            // 
+            this.lckbTable15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable15.Location = new System.Drawing.Point(691, 47);
             this.lckbTable15.Name = "lckbTable15";
-            this.lckbTable15.Size = new Size(0x3b, 30);
+            this.lckbTable15.Size = new System.Drawing.Size(59, 28);
             this.lckbTable15.TabIndex = 0;
             this.lckbTable15.TabStop = false;
             this.lckbTable15.UseVisualStyleBackColor = false;
             this.lckbTable15.Visible = false;
-            this.lckbTable15.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable25.FlatStyle = FlatStyle.Flat;
-            this.lckbTable25.Location = new Point(0x2b3, 0x62);
+            this.lckbTable15.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable25
+            // 
+            this.lckbTable25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable25.Location = new System.Drawing.Point(691, 90);
             this.lckbTable25.Name = "lckbTable25";
-            this.lckbTable25.Size = new Size(0x3b, 30);
+            this.lckbTable25.Size = new System.Drawing.Size(59, 28);
             this.lckbTable25.TabIndex = 0;
             this.lckbTable25.TabStop = false;
             this.lckbTable25.UseVisualStyleBackColor = false;
             this.lckbTable25.Visible = false;
-            this.lckbTable25.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable24.FlatStyle = FlatStyle.Flat;
-            this.lckbTable24.Location = new Point(0x274, 0x62);
+            this.lckbTable25.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable24
+            // 
+            this.lckbTable24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable24.Location = new System.Drawing.Point(628, 90);
             this.lckbTable24.Name = "lckbTable24";
-            this.lckbTable24.Size = new Size(0x38, 30);
+            this.lckbTable24.Size = new System.Drawing.Size(56, 28);
             this.lckbTable24.TabIndex = 0;
             this.lckbTable24.TabStop = false;
             this.lckbTable24.UseVisualStyleBackColor = false;
             this.lckbTable24.Visible = false;
-            this.lckbTable24.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable23.FlatStyle = FlatStyle.Flat;
-            this.lckbTable23.Location = new Point(0x1d8, 0x62);
+            this.lckbTable24.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable23
+            // 
+            this.lckbTable23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable23.Location = new System.Drawing.Point(472, 90);
             this.lckbTable23.Name = "lckbTable23";
-            this.lckbTable23.Size = new Size(0x5e, 30);
+            this.lckbTable23.Size = new System.Drawing.Size(94, 28);
             this.lckbTable23.TabIndex = 0;
             this.lckbTable23.TabStop = false;
             this.lckbTable23.UseVisualStyleBackColor = false;
             this.lckbTable23.Visible = false;
-            this.lckbTable23.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable22.FlatStyle = FlatStyle.Flat;
-            this.lckbTable22.Location = new Point(0x13c, 0x62);
+            this.lckbTable23.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable22
+            // 
+            this.lckbTable22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable22.Location = new System.Drawing.Point(316, 90);
             this.lckbTable22.Name = "lckbTable22";
-            this.lckbTable22.Size = new Size(0x5e, 30);
+            this.lckbTable22.Size = new System.Drawing.Size(94, 28);
             this.lckbTable22.TabIndex = 0;
             this.lckbTable22.TabStop = false;
             this.lckbTable22.UseVisualStyleBackColor = false;
             this.lckbTable22.Visible = false;
-            this.lckbTable22.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable21.FlatStyle = FlatStyle.Flat;
-            this.lckbTable21.Location = new Point(160, 0x62);
+            this.lckbTable22.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable21
+            // 
+            this.lckbTable21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable21.Location = new System.Drawing.Point(160, 90);
             this.lckbTable21.Name = "lckbTable21";
-            this.lckbTable21.Size = new Size(0x5e, 30);
+            this.lckbTable21.Size = new System.Drawing.Size(94, 28);
             this.lckbTable21.TabIndex = 0;
             this.lckbTable21.TabStop = false;
             this.lckbTable21.UseVisualStyleBackColor = false;
             this.lckbTable21.Visible = false;
-            this.lckbTable21.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable32.FlatStyle = FlatStyle.Flat;
-            this.lckbTable32.Location = new Point(0x13c, 0x91);
+            this.lckbTable21.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable32
+            // 
+            this.lckbTable32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable32.Location = new System.Drawing.Point(316, 133);
             this.lckbTable32.Name = "lckbTable32";
-            this.lckbTable32.Size = new Size(0x5e, 30);
+            this.lckbTable32.Size = new System.Drawing.Size(94, 28);
             this.lckbTable32.TabIndex = 0;
             this.lckbTable32.TabStop = false;
             this.lckbTable32.UseVisualStyleBackColor = false;
             this.lckbTable32.Visible = false;
-            this.lckbTable32.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable33.FlatStyle = FlatStyle.Flat;
-            this.lckbTable33.Location = new Point(0x1d8, 0x91);
+            this.lckbTable32.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable33
+            // 
+            this.lckbTable33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable33.Location = new System.Drawing.Point(472, 133);
             this.lckbTable33.Name = "lckbTable33";
-            this.lckbTable33.Size = new Size(0x5e, 30);
+            this.lckbTable33.Size = new System.Drawing.Size(94, 28);
             this.lckbTable33.TabIndex = 0;
             this.lckbTable33.TabStop = false;
             this.lckbTable33.UseVisualStyleBackColor = false;
             this.lckbTable33.Visible = false;
-            this.lckbTable33.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable34.FlatStyle = FlatStyle.Flat;
-            this.lckbTable34.Location = new Point(0x274, 0x91);
+            this.lckbTable33.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable34
+            // 
+            this.lckbTable34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable34.Location = new System.Drawing.Point(628, 133);
             this.lckbTable34.Name = "lckbTable34";
-            this.lckbTable34.Size = new Size(0x38, 30);
+            this.lckbTable34.Size = new System.Drawing.Size(56, 28);
             this.lckbTable34.TabIndex = 0;
             this.lckbTable34.TabStop = false;
             this.lckbTable34.UseVisualStyleBackColor = false;
             this.lckbTable34.Visible = false;
-            this.lckbTable34.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable35.FlatStyle = FlatStyle.Flat;
-            this.lckbTable35.Location = new Point(0x2b3, 0x91);
+            this.lckbTable34.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable35
+            // 
+            this.lckbTable35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable35.Location = new System.Drawing.Point(691, 133);
             this.lckbTable35.Name = "lckbTable35";
-            this.lckbTable35.Size = new Size(0x3b, 30);
+            this.lckbTable35.Size = new System.Drawing.Size(59, 28);
             this.lckbTable35.TabIndex = 0;
             this.lckbTable35.TabStop = false;
             this.lckbTable35.UseVisualStyleBackColor = false;
             this.lckbTable35.Visible = false;
-            this.lckbTable35.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable43.FlatStyle = FlatStyle.Flat;
-            this.lckbTable43.Location = new Point(0x1d8, 0xc0);
+            this.lckbTable35.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable43
+            // 
+            this.lckbTable43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable43.Location = new System.Drawing.Point(472, 176);
             this.lckbTable43.Name = "lckbTable43";
-            this.lckbTable43.Size = new Size(0x5e, 30);
+            this.lckbTable43.Size = new System.Drawing.Size(94, 28);
             this.lckbTable43.TabIndex = 0;
             this.lckbTable43.TabStop = false;
             this.lckbTable43.UseVisualStyleBackColor = false;
             this.lckbTable43.Visible = false;
-            this.lckbTable43.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable41.FlatStyle = FlatStyle.Flat;
-            this.lckbTable41.Location = new Point(160, 0xc0);
+            this.lckbTable43.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable41
+            // 
+            this.lckbTable41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable41.Location = new System.Drawing.Point(160, 176);
             this.lckbTable41.Name = "lckbTable41";
-            this.lckbTable41.Size = new Size(0x5e, 30);
+            this.lckbTable41.Size = new System.Drawing.Size(94, 28);
             this.lckbTable41.TabIndex = 0;
             this.lckbTable41.TabStop = false;
             this.lckbTable41.UseVisualStyleBackColor = false;
             this.lckbTable41.Visible = false;
-            this.lckbTable41.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable31.FlatStyle = FlatStyle.Flat;
-            this.lckbTable31.Location = new Point(160, 0x91);
+            this.lckbTable41.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable31
+            // 
+            this.lckbTable31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable31.Location = new System.Drawing.Point(160, 133);
             this.lckbTable31.Name = "lckbTable31";
-            this.lckbTable31.Size = new Size(0x5e, 30);
+            this.lckbTable31.Size = new System.Drawing.Size(94, 28);
             this.lckbTable31.TabIndex = 0;
             this.lckbTable31.TabStop = false;
             this.lckbTable31.UseVisualStyleBackColor = false;
             this.lckbTable31.Visible = false;
-            this.lckbTable31.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable42.FlatStyle = FlatStyle.Flat;
-            this.lckbTable42.Location = new Point(0x13c, 0xc0);
+            this.lckbTable31.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable42
+            // 
+            this.lckbTable42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable42.Location = new System.Drawing.Point(316, 176);
             this.lckbTable42.Name = "lckbTable42";
-            this.lckbTable42.Size = new Size(0x5e, 30);
+            this.lckbTable42.Size = new System.Drawing.Size(94, 28);
             this.lckbTable42.TabIndex = 0;
             this.lckbTable42.TabStop = false;
             this.lckbTable42.UseVisualStyleBackColor = false;
             this.lckbTable42.Visible = false;
-            this.lckbTable42.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable44.FlatStyle = FlatStyle.Flat;
-            this.lckbTable44.Location = new Point(0x274, 0xc0);
+            this.lckbTable42.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable44
+            // 
+            this.lckbTable44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable44.Location = new System.Drawing.Point(628, 176);
             this.lckbTable44.Name = "lckbTable44";
-            this.lckbTable44.Size = new Size(0x38, 30);
+            this.lckbTable44.Size = new System.Drawing.Size(56, 28);
             this.lckbTable44.TabIndex = 0;
             this.lckbTable44.TabStop = false;
             this.lckbTable44.UseVisualStyleBackColor = false;
             this.lckbTable44.Visible = false;
-            this.lckbTable44.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable45.FlatStyle = FlatStyle.Flat;
-            this.lckbTable45.Location = new Point(0x2b3, 0xc0);
+            this.lckbTable44.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable45
+            // 
+            this.lckbTable45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable45.Location = new System.Drawing.Point(691, 176);
             this.lckbTable45.Name = "lckbTable45";
-            this.lckbTable45.Size = new Size(0x3b, 30);
+            this.lckbTable45.Size = new System.Drawing.Size(59, 28);
             this.lckbTable45.TabIndex = 0;
             this.lckbTable45.TabStop = false;
             this.lckbTable45.UseVisualStyleBackColor = false;
             this.lckbTable45.Visible = false;
-            this.lckbTable45.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable55.FlatStyle = FlatStyle.Flat;
-            this.lckbTable55.Location = new Point(0x2b3, 0xef);
+            this.lckbTable45.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable55
+            // 
+            this.lckbTable55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable55.Location = new System.Drawing.Point(691, 219);
             this.lckbTable55.Name = "lckbTable55";
-            this.lckbTable55.Size = new Size(0x3b, 30);
+            this.lckbTable55.Size = new System.Drawing.Size(59, 28);
             this.lckbTable55.TabIndex = 0;
             this.lckbTable55.TabStop = false;
             this.lckbTable55.UseVisualStyleBackColor = false;
             this.lckbTable55.Visible = false;
-            this.lckbTable55.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable54.FlatStyle = FlatStyle.Flat;
-            this.lckbTable54.Location = new Point(0x274, 0xef);
+            this.lckbTable55.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable54
+            // 
+            this.lckbTable54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable54.Location = new System.Drawing.Point(628, 219);
             this.lckbTable54.Name = "lckbTable54";
-            this.lckbTable54.Size = new Size(0x38, 30);
+            this.lckbTable54.Size = new System.Drawing.Size(56, 28);
             this.lckbTable54.TabIndex = 0;
             this.lckbTable54.TabStop = false;
             this.lckbTable54.UseVisualStyleBackColor = false;
             this.lckbTable54.Visible = false;
-            this.lckbTable54.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable53.FlatStyle = FlatStyle.Flat;
-            this.lckbTable53.Location = new Point(0x1d8, 0xef);
+            this.lckbTable54.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable53
+            // 
+            this.lckbTable53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable53.Location = new System.Drawing.Point(472, 219);
             this.lckbTable53.Name = "lckbTable53";
-            this.lckbTable53.Size = new Size(0x5e, 30);
+            this.lckbTable53.Size = new System.Drawing.Size(94, 28);
             this.lckbTable53.TabIndex = 0;
             this.lckbTable53.TabStop = false;
             this.lckbTable53.UseVisualStyleBackColor = false;
             this.lckbTable53.Visible = false;
-            this.lckbTable53.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable52.FlatStyle = FlatStyle.Flat;
-            this.lckbTable52.Location = new Point(0x13c, 0xef);
+            this.lckbTable53.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable52
+            // 
+            this.lckbTable52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable52.Location = new System.Drawing.Point(316, 219);
             this.lckbTable52.Name = "lckbTable52";
-            this.lckbTable52.Size = new Size(0x5e, 30);
+            this.lckbTable52.Size = new System.Drawing.Size(94, 28);
             this.lckbTable52.TabIndex = 0;
             this.lckbTable52.TabStop = false;
             this.lckbTable52.UseVisualStyleBackColor = false;
             this.lckbTable52.Visible = false;
-            this.lckbTable52.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable51.FlatStyle = FlatStyle.Flat;
-            this.lckbTable51.Location = new Point(160, 0xef);
+            this.lckbTable52.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable51
+            // 
+            this.lckbTable51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable51.Location = new System.Drawing.Point(160, 219);
             this.lckbTable51.Name = "lckbTable51";
-            this.lckbTable51.Size = new Size(0x5e, 30);
+            this.lckbTable51.Size = new System.Drawing.Size(94, 28);
             this.lckbTable51.TabIndex = 0;
             this.lckbTable51.TabStop = false;
             this.lckbTable51.UseVisualStyleBackColor = false;
             this.lckbTable51.Visible = false;
-            this.lckbTable51.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable61.FlatStyle = FlatStyle.Flat;
-            this.lckbTable61.Location = new Point(160, 0x11e);
+            this.lckbTable51.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable61
+            // 
+            this.lckbTable61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable61.Location = new System.Drawing.Point(160, 262);
             this.lckbTable61.Name = "lckbTable61";
-            this.lckbTable61.Size = new Size(0x5e, 0x15);
+            this.lckbTable61.Size = new System.Drawing.Size(94, 19);
             this.lckbTable61.TabIndex = 0;
             this.lckbTable61.TabStop = false;
             this.lckbTable61.UseVisualStyleBackColor = false;
             this.lckbTable61.Visible = false;
-            this.lckbTable61.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable62.FlatStyle = FlatStyle.Flat;
-            this.lckbTable62.Location = new Point(0x13c, 0x11e);
+            this.lckbTable61.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable62
+            // 
+            this.lckbTable62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable62.Location = new System.Drawing.Point(316, 262);
             this.lckbTable62.Name = "lckbTable62";
-            this.lckbTable62.Size = new Size(0x5e, 0x15);
+            this.lckbTable62.Size = new System.Drawing.Size(94, 19);
             this.lckbTable62.TabIndex = 0;
             this.lckbTable62.TabStop = false;
             this.lckbTable62.UseVisualStyleBackColor = false;
             this.lckbTable62.Visible = false;
-            this.lckbTable62.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable63.FlatStyle = FlatStyle.Flat;
-            this.lckbTable63.Location = new Point(0x1d8, 0x11e);
+            this.lckbTable62.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable63
+            // 
+            this.lckbTable63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable63.Location = new System.Drawing.Point(472, 262);
             this.lckbTable63.Name = "lckbTable63";
-            this.lckbTable63.Size = new Size(0x5e, 0x15);
+            this.lckbTable63.Size = new System.Drawing.Size(94, 19);
             this.lckbTable63.TabIndex = 0;
             this.lckbTable63.TabStop = false;
             this.lckbTable63.UseVisualStyleBackColor = false;
             this.lckbTable63.Visible = false;
-            this.lckbTable63.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable64.FlatStyle = FlatStyle.Flat;
-            this.lckbTable64.Location = new Point(0x274, 0x11e);
+            this.lckbTable63.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable64
+            // 
+            this.lckbTable64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable64.Location = new System.Drawing.Point(628, 262);
             this.lckbTable64.Name = "lckbTable64";
-            this.lckbTable64.Size = new Size(0x38, 0x15);
+            this.lckbTable64.Size = new System.Drawing.Size(56, 19);
             this.lckbTable64.TabIndex = 0;
             this.lckbTable64.TabStop = false;
             this.lckbTable64.UseVisualStyleBackColor = false;
             this.lckbTable64.Visible = false;
-            this.lckbTable64.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable65.FlatStyle = FlatStyle.Flat;
-            this.lckbTable65.Location = new Point(0x2b3, 0x11e);
+            this.lckbTable64.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable65
+            // 
+            this.lckbTable65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable65.Location = new System.Drawing.Point(691, 262);
             this.lckbTable65.Name = "lckbTable65";
-            this.lckbTable65.Size = new Size(0x3b, 0x15);
+            this.lckbTable65.Size = new System.Drawing.Size(59, 19);
             this.lckbTable65.TabIndex = 0;
             this.lckbTable65.TabStop = false;
             this.lckbTable65.UseVisualStyleBackColor = false;
             this.lckbTable65.Visible = false;
-            this.lckbTable65.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable71.FlatStyle = FlatStyle.Flat;
-            this.lckbTable71.Location = new Point(160, 0x13a);
+            this.lckbTable65.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable71
+            // 
+            this.lckbTable71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable71.Location = new System.Drawing.Point(160, 288);
             this.lckbTable71.Name = "lckbTable71";
-            this.lckbTable71.Size = new Size(0x3e, 0x15);
+            this.lckbTable71.Size = new System.Drawing.Size(62, 19);
             this.lckbTable71.TabIndex = 0;
             this.lckbTable71.TabStop = false;
             this.lckbTable71.UseVisualStyleBackColor = false;
             this.lckbTable71.Visible = false;
-            this.lckbTable71.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable72.FlatStyle = FlatStyle.Flat;
-            this.lckbTable72.Location = new Point(0x13c, 0x13a);
+            this.lckbTable71.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable72
+            // 
+            this.lckbTable72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable72.Location = new System.Drawing.Point(316, 288);
             this.lckbTable72.Name = "lckbTable72";
-            this.lckbTable72.Size = new Size(0x3e, 0x15);
+            this.lckbTable72.Size = new System.Drawing.Size(62, 19);
             this.lckbTable72.TabIndex = 0;
             this.lckbTable72.TabStop = false;
             this.lckbTable72.UseVisualStyleBackColor = false;
             this.lckbTable72.Visible = false;
-            this.lckbTable72.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable73.FlatStyle = FlatStyle.Flat;
-            this.lckbTable73.Location = new Point(0x1d8, 0x13a);
+            this.lckbTable72.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable73
+            // 
+            this.lckbTable73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable73.Location = new System.Drawing.Point(472, 288);
             this.lckbTable73.Name = "lckbTable73";
-            this.lckbTable73.Size = new Size(0x3e, 0x15);
+            this.lckbTable73.Size = new System.Drawing.Size(62, 19);
             this.lckbTable73.TabIndex = 0;
             this.lckbTable73.TabStop = false;
             this.lckbTable73.UseVisualStyleBackColor = false;
             this.lckbTable73.Visible = false;
-            this.lckbTable73.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable74.FlatStyle = FlatStyle.Flat;
-            this.lckbTable74.Location = new Point(0x274, 0x13a);
+            this.lckbTable73.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable74
+            // 
+            this.lckbTable74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable74.Location = new System.Drawing.Point(628, 288);
             this.lckbTable74.Name = "lckbTable74";
-            this.lckbTable74.Size = new Size(0x38, 0x15);
+            this.lckbTable74.Size = new System.Drawing.Size(56, 19);
             this.lckbTable74.TabIndex = 0;
             this.lckbTable74.TabStop = false;
             this.lckbTable74.UseVisualStyleBackColor = false;
             this.lckbTable74.Visible = false;
-            this.lckbTable74.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable75.FlatStyle = FlatStyle.Flat;
-            this.lckbTable75.Location = new Point(0x2b3, 0x13a);
+            this.lckbTable74.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable75
+            // 
+            this.lckbTable75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable75.Location = new System.Drawing.Point(691, 288);
             this.lckbTable75.Name = "lckbTable75";
-            this.lckbTable75.Size = new Size(0x3b, 0x15);
+            this.lckbTable75.Size = new System.Drawing.Size(59, 19);
             this.lckbTable75.TabIndex = 0;
             this.lckbTable75.TabStop = false;
             this.lckbTable75.UseVisualStyleBackColor = false;
             this.lckbTable75.Visible = false;
-            this.lckbTable75.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable85.FlatStyle = FlatStyle.Flat;
-            this.lckbTable85.Location = new Point(0x2b3, 0x156);
+            this.lckbTable75.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable85
+            // 
+            this.lckbTable85.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable85.Location = new System.Drawing.Point(691, 314);
             this.lckbTable85.Name = "lckbTable85";
-            this.lckbTable85.Size = new Size(0x3b, 0x15);
+            this.lckbTable85.Size = new System.Drawing.Size(59, 19);
             this.lckbTable85.TabIndex = 0;
             this.lckbTable85.TabStop = false;
             this.lckbTable85.UseVisualStyleBackColor = false;
             this.lckbTable85.Visible = false;
-            this.lckbTable85.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable84.FlatStyle = FlatStyle.Flat;
-            this.lckbTable84.Location = new Point(0x274, 0x156);
+            this.lckbTable85.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable84
+            // 
+            this.lckbTable84.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable84.Location = new System.Drawing.Point(628, 314);
             this.lckbTable84.Name = "lckbTable84";
-            this.lckbTable84.Size = new Size(0x38, 0x15);
+            this.lckbTable84.Size = new System.Drawing.Size(56, 19);
             this.lckbTable84.TabIndex = 0;
             this.lckbTable84.TabStop = false;
             this.lckbTable84.UseVisualStyleBackColor = false;
             this.lckbTable84.Visible = false;
-            this.lckbTable84.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable83.FlatStyle = FlatStyle.Flat;
-            this.lckbTable83.Location = new Point(0x1d8, 0x156);
+            this.lckbTable84.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable83
+            // 
+            this.lckbTable83.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable83.Location = new System.Drawing.Point(472, 314);
             this.lckbTable83.Name = "lckbTable83";
-            this.lckbTable83.Size = new Size(0x3e, 0x15);
+            this.lckbTable83.Size = new System.Drawing.Size(62, 19);
             this.lckbTable83.TabIndex = 0;
             this.lckbTable83.TabStop = false;
             this.lckbTable83.UseVisualStyleBackColor = false;
             this.lckbTable83.Visible = false;
-            this.lckbTable83.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable82.FlatStyle = FlatStyle.Flat;
-            this.lckbTable82.Location = new Point(0x13c, 0x156);
+            this.lckbTable83.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable82
+            // 
+            this.lckbTable82.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable82.Location = new System.Drawing.Point(316, 314);
             this.lckbTable82.Name = "lckbTable82";
-            this.lckbTable82.Size = new Size(0x3e, 0x15);
+            this.lckbTable82.Size = new System.Drawing.Size(62, 19);
             this.lckbTable82.TabIndex = 0;
             this.lckbTable82.TabStop = false;
             this.lckbTable82.UseVisualStyleBackColor = false;
             this.lckbTable82.Visible = false;
-            this.lckbTable82.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable81.FlatStyle = FlatStyle.Flat;
-            this.lckbTable81.Location = new Point(160, 0x156);
+            this.lckbTable82.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable81
+            // 
+            this.lckbTable81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable81.Location = new System.Drawing.Point(160, 314);
             this.lckbTable81.Name = "lckbTable81";
-            this.lckbTable81.Size = new Size(0x3e, 0x15);
+            this.lckbTable81.Size = new System.Drawing.Size(62, 19);
             this.lckbTable81.TabIndex = 0;
             this.lckbTable81.TabStop = false;
             this.lckbTable81.UseVisualStyleBackColor = false;
             this.lckbTable81.Visible = false;
-            this.lckbTable81.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable91.FlatStyle = FlatStyle.Flat;
-            this.lckbTable91.Location = new Point(160, 370);
+            this.lckbTable81.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable91
+            // 
+            this.lckbTable91.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable91.Location = new System.Drawing.Point(160, 340);
             this.lckbTable91.Name = "lckbTable91";
-            this.lckbTable91.Size = new Size(0x3e, 0x19);
+            this.lckbTable91.Size = new System.Drawing.Size(62, 23);
             this.lckbTable91.TabIndex = 0;
             this.lckbTable91.TabStop = false;
             this.lckbTable91.UseVisualStyleBackColor = false;
             this.lckbTable91.Visible = false;
-            this.lckbTable91.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable92.FlatStyle = FlatStyle.Flat;
-            this.lckbTable92.Location = new Point(0x13c, 370);
+            this.lckbTable91.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable92
+            // 
+            this.lckbTable92.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable92.Location = new System.Drawing.Point(316, 340);
             this.lckbTable92.Name = "lckbTable92";
-            this.lckbTable92.Size = new Size(0x3e, 0x19);
+            this.lckbTable92.Size = new System.Drawing.Size(62, 23);
             this.lckbTable92.TabIndex = 0;
             this.lckbTable92.TabStop = false;
             this.lckbTable92.UseVisualStyleBackColor = false;
             this.lckbTable92.Visible = false;
-            this.lckbTable92.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable93.FlatStyle = FlatStyle.Flat;
-            this.lckbTable93.Location = new Point(0x1d8, 370);
+            this.lckbTable92.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable93
+            // 
+            this.lckbTable93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable93.Location = new System.Drawing.Point(472, 340);
             this.lckbTable93.Name = "lckbTable93";
-            this.lckbTable93.Size = new Size(0x3e, 0x19);
+            this.lckbTable93.Size = new System.Drawing.Size(62, 23);
             this.lckbTable93.TabIndex = 0;
             this.lckbTable93.TabStop = false;
             this.lckbTable93.UseVisualStyleBackColor = false;
             this.lckbTable93.Visible = false;
-            this.lckbTable93.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable94.FlatStyle = FlatStyle.Flat;
-            this.lckbTable94.Location = new Point(0x274, 370);
+            this.lckbTable93.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable94
+            // 
+            this.lckbTable94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable94.Location = new System.Drawing.Point(628, 340);
             this.lckbTable94.Name = "lckbTable94";
-            this.lckbTable94.Size = new Size(0x38, 0x19);
+            this.lckbTable94.Size = new System.Drawing.Size(56, 23);
             this.lckbTable94.TabIndex = 0;
             this.lckbTable94.TabStop = false;
             this.lckbTable94.UseVisualStyleBackColor = false;
             this.lckbTable94.Visible = false;
-            this.lckbTable94.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lckbTable95.FlatStyle = FlatStyle.Flat;
-            this.lckbTable95.Location = new Point(0x2b3, 370);
+            this.lckbTable94.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lckbTable95
+            // 
+            this.lckbTable95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lckbTable95.Location = new System.Drawing.Point(691, 340);
             this.lckbTable95.Name = "lckbTable95";
-            this.lckbTable95.Size = new Size(0x3b, 0x19);
+            this.lckbTable95.Size = new System.Drawing.Size(59, 23);
             this.lckbTable95.TabIndex = 0;
             this.lckbTable95.TabStop = false;
             this.lckbTable95.UseVisualStyleBackColor = false;
             this.lckbTable95.Visible = false;
-            this.lckbTable95.CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            this.lrtbTableCol1.BackColor = SystemColors.ControlLight;
-            this.lrtbTableCol1.BorderStyle = BorderStyle.None;
-            this.lrtbTableCol1.Location = new Point(160, 4);
+            this.lckbTable95.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
+            // 
+            // lrtbTableCol1
+            // 
+            this.lrtbTableCol1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableCol1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableCol1.Location = new System.Drawing.Point(160, 4);
             this.lrtbTableCol1.Name = "lrtbTableCol1";
             this.lrtbTableCol1.ReadOnly = true;
-            this.lrtbTableCol1.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableCol1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableCol1.ShortcutsEnabled = false;
-            this.lrtbTableCol1.Size = new Size(0x95, 40);
+            this.lrtbTableCol1.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableCol1.TabIndex = 1;
             this.lrtbTableCol1.TabStop = false;
             this.lrtbTableCol1.Text = "";
             this.lrtbTableCol1.Visible = false;
-            this.lrtbTableCol2.BackColor = SystemColors.ControlLight;
-            this.lrtbTableCol2.BorderStyle = BorderStyle.None;
-            this.lrtbTableCol2.Location = new Point(0x13c, 4);
+            // 
+            // lrtbTableCol2
+            // 
+            this.lrtbTableCol2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableCol2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableCol2.Location = new System.Drawing.Point(316, 4);
             this.lrtbTableCol2.Name = "lrtbTableCol2";
             this.lrtbTableCol2.ReadOnly = true;
-            this.lrtbTableCol2.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableCol2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableCol2.ShortcutsEnabled = false;
-            this.lrtbTableCol2.Size = new Size(0x95, 40);
+            this.lrtbTableCol2.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableCol2.TabIndex = 1;
             this.lrtbTableCol2.TabStop = false;
             this.lrtbTableCol2.Text = "";
             this.lrtbTableCol2.Visible = false;
-            this.lrtbTableCol3.BackColor = SystemColors.ControlLight;
-            this.lrtbTableCol3.BorderStyle = BorderStyle.None;
-            this.lrtbTableCol3.Location = new Point(0x1d8, 4);
+            // 
+            // lrtbTableCol3
+            // 
+            this.lrtbTableCol3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableCol3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableCol3.Location = new System.Drawing.Point(472, 4);
             this.lrtbTableCol3.Name = "lrtbTableCol3";
             this.lrtbTableCol3.ReadOnly = true;
-            this.lrtbTableCol3.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableCol3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableCol3.ShortcutsEnabled = false;
-            this.lrtbTableCol3.Size = new Size(0x95, 40);
+            this.lrtbTableCol3.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableCol3.TabIndex = 1;
             this.lrtbTableCol3.TabStop = false;
             this.lrtbTableCol3.Text = "";
             this.lrtbTableCol3.Visible = false;
-            this.lrtbTableCol5.BackColor = SystemColors.ControlLight;
-            this.lrtbTableCol5.BorderStyle = BorderStyle.None;
-            this.lrtbTableCol5.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableCol5.Location = new Point(0x2b3, 4);
+            // 
+            // lrtbTableCol5
+            // 
+            this.lrtbTableCol5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableCol5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableCol5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableCol5.Location = new System.Drawing.Point(691, 4);
             this.lrtbTableCol5.Name = "lrtbTableCol5";
             this.lrtbTableCol5.ReadOnly = true;
             this.lrtbTableCol5.ShortcutsEnabled = false;
-            this.lrtbTableCol5.Size = new Size(0x24, 30);
+            this.lrtbTableCol5.Size = new System.Drawing.Size(36, 28);
             this.lrtbTableCol5.TabIndex = 1;
             this.lrtbTableCol5.TabStop = false;
             this.lrtbTableCol5.Text = "";
             this.lrtbTableCol5.Visible = false;
-            this.lrtbTableRow1.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow1.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow1.Location = new Point(4, 0x33);
+            // 
+            // lrtbTableRow1
+            // 
+            this.lrtbTableRow1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow1.Location = new System.Drawing.Point(4, 47);
             this.lrtbTableRow1.Name = "lrtbTableRow1";
             this.lrtbTableRow1.ReadOnly = true;
-            this.lrtbTableRow1.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow1.ShortcutsEnabled = false;
-            this.lrtbTableRow1.Size = new Size(0x95, 40);
+            this.lrtbTableRow1.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableRow1.TabIndex = 1;
             this.lrtbTableRow1.TabStop = false;
             this.lrtbTableRow1.Text = "";
             this.lrtbTableRow1.Visible = false;
-            this.lrtbTableRow2.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow2.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow2.Location = new Point(4, 0x62);
+            // 
+            // lrtbTableRow2
+            // 
+            this.lrtbTableRow2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow2.Location = new System.Drawing.Point(4, 90);
             this.lrtbTableRow2.Name = "lrtbTableRow2";
             this.lrtbTableRow2.ReadOnly = true;
-            this.lrtbTableRow2.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow2.ShortcutsEnabled = false;
-            this.lrtbTableRow2.Size = new Size(0x95, 40);
+            this.lrtbTableRow2.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableRow2.TabIndex = 1;
             this.lrtbTableRow2.TabStop = false;
             this.lrtbTableRow2.Text = "";
             this.lrtbTableRow2.Visible = false;
-            this.lrtbTableRow3.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow3.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow3.Location = new Point(4, 0x91);
+            // 
+            // lrtbTableRow3
+            // 
+            this.lrtbTableRow3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow3.Location = new System.Drawing.Point(4, 133);
             this.lrtbTableRow3.Name = "lrtbTableRow3";
             this.lrtbTableRow3.ReadOnly = true;
-            this.lrtbTableRow3.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow3.ShortcutsEnabled = false;
-            this.lrtbTableRow3.Size = new Size(0x95, 40);
+            this.lrtbTableRow3.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableRow3.TabIndex = 1;
             this.lrtbTableRow3.TabStop = false;
             this.lrtbTableRow3.Text = "";
             this.lrtbTableRow3.Visible = false;
-            this.lrtbTableRow4.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow4.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow4.Location = new Point(4, 0xc0);
+            // 
+            // lrtbTableRow4
+            // 
+            this.lrtbTableRow4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow4.Location = new System.Drawing.Point(4, 176);
             this.lrtbTableRow4.Name = "lrtbTableRow4";
             this.lrtbTableRow4.ReadOnly = true;
-            this.lrtbTableRow4.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow4.ShortcutsEnabled = false;
-            this.lrtbTableRow4.Size = new Size(0x95, 40);
+            this.lrtbTableRow4.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableRow4.TabIndex = 1;
             this.lrtbTableRow4.TabStop = false;
             this.lrtbTableRow4.Text = "";
             this.lrtbTableRow4.Visible = false;
-            this.lrtbTableRow5.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow5.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow5.Location = new Point(4, 0xef);
+            // 
+            // lrtbTableRow5
+            // 
+            this.lrtbTableRow5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow5.Location = new System.Drawing.Point(4, 219);
             this.lrtbTableRow5.Name = "lrtbTableRow5";
             this.lrtbTableRow5.ReadOnly = true;
-            this.lrtbTableRow5.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow5.ShortcutsEnabled = false;
-            this.lrtbTableRow5.Size = new Size(0x95, 40);
+            this.lrtbTableRow5.Size = new System.Drawing.Size(149, 36);
             this.lrtbTableRow5.TabIndex = 1;
             this.lrtbTableRow5.TabStop = false;
             this.lrtbTableRow5.Text = "";
             this.lrtbTableRow5.Visible = false;
-            this.lrtbTableRow6.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow6.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow6.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableRow6.Location = new Point(4, 0x11e);
+            // 
+            // lrtbTableRow6
+            // 
+            this.lrtbTableRow6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableRow6.Location = new System.Drawing.Point(4, 262);
             this.lrtbTableRow6.Name = "lrtbTableRow6";
             this.lrtbTableRow6.ReadOnly = true;
-            this.lrtbTableRow6.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow6.ShortcutsEnabled = false;
-            this.lrtbTableRow6.Size = new Size(0x95, 0x15);
+            this.lrtbTableRow6.Size = new System.Drawing.Size(149, 19);
             this.lrtbTableRow6.TabIndex = 1;
             this.lrtbTableRow6.TabStop = false;
             this.lrtbTableRow6.Text = "";
             this.lrtbTableRow6.Visible = false;
-            this.lrtbTableRow7.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow7.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow7.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableRow7.Location = new Point(4, 0x13a);
+            // 
+            // lrtbTableRow7
+            // 
+            this.lrtbTableRow7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableRow7.Location = new System.Drawing.Point(4, 288);
             this.lrtbTableRow7.Name = "lrtbTableRow7";
-            this.lrtbTableRow7.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow7.ShortcutsEnabled = false;
-            this.lrtbTableRow7.Size = new Size(0x95, 0x15);
+            this.lrtbTableRow7.Size = new System.Drawing.Size(149, 19);
             this.lrtbTableRow7.TabIndex = 1;
             this.lrtbTableRow7.TabStop = false;
             this.lrtbTableRow7.Text = "";
             this.lrtbTableRow7.Visible = false;
-            this.lrtbTableRow7.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-            this.lrtbTableRow8.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow8.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow8.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableRow8.Location = new Point(4, 0x156);
+            this.lrtbTableRow7.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
+            // 
+            // lrtbTableRow8
+            // 
+            this.lrtbTableRow8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableRow8.Location = new System.Drawing.Point(4, 314);
             this.lrtbTableRow8.Name = "lrtbTableRow8";
-            this.lrtbTableRow8.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableRow8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableRow8.ShortcutsEnabled = false;
-            this.lrtbTableRow8.Size = new Size(0x95, 0x15);
+            this.lrtbTableRow8.Size = new System.Drawing.Size(149, 19);
             this.lrtbTableRow8.TabIndex = 1;
             this.lrtbTableRow8.TabStop = false;
             this.lrtbTableRow8.Text = "";
             this.lrtbTableRow8.Visible = false;
-            this.lrtbTableRow8.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-            this.lrtbTableRow9.BackColor = SystemColors.ControlLight;
-            this.lrtbTableRow9.BorderStyle = BorderStyle.None;
-            this.lrtbTableRow9.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableRow9.Location = new Point(4, 370);
+            this.lrtbTableRow8.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
+            // 
+            // lrtbTableRow9
+            // 
+            this.lrtbTableRow9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableRow9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableRow9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableRow9.Location = new System.Drawing.Point(4, 340);
             this.lrtbTableRow9.Name = "lrtbTableRow9";
             this.lrtbTableRow9.ShortcutsEnabled = false;
-            this.lrtbTableRow9.Size = new Size(0x95, 0x19);
+            this.lrtbTableRow9.Size = new System.Drawing.Size(149, 23);
             this.lrtbTableRow9.TabIndex = 1;
             this.lrtbTableRow9.TabStop = false;
             this.lrtbTableRow9.Text = "";
             this.lrtbTableRow9.Visible = false;
-            this.lrtbTableRow9.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-            this.lrtbTableCol4.BackColor = SystemColors.ControlLight;
-            this.lrtbTableCol4.BorderStyle = BorderStyle.None;
-            this.lrtbTableCol4.Font = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.lrtbTableCol4.Location = new Point(0x274, 4);
+            this.lrtbTableRow9.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
+            // 
+            // lrtbTableCol4
+            // 
+            this.lrtbTableCol4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lrtbTableCol4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lrtbTableCol4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lrtbTableCol4.Location = new System.Drawing.Point(628, 4);
             this.lrtbTableCol4.Name = "lrtbTableCol4";
             this.lrtbTableCol4.ReadOnly = true;
-            this.lrtbTableCol4.ScrollBars = RichTextBoxScrollBars.None;
+            this.lrtbTableCol4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.lrtbTableCol4.ShortcutsEnabled = false;
-            this.lrtbTableCol4.Size = new Size(0x38, 40);
+            this.lrtbTableCol4.Size = new System.Drawing.Size(56, 36);
             this.lrtbTableCol4.TabIndex = 1;
             this.lrtbTableCol4.TabStop = false;
             this.lrtbTableCol4.Text = "";
             this.lrtbTableCol4.Visible = false;
+            // 
+            // tab_Speaking
+            // 
             this.tab_Speaking.Controls.Add(this.tabf_speaking);
-            this.tab_Speaking.Location = new Point(4, 0x16);
+            this.tab_Speaking.Location = new System.Drawing.Point(4, 22);
             this.tab_Speaking.Name = "tab_Speaking";
-            this.tab_Speaking.Size = new Size(780, 0x20f);
+            this.tab_Speaking.Size = new System.Drawing.Size(780, 484);
             this.tab_Speaking.TabIndex = 2;
             this.tab_Speaking.Text = "Speaking";
             this.tab_Speaking.UseVisualStyleBackColor = true;
-            this.tabf_speaking.Appearance = TabAppearance.Buttons;
+            // 
+            // tabf_speaking
+            // 
+            this.tabf_speaking.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabf_speaking.Controls.Add(this.sDirection);
             this.tabf_speaking.Controls.Add(this.sNormalQuestions);
-            this.tabf_speaking.Location = new Point(5, -25);
+            this.tabf_speaking.Location = new System.Drawing.Point(5, -23);
             this.tabf_speaking.Name = "tabf_speaking";
             this.tabf_speaking.SelectedIndex = 0;
-            this.tabf_speaking.Size = new Size(0x303, 0x205);
+            this.tabf_speaking.Size = new System.Drawing.Size(771, 477);
             this.tabf_speaking.TabIndex = 1;
             this.tabf_speaking.TabStop = false;
+            // 
+            // sDirection
+            // 
             this.sDirection.Controls.Add(this.pictureBox3);
-            this.sDirection.Location = new Point(4, 0x19);
+            this.sDirection.Location = new System.Drawing.Point(4, 25);
             this.sDirection.Name = "sDirection";
-            this.sDirection.Size = new Size(0x2fb, 0x1e8);
+            this.sDirection.Size = new System.Drawing.Size(763, 448);
             this.sDirection.TabIndex = 3;
             this.sDirection.Text = "sDirection";
             this.sDirection.UseVisualStyleBackColor = true;
-            this.pictureBox3.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
-            this.pictureBox3.Image = (Image) manager.GetObject("pictureBox3.Image");
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new Point(3, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 7);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new Size(0x388, 0x20b);
-            this.pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 0x11;
+            this.pictureBox3.Size = new System.Drawing.Size(904, 523);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
+            // 
+            // sNormalQuestions
+            // 
             this.sNormalQuestions.Controls.Add(this.spb);
             this.sNormalQuestions.Controls.Add(this.tableLayoutPanel3);
             this.sNormalQuestions.Controls.Add(this.srtb_introduction);
             this.sNormalQuestions.Controls.Add(this.pb_speakingScene);
-            this.sNormalQuestions.Location = new Point(4, 0x19);
+            this.sNormalQuestions.Location = new System.Drawing.Point(4, 25);
             this.sNormalQuestions.Name = "sNormalQuestions";
-            this.sNormalQuestions.Padding = new Padding(3);
-            this.sNormalQuestions.Size = new Size(0x2fb, 0x1e8);
+            this.sNormalQuestions.Padding = new System.Windows.Forms.Padding(3);
+            this.sNormalQuestions.Size = new System.Drawing.Size(763, 448);
             this.sNormalQuestions.TabIndex = 0;
             this.sNormalQuestions.Text = "sNormalQuestions";
             this.sNormalQuestions.UseVisualStyleBackColor = true;
-            this.spb.Location = new Point(190, 0x192);
+            // 
+            // spb
+            // 
+            this.spb.Location = new System.Drawing.Point(190, 371);
             this.spb.Name = "spb";
-            this.spb.Size = new Size(350, 0x17);
-            this.spb.TabIndex = 0x29;
+            this.spb.Size = new System.Drawing.Size(350, 21);
+            this.spb.TabIndex = 41;
+            // 
+            // tableLayoutPanel3
+            // 
             this.tableLayoutPanel3.AutoSize = true;
-            this.tableLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.srtb_timer, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.srtb_timeindicator, 0, 0);
-            this.tableLayoutPanel3.Location = new Point(0x10b, 0xf7);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(267, 228);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel3.Size = new Size(200, 0x4e);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 72);
             this.tableLayoutPanel3.TabIndex = 4;
-            this.srtb_timer.Font = new Font("Microsoft Sans Serif", 14f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.srtb_timer.Location = new Point(3, 0x27);
+            // 
+            // srtb_timer
+            // 
+            this.srtb_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.srtb_timer.Location = new System.Drawing.Point(3, 36);
             this.srtb_timer.Name = "srtb_timer";
-            this.srtb_timer.Size = new Size(0xc2, 0x27);
+            this.srtb_timer.Size = new System.Drawing.Size(194, 36);
             this.srtb_timer.TabIndex = 1;
             this.srtb_timer.Text = "label1";
-            this.srtb_timer.TextAlign = ContentAlignment.MiddleCenter;
-            this.srtb_timeindicator.BackColor = SystemColors.ActiveCaptionText;
-            this.srtb_timeindicator.Font = new Font("Microsoft Sans Serif", 14f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.srtb_timeindicator.ForeColor = SystemColors.ButtonHighlight;
-            this.srtb_timeindicator.Location = new Point(3, 0);
+            this.srtb_timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // srtb_timeindicator
+            // 
+            this.srtb_timeindicator.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.srtb_timeindicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.srtb_timeindicator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.srtb_timeindicator.Location = new System.Drawing.Point(3, 0);
             this.srtb_timeindicator.Name = "srtb_timeindicator";
-            this.srtb_timeindicator.Size = new Size(0xc2, 0x27);
+            this.srtb_timeindicator.Size = new System.Drawing.Size(194, 36);
             this.srtb_timeindicator.TabIndex = 1;
             this.srtb_timeindicator.Text = "PREPARATION TIME";
-            this.srtb_timeindicator.TextAlign = ContentAlignment.MiddleCenter;
-            this.srtb_introduction.BorderStyle = BorderStyle.None;
-            this.srtb_introduction.Location = new Point(0x81, 0x4b);
+            this.srtb_timeindicator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // srtb_introduction
+            // 
+            this.srtb_introduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.srtb_introduction.Location = new System.Drawing.Point(129, 69);
             this.srtb_introduction.Name = "srtb_introduction";
             this.srtb_introduction.ReadOnly = true;
             this.srtb_introduction.ShortcutsEnabled = false;
-            this.srtb_introduction.Size = new Size(0x1cd, 0x61);
+            this.srtb_introduction.Size = new System.Drawing.Size(461, 90);
             this.srtb_introduction.TabIndex = 3;
             this.srtb_introduction.TabStop = false;
             this.srtb_introduction.Text = "Introduction";
             this.srtb_introduction.Visible = false;
-            this.srtb_introduction.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-            this.pb_speakingScene.BackgroundImageLayout = ImageLayout.None;
-            this.pb_speakingScene.Image = (Image) manager.GetObject("pb_speakingScene.Image");
-            this.pb_speakingScene.Location = new Point(190, 20);
+            this.srtb_introduction.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
+            // 
+            // pb_speakingScene
+            // 
+            this.pb_speakingScene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pb_speakingScene.Image = ((System.Drawing.Image)(resources.GetObject("pb_speakingScene.Image")));
+            this.pb_speakingScene.Location = new System.Drawing.Point(190, 18);
             this.pb_speakingScene.Name = "pb_speakingScene";
-            this.pb_speakingScene.Size = new Size(350, 350);
-            this.pb_speakingScene.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pb_speakingScene.Size = new System.Drawing.Size(350, 323);
+            this.pb_speakingScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_speakingScene.TabIndex = 0;
             this.pb_speakingScene.TabStop = false;
+            // 
+            // tab_Writing
+            // 
             this.tab_Writing.Controls.Add(this.tabf_writing);
-            this.tab_Writing.Location = new Point(4, 0x16);
+            this.tab_Writing.Location = new System.Drawing.Point(4, 22);
             this.tab_Writing.Name = "tab_Writing";
-            this.tab_Writing.Size = new Size(780, 0x20f);
+            this.tab_Writing.Size = new System.Drawing.Size(780, 484);
             this.tab_Writing.TabIndex = 3;
             this.tab_Writing.Text = "Writing";
             this.tab_Writing.UseVisualStyleBackColor = true;
-            this.tabf_writing.Appearance = TabAppearance.Buttons;
+            // 
+            // tabf_writing
+            // 
+            this.tabf_writing.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabf_writing.Controls.Add(this.wDirection);
             this.tabf_writing.Controls.Add(this.wReading);
             this.tabf_writing.Controls.Add(this.wSpeakingPassage);
             this.tabf_writing.Controls.Add(this.wWriting2);
-            this.tabf_writing.Location = new Point(5, -27);
+            this.tabf_writing.Location = new System.Drawing.Point(5, -25);
             this.tabf_writing.Name = "tabf_writing";
             this.tabf_writing.SelectedIndex = 0;
-            this.tabf_writing.Size = new Size(0x303, 0x205);
+            this.tabf_writing.Size = new System.Drawing.Size(771, 477);
             this.tabf_writing.TabIndex = 2;
             this.tabf_writing.TabStop = false;
-            this.tabf_writing.DrawItem += new DrawItemEventHandler(this.tabControl_DrawItem);
+            this.tabf_writing.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
+            // 
+            // wDirection
+            // 
             this.wDirection.Controls.Add(this.pictureBox4);
-            this.wDirection.Location = new Point(4, 0x19);
+            this.wDirection.Location = new System.Drawing.Point(4, 25);
             this.wDirection.Name = "wDirection";
-            this.wDirection.Size = new Size(0x2fb, 0x1e8);
+            this.wDirection.Size = new System.Drawing.Size(763, 448);
             this.wDirection.TabIndex = 3;
             this.wDirection.Text = "wDirection";
             this.wDirection.UseVisualStyleBackColor = true;
-            this.pictureBox4.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Top;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = (Image) manager.GetObject("pictureBox4.Image");
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new Point(3, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new Size(0x439, 490);
-            this.pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 0x11;
+            this.pictureBox4.Size = new System.Drawing.Size(1081, 490);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            // 
+            // wReading
+            // 
             this.wReading.Controls.Add(this.wrtb_writing1);
             this.wReading.Controls.Add(this.wrtb_reading);
-            this.wReading.Location = new Point(4, 0x19);
+            this.wReading.Location = new System.Drawing.Point(4, 25);
             this.wReading.Name = "wReading";
-            this.wReading.Size = new Size(0x2fb, 0x1e8);
+            this.wReading.Size = new System.Drawing.Size(763, 448);
             this.wReading.TabIndex = 5;
             this.wReading.Text = "wReading";
             this.wReading.UseVisualStyleBackColor = true;
-            this.wrtb_writing1.BackColor = SystemColors.ControlLightLight;
-            this.wrtb_writing1.Font = new Font("Times New Roman", 13f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.wrtb_writing1.Location = new Point(0x183, 3);
+            // 
+            // wrtb_writing1
+            // 
+            this.wrtb_writing1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.wrtb_writing1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.wrtb_writing1.Location = new System.Drawing.Point(387, 3);
             this.wrtb_writing1.Name = "wrtb_writing1";
             this.wrtb_writing1.ShortcutsEnabled = false;
-            this.wrtb_writing1.Size = new Size(0x175, 480);
+            this.wrtb_writing1.Size = new System.Drawing.Size(373, 443);
             this.wrtb_writing1.TabIndex = 4;
             this.wrtb_writing1.TabStop = false;
             this.wrtb_writing1.Text = "Introduction";
-            this.wrtb_reading.BackColor = SystemColors.Control;
-            this.wrtb_reading.Font = new Font("Times New Roman", 13f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.wrtb_reading.Location = new Point(3, 3);
+            // 
+            // wrtb_reading
+            // 
+            this.wrtb_reading.BackColor = System.Drawing.SystemColors.Control;
+            this.wrtb_reading.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.wrtb_reading.Location = new System.Drawing.Point(3, 3);
             this.wrtb_reading.Name = "wrtb_reading";
             this.wrtb_reading.ReadOnly = true;
             this.wrtb_reading.ShortcutsEnabled = false;
-            this.wrtb_reading.Size = new Size(0x180, 480);
+            this.wrtb_reading.Size = new System.Drawing.Size(384, 443);
             this.wrtb_reading.TabIndex = 4;
             this.wrtb_reading.TabStop = false;
             this.wrtb_reading.Text = "Introduction";
+            // 
+            // wSpeakingPassage
+            // 
             this.wSpeakingPassage.Controls.Add(this.wpb_speak);
             this.wSpeakingPassage.Controls.Add(this.wtb_speak);
             this.wSpeakingPassage.Controls.Add(this.pb_writingScene);
-            this.wSpeakingPassage.Location = new Point(4, 0x19);
+            this.wSpeakingPassage.Location = new System.Drawing.Point(4, 25);
             this.wSpeakingPassage.Name = "wSpeakingPassage";
-            this.wSpeakingPassage.Padding = new Padding(3);
-            this.wSpeakingPassage.Size = new Size(0x2fb, 0x1e8);
+            this.wSpeakingPassage.Padding = new System.Windows.Forms.Padding(3);
+            this.wSpeakingPassage.Size = new System.Drawing.Size(763, 448);
             this.wSpeakingPassage.TabIndex = 0;
             this.wSpeakingPassage.Text = "wSpeakingPassage";
             this.wSpeakingPassage.UseVisualStyleBackColor = true;
-            this.wpb_speak.Location = new Point(0xce, 420);
+            // 
+            // wpb_speak
+            // 
+            this.wpb_speak.Location = new System.Drawing.Point(206, 388);
             this.wpb_speak.Name = "wpb_speak";
-            this.wpb_speak.Size = new Size(350, 0x17);
+            this.wpb_speak.Size = new System.Drawing.Size(350, 21);
             this.wpb_speak.TabIndex = 40;
+            // 
+            // wtb_speak
+            // 
             this.wtb_speak.AutoSize = false;
             this.wtb_speak.LargeChange = 1;
-            this.wtb_speak.Location = new Point(0xce, 0x13);
+            this.wtb_speak.Location = new System.Drawing.Point(206, 18);
             this.wtb_speak.Name = "wtb_speak";
-            this.wtb_speak.Size = new Size(350, 0x19);
-            this.wtb_speak.TabIndex = 0x27;
+            this.wtb_speak.Size = new System.Drawing.Size(350, 23);
+            this.wtb_speak.TabIndex = 39;
             this.wtb_speak.TabStop = false;
-            this.wtb_speak.TickStyle = TickStyle.None;
-            this.wtb_speak.Scroll += new EventHandler(this.wtb_speak_Scroll);
-            this.pb_writingScene.BackgroundImageLayout = ImageLayout.None;
-            this.pb_writingScene.Image = (Image) manager.GetObject("pb_writingScene.Image");
-            this.pb_writingScene.Location = new Point(0xce, 50);
+            this.wtb_speak.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.wtb_speak.Scroll += new System.EventHandler(this.wtb_speak_Scroll);
+            // 
+            // pb_writingScene
+            // 
+            this.pb_writingScene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pb_writingScene.Image = ((System.Drawing.Image)(resources.GetObject("pb_writingScene.Image")));
+            this.pb_writingScene.Location = new System.Drawing.Point(206, 46);
             this.pb_writingScene.Name = "pb_writingScene";
-            this.pb_writingScene.Size = new Size(350, 350);
-            this.pb_writingScene.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pb_writingScene.Size = new System.Drawing.Size(350, 323);
+            this.pb_writingScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_writingScene.TabIndex = 1;
             this.pb_writingScene.TabStop = false;
+            // 
+            // wWriting2
+            // 
             this.wWriting2.Controls.Add(this.lbl_writeDirection);
             this.wWriting2.Controls.Add(this.wrtb_writing2);
             this.wWriting2.Controls.Add(this.wrtbQuestion2);
             this.wWriting2.Controls.Add(this.wpanel);
-            this.wWriting2.Location = new Point(4, 0x19);
+            this.wWriting2.Location = new System.Drawing.Point(4, 25);
             this.wWriting2.Name = "wWriting2";
-            this.wWriting2.Size = new Size(0x2fb, 0x1e8);
+            this.wWriting2.Size = new System.Drawing.Size(763, 448);
             this.wWriting2.TabIndex = 4;
             this.wWriting2.Text = "wWriting2";
             this.wWriting2.UseVisualStyleBackColor = true;
-            this.lbl_writeDirection.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lbl_writeDirection.Location = new Point(3, 0x17);
+            // 
+            // lbl_writeDirection
+            // 
+            this.lbl_writeDirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_writeDirection.Location = new System.Drawing.Point(3, 21);
             this.lbl_writeDirection.Name = "lbl_writeDirection";
-            this.lbl_writeDirection.Size = new Size(760, 0x31);
+            this.lbl_writeDirection.Size = new System.Drawing.Size(760, 45);
             this.lbl_writeDirection.TabIndex = 8;
-            this.lbl_writeDirection.Text = manager.GetString("lbl_writeDirection.Text");
-            this.wrtb_writing2.BackColor = SystemColors.ControlLightLight;
-            this.wrtb_writing2.Font = new Font("Times New Roman", 13f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.wrtb_writing2.Location = new Point(0x15f, 0x73);
+            this.lbl_writeDirection.Text = resources.GetString("lbl_writeDirection.Text");
+            // 
+            // wrtb_writing2
+            // 
+            this.wrtb_writing2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.wrtb_writing2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.wrtb_writing2.Location = new System.Drawing.Point(351, 106);
             this.wrtb_writing2.Name = "wrtb_writing2";
             this.wrtb_writing2.ShortcutsEnabled = false;
-            this.wrtb_writing2.Size = new Size(0x1a1, 0x175);
+            this.wrtb_writing2.Size = new System.Drawing.Size(417, 345);
             this.wrtb_writing2.TabIndex = 6;
             this.wrtb_writing2.TabStop = false;
             this.wrtb_writing2.Text = "";
-            this.wrtb_writing2.TextChanged += new EventHandler(this.wrtb_writing2_TextChanged);
-            this.wrtbQuestion2.BackColor = SystemColors.Control;
-            this.wrtbQuestion2.Font = new Font("Times New Roman", 13f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
-            this.wrtbQuestion2.Location = new Point(3, 0x4b);
+            this.wrtb_writing2.TextChanged += new System.EventHandler(this.wrtb_writing2_TextChanged);
+            // 
+            // wrtbQuestion2
+            // 
+            this.wrtbQuestion2.BackColor = System.Drawing.SystemColors.Control;
+            this.wrtbQuestion2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.wrtbQuestion2.Location = new System.Drawing.Point(3, 69);
             this.wrtbQuestion2.Name = "wrtbQuestion2";
             this.wrtbQuestion2.ReadOnly = true;
             this.wrtbQuestion2.ShortcutsEnabled = false;
-            this.wrtbQuestion2.Size = new Size(0x15b, 0x19c);
+            this.wrtbQuestion2.Size = new System.Drawing.Size(347, 381);
             this.wrtbQuestion2.TabIndex = 5;
             this.wrtbQuestion2.TabStop = false;
             this.wrtbQuestion2.Text = "Introduction";
-            this.wpanel.BackColor = Color.LightGray;
+            // 
+            // wpanel
+            // 
+            this.wpanel.BackColor = System.Drawing.Color.LightGray;
             this.wpanel.Controls.Add(this.wlbl_wordcount);
             this.wpanel.Controls.Add(this.wbtn_wordcount);
             this.wpanel.Controls.Add(this.wbtn_redo);
             this.wpanel.Controls.Add(this.wbtn_undo);
             this.wpanel.Controls.Add(this.wbtn_paste);
             this.wpanel.Controls.Add(this.wbtn_cut);
-            this.wpanel.Location = new Point(350, 0x4b);
+            this.wpanel.Location = new System.Drawing.Point(350, 69);
             this.wpanel.Name = "wpanel";
-            this.wpanel.Size = new Size(0x1a9, 0x29);
+            this.wpanel.Size = new System.Drawing.Size(425, 38);
             this.wpanel.TabIndex = 7;
+            // 
+            // wlbl_wordcount
+            // 
             this.wlbl_wordcount.AutoSize = true;
-            this.wlbl_wordcount.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.wlbl_wordcount.Location = new Point(0x173, 8);
+            this.wlbl_wordcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.wlbl_wordcount.Location = new System.Drawing.Point(371, 7);
             this.wlbl_wordcount.Name = "wlbl_wordcount";
-            this.wlbl_wordcount.Size = new Size(0x13, 20);
+            this.wlbl_wordcount.Size = new System.Drawing.Size(19, 20);
             this.wlbl_wordcount.TabIndex = 1;
             this.wlbl_wordcount.Text = "0";
-            this.wbtn_wordcount.Location = new Point(0xf6, 5);
+            // 
+            // wbtn_wordcount
+            // 
+            this.wbtn_wordcount.Location = new System.Drawing.Point(246, 5);
             this.wbtn_wordcount.Name = "wbtn_wordcount";
-            this.wbtn_wordcount.Size = new Size(0x77, 0x1d);
+            this.wbtn_wordcount.Size = new System.Drawing.Size(119, 27);
             this.wbtn_wordcount.TabIndex = 0;
             this.wbtn_wordcount.TabStop = false;
             this.wbtn_wordcount.Text = "Hide Word Count";
             this.wbtn_wordcount.UseVisualStyleBackColor = true;
-            this.wbtn_wordcount.Click += new EventHandler(this.wbtn_wordcount_Click);
-            this.wbtn_redo.Location = new Point(0xae, 5);
+            this.wbtn_wordcount.Click += new System.EventHandler(this.wbtn_wordcount_Click);
+            // 
+            // wbtn_redo
+            // 
+            this.wbtn_redo.Location = new System.Drawing.Point(174, 5);
             this.wbtn_redo.Name = "wbtn_redo";
-            this.wbtn_redo.Size = new Size(0x2d, 0x1d);
+            this.wbtn_redo.Size = new System.Drawing.Size(45, 27);
             this.wbtn_redo.TabIndex = 0;
             this.wbtn_redo.TabStop = false;
             this.wbtn_redo.Text = "Redo";
             this.wbtn_redo.UseVisualStyleBackColor = true;
-            this.wbtn_redo.Click += new EventHandler(this.wbtn_redo_Click);
-            this.wbtn_undo.Location = new Point(0x73, 5);
+            this.wbtn_redo.Click += new System.EventHandler(this.wbtn_redo_Click);
+            // 
+            // wbtn_undo
+            // 
+            this.wbtn_undo.Location = new System.Drawing.Point(115, 5);
             this.wbtn_undo.Name = "wbtn_undo";
-            this.wbtn_undo.Size = new Size(0x2d, 0x1d);
+            this.wbtn_undo.Size = new System.Drawing.Size(45, 27);
             this.wbtn_undo.TabIndex = 0;
             this.wbtn_undo.TabStop = false;
             this.wbtn_undo.Text = "Undo";
             this.wbtn_undo.UseVisualStyleBackColor = true;
-            this.wbtn_undo.Click += new EventHandler(this.wbtn_undo_Click);
-            this.wbtn_paste.Location = new Point(0x3b, 5);
+            this.wbtn_undo.Click += new System.EventHandler(this.wbtn_undo_Click);
+            // 
+            // wbtn_paste
+            // 
+            this.wbtn_paste.Location = new System.Drawing.Point(59, 5);
             this.wbtn_paste.Name = "wbtn_paste";
-            this.wbtn_paste.Size = new Size(0x2d, 0x1d);
+            this.wbtn_paste.Size = new System.Drawing.Size(45, 27);
             this.wbtn_paste.TabIndex = 0;
             this.wbtn_paste.TabStop = false;
             this.wbtn_paste.Text = "Paste";
             this.wbtn_paste.UseVisualStyleBackColor = true;
-            this.wbtn_paste.Click += new EventHandler(this.wbtn_paste_Click);
-            this.wbtn_cut.Location = new Point(6, 5);
+            this.wbtn_paste.Click += new System.EventHandler(this.wbtn_paste_Click);
+            // 
+            // wbtn_cut
+            // 
+            this.wbtn_cut.Location = new System.Drawing.Point(6, 5);
             this.wbtn_cut.Name = "wbtn_cut";
-            this.wbtn_cut.Size = new Size(0x2d, 0x1d);
+            this.wbtn_cut.Size = new System.Drawing.Size(45, 27);
             this.wbtn_cut.TabIndex = 0;
             this.wbtn_cut.TabStop = false;
             this.wbtn_cut.Text = "Cut";
             this.wbtn_cut.UseVisualStyleBackColor = true;
-            this.wbtn_cut.Click += new EventHandler(this.wbtn_cut_Click);
+            this.wbtn_cut.Click += new System.EventHandler(this.wbtn_cut_Click);
+            // 
+            // tabPage1
+            // 
             this.tabPage1.Controls.Add(this.tabf_answer);
-            this.tabPage1.Location = new Point(4, 0x16);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new Size(780, 0x20f);
+            this.tabPage1.Size = new System.Drawing.Size(780, 484);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "tab_anwers";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabf_answer
+            // 
             this.tabf_answer.Controls.Add(this.tab_readinganswer);
             this.tabf_answer.Controls.Add(this.tab_listeninganswers);
             this.tabf_answer.Controls.Add(this.tab_speakinganswers);
             this.tabf_answer.Controls.Add(this.tab_writinganswers);
-            this.tabf_answer.Location = new Point(3, 0);
+            this.tabf_answer.Location = new System.Drawing.Point(3, 0);
             this.tabf_answer.Name = "tabf_answer";
             this.tabf_answer.SelectedIndex = 0;
-            this.tabf_answer.Size = new Size(0x309, 0x228);
+            this.tabf_answer.Size = new System.Drawing.Size(777, 510);
             this.tabf_answer.TabIndex = 0;
+            // 
+            // tab_readinganswer
+            // 
             this.tab_readinganswer.Controls.Add(this.label2);
             this.tab_readinganswer.Controls.Add(this.lbl_readingscorereport);
             this.tab_readinganswer.Controls.Add(this.label3);
@@ -6008,83 +6919,114 @@
             this.tab_readinganswer.Controls.Add(this.label5);
             this.tab_readinganswer.Controls.Add(this.pictureBox8);
             this.tab_readinganswer.Controls.Add(this.dgv_readinganswers);
-            this.tab_readinganswer.Location = new Point(4, 0x16);
+            this.tab_readinganswer.Location = new System.Drawing.Point(4, 22);
             this.tab_readinganswer.Name = "tab_readinganswer";
-            this.tab_readinganswer.Padding = new Padding(3);
-            this.tab_readinganswer.Size = new Size(0x301, 0x20e);
+            this.tab_readinganswer.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_readinganswer.Size = new System.Drawing.Size(769, 484);
             this.tab_readinganswer.TabIndex = 0;
             this.tab_readinganswer.Text = "Reading";
             this.tab_readinganswer.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
             this.label2.AutoSize = true;
-            this.label2.Location = new Point(0x1a, 0x1c7);
+            this.label2.Location = new System.Drawing.Point(26, 420);
             this.label2.Name = "label2";
-            this.label2.Size = new Size(0x2c5, 13);
+            this.label2.Size = new System.Drawing.Size(905, 12);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Note: Because the real IBT scoring policy will take all the students' performance into account, the standard score gained here can't be very accurate!";
+            this.label2.Text = "Note: Because the real IBT scoring policy will take all the students\' performance" +
+    " into account, the standard score gained here can\'t be very accurate!";
+            // 
+            // lbl_readingscorereport
+            // 
             this.lbl_readingscorereport.AutoSize = true;
-            this.lbl_readingscorereport.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.lbl_readingscorereport.Location = new Point(0x3d, 14);
+            this.lbl_readingscorereport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_readingscorereport.Location = new System.Drawing.Point(61, 13);
             this.lbl_readingscorereport.Name = "lbl_readingscorereport";
-            this.lbl_readingscorereport.Size = new Size(0x61, 0x11);
+            this.lbl_readingscorereport.Size = new System.Drawing.Size(97, 17);
             this.lbl_readingscorereport.TabIndex = 13;
             this.lbl_readingscorereport.Text = "scoreReport";
+            // 
+            // label3
+            // 
             this.label3.AutoSize = true;
-            this.label3.Location = new Point(0x14c, 50);
+            this.label3.Location = new System.Drawing.Point(332, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new Size(0x59, 13);
+            this.label3.Size = new System.Drawing.Size(89, 12);
             this.label3.TabIndex = 11;
             this.label3.Text = "Wrong Answered";
-            this.pictureBox6.BackColor = Color.Yellow;
-            this.pictureBox6.Location = new Point(0x12b, 0x29);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox6.Location = new System.Drawing.Point(299, 38);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new Size(0x1b, 0x16);
+            this.pictureBox6.Size = new System.Drawing.Size(27, 20);
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            // 
+            // label4
+            // 
             this.label4.AutoSize = true;
-            this.label4.Location = new Point(0xd7, 50);
+            this.label4.Location = new System.Drawing.Point(215, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new Size(0x52, 13);
+            this.label4.Size = new System.Drawing.Size(89, 12);
             this.label4.TabIndex = 12;
             this.label4.Text = "Right Answered";
-            this.pictureBox7.BackColor = Color.Green;
-            this.pictureBox7.Location = new Point(0xb6, 0x29);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Green;
+            this.pictureBox7.Location = new System.Drawing.Point(182, 38);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new Size(0x1b, 0x16);
+            this.pictureBox7.Size = new System.Drawing.Size(27, 20);
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
+            // 
+            // label5
+            // 
             this.label5.AutoSize = true;
-            this.label5.Location = new Point(0x61, 50);
+            this.label5.Location = new System.Drawing.Point(97, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new Size(0x4a, 13);
+            this.label5.Size = new System.Drawing.Size(77, 12);
             this.label5.TabIndex = 10;
             this.label5.Text = "Not Answered";
-            this.pictureBox8.BackColor = Color.Red;
-            this.pictureBox8.Location = new Point(0x40, 0x29);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Red;
+            this.pictureBox8.Location = new System.Drawing.Point(64, 38);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new Size(0x1b, 0x16);
+            this.pictureBox8.Size = new System.Drawing.Size(27, 20);
             this.pictureBox8.TabIndex = 9;
             this.pictureBox8.TabStop = false;
+            // 
+            // dgv_readinganswers
+            // 
             this.dgv_readinganswers.AllowUserToAddRows = false;
             this.dgv_readinganswers.AllowUserToDeleteRows = false;
             this.dgv_readinganswers.AllowUserToResizeColumns = false;
             this.dgv_readinganswers.AllowUserToResizeRows = false;
-            this.dgv_readinganswers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_readinganswers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_readinganswers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_readinganswers.Location = new Point(0x40, 0x45);
+            this.dgv_readinganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_readinganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgv_readinganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_readinganswers.Location = new System.Drawing.Point(64, 64);
             this.dgv_readinganswers.MultiSelect = false;
             this.dgv_readinganswers.Name = "dgv_readinganswers";
             this.dgv_readinganswers.ReadOnly = true;
             this.dgv_readinganswers.RowHeadersVisible = false;
-            this.dgv_readinganswers.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_readinganswers.RowTemplate.Height = 0x17;
+            this.dgv_readinganswers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_readinganswers.RowTemplate.Height = 23;
             this.dgv_readinganswers.RowTemplate.ReadOnly = true;
-            this.dgv_readinganswers.RowTemplate.Resizable = DataGridViewTriState.False;
-            this.dgv_readinganswers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_readinganswers.Size = new Size(0x284, 0x171);
+            this.dgv_readinganswers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_readinganswers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_readinganswers.Size = new System.Drawing.Size(644, 341);
             this.dgv_readinganswers.TabIndex = 6;
             this.dgv_readinganswers.TabStop = false;
-            this.dgv_readinganswers.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
+            this.dgv_readinganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
+            // 
+            // tab_listeninganswers
+            // 
             this.tab_listeninganswers.Controls.Add(this.label16);
             this.tab_listeninganswers.Controls.Add(this.dgv_listeninganswers);
             this.tab_listeninganswers.Controls.Add(this.lbl_listeningScorereport);
@@ -6094,98 +7036,132 @@
             this.tab_listeninganswers.Controls.Add(this.pictureBox10);
             this.tab_listeninganswers.Controls.Add(this.label9);
             this.tab_listeninganswers.Controls.Add(this.pictureBox11);
-            this.tab_listeninganswers.Location = new Point(4, 0x16);
+            this.tab_listeninganswers.Location = new System.Drawing.Point(4, 22);
             this.tab_listeninganswers.Name = "tab_listeninganswers";
-            this.tab_listeninganswers.Padding = new Padding(3);
-            this.tab_listeninganswers.Size = new Size(0x301, 0x20e);
+            this.tab_listeninganswers.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_listeninganswers.Size = new System.Drawing.Size(769, 484);
             this.tab_listeninganswers.TabIndex = 1;
             this.tab_listeninganswers.Text = "Listening";
             this.tab_listeninganswers.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
             this.label16.AutoSize = true;
-            this.label16.Location = new Point(0x1a, 0x1c9);
+            this.label16.Location = new System.Drawing.Point(26, 422);
             this.label16.Name = "label16";
-            this.label16.Size = new Size(0x2c5, 13);
-            this.label16.TabIndex = 0x17;
-            this.label16.Text = "Note: Because the real IBT scoring policy will take all the students' performance into account, the standard score gained here can't be very accurate!";
+            this.label16.Size = new System.Drawing.Size(905, 12);
+            this.label16.TabIndex = 23;
+            this.label16.Text = "Note: Because the real IBT scoring policy will take all the students\' performance" +
+    " into account, the standard score gained here can\'t be very accurate!";
+            // 
+            // dgv_listeninganswers
+            // 
             this.dgv_listeninganswers.AllowUserToAddRows = false;
             this.dgv_listeninganswers.AllowUserToDeleteRows = false;
             this.dgv_listeninganswers.AllowUserToResizeColumns = false;
             this.dgv_listeninganswers.AllowUserToResizeRows = false;
-            this.dgv_listeninganswers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_listeninganswers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_listeninganswers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_listeninganswers.Location = new Point(0x3e, 0x43);
+            this.dgv_listeninganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_listeninganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgv_listeninganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_listeninganswers.Location = new System.Drawing.Point(62, 62);
             this.dgv_listeninganswers.MultiSelect = false;
             this.dgv_listeninganswers.Name = "dgv_listeninganswers";
             this.dgv_listeninganswers.ReadOnly = true;
             this.dgv_listeninganswers.RowHeadersVisible = false;
-            this.dgv_listeninganswers.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_listeninganswers.RowTemplate.Height = 0x17;
+            this.dgv_listeninganswers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_listeninganswers.RowTemplate.Height = 23;
             this.dgv_listeninganswers.RowTemplate.ReadOnly = true;
-            this.dgv_listeninganswers.RowTemplate.Resizable = DataGridViewTriState.False;
-            this.dgv_listeninganswers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_listeninganswers.Size = new Size(0x284, 0x171);
-            this.dgv_listeninganswers.TabIndex = 0x16;
+            this.dgv_listeninganswers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_listeninganswers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_listeninganswers.Size = new System.Drawing.Size(644, 341);
+            this.dgv_listeninganswers.TabIndex = 22;
             this.dgv_listeninganswers.TabStop = false;
-            this.dgv_listeninganswers.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
+            this.dgv_listeninganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
+            // 
+            // lbl_listeningScorereport
+            // 
             this.lbl_listeningScorereport.AutoSize = true;
-            this.lbl_listeningScorereport.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.lbl_listeningScorereport.Location = new Point(0x3d, 10);
+            this.lbl_listeningScorereport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_listeningScorereport.Location = new System.Drawing.Point(61, 9);
             this.lbl_listeningScorereport.Name = "lbl_listeningScorereport";
-            this.lbl_listeningScorereport.Size = new Size(0x61, 0x11);
-            this.lbl_listeningScorereport.TabIndex = 0x15;
+            this.lbl_listeningScorereport.Size = new System.Drawing.Size(97, 17);
+            this.lbl_listeningScorereport.TabIndex = 21;
             this.lbl_listeningScorereport.Text = "scoreReport";
+            // 
+            // label7
+            // 
             this.label7.AutoSize = true;
-            this.label7.Location = new Point(0x14c, 0x2e);
+            this.label7.Location = new System.Drawing.Point(332, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new Size(0x59, 13);
-            this.label7.TabIndex = 0x13;
+            this.label7.Size = new System.Drawing.Size(89, 12);
+            this.label7.TabIndex = 19;
             this.label7.Text = "Wrong Answered";
-            this.pictureBox9.BackColor = Color.Yellow;
-            this.pictureBox9.Location = new Point(0x12b, 0x25);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox9.Location = new System.Drawing.Point(299, 34);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new Size(0x1b, 0x16);
-            this.pictureBox9.TabIndex = 0x10;
+            this.pictureBox9.Size = new System.Drawing.Size(27, 20);
+            this.pictureBox9.TabIndex = 16;
             this.pictureBox9.TabStop = false;
+            // 
+            // label8
+            // 
             this.label8.AutoSize = true;
-            this.label8.Location = new Point(0xd7, 0x2e);
+            this.label8.Location = new System.Drawing.Point(215, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new Size(0x52, 13);
+            this.label8.Size = new System.Drawing.Size(89, 12);
             this.label8.TabIndex = 20;
             this.label8.Text = "Right Answered";
-            this.pictureBox10.BackColor = Color.Green;
-            this.pictureBox10.Location = new Point(0xb6, 0x25);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Green;
+            this.pictureBox10.Location = new System.Drawing.Point(182, 34);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new Size(0x1b, 0x16);
+            this.pictureBox10.Size = new System.Drawing.Size(27, 20);
             this.pictureBox10.TabIndex = 15;
             this.pictureBox10.TabStop = false;
+            // 
+            // label9
+            // 
             this.label9.AutoSize = true;
-            this.label9.Location = new Point(0x61, 0x2e);
+            this.label9.Location = new System.Drawing.Point(97, 42);
             this.label9.Name = "label9";
-            this.label9.Size = new Size(0x4a, 13);
-            this.label9.TabIndex = 0x12;
+            this.label9.Size = new System.Drawing.Size(77, 12);
+            this.label9.TabIndex = 18;
             this.label9.Text = "Not Answered";
-            this.pictureBox11.BackColor = Color.Red;
-            this.pictureBox11.Location = new Point(0x40, 0x25);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Red;
+            this.pictureBox11.Location = new System.Drawing.Point(64, 34);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new Size(0x1b, 0x16);
-            this.pictureBox11.TabIndex = 0x11;
+            this.pictureBox11.Size = new System.Drawing.Size(27, 20);
+            this.pictureBox11.TabIndex = 17;
             this.pictureBox11.TabStop = false;
+            // 
+            // tab_speakinganswers
+            // 
             this.tab_speakinganswers.AutoScroll = true;
             this.tab_speakinganswers.Controls.Add(this.tableLayoutPanel2);
-            this.tab_speakinganswers.Location = new Point(4, 0x16);
+            this.tab_speakinganswers.Location = new System.Drawing.Point(4, 22);
             this.tab_speakinganswers.Name = "tab_speakinganswers";
-            this.tab_speakinganswers.Size = new Size(0x301, 0x20e);
+            this.tab_speakinganswers.Size = new System.Drawing.Size(769, 484);
             this.tab_speakinganswers.TabIndex = 2;
             this.tab_speakinganswers.Text = "Speaking";
             this.tab_speakinganswers.UseVisualStyleBackColor = true;
-            this.tab_speakinganswers.Click += new EventHandler(this.tab_speakinganswers_Click);
-            this.tab_speakinganswers.Leave += new EventHandler(this.tab_speakinganswers_Leave);
-            this.tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tab_speakinganswers.Click += new System.EventHandler(this.tab_speakinganswers_Click);
+            this.tab_speakinganswers.Leave += new System.EventHandler(this.tab_speakinganswers_Leave);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15f));
-            this.tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15f));
-            this.tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70f));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 2);
@@ -6198,267 +7174,354 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer4, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer5, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer6, 1, 5);
-            this.tableLayoutPanel2.Location = new Point(0x54, 0x13);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(84, 18);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667f));
-            this.tableLayoutPanel2.Size = new Size(0x270, 0x1c9);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(624, 422);
             this.tableLayoutPanel2.TabIndex = 0;
-            this.label10.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label10.Location = new Point(6, 3);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(6, 3);
             this.label10.Name = "label10";
-            this.label10.Size = new Size(0x55, 0x48);
+            this.label10.Size = new System.Drawing.Size(85, 66);
             this.label10.TabIndex = 0;
             this.label10.Text = "SPEAKING 1";
-            this.label10.TextAlign = ContentAlignment.MiddleCenter;
-            this.label11.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label11.Location = new Point(6, 0x4e);
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(6, 72);
             this.label11.Name = "label11";
-            this.label11.Size = new Size(0x55, 0x48);
+            this.label11.Size = new System.Drawing.Size(85, 66);
             this.label11.TabIndex = 0;
             this.label11.Text = "SPEAKING 2";
-            this.label11.TextAlign = ContentAlignment.MiddleCenter;
-            this.label12.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label12.Location = new Point(6, 0x99);
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(6, 141);
             this.label12.Name = "label12";
-            this.label12.Size = new Size(0x55, 0x48);
+            this.label12.Size = new System.Drawing.Size(85, 66);
             this.label12.TabIndex = 0;
             this.label12.Text = "SPEAKING 3";
-            this.label12.TextAlign = ContentAlignment.MiddleCenter;
-            this.label13.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label13.Location = new Point(6, 0xe4);
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(6, 210);
             this.label13.Name = "label13";
-            this.label13.Size = new Size(0x55, 0x48);
+            this.label13.Size = new System.Drawing.Size(85, 66);
             this.label13.TabIndex = 0;
             this.label13.Text = "SPEAKING 4";
-            this.label13.TextAlign = ContentAlignment.MiddleCenter;
-            this.label14.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label14.Location = new Point(6, 0x12f);
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(6, 279);
             this.label14.Name = "label14";
-            this.label14.Size = new Size(0x55, 0x48);
+            this.label14.Size = new System.Drawing.Size(85, 66);
             this.label14.TabIndex = 0;
             this.label14.Text = "SPEAKING 5";
-            this.label14.TextAlign = ContentAlignment.MiddleCenter;
-            this.label15.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.label15.Location = new Point(6, 0x17a);
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(6, 348);
             this.label15.Name = "label15";
-            this.label15.Size = new Size(0x55, 0x4c);
+            this.label15.Size = new System.Drawing.Size(85, 70);
             this.label15.TabIndex = 0;
             this.label15.Text = "SPEAKING 6";
-            this.label15.TextAlign = ContentAlignment.MiddleCenter;
-            this.btn_speakinganswer1.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer1.BackgroundImage");
-            this.btn_speakinganswer1.BackgroundImageLayout = ImageLayout.Stretch;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_speakinganswer1
+            // 
+            this.btn_speakinganswer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer1.BackgroundImage")));
+            this.btn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer1.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer1.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer1.Location = new Point(100, 6);
+            this.btn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer1.Location = new System.Drawing.Point(100, 6);
             this.btn_speakinganswer1.Name = "btn_speakinganswer1";
-            this.btn_speakinganswer1.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer1.Size = new System.Drawing.Size(85, 60);
             this.btn_speakinganswer1.TabIndex = 1;
             this.btn_speakinganswer1.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer1.Click += new EventHandler(this.btn_speakinganswer_Click);
-            this.btn_speakinganswer2.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer2.BackgroundImage");
-            this.btn_speakinganswer2.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_speakinganswer1.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // btn_speakinganswer2
+            // 
+            this.btn_speakinganswer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer2.BackgroundImage")));
+            this.btn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer2.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer2.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer2.Location = new Point(100, 0x51);
+            this.btn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer2.Location = new System.Drawing.Point(100, 75);
             this.btn_speakinganswer2.Name = "btn_speakinganswer2";
-            this.btn_speakinganswer2.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer2.Size = new System.Drawing.Size(85, 60);
             this.btn_speakinganswer2.TabIndex = 1;
             this.btn_speakinganswer2.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer2.Click += new EventHandler(this.btn_speakinganswer_Click);
-            this.btn_speakinganswer3.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer3.BackgroundImage");
-            this.btn_speakinganswer3.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_speakinganswer2.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // btn_speakinganswer3
+            // 
+            this.btn_speakinganswer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer3.BackgroundImage")));
+            this.btn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer3.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer3.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer3.Location = new Point(100, 0x9c);
+            this.btn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer3.Location = new System.Drawing.Point(100, 144);
             this.btn_speakinganswer3.Name = "btn_speakinganswer3";
-            this.btn_speakinganswer3.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer3.Size = new System.Drawing.Size(85, 60);
             this.btn_speakinganswer3.TabIndex = 1;
             this.btn_speakinganswer3.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer3.Click += new EventHandler(this.btn_speakinganswer_Click);
-            this.btn_speakinganswer4.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer4.BackgroundImage");
-            this.btn_speakinganswer4.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_speakinganswer3.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // btn_speakinganswer4
+            // 
+            this.btn_speakinganswer4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer4.BackgroundImage")));
+            this.btn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer4.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer4.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer4.Location = new Point(100, 0xe7);
+            this.btn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer4.Location = new System.Drawing.Point(100, 213);
             this.btn_speakinganswer4.Name = "btn_speakinganswer4";
-            this.btn_speakinganswer4.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer4.Size = new System.Drawing.Size(85, 60);
             this.btn_speakinganswer4.TabIndex = 1;
             this.btn_speakinganswer4.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer4.Click += new EventHandler(this.btn_speakinganswer_Click);
-            this.btn_speakinganswer5.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer5.BackgroundImage");
-            this.btn_speakinganswer5.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_speakinganswer4.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // btn_speakinganswer5
+            // 
+            this.btn_speakinganswer5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer5.BackgroundImage")));
+            this.btn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer5.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer5.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer5.Location = new Point(100, 0x132);
+            this.btn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer5.Location = new System.Drawing.Point(100, 282);
             this.btn_speakinganswer5.Name = "btn_speakinganswer5";
-            this.btn_speakinganswer5.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer5.Size = new System.Drawing.Size(85, 60);
             this.btn_speakinganswer5.TabIndex = 1;
             this.btn_speakinganswer5.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer5.Click += new EventHandler(this.btn_speakinganswer_Click);
-            this.btn_speakinganswer6.BackgroundImage = (Image) manager.GetObject("btn_speakinganswer6.BackgroundImage");
-            this.btn_speakinganswer6.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_speakinganswer5.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // btn_speakinganswer6
+            // 
+            this.btn_speakinganswer6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer6.BackgroundImage")));
+            this.btn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer6.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer6.FlatStyle = FlatStyle.Flat;
-            this.btn_speakinganswer6.Location = new Point(100, 0x17d);
+            this.btn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speakinganswer6.Location = new System.Drawing.Point(100, 351);
             this.btn_speakinganswer6.Name = "btn_speakinganswer6";
-            this.btn_speakinganswer6.Size = new Size(0x55, 0x42);
+            this.btn_speakinganswer6.Size = new System.Drawing.Size(85, 61);
             this.btn_speakinganswer6.TabIndex = 1;
             this.btn_speakinganswer6.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer6.Click += new EventHandler(this.btn_speakinganswer_Click);
+            this.btn_speakinganswer6.Click += new System.EventHandler(this.btn_speakinganswer_Click);
+            // 
+            // tab_writinganswers
+            // 
             this.tab_writinganswers.Controls.Add(this.rtb_writinganswers);
             this.tab_writinganswers.Controls.Add(this.rtb_writing2);
             this.tab_writinganswers.Controls.Add(this.rtb_writing1);
-            this.tab_writinganswers.Location = new Point(4, 0x16);
+            this.tab_writinganswers.Location = new System.Drawing.Point(4, 22);
             this.tab_writinganswers.Name = "tab_writinganswers";
-            this.tab_writinganswers.Size = new Size(0x301, 0x20e);
+            this.tab_writinganswers.Size = new System.Drawing.Size(769, 484);
             this.tab_writinganswers.TabIndex = 3;
             this.tab_writinganswers.Text = "Writing";
             this.tab_writinganswers.UseVisualStyleBackColor = true;
-            this.rtb_writinganswers.Location = new Point(0x37, 0x2b);
+            // 
+            // rtb_writinganswers
+            // 
+            this.rtb_writinganswers.Location = new System.Drawing.Point(55, 40);
             this.rtb_writinganswers.Name = "rtb_writinganswers";
-            this.rtb_writinganswers.Size = new Size(0x281, 0x1aa);
+            this.rtb_writinganswers.Size = new System.Drawing.Size(641, 394);
             this.rtb_writinganswers.TabIndex = 1;
             this.rtb_writinganswers.Text = "";
+            // 
+            // rtb_writing2
+            // 
             this.rtb_writing2.AutoSize = true;
-            this.rtb_writing2.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.rtb_writing2.Location = new Point(0xd5, 0x10);
+            this.rtb_writing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rtb_writing2.Location = new System.Drawing.Point(213, 15);
             this.rtb_writing2.Name = "rtb_writing2";
-            this.rtb_writing2.Size = new Size(0xac, 0x15);
+            this.rtb_writing2.Size = new System.Drawing.Size(172, 19);
             this.rtb_writing2.TabIndex = 0;
             this.rtb_writing2.Text = "Independent Writing";
             this.rtb_writing2.UseVisualStyleBackColor = true;
-            this.rtb_writing2.CheckedChanged += new EventHandler(this.rtb_writing2_CheckedChanged);
+            this.rtb_writing2.CheckedChanged += new System.EventHandler(this.rtb_writing2_CheckedChanged);
+            // 
+            // rtb_writing1
+            // 
             this.rtb_writing1.AutoSize = true;
             this.rtb_writing1.Checked = true;
-            this.rtb_writing1.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.rtb_writing1.Location = new Point(0x37, 0x10);
+            this.rtb_writing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rtb_writing1.Location = new System.Drawing.Point(55, 15);
             this.rtb_writing1.Name = "rtb_writing1";
-            this.rtb_writing1.Size = new Size(0x98, 0x15);
+            this.rtb_writing1.Size = new System.Drawing.Size(152, 19);
             this.rtb_writing1.TabIndex = 0;
             this.rtb_writing1.TabStop = true;
             this.rtb_writing1.Text = "Integrated Wrting";
             this.rtb_writing1.UseVisualStyleBackColor = true;
-            this.btn_ShowText.BackgroundImage = (Image) manager.GetObject("btn_ShowText.BackgroundImage");
-            this.btn_ShowText.BackgroundImageLayout = ImageLayout.Stretch;
+            // 
+            // btn_ShowText
+            // 
+            this.btn_ShowText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ShowText.BackgroundImage")));
+            this.btn_ShowText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ShowText.FlatAppearance.BorderSize = 0;
-            this.btn_ShowText.FlatStyle = FlatStyle.Flat;
-            this.btn_ShowText.Location = new Point(0x20b, 11);
+            this.btn_ShowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowText.Location = new System.Drawing.Point(523, 10);
             this.btn_ShowText.Name = "btn_ShowText";
-            this.btn_ShowText.Size = new Size(0x4a, 0x22);
-            this.btn_ShowText.TabIndex = 0x10;
+            this.btn_ShowText.Size = new System.Drawing.Size(74, 31);
+            this.btn_ShowText.TabIndex = 16;
             this.btn_ShowText.TabStop = false;
             this.btn_ShowText.UseVisualStyleBackColor = true;
             this.btn_ShowText.Visible = false;
-            this.btn_ShowText.Click += new EventHandler(this.btn_ShowText_Click);
+            this.btn_ShowText.Click += new System.EventHandler(this.btn_ShowText_Click);
+            // 
+            // flash_timer
+            // 
             this.flash_timer.Interval = 300;
-            this.flash_timer.Tick += new EventHandler(this.flash_timer_Tick);
-            this.Timer_Speaking.Interval = 0x3e8;
-            this.Timer_Speaking.Tick += new EventHandler(this.Timer_Speaking_Tick);
-            this.ckb_viewSpeakingText.BackColor = Color.Transparent;
-            this.ckb_viewSpeakingText.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.ckb_viewSpeakingText.Location = new Point(0x1ce, 0x37);
+            this.flash_timer.Tick += new System.EventHandler(this.flash_timer_Tick);
+            // 
+            // Timer_Speaking
+            // 
+            this.Timer_Speaking.Interval = 1000;
+            this.Timer_Speaking.Tick += new System.EventHandler(this.Timer_Speaking_Tick);
+            // 
+            // ckb_viewSpeakingText
+            // 
+            this.ckb_viewSpeakingText.BackColor = System.Drawing.Color.Transparent;
+            this.ckb_viewSpeakingText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_viewSpeakingText.Location = new System.Drawing.Point(462, 51);
             this.ckb_viewSpeakingText.Name = "ckb_viewSpeakingText";
-            this.ckb_viewSpeakingText.Size = new Size(0x70, 0x17);
-            this.ckb_viewSpeakingText.TabIndex = 0x11;
+            this.ckb_viewSpeakingText.Size = new System.Drawing.Size(112, 21);
+            this.ckb_viewSpeakingText.TabIndex = 17;
             this.ckb_viewSpeakingText.TabStop = false;
             this.ckb_viewSpeakingText.Text = "Show Scripts";
             this.ckb_viewSpeakingText.UseVisualStyleBackColor = false;
             this.ckb_viewSpeakingText.Visible = false;
-            this.ckb_viewSpeakingText.CheckedChanged += new EventHandler(this.ckb_viewSpeakingText_CheckedChanged);
+            this.ckb_viewSpeakingText.CheckedChanged += new System.EventHandler(this.ckb_viewSpeakingText_CheckedChanged);
+            // 
+            // lbl_testingSection
+            // 
             this.lbl_testingSection.AutoSize = true;
-            this.lbl_testingSection.BackColor = Color.Transparent;
-            this.lbl_testingSection.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.lbl_testingSection.Location = new Point(10, 2);
+            this.lbl_testingSection.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_testingSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_testingSection.Location = new System.Drawing.Point(10, 2);
             this.lbl_testingSection.Name = "lbl_testingSection";
-            this.lbl_testingSection.Size = new Size(0xae, 0x18);
-            this.lbl_testingSection.TabIndex = 0x12;
+            this.lbl_testingSection.Size = new System.Drawing.Size(174, 24);
+            this.lbl_testingSection.TabIndex = 18;
             this.lbl_testingSection.Text = "lbl_testingSection";
             this.lbl_testingSection.Visible = false;
-            this.btn_LastPage.BackgroundImage = (Image) manager.GetObject("btn_LastPage.BackgroundImage");
-            this.btn_LastPage.BackgroundImageLayout = ImageLayout.Stretch;
+            // 
+            // btn_LastPage
+            // 
+            this.btn_LastPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_LastPage.BackgroundImage")));
+            this.btn_LastPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_LastPage.Enabled = false;
             this.btn_LastPage.FlatAppearance.BorderSize = 0;
-            this.btn_LastPage.FlatStyle = FlatStyle.Flat;
-            this.btn_LastPage.Location = new Point(7, 0x1d);
+            this.btn_LastPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LastPage.Location = new System.Drawing.Point(7, 27);
             this.btn_LastPage.Name = "btn_LastPage";
-            this.btn_LastPage.Size = new Size(0x55, 0x21);
-            this.btn_LastPage.TabIndex = 0x13;
+            this.btn_LastPage.Size = new System.Drawing.Size(85, 30);
+            this.btn_LastPage.TabIndex = 19;
             this.btn_LastPage.TabStop = false;
             this.btn_LastPage.UseVisualStyleBackColor = true;
-            this.btn_LastPage.Click += new EventHandler(this.btn_LastPage_Click);
-            this.btn_NexPage.BackgroundImage = (Image) manager.GetObject("btn_NexPage.BackgroundImage");
-            this.btn_NexPage.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_LastPage.Click += new System.EventHandler(this.btn_LastPage_Click);
+            // 
+            // btn_NexPage
+            // 
+            this.btn_NexPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_NexPage.BackgroundImage")));
+            this.btn_NexPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_NexPage.FlatAppearance.BorderSize = 0;
-            this.btn_NexPage.FlatStyle = FlatStyle.Flat;
-            this.btn_NexPage.Location = new Point(0x43, 0x1d);
+            this.btn_NexPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NexPage.Location = new System.Drawing.Point(67, 27);
             this.btn_NexPage.Name = "btn_NexPage";
-            this.btn_NexPage.Size = new Size(0x55, 0x21);
-            this.btn_NexPage.TabIndex = 0x13;
+            this.btn_NexPage.Size = new System.Drawing.Size(85, 30);
+            this.btn_NexPage.TabIndex = 19;
             this.btn_NexPage.TabStop = false;
             this.btn_NexPage.UseVisualStyleBackColor = true;
-            this.btn_NexPage.Click += new EventHandler(this.btn_NexPage_Click);
+            this.btn_NexPage.Click += new System.EventHandler(this.btn_NexPage_Click);
+            // 
+            // rb_PracticeMode
+            // 
             this.rb_PracticeMode.AutoSize = true;
-            this.rb_PracticeMode.BackColor = Color.Transparent;
+            this.rb_PracticeMode.BackColor = System.Drawing.Color.Transparent;
             this.rb_PracticeMode.Checked = true;
-            this.rb_PracticeMode.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.rb_PracticeMode.Location = new Point(0x109, 12);
+            this.rb_PracticeMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb_PracticeMode.Location = new System.Drawing.Point(265, 11);
             this.rb_PracticeMode.Name = "rb_PracticeMode";
-            this.rb_PracticeMode.Size = new Size(0x97, 0x15);
+            this.rb_PracticeMode.Size = new System.Drawing.Size(151, 21);
             this.rb_PracticeMode.TabIndex = 20;
             this.rb_PracticeMode.TabStop = true;
             this.rb_PracticeMode.Text = "PRACTICE MODE";
             this.rb_PracticeMode.UseVisualStyleBackColor = false;
+            // 
+            // rb_TestMode
+            // 
             this.rb_TestMode.AutoSize = true;
-            this.rb_TestMode.BackColor = Color.Transparent;
-            this.rb_TestMode.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.rb_TestMode.Location = new Point(0x109, 0x29);
+            this.rb_TestMode.BackColor = System.Drawing.Color.Transparent;
+            this.rb_TestMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb_TestMode.Location = new System.Drawing.Point(265, 38);
             this.rb_TestMode.Name = "rb_TestMode";
-            this.rb_TestMode.Size = new Size(0x74, 0x15);
+            this.rb_TestMode.Size = new System.Drawing.Size(116, 21);
             this.rb_TestMode.TabIndex = 20;
             this.rb_TestMode.Text = "TEST MODE";
             this.rb_TestMode.UseVisualStyleBackColor = false;
+            // 
+            // ckb_ShowAnswer
+            // 
             this.ckb_ShowAnswer.AutoSize = true;
-            this.ckb_ShowAnswer.BackColor = Color.Transparent;
-            this.ckb_ShowAnswer.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.ckb_ShowAnswer.Location = new Point(0xcb, 0x3b);
+            this.ckb_ShowAnswer.BackColor = System.Drawing.Color.Transparent;
+            this.ckb_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ckb_ShowAnswer.Location = new System.Drawing.Point(203, 54);
             this.ckb_ShowAnswer.Name = "ckb_ShowAnswer";
-            this.ckb_ShowAnswer.Size = new Size(0x6f, 0x13);
-            this.ckb_ShowAnswer.TabIndex = 0x16;
+            this.ckb_ShowAnswer.Size = new System.Drawing.Size(111, 19);
+            this.ckb_ShowAnswer.TabIndex = 22;
             this.ckb_ShowAnswer.TabStop = false;
             this.ckb_ShowAnswer.Text = "Show Answer";
             this.ckb_ShowAnswer.UseVisualStyleBackColor = false;
             this.ckb_ShowAnswer.Visible = false;
-            this.ckb_ShowAnswer.CheckedChanged += new EventHandler(this.ckb_ShowAnswer_CheckedChanged);
-            this.btn_pause.BackgroundImage = (Image) manager.GetObject("btn_pause.BackgroundImage");
-            this.btn_pause.BackgroundImageLayout = ImageLayout.Stretch;
+            this.ckb_ShowAnswer.CheckedChanged += new System.EventHandler(this.ckb_ShowAnswer_CheckedChanged);
+            // 
+            // btn_pause
+            // 
+            this.btn_pause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_pause.BackgroundImage")));
+            this.btn_pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_pause.FlatAppearance.BorderSize = 0;
-            this.btn_pause.FlatStyle = FlatStyle.Flat;
-            this.btn_pause.Location = new Point(110, 0x21);
+            this.btn_pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pause.Location = new System.Drawing.Point(110, 30);
             this.btn_pause.Name = "btn_pause";
-            this.btn_pause.Size = new Size(0x45, 0x1a);
-            this.btn_pause.TabIndex = 0x10;
+            this.btn_pause.Size = new System.Drawing.Size(69, 24);
+            this.btn_pause.TabIndex = 16;
             this.btn_pause.TabStop = false;
             this.btn_pause.UseVisualStyleBackColor = true;
             this.btn_pause.Visible = false;
-            this.btn_pause.Click += new EventHandler(this.btn_pause_Click);
-            this.btn_QUITapp.BackgroundImage = (Image) manager.GetObject("btn_QUITapp.BackgroundImage");
-            this.btn_QUITapp.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_pause.Click += new System.EventHandler(this.btn_pause_Click);
+            // 
+            // btn_QUITapp
+            // 
+            this.btn_QUITapp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_QUITapp.BackgroundImage")));
+            this.btn_QUITapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_QUITapp.FlatAppearance.BorderSize = 0;
-            this.btn_QUITapp.FlatStyle = FlatStyle.Flat;
-            this.btn_QUITapp.Location = new Point(0x2c3, 0);
+            this.btn_QUITapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QUITapp.Location = new System.Drawing.Point(707, 0);
             this.btn_QUITapp.Name = "btn_QUITapp";
-            this.btn_QUITapp.Size = new Size(80, 0x30);
-            this.btn_QUITapp.TabIndex = 0x17;
+            this.btn_QUITapp.Size = new System.Drawing.Size(80, 44);
+            this.btn_QUITapp.TabIndex = 23;
             this.btn_QUITapp.UseVisualStyleBackColor = true;
-            this.btn_QUITapp.Click += new EventHandler(this.btn_QUITapp_Click);
-            this.bgimagelist.ImageStream = (ImageListStreamer) manager.GetObject("bgimagelist.ImageStream");
-            this.bgimagelist.TransparentColor = Color.Transparent;
+            this.btn_QUITapp.Click += new System.EventHandler(this.btn_QUITapp_Click);
+            // 
+            // bgimagelist
+            // 
+            this.bgimagelist.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("bgimagelist.ImageStream")));
+            this.bgimagelist.TransparentColor = System.Drawing.Color.Transparent;
             this.bgimagelist.Images.SetKeyName(0, "back1.jpg");
             this.bgimagelist.Images.SetKeyName(1, "continue.jpg");
             this.bgimagelist.Images.SetKeyName(2, "exit1.jpg");
@@ -6469,86 +7532,98 @@
             this.bgimagelist.Images.SetKeyName(7, "ok.jpg");
             this.bgimagelist.Images.SetKeyName(8, "Review.jpg");
             this.bgimagelist.Images.SetKeyName(9, "volumn.jpg");
-            this.btn_showexplanation.BackColor = Color.Transparent;
-            this.btn_showexplanation.BackgroundImage = (Image) manager.GetObject("btn_showexplanation.BackgroundImage");
-            this.btn_showexplanation.BackgroundImageLayout = ImageLayout.Stretch;
+            // 
+            // btn_showexplanation
+            // 
+            this.btn_showexplanation.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showexplanation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_showexplanation.BackgroundImage")));
+            this.btn_showexplanation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showexplanation.FlatAppearance.BorderSize = 0;
-            this.btn_showexplanation.FlatStyle = FlatStyle.Flat;
-            this.btn_showexplanation.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.btn_showexplanation.Location = new Point(0x13e, 15);
+            this.btn_showexplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_showexplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_showexplanation.Location = new System.Drawing.Point(318, 14);
             this.btn_showexplanation.Name = "btn_showexplanation";
-            this.btn_showexplanation.Size = new Size(0x44, 0x1f);
-            this.btn_showexplanation.TabIndex = 0x18;
+            this.btn_showexplanation.Size = new System.Drawing.Size(68, 29);
+            this.btn_showexplanation.TabIndex = 24;
             this.btn_showexplanation.UseVisualStyleBackColor = false;
             this.btn_showexplanation.Visible = false;
-            this.btn_showexplanation.Click += new EventHandler(this.btn_showexplanation_Click);
-            this.btn_showtranslation.BackColor = Color.Transparent;
-            this.btn_showtranslation.BackgroundImage = (Image) manager.GetObject("btn_showtranslation.BackgroundImage");
-            this.btn_showtranslation.BackgroundImageLayout = ImageLayout.Stretch;
+            this.btn_showexplanation.Click += new System.EventHandler(this.btn_showexplanation_Click);
+            // 
+            // btn_showtranslation
+            // 
+            this.btn_showtranslation.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showtranslation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_showtranslation.BackgroundImage")));
+            this.btn_showtranslation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showtranslation.FlatAppearance.BorderSize = 0;
-            this.btn_showtranslation.FlatStyle = FlatStyle.Flat;
-            this.btn_showtranslation.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.btn_showtranslation.Location = new Point(0x18d, 15);
+            this.btn_showtranslation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_showtranslation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_showtranslation.Location = new System.Drawing.Point(397, 14);
             this.btn_showtranslation.Name = "btn_showtranslation";
-            this.btn_showtranslation.Size = new Size(70, 30);
-            this.btn_showtranslation.TabIndex = 0x18;
+            this.btn_showtranslation.Size = new System.Drawing.Size(70, 28);
+            this.btn_showtranslation.TabIndex = 24;
             this.btn_showtranslation.UseVisualStyleBackColor = false;
             this.btn_showtranslation.Visible = false;
-            this.btn_showtranslation.Click += new EventHandler(this.btn_showtranslation_Click);
-            this.Timer_reading.Tick += new EventHandler(this.Timer_reading_Tick);
-            base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            this.btn_showtranslation.Click += new System.EventHandler(this.btn_showtranslation_Click);
+            // 
+            // Timer_reading
+            // 
+            this.Timer_reading.Tick += new System.EventHandler(this.Timer_reading_Tick);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = Color.White;
-            this.BackgroundImage = (Image) manager.GetObject("$this.BackgroundImage");
-            base.ClientSize = new Size(0x314, 0x296);
-            base.Controls.Add(this.btn_pause);
-            base.Controls.Add(this.btn_NexPage);
-            base.Controls.Add(this.ckb_ShowAnswer);
-            base.Controls.Add(this.btn_LastPage);
-            base.Controls.Add(this.tabf_test);
-            base.Controls.Add(this.btn_ShowText);
-            base.Controls.Add(this.lbl_testingSection);
-            base.Controls.Add(this.btn_QUITapp);
-            base.Controls.Add(this.ckb_viewSpeakingText);
-            base.Controls.Add(this.rb_PracticeMode);
-            base.Controls.Add(this.rb_TestMode);
-            base.Controls.Add(this.btn_showtranslation);
-            base.Controls.Add(this.btn_showexplanation);
-            base.FormBorderStyle = FormBorderStyle.None;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
-            base.MaximizeBox = false;
-            base.Name = "MainForm";
-            base.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(788, 611);
+            this.Controls.Add(this.btn_pause);
+            this.Controls.Add(this.btn_NexPage);
+            this.Controls.Add(this.ckb_ShowAnswer);
+            this.Controls.Add(this.btn_LastPage);
+            this.Controls.Add(this.tabf_test);
+            this.Controls.Add(this.btn_ShowText);
+            this.Controls.Add(this.lbl_testingSection);
+            this.Controls.Add(this.btn_QUITapp);
+            this.Controls.Add(this.ckb_viewSpeakingText);
+            this.Controls.Add(this.rb_PracticeMode);
+            this.Controls.Add(this.rb_TestMode);
+            this.Controls.Add(this.btn_showtranslation);
+            this.Controls.Add(this.btn_showexplanation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TPO";
-            base.Load += new EventHandler(this.MainForm_Load);
-            base.SizeChanged += new EventHandler(this.MainForm_SizeChanged);
-            base.Controls.SetChildIndex(this.btn_showexplanation, 0);
-            base.Controls.SetChildIndex(this.btn_showtranslation, 0);
-            base.Controls.SetChildIndex(this.rb_TestMode, 0);
-            base.Controls.SetChildIndex(this.rb_PracticeMode, 0);
-            base.Controls.SetChildIndex(this.ckb_viewSpeakingText, 0);
-            base.Controls.SetChildIndex(this.btn_QUITapp, 0);
-            base.Controls.SetChildIndex(this.lbl_testingSection, 0);
-            base.Controls.SetChildIndex(this.btn_ShowText, 0);
-            base.Controls.SetChildIndex(this.tabf_test, 0);
-            base.Controls.SetChildIndex(this.btn_LastPage, 0);
-            base.Controls.SetChildIndex(this.ckb_ShowAnswer, 0);
-            base.Controls.SetChildIndex(this.btn_NexPage, 0);
-            base.Controls.SetChildIndex(this.btn_pause, 0);
-            base.Controls.SetChildIndex(base.btn_mainmenu, 0);
-            base.Controls.SetChildIndex(base.btn_quit, 0);
-            base.Controls.SetChildIndex(base.btn_review, 0);
-            base.Controls.SetChildIndex(base.Sound_icon, 0);
-            base.Controls.SetChildIndex(base.tb_sound, 0);
-            base.Controls.SetChildIndex(base.btn_continue, 0);
-            base.Controls.SetChildIndex(base.lbl_timeremain, 0);
-            base.Controls.SetChildIndex(base.btn_nextQuestion, 0);
-            base.Controls.SetChildIndex(base.btn_preQuestion, 0);
-            base.Controls.SetChildIndex(base.button1, 0);
-            base.Controls.SetChildIndex(base.lbl_questionNO, 0);
-            base.Controls.SetChildIndex(base.lbl_mode, 0);
-            base.tb_sound.EndInit();
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
+            this.Controls.SetChildIndex(this.btn_showexplanation, 0);
+            this.Controls.SetChildIndex(this.btn_showtranslation, 0);
+            this.Controls.SetChildIndex(this.rb_TestMode, 0);
+            this.Controls.SetChildIndex(this.rb_PracticeMode, 0);
+            this.Controls.SetChildIndex(this.ckb_viewSpeakingText, 0);
+            this.Controls.SetChildIndex(this.btn_QUITapp, 0);
+            this.Controls.SetChildIndex(this.lbl_testingSection, 0);
+            this.Controls.SetChildIndex(this.btn_ShowText, 0);
+            this.Controls.SetChildIndex(this.tabf_test, 0);
+            this.Controls.SetChildIndex(this.btn_LastPage, 0);
+            this.Controls.SetChildIndex(this.ckb_ShowAnswer, 0);
+            this.Controls.SetChildIndex(this.btn_NexPage, 0);
+            this.Controls.SetChildIndex(this.btn_pause, 0);
+            this.Controls.SetChildIndex(this.btn_mainmenu, 0);
+            this.Controls.SetChildIndex(this.btn_quit, 0);
+            this.Controls.SetChildIndex(this.btn_review, 0);
+            this.Controls.SetChildIndex(this.Sound_icon, 0);
+            this.Controls.SetChildIndex(this.tb_sound, 0);
+            this.Controls.SetChildIndex(this.btn_continue, 0);
+            this.Controls.SetChildIndex(this.lbl_timeremain, 0);
+            this.Controls.SetChildIndex(this.btn_nextQuestion, 0);
+            this.Controls.SetChildIndex(this.btn_preQuestion, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.lbl_questionNO, 0);
+            this.Controls.SetChildIndex(this.lbl_mode, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.tb_sound)).EndInit();
             this.tabf_test.ResumeLayout(false);
             this.tab_CoverForm.ResumeLayout(false);
             this.tabf_tposelection.ResumeLayout(false);
@@ -6558,10 +7633,10 @@
             this.tabf_Reading.ResumeLayout(false);
             this.rtab_Direction.ResumeLayout(false);
             this.rtab_Direction.PerformLayout();
-            ((ISupportInitialize) this.pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.rtab_NormalQuestion.ResumeLayout(false);
             this.rtab_NormalQuestion.PerformLayout();
-            this.tb_reading.EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_reading)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tlp_answers.ResumeLayout(false);
@@ -6576,27 +7651,27 @@
             this.tlp_Summary.PerformLayout();
             this.rtab_Review.ResumeLayout(false);
             this.rtab_Review.PerformLayout();
-            ((ISupportInitialize) this.pb_wrongAnswered).EndInit();
-            ((ISupportInitialize) this.pb_rightAnswered).EndInit();
-            ((ISupportInitialize) this.pictureBox5).EndInit();
-            ((ISupportInitialize) this.dgv_readingReview).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_wrongAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingReview)).EndInit();
             this.tab_Listening.ResumeLayout(false);
             this.tabf_Listening.ResumeLayout(false);
             this.ltab_Direction1.ResumeLayout(false);
-            ((ISupportInitialize) this.pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ltab_Materials.ResumeLayout(false);
             this.l_splitContainer.Panel1.ResumeLayout(false);
             this.l_splitContainer.Panel1.PerformLayout();
             this.l_splitContainer.Panel2.ResumeLayout(false);
             this.l_splitContainer.ResumeLayout(false);
-            this.tb_currentpos.EndInit();
-            ((ISupportInitialize) this.pb_ListenScene).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene)).EndInit();
             this.panel1.ResumeLayout(false);
             this.flp_passage.ResumeLayout(false);
             this.flp_passage.PerformLayout();
             this.lMaterials1.ResumeLayout(false);
-            this.tb_currentpos1.EndInit();
-            ((ISupportInitialize) this.pb_ListenScene1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene1)).EndInit();
             this.ltab_Question.ResumeLayout(false);
             this.ltab_Question.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -6608,20 +7683,20 @@
             this.tabf_speaking.ResumeLayout(false);
             this.sDirection.ResumeLayout(false);
             this.sDirection.PerformLayout();
-            ((ISupportInitialize) this.pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.sNormalQuestions.ResumeLayout(false);
             this.sNormalQuestions.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((ISupportInitialize) this.pb_speakingScene).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).EndInit();
             this.tab_Writing.ResumeLayout(false);
             this.tabf_writing.ResumeLayout(false);
             this.wDirection.ResumeLayout(false);
             this.wDirection.PerformLayout();
-            ((ISupportInitialize) this.pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.wReading.ResumeLayout(false);
             this.wSpeakingPassage.ResumeLayout(false);
-            this.wtb_speak.EndInit();
-            ((ISupportInitialize) this.pb_writingScene).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).EndInit();
             this.wWriting2.ResumeLayout(false);
             this.wpanel.ResumeLayout(false);
             this.wpanel.PerformLayout();
@@ -6629,22 +7704,23 @@
             this.tabf_answer.ResumeLayout(false);
             this.tab_readinganswer.ResumeLayout(false);
             this.tab_readinganswer.PerformLayout();
-            ((ISupportInitialize) this.pictureBox6).EndInit();
-            ((ISupportInitialize) this.pictureBox7).EndInit();
-            ((ISupportInitialize) this.pictureBox8).EndInit();
-            ((ISupportInitialize) this.dgv_readinganswers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).EndInit();
             this.tab_listeninganswers.ResumeLayout(false);
             this.tab_listeninganswers.PerformLayout();
-            ((ISupportInitialize) this.dgv_listeninganswers).EndInit();
-            ((ISupportInitialize) this.pictureBox9).EndInit();
-            ((ISupportInitialize) this.pictureBox10).EndInit();
-            ((ISupportInitialize) this.pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.tab_speakinganswers.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tab_writinganswers.ResumeLayout(false);
             this.tab_writinganswers.PerformLayout();
-            base.ResumeLayout(false);
-            base.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void InitialParas()
