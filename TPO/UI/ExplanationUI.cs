@@ -41,10 +41,10 @@
             this.rtb_Explanation.TabIndex = 0;
             this.rtb_Explanation.Text = "";
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(0x2cb, 0x257);
             base.Controls.Add(this.rtb_Explanation);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.Name = "ExplanationUI";
             this.Text = "EXPLANATION";
             base.TopMost = true;

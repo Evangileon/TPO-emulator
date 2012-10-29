@@ -191,7 +191,7 @@
             this.btn_login.Text = "Log In";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new EventHandler(this.btn_login_Click);
-            this.btn_cancel.DialogResult = DialogResult.Cancel;
+            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_cancel.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
             this.btn_cancel.Location = new Point(0xbd, 0x7e);
             this.btn_cancel.Name = "btn_cancel";
@@ -201,7 +201,7 @@
             this.btn_cancel.UseVisualStyleBackColor = true;
             base.AcceptButton = this.btn_login;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.CancelButton = this.btn_cancel;
             base.ClientSize = new Size(380, 0xaf);
             base.Controls.Add(this.btn_cancel);
@@ -214,7 +214,7 @@
             base.Controls.Add(this.lbl_repwd);
             base.Controls.Add(this.lbl_pwd);
             base.Controls.Add(this.label1);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.Name = "Login";
             base.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Login";

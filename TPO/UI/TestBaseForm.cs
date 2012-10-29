@@ -37,7 +37,7 @@
 
         private void InitializeComponent()
         {
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(TestBaseForm));
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(TestBaseForm));
             this.btn_mainmenu = new Button();
             this.btn_quit = new Button();
             this.tb_sound = new TrackBar();
@@ -77,7 +77,7 @@
             this.tb_sound.TickStyle = TickStyle.TopLeft;
             this.tb_sound.Value = 5;
             this.Sound_icon.BackColor = SystemColors.ActiveCaptionText;
-            this.Sound_icon.BackgroundImage = (Image) manager.GetObject("Sound_icon.BackgroundImage");
+            this.Sound_icon.BackgroundImage = (Image) resources.GetObject("Sound_icon.BackgroundImage");
             this.Sound_icon.BackgroundImageLayout = ImageLayout.Stretch;
             this.Sound_icon.Location = new Point(0xbf, 0);
             this.Sound_icon.Name = "Sound_icon";
@@ -135,8 +135,8 @@
             this.btn_nextQuestion.Text = "Next>>";
             this.btn_nextQuestion.UseVisualStyleBackColor = true;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
-            this.BackgroundImage = (Image) manager.GetObject("$this.BackgroundImage");
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = (Image) resources.GetObject("$this.BackgroundImage");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             base.ClientSize = new Size(0x318, 0x25b);
             base.Controls.Add(this.Sound_icon);
@@ -151,7 +151,7 @@
             base.Controls.Add(this.tb_sound);
             base.Controls.Add(this.btn_quit);
             base.Controls.Add(this.btn_mainmenu);
-            base.FormBorderStyle = FormBorderStyle.Fixed3D;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             base.MinimizeBox = false;
             base.Name = "TestBaseForm";
             this.Text = "TestBaseForm";

@@ -106,13 +106,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Please Copy the string below and tell me which TPO you want to buy!";
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(0x178, 0x81);
             base.Controls.Add(this.label2);
             base.Controls.Add(this.btn_ACTIVE);
             base.Controls.Add(this.txt_machineCode);
             base.Controls.Add(this.txt_pin);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.MinimizeBox = false;
             base.Name = "RegisterForm";
             base.StartPosition = FormStartPosition.CenterScreen;

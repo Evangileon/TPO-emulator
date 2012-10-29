@@ -68,7 +68,7 @@
 
         private void InitializeComponent()
         {
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(CoverForm));
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(CoverForm));
             this.tab_tposelection = new TabControl();
             this.tabPage1 = new TabPage();
             this.label6 = new Label();
@@ -182,7 +182,7 @@
             this.label1.Size = new Size(0x40, 0x13);
             this.label1.TabIndex = 0;
             this.label1.Text = "TPO 01";
-            this.tabPage2.BackgroundImage = (Image) manager.GetObject("tabPage2.BackgroundImage");
+            this.tabPage2.BackgroundImage = (Image) resources.GetObject("tabPage2.BackgroundImage");
             this.tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             this.tabPage2.Location = new Point(4, 0x16);
             this.tabPage2.Name = "tabPage2";
@@ -191,7 +191,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TPO11-20";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage3.BackgroundImage = (Image) manager.GetObject("tabPage3.BackgroundImage");
+            this.tabPage3.BackgroundImage = (Image) resources.GetObject("tabPage3.BackgroundImage");
             this.tabPage3.BackgroundImageLayout = ImageLayout.Stretch;
             this.tabPage3.Location = new Point(4, 0x16);
             this.tabPage3.Name = "tabPage3";
@@ -200,8 +200,8 @@
             this.tabPage3.Text = "TPO21-22";
             this.tabPage3.UseVisualStyleBackColor = true;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
-            this.BackgroundImage = (Image) manager.GetObject("$this.BackgroundImage");
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = (Image) resources.GetObject("$this.BackgroundImage");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             base.ClientSize = new Size(0x318, 0x25b);
             base.Controls.Add(this.tab_tposelection);

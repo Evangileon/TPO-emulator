@@ -708,13 +708,13 @@
             this.btn_exp.UseVisualStyleBackColor = true;
             this.btn_exp.Click += new EventHandler(this.btn_exp_Click);
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(0x1e7, 230);
             base.Controls.Add(this.btn_exp);
             base.Controls.Add(this.btn_md5);
             base.Controls.Add(this.btn_execute2);
             base.Controls.Add(this.btn_execute);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.Name = "File2Acces";
             this.Text = "File2Acces";
             base.ResumeLayout(false);

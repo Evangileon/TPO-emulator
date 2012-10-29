@@ -36,10 +36,10 @@
             this.rtb_Translation.TabIndex = 1;
             this.rtb_Translation.Text = "";
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(0x2c1, 0x249);
             base.Controls.Add(this.rtb_Translation);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.Name = "TranslationUI";
             this.Text = "TRANSLATION";
             base.TopMost = true;
