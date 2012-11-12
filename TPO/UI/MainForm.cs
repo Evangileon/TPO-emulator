@@ -14,9 +14,12 @@
     using TPO.Quiz;
     using TPO.TPOFile;
     using TPO.Utility;
+    using System.Data.Common;
+    using System.Data.SQLite;
 
     public class MainForm : TestBaseForm
     {
+        #region default UI interface
         private ImageList bgimagelist;
         private Button bn_readText;
         private Button btn_Answer01;
@@ -449,7 +452,11 @@
         private TabPage wSpeakingPassage;
         private static int WSPEECH = 2;
         private TrackBar wtb_speak;
+        private BindingSource bindingSource1;
         private TabPage wWriting2;
+        #endregion
+
+        private DbConnection dbConn;
 
         public MainForm()
         {
@@ -2626,6 +2633,7 @@
             this.btn_showexplanation = new System.Windows.Forms.Button();
             this.btn_showtranslation = new System.Windows.Forms.Button();
             this.Timer_reading = new System.Windows.Forms.Timer(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tb_sound)).BeginInit();
             this.tabf_test.SuspendLayout();
             this.tab_CoverForm.SuspendLayout();
@@ -2699,6 +2707,7 @@
             this.tab_speakinganswers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tab_writinganswers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_continue
@@ -5274,7 +5283,7 @@
             this.lnk_passage.LinkColor = System.Drawing.Color.Black;
             this.lnk_passage.Location = new System.Drawing.Point(3, 0);
             this.lnk_passage.Name = "lnk_passage";
-            this.lnk_passage.Size = new System.Drawing.Size(26, 16);
+            this.lnk_passage.Size = new System.Drawing.Size(26, 17);
             this.lnk_passage.TabIndex = 0;
             this.lnk_passage.TabStop = true;
             this.lnk_passage.Text = "lnk\r\n";
@@ -7350,7 +7359,7 @@
             this.rtb_writing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.rtb_writing2.Location = new System.Drawing.Point(213, 15);
             this.rtb_writing2.Name = "rtb_writing2";
-            this.rtb_writing2.Size = new System.Drawing.Size(172, 19);
+            this.rtb_writing2.Size = new System.Drawing.Size(172, 21);
             this.rtb_writing2.TabIndex = 0;
             this.rtb_writing2.Text = "Independent Writing";
             this.rtb_writing2.UseVisualStyleBackColor = true;
@@ -7363,7 +7372,7 @@
             this.rtb_writing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.rtb_writing1.Location = new System.Drawing.Point(55, 15);
             this.rtb_writing1.Name = "rtb_writing1";
-            this.rtb_writing1.Size = new System.Drawing.Size(152, 19);
+            this.rtb_writing1.Size = new System.Drawing.Size(152, 21);
             this.rtb_writing1.TabIndex = 0;
             this.rtb_writing1.TabStop = true;
             this.rtb_writing1.Text = "Integrated Wrting";
@@ -7718,6 +7727,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tab_writinganswers.ResumeLayout(false);
             this.tab_writinganswers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8396,6 +8406,25 @@
             this.tabf_writing.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_writing.TabPages[0].Width, (float) this.tabf_writing.TabPages[0].Height));
             this.Antuorization();
             new Login().ShowDialog(this);
+
+            this.GetConnectAndCreateTable();
+        }
+
+        private void GetConnectAndCreateTable()
+        {
+            this.dbConn = new System.Data.SQLite.SQLiteConnection();
+            String sql_create = @"CREATE TABLE test_tbl(id INTEGER PRIMARY KEY AUTOINCREMENT,
+							byte0 TEXT(4), byte1 TEXT(4), byte2 TEXT(4), byte3 TEXT(4), byte4 TEXT(4),
+							byte5 TEXT(4), byte6 TEXT(4), byte7 TEXT(4));";
+            DbCommand com = dbConn.CreateCommand();
+            String tableVerify = "select count(*) from sqlite_master where type='table' and name='%s' ";
+            String[] sections = { "Reading", "Listening", "Speaking", "Writing" };
+            foreach (String section in sections)
+            {
+                
+            }
+
+
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
