@@ -78,6 +78,39 @@
                 return str;
             }
         }
+
+        //QuestionNo TEXT(5) PRIMARY KEY AUTOINCREMENT, QuestionType TEXT(15), YourAnswers TEXT(5), StandardAnswers TEXT(5), Score TEXT(5)
+        public int QuestionNo
+        {
+            set;
+            get;
+        }
+        public string QuesType
+        {
+            set
+            {
+                this.QuestionType = (QuestionType)Enum.Parse(typeof(QuestionType), value, true);
+            }
+            get
+            {
+                return this.QuestionType.ToString();
+            }
+        }
+        public string YourAnswers
+        {
+            set;
+            get;
+        }
+        public string StandardAnswers
+        {
+            set;
+            get;
+        }
+        public int Scores
+        {
+            set;
+            get;
+        }
     }
 }
 
