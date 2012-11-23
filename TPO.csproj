@@ -48,9 +48,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
-    <EmbeddedResource Include="TPO\Properties\Resources.resx">
-      <DependentUpon>Resources.cs</DependentUpon>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TPO\UI\CoverForm.resx">
       <DependentUpon>CoverForm.cs</DependentUpon>
@@ -88,6 +88,11 @@
     <Reference Include="System.Management" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -96,12 +101,6 @@
     <Compile Include="Settings.cs" />
     <Compile Include="TPO\Common\FTabControl.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TPO\Properties\Resources.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TPO\Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.cs</DependentUpon>
     </Compile>
     <Compile Include="TPO\SQLite\CaseTestFunc.cs" />
     <Compile Include="TPO\SQLite\InconclusiveException.cs" />
@@ -146,7 +145,6 @@
     <Compile Include="TPO\Utility\TestingSection.cs" />
     <Compile Include="TPO\Quiz\TPOQuestions.cs" />
     <Compile Include="TPO\Common\Question.cs" />
-    <Compile Include="TPO\Properties\Settings.cs" />
     <Compile Include="TPO\Media\MP3Record.cs" />
     <Compile Include="TPO\Utility\QuestionType.cs" />
     <Compile Include="TPO\Utility\ConstantValues.cs" />
@@ -211,6 +209,8 @@
     <EmbeddedResource Include="Resources\volumn.jpg" />
     <EmbeddedResource Include="Resources\WritingDirection.jpg" />
     <EmbeddedResource Include="Resources\WritingDirection1.jpg" />
+    <EmbeddedResource Include="Resources\EXPLANATION.jpg" />
+    <EmbeddedResource Include="Resources\TRANSLATION.jpg" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -225,4 +225,5 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
 </Project>

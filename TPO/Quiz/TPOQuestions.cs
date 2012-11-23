@@ -40,8 +40,8 @@
                 box2.Rtf = selectedRtf;
                 string[] strArray2 = box2.Text.Split(new char[] { '\n' });
                 Question question = new Question();
-                question.ID = num3 + 1;
-                question.Answers = new string[strArray2.Length - 3];
+                question.AnswerID = num3 + 1;
+                question.Answer = new string[strArray2.Length - 3];
                 int num4 = 0;
                 box2.SelectionStart = num4;
                 box2.SelectionLength = strArray2[0].Length;
@@ -63,14 +63,14 @@
                 {
                     box2.SelectionStart = num4;
                     box2.SelectionLength = strArray2[j].Length;
-                    question.Answers[j - 2] = box2.SelectedRtf;
+                    question.Answer[j - 2] = box2.SelectedRtf;
                     num4 = (num4 + strArray2[j].Length) + 1;
                 }
                 if (question.QuestionType == QuestionType.TABEL)
                 {
-                    for (int k = 0; k < question.Answers.Length; k++)
+                    for (int k = 0; k < question.Answer.Length; k++)
                     {
-                        string str5 = question.Answers[k];
+                        string str5 = question.Answer[k];
                         if (str5.Contains("</C>"))
                         {
                             question.ColStrs.Add(str5.Replace("</C>", ""));

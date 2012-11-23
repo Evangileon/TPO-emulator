@@ -467,7 +467,12 @@
         private DataGridViewTextBoxColumn rightAnswersStrDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn userAnswersStrDataGridViewTextBoxColumn;
         private TPO.SQLite.SQLiteDB sqlite = new SQLite.SQLiteDB();
-        private ResourceManager resmgr = new ResourceManager("TPO.Resources", Assembly.GetExecutingAssembly());
+        private ResourceManager resmgr = new ResourceManager("Properties.Resources", Assembly.GetExecutingAssembly());
+
+        #region event
+        private event EventHandler OnClickNextButton;
+        private event EventHandler OnClickPrevButton;
+        #endregion event
 
         public MainForm()
         {
@@ -925,7 +930,7 @@
             }
             if (this.QuestionNO > 0)
             {
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if ((question.QuestionType == QuestionType.SUMMARY) || (question.QuestionType == QuestionType.TABEL))
                 {
                     this.btn_ShowText.Visible = true;
@@ -1122,7 +1127,7 @@
                 }
                 this.InitialParas();
                 this.flash_timer.Stop();
-                Button button = (Button) sender;
+                Button button = (Button)sender;
                 string name = button.Name;
                 if (name.Contains("Reading"))
                 {
@@ -1214,48 +1219,48 @@
                             goto Label_05A6;
 
                         case TestingSection.LISTENING:
-                        {
-                            this.lbl_testingSection.Visible = true;
-                            base.btn_nextQuestion.Enabled = false;
-                            base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
-                            base.btn_preQuestion.Enabled = false;
-                            base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
-                            base.lbl_timeremain.ForeColor = SystemColors.ControlText;
-                            base.lbl_timeremain.Text = "10:00";
-                            this.lbl_testingSection.Text = "Listening Section";
-                            reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
-                            this.PartCount = int.Parse(reader.GetAttr("//parts/@partCount"));
-                            string attr = reader.GetAttr("//passage[@NO=" + 2 + "]/pictures/picture/@pictureName");
-                            base.lbl_timeremain.Text = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation");
-                            this.TimeLimitation = DateTime.ParseExact(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation"), "mm:ss", null);
-                            this.QuestionCount = int.Parse(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@questionCount"));
-                            this.tabf_test.SelectedIndex = LISTENING;
-                            this.tabf_Listening.SelectedIndex = LDIRECTION1;
-                            if (this.PassageNO <= 1)
                             {
-                                this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", "");
+                                this.lbl_testingSection.Visible = true;
+                                base.btn_nextQuestion.Enabled = false;
+                                base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
+                                base.btn_preQuestion.Enabled = false;
+                                base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
+                                base.lbl_timeremain.ForeColor = SystemColors.ControlText;
+                                base.lbl_timeremain.Text = "10:00";
+                                this.lbl_testingSection.Text = "Listening Section";
+                                reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
+                                this.PartCount = int.Parse(reader.GetAttr("//parts/@partCount"));
+                                string attr = reader.GetAttr("//passage[@NO=" + 2 + "]/pictures/picture/@pictureName");
+                                base.lbl_timeremain.Text = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation");
+                                this.TimeLimitation = DateTime.ParseExact(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation"), "mm:ss", null);
+                                this.QuestionCount = int.Parse(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@questionCount"));
+                                this.tabf_test.SelectedIndex = LISTENING;
+                                this.tabf_Listening.SelectedIndex = LDIRECTION1;
+                                if (this.PassageNO <= 1)
+                                {
+                                    this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", "");
+                                }
+                                string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
+                                try
+                                {
+                                    this.MP3Player = new MP3MCI();
+                                    string str5 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", str4 });
+                                    this.MP3Player.FileName = str5;
+                                    this.PlayFileName.Text = str5;
+                                    this.pb_currentpos.Maximum = this.MP3Player.Duration;
+                                    this.pb_currentpos1.Maximum = this.MP3Player.Duration;
+                                    this.tb_currentpos.Maximum = this.MP3Player.Duration;
+                                    this.tb_currentpos1.Maximum = this.MP3Player.Duration;
+                                    this.MP3Player.play();
+                                    this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
+                                    this.Timer_Listening.Start();
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("open出错!");
+                                }
+                                break;
                             }
-                            string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
-                            try
-                            {
-                                this.MP3Player = new MP3MCI();
-                                string str5 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", str4 });
-                                this.MP3Player.FileName = str5;
-                                this.PlayFileName.Text = str5;
-                                this.pb_currentpos.Maximum = this.MP3Player.Duration;
-                                this.pb_currentpos1.Maximum = this.MP3Player.Duration;
-                                this.tb_currentpos.Maximum = this.MP3Player.Duration;
-                                this.tb_currentpos1.Maximum = this.MP3Player.Duration;
-                                this.MP3Player.play();
-                                this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                                this.Timer_Listening.Start();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("open出错!");
-                            }
-                            break;
-                        }
                         case TestingSection.SPEAKING:
                             this.lbl_testingSection.Visible = true;
                             this.lbl_testingSection.Text = "Speaking Section";
@@ -1286,16 +1291,16 @@
                             break;
 
                         case TestingSection.REVIEW:
-                        {
-                            this.rb_TestMode.Checked = true;
-                            int index = this.TPONO % 10;
-                            if (index == 0)
                             {
-                                index = 10;
+                                this.rb_TestMode.Checked = true;
+                                int index = this.TPONO % 10;
+                                if (index == 0)
+                                {
+                                    index = 10;
+                                }
+                                this.btn_LoadTest_Click(this.BtnLoadTest[index], e);
+                                break;
                             }
-                            this.btn_LoadTest_Click(this.BtnLoadTest[index], e);
-                            break;
-                        }
                         case TestingSection.VIEWANSWERS:
                             base.btn_continue.Visible = false;
                             this.ReportingScores();
@@ -1309,7 +1314,7 @@
                 return;
             Label_0597:
                 this.bn_readText.Visible = false;
-            Label_05A6:;
+            Label_05A6: ;
                 this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                 this.QuestionCount = this.TestQuestions.QuestionCount;
                 this.LoadReadingMaterialAndQA();
@@ -1417,15 +1422,11 @@
             switch (this.TestSection)
             {
                 case TestingSection.READING:
-                    this.RBtn_nextQuestion(e);
+                    
                     break;
 
                 case TestingSection.LISTENING:
-                    base.btn_preQuestion.Enabled = true;
-                    base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok1");
-                    base.btn_nextQuestion.Enabled = false;
-                    base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
-                    this.HasClickedNext = true;
+                    
                     break;
 
                 case TestingSection.SPEAKING:
@@ -1496,23 +1497,24 @@
 
         private void btn_preQuestion_Click(object sender, EventArgs e)
         {
+
+
+            #region too dirty
             switch (this.TestSection)
             {
                 case TestingSection.READING:
-                    if (this.QuestionNO == (this.RSpiltQuestionNO + 1))
-                    {
-                        this.PreInsertPosition = -1;
-                    }
-                    this.SaveUserAnswers();
-                    this.QuestionNO--;
-                    this.LoadReadingMaterialAndQA();
+                   
                     break;
 
                 case TestingSection.LISTENING:
+                    this.HasClickedNext = false;
+                    base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
+                    this.OnClickPrevButton(sender, e);
                     if (!this.rb_TestMode.Checked || this.HasAnswered())
                     {
-                        this.SaveUserAnswers();
-                        this.HasClickedNext = false;
+                        //this.SaveUserAnswers();
+
+                        base.btn_preQuestion.Enabled = false;
                         this.Timer_Listening.Start();
                         if (this.QuestionNO >= this.PassageLastQuestionIndex)
                         {
@@ -1585,6 +1587,7 @@
                     this.HasLoadMP3 = false;
                     break;
             }
+            #endregion too dirty
         }
 
         private void btn_quit_Click(object sender, EventArgs e)
@@ -1701,8 +1704,8 @@
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
                     DataRow row = table.NewRow();
-                    Question question = (Question) this.TestQuestions.Questions[i];
-                    row["QuestionID"] = question.ID;
+                    Question question = (Question)this.TestQuestions.Questions[i];
+                    row["QuestionID"] = question.AnswerID;
                     box.Rtf = question.QuestionTitle;
                     string text = box.Text;
                     if (text.Length > 100)
@@ -1754,7 +1757,7 @@
             else
             {
                 this.btn_ShowText.BackgroundImage = (Image)this.resmgr.GetObject("viewtext");
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (question.QuestionType == QuestionType.TABEL)
                 {
                     this.tabf_test.SelectedIndex = LISTENING;
@@ -1773,7 +1776,7 @@
         {
             this.MP3Player.StopT();
             this.MP3Player = new MP3MCI();
-            Button button = (Button) sender;
+            Button button = (Button)sender;
             string str = button.Name.Substring(button.Name.Length - 1);
             string path = string.Concat(new object[] { Application.StartupPath, @"\users\", USERNAME, @"\", this.TPONO, @"\SpeakingAnswer", str, ".wav" });
             if (File.Exists(path))
@@ -1828,12 +1831,12 @@
         {
             foreach (Control control2 in control.Controls)
             {
-                control2.Top = Convert.ToInt16((double) (Convert.ToDouble(control2.Top) * scale1));
-                control2.Left = Convert.ToInt16((double) (Convert.ToDouble(control2.Left) * scale2));
+                control2.Top = Convert.ToInt16((double)(Convert.ToDouble(control2.Top) * scale1));
+                control2.Left = Convert.ToInt16((double)(Convert.ToDouble(control2.Left) * scale2));
                 if (control2.BackgroundImage == null)
                 {
-                    control2.Height = Convert.ToInt16((double) (Convert.ToDouble(control2.Height) * scale1));
-                    control2.Width = Convert.ToInt16((double) (Convert.ToDouble(control2.Width) * scale2));
+                    control2.Height = Convert.ToInt16((double)(Convert.ToDouble(control2.Height) * scale1));
+                    control2.Width = Convert.ToInt16((double)(Convert.ToDouble(control2.Width) * scale2));
                 }
                 this.ChangeControlSize(control2, scale1, scale2);
             }
@@ -1898,7 +1901,7 @@
         {
             Question question;
             int num;
-            CheckBox ckb = (CheckBox) sender;
+            CheckBox ckb = (CheckBox)sender;
             switch (this.TestSection)
             {
                 case TestingSection.READING:
@@ -1906,7 +1909,7 @@
                     {
                         return;
                     }
-                    question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                    question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                     this.SaveUserAnswers();
                     if (question.RightAnswers.Length == 1)
                     {
@@ -1925,7 +1928,7 @@
                 case TestingSection.LISTENING:
                     if (ckb.Checked)
                     {
-                        question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                         num = 0;
                         while (num < 9)
                         {
@@ -1961,7 +1964,7 @@
             try
             {
                 int num;
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (this.TestSection != TestingSection.READING)
                 {
                     goto Label_0185;
@@ -2083,7 +2086,7 @@
 
         private void CkbSummary_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox box = (CheckBox) sender;
+            CheckBox box = (CheckBox)sender;
             if (box.Checked)
             {
                 string name = box.Name;
@@ -2114,7 +2117,7 @@
 
         private void CkbSummarySelected_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox box = (CheckBox) sender;
+            CheckBox box = (CheckBox)sender;
             if (!box.Checked)
             {
                 string name = box.Name;
@@ -2142,7 +2145,7 @@
 
         private void dgv_readinganswers_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            DataGridView view = (DataGridView) sender;
+            DataGridView view = (DataGridView)sender;
             for (int i = 0; i < view.Rows.Count; i++)
             {
                 DataGridViewRow row = view.Rows[i];
@@ -2264,7 +2267,7 @@
         private bool HasAnswered()
         {
             int num;
-            Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+            Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
             if ((question.QuestionType == QuestionType.SINGLE) || (question.QuestionType == QuestionType.MULTIPLE))
             {
                 for (num = 0; num < this.LCkbAnswers.Length; num++)
@@ -2603,8 +2606,13 @@
             this.dgv_readinganswers = new System.Windows.Forms.DataGridView();
             this.tab_listeninganswers = new System.Windows.Forms.TabPage();
             this.dgv_listeningSelect = new System.Windows.Forms.DataGridView();
+            this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.dgv_listeninganswers = new System.Windows.Forms.DataGridView();
+            this.isAnsweredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.rightAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);
             this.lbl_listeningScorereport = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -2646,11 +2654,6 @@
             this.btn_showexplanation = new System.Windows.Forms.Button();
             this.btn_showtranslation = new System.Windows.Forms.Button();
             this.Timer_reading = new System.Windows.Forms.Timer(this.components);
-            this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
-            this.isAnsweredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.rightAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tb_sound)).BeginInit();
             this.tabf_test.SuspendLayout();
             this.tab_CoverForm.SuspendLayout();
@@ -2719,20 +2722,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).BeginInit();
             this.tab_listeninganswers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.tab_speakinganswers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tab_writinganswers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_continue
             // 
-            this.btn_continue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_continue.BackgroundImage")));
+            this.btn_continue.BackgroundImage = global::Properties.Resources._continue;
             this.btn_continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_continue.FlatAppearance.BorderSize = 0;
             this.btn_continue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2745,7 +2748,7 @@
             // 
             // btn_mainmenu
             // 
-            this.btn_mainmenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mainmenu.BackgroundImage")));
+            this.btn_mainmenu.BackgroundImage = global::Properties.Resources.mainmenu;
             this.btn_mainmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_mainmenu.FlatAppearance.BorderSize = 0;
             this.btn_mainmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2759,7 +2762,7 @@
             // 
             this.btn_nextQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_nextQuestion.BackColor = System.Drawing.Color.White;
-            this.btn_nextQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nextQuestion.BackgroundImage")));
+            this.btn_nextQuestion.BackgroundImage = global::Properties.Resources.next;
             this.btn_nextQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_nextQuestion.FlatAppearance.BorderSize = 0;
             this.btn_nextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2774,7 +2777,7 @@
             // 
             // btn_preQuestion
             // 
-            this.btn_preQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_preQuestion.BackgroundImage")));
+            this.btn_preQuestion.BackgroundImage = global::Properties.Resources.back;
             this.btn_preQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_preQuestion.FlatAppearance.BorderSize = 0;
             this.btn_preQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2787,7 +2790,7 @@
             // 
             // btn_quit
             // 
-            this.btn_quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_quit.BackgroundImage")));
+            this.btn_quit.BackgroundImage = global::Properties.Resources.exit;
             this.btn_quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_quit.FlatAppearance.BorderSize = 0;
             this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2799,7 +2802,7 @@
             // 
             // btn_review
             // 
-            this.btn_review.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_review.BackgroundImage")));
+            this.btn_review.BackgroundImage = global::Properties.Resources.review;
             this.btn_review.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_review.FlatAppearance.BorderSize = 0;
             this.btn_review.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2812,7 +2815,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImage = global::Properties.Resources.hidetimer;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2852,7 +2855,7 @@
             // 
             // Sound_icon
             // 
-            this.Sound_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sound_icon.BackgroundImage")));
+            this.Sound_icon.BackgroundImage = global::Properties.Resources.volumn;
             this.Sound_icon.Location = new System.Drawing.Point(597, 36);
             this.Sound_icon.Size = new System.Drawing.Size(74, 36);
             this.Sound_icon.Visible = false;
@@ -4095,10 +4098,10 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::Properties.Resources.ReadingDirection;
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(30, 5);
             this.pictureBox2.Name = "pictureBox2";
@@ -5185,11 +5188,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Properties.Resources.ListeningDirection3;
             this.pictureBox1.Location = new System.Drawing.Point(28, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1126, 492);
@@ -6563,10 +6566,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::Properties.Resources.SpeakingDirection4;
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(3, 7);
             this.pictureBox3.Name = "pictureBox3";
@@ -6696,11 +6699,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Image = global::Properties.Resources.WritingDirection1;
             this.pictureBox4.InitialImage = null;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
@@ -7159,6 +7162,34 @@
             this.dgv_listeninganswers.TabStop = false;
             this.dgv_listeninganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
             // 
+            // isAnsweredDataGridViewCheckBoxColumn
+            // 
+            this.isAnsweredDataGridViewCheckBoxColumn.DataPropertyName = "IsAnswered";
+            this.isAnsweredDataGridViewCheckBoxColumn.HeaderText = "IsAnswered";
+            this.isAnsweredDataGridViewCheckBoxColumn.Name = "isAnsweredDataGridViewCheckBoxColumn";
+            this.isAnsweredDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isAnsweredDataGridViewCheckBoxColumn.Width = 71;
+            // 
+            // rightAnswersStrDataGridViewTextBoxColumn
+            // 
+            this.rightAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "RightAnswersStr";
+            this.rightAnswersStrDataGridViewTextBoxColumn.HeaderText = "RightAnswersStr";
+            this.rightAnswersStrDataGridViewTextBoxColumn.Name = "rightAnswersStrDataGridViewTextBoxColumn";
+            this.rightAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rightAnswersStrDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // userAnswersStrDataGridViewTextBoxColumn
+            // 
+            this.userAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "UserAnswersStr";
+            this.userAnswersStrDataGridViewTextBoxColumn.HeaderText = "UserAnswersStr";
+            this.userAnswersStrDataGridViewTextBoxColumn.Name = "userAnswersStrDataGridViewTextBoxColumn";
+            this.userAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userAnswersStrDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // bindingSource_Section
+            // 
+            this.bindingSource_Section.DataSource = typeof(TPO.Common.Question);
+            // 
             // lbl_listeningScorereport
             // 
             this.lbl_listeningScorereport.AutoSize = true;
@@ -7322,14 +7353,14 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label15.Location = new System.Drawing.Point(6, 348);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 70);
+            this.label15.Size = new System.Drawing.Size(106, 70);
             this.label15.TabIndex = 0;
             this.label15.Text = "SPEAKING 6";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_speakinganswer1
             // 
-            this.btn_speakinganswer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer1.BackgroundImage")));
+            this.btn_speakinganswer1.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer1.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7342,7 +7373,7 @@
             // 
             // btn_speakinganswer2
             // 
-            this.btn_speakinganswer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer2.BackgroundImage")));
+            this.btn_speakinganswer2.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer2.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7355,7 +7386,7 @@
             // 
             // btn_speakinganswer3
             // 
-            this.btn_speakinganswer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer3.BackgroundImage")));
+            this.btn_speakinganswer3.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer3.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7368,7 +7399,7 @@
             // 
             // btn_speakinganswer4
             // 
-            this.btn_speakinganswer4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer4.BackgroundImage")));
+            this.btn_speakinganswer4.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer4.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7381,7 +7412,7 @@
             // 
             // btn_speakinganswer5
             // 
-            this.btn_speakinganswer5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer5.BackgroundImage")));
+            this.btn_speakinganswer5.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer5.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7394,7 +7425,7 @@
             // 
             // btn_speakinganswer6
             // 
-            this.btn_speakinganswer6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_speakinganswer6.BackgroundImage")));
+            this.btn_speakinganswer6.BackgroundImage = global::Properties.Resources.horn;
             this.btn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer6.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7452,7 +7483,7 @@
             // 
             // btn_ShowText
             // 
-            this.btn_ShowText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ShowText.BackgroundImage")));
+            this.btn_ShowText.BackgroundImage = global::Properties.Resources.viewtext;
             this.btn_ShowText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ShowText.FlatAppearance.BorderSize = 0;
             this.btn_ShowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7573,7 +7604,7 @@
             // 
             // btn_pause
             // 
-            this.btn_pause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_pause.BackgroundImage")));
+            this.btn_pause.BackgroundImage = global::Properties.Resources.pause;
             this.btn_pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_pause.FlatAppearance.BorderSize = 0;
             this.btn_pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7588,7 +7619,7 @@
             // 
             // btn_QUITapp
             // 
-            this.btn_QUITapp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_QUITapp.BackgroundImage")));
+            this.btn_QUITapp.BackgroundImage = global::Properties.Resources.exit1;
             this.btn_QUITapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_QUITapp.FlatAppearance.BorderSize = 0;
             this.btn_QUITapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7603,21 +7634,21 @@
             // 
             this.bgimagelist.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("bgimagelist.ImageStream")));
             this.bgimagelist.TransparentColor = System.Drawing.Color.Transparent;
-            this.bgimagelist.Images.SetKeyName(0, "back1.jpg");
-            this.bgimagelist.Images.SetKeyName(1, "continue.jpg");
-            this.bgimagelist.Images.SetKeyName(2, "exit1.jpg");
-            this.bgimagelist.Images.SetKeyName(3, "exit2.jpg");
-            this.bgimagelist.Images.SetKeyName(4, "help.jpg");
-            this.bgimagelist.Images.SetKeyName(5, "hidetimer.jpg");
-            this.bgimagelist.Images.SetKeyName(6, "next.jpg");
-            this.bgimagelist.Images.SetKeyName(7, "ok.jpg");
-            this.bgimagelist.Images.SetKeyName(8, "Review.jpg");
-            this.bgimagelist.Images.SetKeyName(9, "volumn.jpg");
+            this.bgimagelist.Images.SetKeyName(0, "back1");
+            this.bgimagelist.Images.SetKeyName(1, "continue");
+            this.bgimagelist.Images.SetKeyName(2, "exit1");
+            this.bgimagelist.Images.SetKeyName(3, "exit2");
+            this.bgimagelist.Images.SetKeyName(4, "help");
+            this.bgimagelist.Images.SetKeyName(5, "hidetimer");
+            this.bgimagelist.Images.SetKeyName(6, "next");
+            this.bgimagelist.Images.SetKeyName(7, "ok");
+            this.bgimagelist.Images.SetKeyName(8, "Review");
+            this.bgimagelist.Images.SetKeyName(9, "volumn");
             // 
             // btn_showexplanation
             // 
             this.btn_showexplanation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showexplanation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_showexplanation.BackgroundImage")));
+            this.btn_showexplanation.BackgroundImage = global::Properties.Resources.EXPLANATION;
             this.btn_showexplanation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showexplanation.FlatAppearance.BorderSize = 0;
             this.btn_showexplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7633,7 +7664,7 @@
             // btn_showtranslation
             // 
             this.btn_showtranslation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showtranslation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_showtranslation.BackgroundImage")));
+            this.btn_showtranslation.BackgroundImage = global::Properties.Resources.TRANSLATION;
             this.btn_showtranslation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showtranslation.FlatAppearance.BorderSize = 0;
             this.btn_showtranslation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7650,55 +7681,27 @@
             // 
             this.Timer_reading.Tick += new System.EventHandler(this.Timer_reading_Tick);
             // 
-            // bindingSource_Section
-            // 
-            this.bindingSource_Section.DataSource = typeof(TPO.Common.Question);
-            // 
-            // isAnsweredDataGridViewCheckBoxColumn
-            // 
-            this.isAnsweredDataGridViewCheckBoxColumn.DataPropertyName = "IsAnswered";
-            this.isAnsweredDataGridViewCheckBoxColumn.HeaderText = "IsAnswered";
-            this.isAnsweredDataGridViewCheckBoxColumn.Name = "isAnsweredDataGridViewCheckBoxColumn";
-            this.isAnsweredDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isAnsweredDataGridViewCheckBoxColumn.Width = 71;
-            // 
-            // rightAnswersStrDataGridViewTextBoxColumn
-            // 
-            this.rightAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "RightAnswersStr";
-            this.rightAnswersStrDataGridViewTextBoxColumn.HeaderText = "RightAnswersStr";
-            this.rightAnswersStrDataGridViewTextBoxColumn.Name = "rightAnswersStrDataGridViewTextBoxColumn";
-            this.rightAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rightAnswersStrDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // userAnswersStrDataGridViewTextBoxColumn
-            // 
-            this.userAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "UserAnswersStr";
-            this.userAnswersStrDataGridViewTextBoxColumn.HeaderText = "UserAnswersStr";
-            this.userAnswersStrDataGridViewTextBoxColumn.Name = "userAnswersStrDataGridViewTextBoxColumn";
-            this.userAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userAnswersStrDataGridViewTextBoxColumn.Width = 114;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(788, 611);
             this.Controls.Add(this.btn_pause);
             this.Controls.Add(this.btn_NexPage);
             this.Controls.Add(this.ckb_ShowAnswer);
             this.Controls.Add(this.btn_LastPage);
             this.Controls.Add(this.tabf_test);
-            this.Controls.Add(this.btn_ShowText);
             this.Controls.Add(this.lbl_testingSection);
-            this.Controls.Add(this.btn_QUITapp);
             this.Controls.Add(this.ckb_viewSpeakingText);
             this.Controls.Add(this.rb_PracticeMode);
             this.Controls.Add(this.rb_TestMode);
             this.Controls.Add(this.btn_showtranslation);
             this.Controls.Add(this.btn_showexplanation);
+            this.Controls.Add(this.btn_ShowText);
+            this.Controls.Add(this.btn_QUITapp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -7707,14 +7710,20 @@
             this.Text = "TPO";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
+            this.Controls.SetChildIndex(this.btn_nextQuestion, 0);
+            this.Controls.SetChildIndex(this.btn_continue, 0);
+            this.Controls.SetChildIndex(this.btn_QUITapp, 0);
+            this.Controls.SetChildIndex(this.btn_preQuestion, 0);
+            this.Controls.SetChildIndex(this.btn_ShowText, 0);
+            this.Controls.SetChildIndex(this.btn_review, 0);
+            this.Controls.SetChildIndex(this.Sound_icon, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.btn_showexplanation, 0);
             this.Controls.SetChildIndex(this.btn_showtranslation, 0);
             this.Controls.SetChildIndex(this.rb_TestMode, 0);
             this.Controls.SetChildIndex(this.rb_PracticeMode, 0);
             this.Controls.SetChildIndex(this.ckb_viewSpeakingText, 0);
-            this.Controls.SetChildIndex(this.btn_QUITapp, 0);
             this.Controls.SetChildIndex(this.lbl_testingSection, 0);
-            this.Controls.SetChildIndex(this.btn_ShowText, 0);
             this.Controls.SetChildIndex(this.tabf_test, 0);
             this.Controls.SetChildIndex(this.btn_LastPage, 0);
             this.Controls.SetChildIndex(this.ckb_ShowAnswer, 0);
@@ -7722,14 +7731,8 @@
             this.Controls.SetChildIndex(this.btn_pause, 0);
             this.Controls.SetChildIndex(this.btn_mainmenu, 0);
             this.Controls.SetChildIndex(this.btn_quit, 0);
-            this.Controls.SetChildIndex(this.btn_review, 0);
-            this.Controls.SetChildIndex(this.Sound_icon, 0);
             this.Controls.SetChildIndex(this.tb_sound, 0);
-            this.Controls.SetChildIndex(this.btn_continue, 0);
             this.Controls.SetChildIndex(this.lbl_timeremain, 0);
-            this.Controls.SetChildIndex(this.btn_nextQuestion, 0);
-            this.Controls.SetChildIndex(this.btn_preQuestion, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.lbl_questionNO, 0);
             this.Controls.SetChildIndex(this.lbl_mode, 0);
             ((System.ComponentModel.ISupportInitialize)(this.tb_sound)).EndInit();
@@ -7821,7 +7824,9 @@
             this.tab_listeninganswers.ResumeLayout(false);
             this.tab_listeninganswers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -7829,8 +7834,6 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tab_writinganswers.ResumeLayout(false);
             this.tab_writinganswers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7894,10 +7897,10 @@
 
         private void linkLabel_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LinkLabel label = (LinkLabel) sender;
+            LinkLabel label = (LinkLabel)sender;
             label.Links[label.Links.IndexOf(e.Link)].Visited = true;
             string linkData = e.Link.LinkData as string;
-            this.MP3Player.SetPlayTime((long) Convert.ToInt32(linkData));
+            this.MP3Player.SetPlayTime((long)Convert.ToInt32(linkData));
             this.Timer_Listening.Start();
         }
 
@@ -7961,80 +7964,80 @@
             {
                 this.LoadUserAnswer();
             }
-            Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+            Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
             base.lbl_questionNO.Text = "Question " + this.QuestionNO + " of 34";
             this.llbl_rightAnswer.Visible = this.ckb_ShowAnswer.Checked;
             this.IsPassageMP3 = false;
             switch (question.QuestionType)
             {
                 case QuestionType.TABEL:
-                {
-                    int num5;
-                    this.tabf_test.SelectedIndex = LISTENING;
-                    this.tabf_Listening.SelectedIndex = LTABLEQUESTION;
-                    this.lrtbTableQuestion.Rtf = question.QuestionTitle;
-                    int count = question.ColStrs.Count;
-                    int num4 = question.RowStrs.Count;
-                    this.ltlp_table.RowCount = num4 + 1;
-                    this.ltlp_table.ColumnCount = count + 1;
-                    length = this.LRtbTableCol.Length;
-                    while (length < this.LRtbTableCol.Length)
                     {
-                        this.LRtbTableCol[length].Rtf = "";
-                        this.LRtbTableCol[length].Visible = false;
-                        num5 = this.LRtbTableRow.Length;
-                        while (num5 < this.LRtbTableRow.Length)
+                        int num5;
+                        this.tabf_test.SelectedIndex = LISTENING;
+                        this.tabf_Listening.SelectedIndex = LTABLEQUESTION;
+                        this.lrtbTableQuestion.Rtf = question.QuestionTitle;
+                        int count = question.ColStrs.Count;
+                        int num4 = question.RowStrs.Count;
+                        this.ltlp_table.RowCount = num4 + 1;
+                        this.ltlp_table.ColumnCount = count + 1;
+                        length = this.LRtbTableCol.Length;
+                        while (length < this.LRtbTableCol.Length)
                         {
-                            this.LRtbTableRow[num5].Rtf = "";
-                            this.LRtbTableRow[num5].Visible = false;
-                            this.LCkbTable[num5][length].Visible = false;
-                            this.LCkbTable[num5][length].Checked = false;
-                            num5++;
+                            this.LRtbTableCol[length].Rtf = "";
+                            this.LRtbTableCol[length].Visible = false;
+                            num5 = this.LRtbTableRow.Length;
+                            while (num5 < this.LRtbTableRow.Length)
+                            {
+                                this.LRtbTableRow[num5].Rtf = "";
+                                this.LRtbTableRow[num5].Visible = false;
+                                this.LCkbTable[num5][length].Visible = false;
+                                this.LCkbTable[num5][length].Checked = false;
+                                num5++;
+                            }
+                            length++;
                         }
-                        length++;
-                    }
-                    for (length = 0; length < this.LRtbTableCol.Length; length++)
-                    {
-                        this.LRtbTableCol[length].Rtf = "";
-                        this.LRtbTableCol[length].Visible = false;
-                        num5 = 0;
-                        while (num5 < this.LRtbTableRow.Length)
+                        for (length = 0; length < this.LRtbTableCol.Length; length++)
                         {
-                            this.LRtbTableRow[num5].Rtf = "";
-                            this.LRtbTableRow[num5].Visible = false;
-                            this.LCkbTable[num5][length].Visible = false;
-                            this.LCkbTable[num5][length].Checked = false;
-                            num5++;
+                            this.LRtbTableCol[length].Rtf = "";
+                            this.LRtbTableCol[length].Visible = false;
+                            num5 = 0;
+                            while (num5 < this.LRtbTableRow.Length)
+                            {
+                                this.LRtbTableRow[num5].Rtf = "";
+                                this.LRtbTableRow[num5].Visible = false;
+                                this.LCkbTable[num5][length].Visible = false;
+                                this.LCkbTable[num5][length].Checked = false;
+                                num5++;
+                            }
                         }
-                    }
-                    for (length = 0; length < count; length++)
-                    {
-                        this.LRtbTableCol[length].Rtf = (string) question.ColStrs[length];
-                        this.LRtbTableCol[length].Visible = true;
-                        num5 = 0;
-                        while (num5 < num4)
+                        for (length = 0; length < count; length++)
                         {
-                            this.LCkbTable[num5][length].Visible = true;
-                            this.LCkbTable[num5][length].Checked = false;
-                            num5++;
+                            this.LRtbTableCol[length].Rtf = (string)question.ColStrs[length];
+                            this.LRtbTableCol[length].Visible = true;
+                            num5 = 0;
+                            while (num5 < num4)
+                            {
+                                this.LCkbTable[num5][length].Visible = true;
+                                this.LCkbTable[num5][length].Checked = false;
+                                num5++;
+                            }
                         }
+                        for (num5 = 0; num5 < num4; num5++)
+                        {
+                            this.LRtbTableRow[num5].Rtf = (string)question.RowStrs[num5];
+                            this.LRtbTableRow[num5].Visible = true;
+                        }
+                        if (this.ckb_ShowAnswer.Checked)
+                        {
+                            this.lbl_tableAnswer.Visible = true;
+                            this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                        }
+                        else
+                        {
+                            this.lbl_tableAnswer.Visible = false;
+                        }
+                        goto Label_0656;
                     }
-                    for (num5 = 0; num5 < num4; num5++)
-                    {
-                        this.LRtbTableRow[num5].Rtf = (string) question.RowStrs[num5];
-                        this.LRtbTableRow[num5].Visible = true;
-                    }
-                    if (this.ckb_ShowAnswer.Checked)
-                    {
-                        this.lbl_tableAnswer.Visible = true;
-                        this.lbl_tableAnswer.Text = question.RightAnswersStr;
-                    }
-                    else
-                    {
-                        this.lbl_tableAnswer.Visible = false;
-                    }
-                    goto Label_0656;
-                }
                 case QuestionType.SORT:
                     if (question.QuestionType == QuestionType.SORT)
                     {
@@ -8087,7 +8090,7 @@
                     this.lrtb_question.Rtf = question.QuestionTitle;
                     for (length = 0; length < question.UserAnswers.Count; length++)
                     {
-                        this.LCkbAnswers[((int) question.UserAnswers[length]) - 1].Checked = true;
+                        this.LCkbAnswers[((int)question.UserAnswers[length]) - 1].Checked = true;
                     }
                     for (int i = 0; i < question.RightAnswers.Length; i++)
                     {
@@ -8147,7 +8150,7 @@
                 while (num3 < reader.LrcList.Count)
                 {
                     num4++;
-                    LyricsReader.Lrc lrc = (LyricsReader.Lrc) reader.LrcList[num3];
+                    LyricsReader.Lrc lrc = (LyricsReader.Lrc)reader.LrcList[num3];
                     string sText = lrc.sText;
                     int length = 0;
                     if (sText.TrimEnd(new char[0]).EndsWith("<BR>"))
@@ -8233,7 +8236,7 @@
                         this.btn_showtranslation.Visible = this.ckb_ShowAnswer.Visible;
                     }
                 }
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 EXPLANATION = question.QuestionExplanation;
                 if (question.QuestionType == QuestionType.SUMMARY)
                 {
@@ -8264,11 +8267,11 @@
                     this.rtb_sumQuestion.Rtf = question.QuestionTitle;
                     this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
                     TRANSLATION = this.RMaterial.Translation;
-                    for (num = 0; (num < question.Answers.Length) && (num < this.CkbSummary.Length); num++)
+                    for (num = 0; (num < question.Answer.Length) && (num < this.CkbSummary.Length); num++)
                     {
                         this.RtbSumAnswersToBeSelected[num].Visible = true;
                         this.CkbSummary[num].Visible = true;
-                        this.RtbSumAnswersToBeSelected[num].Rtf = question.Answers[num];
+                        this.RtbSumAnswersToBeSelected[num].Rtf = question.Answer[num].ToString();
                     }
                     for (num = 0; num < question.RightAnswers.Length; num++)
                     {
@@ -8303,7 +8306,7 @@
                     this.ltlp_table.ColumnCount = count + 1;
                     for (num = 0; num < count; num++)
                     {
-                        this.LRtbTableCol[num].Rtf = (string) question.ColStrs[num];
+                        this.LRtbTableCol[num].Rtf = (string)question.ColStrs[num];
                         this.LRtbTableCol[num].Visible = true;
                         num5 = 0;
                         while (num5 < num4)
@@ -8314,7 +8317,7 @@
                     }
                     for (num5 = 0; num5 < num4; num5++)
                     {
-                        this.LRtbTableRow[num5].Rtf = (string) question.RowStrs[num5];
+                        this.LRtbTableRow[num5].Rtf = (string)question.RowStrs[num5];
                         this.LRtbTableRow[num5].Visible = true;
                     }
                     if (this.ckb_ShowAnswer.Checked)
@@ -8332,14 +8335,14 @@
                     this.rtb_question.Rtf = question.QuestionTitle;
                     this.tabf_test.SelectedIndex = READING;
                     this.tabf_Reading.SelectedIndex = RNORMALQUESTION;
-                    for (num = 0; (num < question.Answers.Length) && (num < this.CkbReading.Length); num++)
+                    for (num = 0; (num < question.Answer.Length) && (num < this.CkbReading.Length); num++)
                     {
                         this.RtbReadingAnswers[num].Visible = true;
                         if (question.QuestionType != QuestionType.INSERT)
                         {
                             this.CkbReading[num].Visible = true;
                         }
-                        this.RtbReadingAnswers[num].Rtf = question.Answers[num];
+                        this.RtbReadingAnswers[num].Rtf = question.Answer[num].ToString();
                         this.RtbReadingAnswers[num].BackColor = SystemColors.ControlLight;
                     }
                     if (this.ckb_ShowAnswer.Checked)
@@ -8373,7 +8376,7 @@
                     }
                     for (num = 0; num < question.UserAnswers.Count; num++)
                     {
-                        this.CkbReading[((int) question.UserAnswers[num]) - 1].Checked = true;
+                        this.CkbReading[((int)question.UserAnswers[num]) - 1].Checked = true;
                         if ((question.QuestionType == QuestionType.INSERT) && (this.PreInsertPosition != -1))
                         {
                             this.rtb_Passage.SelectionStart = this.PreInsertPosition;
@@ -8447,7 +8450,7 @@
                     str2 = reader2.ReadLine();
                     if (num >= 2)
                     {
-                        Question question = (Question) this.TestQuestions.Questions[num - 2];
+                        Question question = (Question)this.TestQuestions.Questions[num - 2];
                         string str3 = str2.Substring(30, 15).TrimEnd(new char[0]);
                         question.UserAnswers.Clear();
                         for (int i = 0; i < str3.Length; i++)
@@ -8501,50 +8504,50 @@
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.tabf_test.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_test.TabPages[0].Width, (float) this.tabf_test.TabPages[0].Height));
-            this.tabf_tposelection.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_tposelection.TabPages[0].Width, (float) this.tabf_tposelection.TabPages[0].Height));
-            this.tabf_Reading.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_Reading.TabPages[0].Width, (float) this.tabf_Reading.TabPages[0].Height));
-            this.tabf_Listening.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_Listening.TabPages[0].Width, (float) this.tabf_Listening.TabPages[0].Height));
-            this.tabf_speaking.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_speaking.TabPages[0].Width, (float) this.tabf_speaking.TabPages[0].Height));
-            this.tabf_writing.Region = new Region(new RectangleF((float) this.tabf_test.TabPages[0].Left, (float) this.tabf_test.TabPages[0].Top, (float) this.tabf_writing.TabPages[0].Width, (float) this.tabf_writing.TabPages[0].Height));
+            this.tabf_test.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_test.TabPages[0].Width, (float)this.tabf_test.TabPages[0].Height));
+            this.tabf_tposelection.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_tposelection.TabPages[0].Width, (float)this.tabf_tposelection.TabPages[0].Height));
+            this.tabf_Reading.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_Reading.TabPages[0].Width, (float)this.tabf_Reading.TabPages[0].Height));
+            this.tabf_Listening.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_Listening.TabPages[0].Width, (float)this.tabf_Listening.TabPages[0].Height));
+            this.tabf_speaking.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_speaking.TabPages[0].Width, (float)this.tabf_speaking.TabPages[0].Height));
+            this.tabf_writing.Region = new Region(new RectangleF((float)this.tabf_test.TabPages[0].Left, (float)this.tabf_test.TabPages[0].Top, (float)this.tabf_writing.TabPages[0].Width, (float)this.tabf_writing.TabPages[0].Height));
             this.Antuorization();
         }
 
         private void GetConnectAndCreateTable()
         {
-             if (!Directory.Exists("history"))
+            if (!Directory.Exists("history"))
             {
                 Directory.CreateDirectory("history");
             }
-             if (!File.Exists("history/history.db"))
-             {
-                 SQLiteConnection.CreateFile("history/history.db");
-             }
+            if (!File.Exists("history/history.db"))
+            {
+                SQLiteConnection.CreateFile("history/history.db");
+            }
 
-             /*using (DataTable tbl = DbProviderFactories.GetFactoryClasses())
-             {
-                 foreach (DataRow row in tbl.Rows)
-                 {
-                     string prov = row[2].ToString();
-                     if ((prov.IndexOf("SQLite", 0, StringComparison.OrdinalIgnoreCase) != -1) || (prov.IndexOf("SqlClient", 0, StringComparison.OrdinalIgnoreCase) != -1))
-                     {
-                         MessageBox.Show("SQLite");
-                     }
-                     if (prov == "System.Data.SQLite")
-                     {
-                         MessageBox.Show("Has System.Data.SQLite");
-                     }
-                 }
-             }*/
+            /*using (DataTable tbl = DbProviderFactories.GetFactoryClasses())
+            {
+                foreach (DataRow row in tbl.Rows)
+                {
+                    string prov = row[2].ToString();
+                    if ((prov.IndexOf("SQLite", 0, StringComparison.OrdinalIgnoreCase) != -1) || (prov.IndexOf("SqlClient", 0, StringComparison.OrdinalIgnoreCase) != -1))
+                    {
+                        MessageBox.Show("SQLite");
+                    }
+                    if (prov == "System.Data.SQLite")
+                    {
+                        MessageBox.Show("Has System.Data.SQLite");
+                    }
+                }
+            }*/
 
 
             //this.dbConn = new System.Data.SQLite.SQLiteConnection("Data Source=history/history.s3db");
-             SQLiteConnection dbConn = new SQLiteConnection("Data Source=history/history.db;Pooling=true;FailIfMissing=false");
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=history/history.db;Pooling=true;FailIfMissing=false");
             dbConn.Open();
 
             try
             {
-                
+
                 SQLiteCommand cmd = dbConn.CreateCommand();
 
                 String temp = "select count(*) from sqlite_master where type='table' and name='%s'";
@@ -8564,12 +8567,12 @@
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch(SQLiteException ex)
+            catch (SQLiteException ex)
             {
                 MessageBox.Show(ex.StackTrace);
                 Debug.Print(ex.StackTrace);
             }
-            
+
             String sql_create = @"CREATE TABLE test_tbl(id INTEGER PRIMARY KEY AUTOINCREMENT,
 							byte0 TEXT(4), byte1 TEXT(4), byte2 TEXT(4), byte3 TEXT(4), byte4 TEXT(4),
 							byte5 TEXT(4), byte6 TEXT(4), byte7 TEXT(4));";
@@ -8578,7 +8581,7 @@
             String[] sections = { "Reading", "Listening", "Speaking", "Writing" };
             foreach (String section in sections)
             {
-                
+
             }
 
 
@@ -8643,7 +8646,10 @@
                     }
                 }
             }
-            this.SaveUserAnswers();
+
+            #region temporarily disabled
+            //this.SaveUserAnswers();
+            #endregion temporarily disabled
             if (this.HasReachedEndOfSection())
             {
                 if (this.PassageNO < this.PassageCount)
@@ -8981,7 +8987,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if ((question.QuestionType == QuestionType.INSERT) && this.rtb_Passage.Text[charIndexFromPosition].Equals('█'))
                 {
                     int textLength = 1;
@@ -9027,7 +9033,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (question.QuestionType == QuestionType.INSERT)
                 {
                     char ch = this.rtb_Passage.Text[charIndexFromPosition];
@@ -9086,7 +9092,7 @@
 
         private void RtbAnswers_TextChanged(object sender, EventArgs e)
         {
-            RichTextBox box = (RichTextBox) sender;
+            RichTextBox box = (RichTextBox)sender;
             int num = box.GetPositionFromCharIndex(box.TextLength - 1).Y - box.GetPositionFromCharIndex(0).Y;
             box.Height = num + 20;
         }
@@ -9094,7 +9100,7 @@
         private void RtbSumSelected_Click(object sender, EventArgs e)
         {
             int num2;
-            RichTextBox box = (RichTextBox) sender;
+            RichTextBox box = (RichTextBox)sender;
             string name = box.Name;
             int num = Convert.ToInt16(name.Substring(name.Length - 1));
             if ((this.SummarySelectedAnswerIndex != num) && (box.TextLength < 4))
@@ -9135,7 +9141,7 @@
                 case TestingSection.READING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SUMMARY)
                         {
@@ -9187,7 +9193,7 @@
                 case TestingSection.LISTENING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SORT)
                         {
@@ -9251,7 +9257,7 @@
             int num4 = 0;
             for (int i = 0; i < this.TestQuestions.Questions.Count; i++)
             {
-                question = (Question) this.TestQuestions.Questions[i];
+                question = (Question)this.TestQuestions.Questions[i];
                 if (question.UserAnswersStr.Equals(question.RightAnswersStr))
                 {
                     num4 += question.Score;
@@ -9369,7 +9375,7 @@
         {
             Brush brush;
             Graphics graphics = e.Graphics;
-            TabControl control = (TabControl) sender;
+            TabControl control = (TabControl)sender;
             TabPage page = control.TabPages[e.Index];
             Rectangle tabRect = control.GetTabRect(e.Index);
             if (e.State == DrawItemState.Selected)
@@ -9393,17 +9399,17 @@
 
         private void tb_currentpos_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long) (this.tb_currentpos.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.tb_currentpos.Value * 0x3e8));
         }
 
         private void tb_currentpos1_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long) (this.tb_currentpos1.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.tb_currentpos1.Value * 0x3e8));
         }
 
         private void tb_reading_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long) (this.tb_reading.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.tb_reading.Value * 0x3e8));
         }
 
         private void tb_sound_Scroll(object sender, EventArgs e)
@@ -9567,12 +9573,12 @@
                     if (this.QuestionNO > 0)
                     {
                         time6 = DateTime.ParseExact("00:01", "mm:ss", null);
-                        span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time6);
+                        span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time6);
                         base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                     }
                     if (this.QuestionNO >= 1)
                     {
-                        Question question = (Question) this.TestQuestions.Questions[this.QuestionNO - 1];
+                        Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
                         switch (question.QuestionType)
                         {
                             case QuestionType.TABEL:
@@ -9591,11 +9597,11 @@
                                     this.rtb_sumQuestion.Rtf = question.QuestionTitle;
                                     this.rtb_sumQuestion.Visible = true;
                                     num4 = 0;
-                                    while ((num4 < question.Answers.Length) && (num4 < this.CkbSummary.Length))
+                                    while ((num4 < question.Answer.Length) && (num4 < this.CkbSummary.Length))
                                     {
                                         this.RtbSumAnswersToBeSelected[num4].Visible = true;
                                         this.CkbSummary[num4].Visible = true;
-                                        this.RtbSumAnswersToBeSelected[num4].Rtf = question.Answers[num4];
+                                        this.RtbSumAnswersToBeSelected[num4].Rtf = (question.Answer[num4]).ToString();
                                         num4++;
                                     }
                                     for (num4 = 0; num4 < question.RightAnswers.Length; num4++)
@@ -9607,11 +9613,11 @@
                                 break;
 
                             default:
-                                for (num4 = 0; (num4 < question.Answers.Length) && (num4 < this.CkbReading.Length); num4++)
+                                for (num4 = 0; (num4 < question.Answer.Length) && (num4 < this.CkbReading.Length); num4++)
                                 {
                                     this.LRtbAnswers[num4].Visible = true;
                                     this.LCkbAnswers[num4].Visible = true;
-                                    this.LRtbAnswers[num4].Rtf = question.Answers[num4];
+                                    this.LRtbAnswers[num4].Rtf = (question.Answer[num4]).ToString();
                                 }
                                 break;
                         }
@@ -9627,7 +9633,7 @@
             if ((this.TestSection == TestingSection.READING) && (this.CurrentReadingStep >= 1))
             {
                 time6 = DateTime.ParseExact("00:01", "mm:ss", null);
-                span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time6);
+                span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time6);
                 base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
             }
         }
@@ -9732,7 +9738,7 @@
                                 this.HasLoadMP3 = true;
                             }
                             time = DateTime.ParseExact("00:01", "mm:ss", null);
-                            span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                            span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                             base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                             if (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) <= DateTime.ParseExact("00:00", "mm:ss", null))
                             {
@@ -9839,7 +9845,7 @@
                                 this.HasLoadMP3 = true;
                             }
                             time = DateTime.ParseExact("00:01", "mm:ss", null);
-                            span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                            span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                             base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                             time3 = DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null);
                             this.WriteWritingAnswers("write1.txt", this.wrtb_writing2.Text);
@@ -9878,7 +9884,7 @@
                             }
                             this.WriteWritingAnswers("write2.txt", this.wrtb_writing2.Text);
                             time = DateTime.ParseExact("00:01", "mm:ss", null);
-                            span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                            span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                             base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                             if (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) <= DateTime.ParseExact("00:00", "mm:ss", null))
                             {
@@ -10032,7 +10038,7 @@
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
-                        span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                        span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                         base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                         this.srtb_timeindicator.Text = "READING TIME";
                         this.srtb_timer.Text = "00:" + base.lbl_timeremain.Text;
@@ -10187,7 +10193,7 @@
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
-                        span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                        span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                         base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                         this.srtb_timer.Text = "00:" + base.lbl_timeremain.Text;
                         if (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) <= DateTime.ParseExact("00:00", "mm:ss", null))
@@ -10250,7 +10256,7 @@
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
-                        span = (TimeSpan) (DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
+                        span = (TimeSpan)(DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null) - time);
                         base.lbl_timeremain.Text = span.Minutes.ToString().PadLeft(2, '0') + ":" + span.Seconds.ToString().PadLeft(2, '0');
                         this.srtb_timeindicator.Visible = true;
                         this.srtb_timer.Visible = true;
@@ -10322,7 +10328,7 @@
 
         private void WriteAnswersToDB(DbConnection conn)
         {
-            
+
             try
             {
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
@@ -10332,7 +10338,7 @@
                     DbCommand cmd = conn.CreateCommand();
                     cmd.CommandText = "insert　into　Answers　values(@QuestionNo,@QuestionType,@YourAnswers,@StandardAnswers,@Score);";
 
-                    cmd.Parameters.Add(new SQLiteParameter("QuestionNo", question.ID.ToString()));
+                    cmd.Parameters.Add(new SQLiteParameter("QuestionNo", question.AnswerID.ToString()));
                     cmd.Parameters.Add(new SQLiteParameter("QuestionType", question.QuestionType.ToString()));
                     cmd.Parameters.Add(new SQLiteParameter("YourAnswers", question.UserAnswersStr.ToString()));
                     cmd.Parameters.Add(new SQLiteParameter("StandardAnswers", question.RightAnswersStr.ToString()));
@@ -10341,16 +10347,16 @@
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch(SQLiteException e)
+            catch (SQLiteException e)
             {
                 //MessageBox.Show(e);   
                 MessageBox.Show(e.StackTrace);
             }
         }
-        
+
         private void WriteAnswersToFile(string fileName)
         {
-            WriteAnswersToDB(this.dbConn);
+            //WriteAnswersToDB(this.dbConn);
 
             FileStream stream = null;
             StreamWriter writer = null;
@@ -10361,8 +10367,8 @@
                 writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { "QuestionNo".PadRight(15), "QuestionType".PadRight(15), "YourAnswers".PadRight(15), "StandardAnswers".PadRight(15), "Score".PadRight(15) }));
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
-                    Question question = (Question) this.TestQuestions.Questions[i];
-                    writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { question.ID.ToString().PadRight(15), question.QuestionType.ToString().PadRight(15), question.UserAnswersStr.ToString().PadRight(15), question.RightAnswersStr.ToString().PadRight(15), question.Score.ToString().PadRight(15) }));
+                    Question question = (Question)this.TestQuestions.Questions[i];
+                    writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { question.AnswerID.ToString().PadRight(15), question.QuestionType.ToString().PadRight(15), question.UserAnswersStr.ToString().PadRight(15), question.RightAnswersStr.ToString().PadRight(15), question.Score.ToString().PadRight(15) }));
                 }
             }
             catch (Exception exception)
@@ -10422,12 +10428,12 @@
 
         private void wtb_speak_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long) (this.wtb_speak.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.wtb_speak.Value * 0x3e8));
         }
 
         private void dgv_readingSelect_SelectionChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgv_readinganswers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -10454,6 +10460,109 @@
             int index = this.tabf_answer.SelectedIndex;
 
         }
+
+        private void notify_prev_Listening_Practical(object sender, EventArgs e)
+        {
+            this.btn_preQuestion.Enabled = true;
+            this.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok1");
+        }
+
+        #region 模拟在所有情况下点击按钮的行为
+        private void btn_Next_Reading_Practical_Click(object sender, EventArgs e)
+        {
+            this.btn_Next_Reading_Test_Click(sender, e);
+        }
+
+        private void btn_Next_Reading_Test_Click(object sender, EventArgs e)
+        {
+            this.RBtn_nextQuestion(e);
+        }
+
+        private void btn_Prev_Reading_Practical_Click(object sender, EventArgs e)
+        {
+            this.btn_Prev_Reading_Test_Click(sender, e);
+        }
+
+        private void btn_Prev_Reading_Test_Click(object sender, EventArgs e)
+        {
+            if (this.QuestionNO == (this.RSpiltQuestionNO + 1))
+            {
+                this.PreInsertPosition = -1;
+            }
+            //this.SaveUserAnswers();
+            this.QuestionNO--;
+            this.LoadReadingMaterialAndQA();
+        }
+
+        private void btn_Next_Listening_Practical_Click(object sender, EventArgs e)
+        {
+            this.btn_Prev_Listening_Test_Click(sender, e);
+        }
+
+        private void btn_Next_Listening_Test_Click(object sender, EventArgs e)
+        {
+            this.btn_nextQuestion.Enabled = false;  //next disable
+            this.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
+            this.btn_preQuestion.Enabled = true;  //ok enable
+            this.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok1");
+        }
+
+        private void btn_Prev_Listening_Practical_Click(object sender, EventArgs e)
+        {
+            this.btn_nextQuestion.Enabled = true;  // next enable
+            this.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next1");
+            this.btn_preQuestion.Enabled = true;  //ok enable
+            this.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok1");
+        }
+
+        private void btn_Prev_Listening_Test_Click(object sender, EventArgs e)
+        {
+            this.btn_nextQuestion.Enabled = true;  // next enable
+            this.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next1");
+            this.btn_preQuestion.Enabled = false;  //ok disable
+            this.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
+        }
+
+        private void btn_Next_Speaking_Practical_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Speaking_Test_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Prev_Speaking_Practical_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Prev_Speaking_Test_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Writing_Practical_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Writing_Test_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Prev_Writing_Practical_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Prev_Writing_Test_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion 模拟在所有情况下点击按钮的行为
     }
 }
 

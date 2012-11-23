@@ -6,24 +6,29 @@
 
     internal class Question
     {
-        public string[] Answers;
-        public ArrayList ColStrs = new ArrayList();
-        public int ID;
+        public int AnswerID;
+        public int TPONO;
+        public QuestionType QuestionType;
+        public string[] Answer;
+        public int Score;
+        
         public string MP3Path;
+        public string RepeatMP3Path;    
         public string QuestionExplanation;
         public string QuestionTitle;
-        public TPO.Utility.QuestionType QuestionType;
-        public string RepeatMP3Path;
-        public int[] RightAnswers;
+        
+           
         public ArrayList RowStrs = new ArrayList();
-        public int Score;
+        public ArrayList ColStrs = new ArrayList();   
+        
+        public int[] RightAnswers;
         public ArrayList UserAnswers = new ArrayList();
 
         public Question()
         {
             this.ColStrs = new ArrayList();
             this.RowStrs = new ArrayList();
-            this.Answers = null;
+            this.Answer = null;
             this.RightAnswers = null;
             this.UserAnswers = new ArrayList();
         }
