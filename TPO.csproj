@@ -130,6 +130,9 @@
     <Compile Include="TPO\UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TPO\UI\MainForm-verbose.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TPO\UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
