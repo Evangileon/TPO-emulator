@@ -9,7 +9,7 @@
     /// 一场考试包含四个Part，一个Part包含二或三个Section，一个Section包含若干个Question
     /// Section是一个测试单元，包含一段题目（一篇文章，听力或者作文），和若干个问题(Question)
     /// </summary>
-    internal class Section
+    public class Section
     {
         public int AnswerID;//no need
         public int TPONO;//no need
