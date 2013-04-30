@@ -12,7 +12,7 @@
         MULTIPLE,
         INSERT,
         SUMMARY,
-        TABEL,
+        TABLE,
         SORT
     }
 /*

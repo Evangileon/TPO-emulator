@@ -1,121 +1,64 @@
-﻿namespace TPO.Common
+﻿using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+
+namespace TPO.Common
 {
-    using System;
-    using System.Collections;
-    using TPO.Utility;
+	class Question
+	{
+        private string question;
+        private ArrayList options;
 
-    internal class Question
+        public Question(string questionStr)
+        {
+            this.question = questionStr;
+            this.options = new ArrayList(4);
+        }
+
+        public void AddOption(String option)
+        {
+            this.options.Add(option);
+        }
+
+        public string GetQuestion()
+        {
+            return question;
+        }
+
+        ArrayList GetOptions()
+        {
+            return options;
+        }
+	}
+
+    class QuestionSingle : Question
     {
-        public int AnswerID;
-        public int TPONO;
-        public QuestionType QuestionType;
-        public string[] Answer;
-        public int Score;
         
-        public string MP3Path;
-        public string RepeatMP3Path;    
-        public string QuestionExplanation;
-        public string QuestionTitle;
-        
-           
-        public ArrayList RowStrs = new ArrayList();
-        public ArrayList ColStrs = new ArrayList();   
-        
-        public int[] RightAnswers;
-        public ArrayList UserAnswers = new ArrayList();
+    }
 
-        public Question()
-        {
-            this.ColStrs = new ArrayList();
-            this.RowStrs = new ArrayList();
-            this.Answer = null;
-            this.RightAnswers = null;
-            this.UserAnswers = new ArrayList();
-        }
+    class QuestionMulti : Question
+    {
 
-        public bool IsAnswered
-        {
-            get
-            {
-                int num = 0;
-                for (int i = 0; i < this.UserAnswers.Count; i++)
-                {
-                    num += (int) this.UserAnswers[i];
-                }
-                return (num != 0);
-            }
-        }
+    }
 
-        public string RightAnswersStr
-        {
-            get
-            {
-                string str = "";
-                for (int i = 0; i < this.RightAnswers.Length; i++)
-                {
-                    int num = this.RightAnswers[i];
-                    if (num > 0)
-                    {
-                        str = str + Convert.ToChar((int) (num + 0x40)).ToString();
-                    }
-                }
-                return str;
-            }
-        }
+    class QuestionInsert : Question
+    {
 
-        public string UserAnswersStr
-        {
-            get
-            {
-                string str = "";
-                if (this.QuestionType == TPO.Utility.QuestionType.SUMMARY)
-                {
-                    this.UserAnswers.Sort();
-                }
-                for (int i = 0; i < this.UserAnswers.Count; i++)
-                {
-                    int num = (int) this.UserAnswers[i];
-                    if (num > 0)
-                    {
-                        str = str + Convert.ToChar((int) (num + 0x40)).ToString();
-                    }
-                }
-                return str;
-            }
-        }
+    }
 
-        //QuestionNo TEXT(5) PRIMARY KEY AUTOINCREMENT, QuestionType TEXT(15), YourAnswers TEXT(5), StandardAnswers TEXT(5), Score TEXT(5)
-        public int QuestionNo
-        {
-            set;
-            get;
-        }
-        public string QuesType
-        {
-            set
-            {
-                this.QuestionType = (QuestionType)Enum.Parse(typeof(QuestionType), value, true);
-            }
-            get
-            {
-                return this.QuestionType.ToString();
-            }
-        }
-        public string YourAnswers
-        {
-            set;
-            get;
-        }
-        public string StandardAnswers
-        {
-            set;
-            get;
-        }
-        public int Scores
-        {
-            set;
-            get;
-        }
+    class QuestionSummary : Question
+    {
+
+    }
+
+    class QuestionTable : Question
+    {
+
+    }
+
+    class QuestionSort : Question
+    {
+
     }
 }
-

@@ -102,6 +102,7 @@
     <Compile Include="TPO\Common\FTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TPO\Common\Question.cs" />
     <Compile Include="TPO\SQLite\CaseTestFunc.cs" />
     <Compile Include="TPO\SQLite\InconclusiveException.cs" />
     <Compile Include="TPO\SQLite\MyCount.cs" />
@@ -146,8 +147,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TPO\Utility\TestingSection.cs" />
-    <Compile Include="TPO\Quiz\TPOQuestions.cs" />
-    <Compile Include="TPO\Common\Question.cs" />
+    <Compile Include="TPO\Quiz\TPOPart.cs" />
+    <Compile Include="TPO\Common\Section.cs" />
     <Compile Include="TPO\Media\MP3Record.cs" />
     <Compile Include="TPO\Utility\QuestionType.cs" />
     <Compile Include="TPO\Utility\ConstantValues.cs" />

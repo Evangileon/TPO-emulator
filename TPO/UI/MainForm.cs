@@ -223,8 +223,8 @@
             }
             if (this.QuestionNO > 0)
             {
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
-                if ((question.QuestionType == QuestionType.SUMMARY) || (question.QuestionType == QuestionType.TABEL))
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                if ((question.QuestionType == QuestionType.SUMMARY) || (question.QuestionType == QuestionType.TABLE))
                 {
                     this.btn_ShowText.Visible = true;
                 }
@@ -531,7 +531,7 @@
                                 this.tabf_Listening.SelectedIndex = LDIRECTION1;
                                 if (this.PassageNO <= 1)
                                 {
-                                    this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", "");
+                                    this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", "");
                                 }
                                 string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
                                 try
@@ -608,7 +608,7 @@
             Label_0597:
                 this.bn_readText.Visible = false;
             Label_05A6: ;
-                this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                 this.QuestionCount = this.TestQuestions.QuestionCount;
                 this.LoadReadingMaterialAndQA();
                 if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
@@ -997,7 +997,7 @@
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
                     DataRow row = table.NewRow();
-                    Question question = (Question)this.TestQuestions.Questions[i];
+                    Section question = (Section)this.TestQuestions.Questions[i];
                     row["QuestionID"] = question.AnswerID;
                     box.Rtf = question.QuestionTitle;
                     string text = box.Text;
@@ -1017,10 +1017,10 @@
                     {
                         row["QuestionStatus"] = "Not Answered";
                     }
-                    row["MyAnswer"] = question.UserAnswersStr;
+                    row["MyAnswer"] = question.MyAnswersStr;
                     if (this.rb_PracticeMode.Checked)
                     {
-                        row["StandardAnswer"] = question.RightAnswersStr;
+                        row["StandardAnswer"] = question.CorrectAnswersStr;
                     }
                     table.Rows.Add(row);
                 }
@@ -1050,8 +1050,8 @@
             else
             {
                 this.btn_ShowText.BackgroundImage = (Image)this.resmgr.GetObject("viewtext");
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
-                if (question.QuestionType == QuestionType.TABEL)
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                if (question.QuestionType == QuestionType.TABLE)
                 {
                     this.tabf_test.SelectedIndex = LISTENING;
                     this.tabf_Listening.SelectedIndex = LTABLEQUESTION;
@@ -1192,7 +1192,7 @@
 
         public void Ckb_CheckedChanged(object sender, EventArgs e)
         {
-            Question question;
+            Section question;
             int num;
             CheckBox ckb = (CheckBox)sender;
             switch (this.TestSection)
@@ -1202,9 +1202,9 @@
                     {
                         return;
                     }
-                    question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                    question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                     this.SaveUserAnswers();
-                    if (question.RightAnswers.Length == 1)
+                    if (question.CorrectAnswer.Length == 1)
                     {
                         ckb.Enabled = false;
                         for (num = 0; num < this.CkbReading.Length; num++)
@@ -1221,14 +1221,14 @@
                 case TestingSection.LISTENING:
                     if (ckb.Checked)
                     {
-                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                         num = 0;
                         while (num < 9)
                         {
                             this.OnlyOneCheck(this.LCkbTable[num], ckb);
                             num++;
                         }
-                        if (question.RightAnswers.Length == 1)
+                        if (question.CorrectAnswer.Length == 1)
                         {
                             ckb.Enabled = false;
                             for (num = 0; num < this.LCkbAnswers.Length; num++)
@@ -1257,7 +1257,7 @@
             try
             {
                 int num;
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (this.TestSection != TestingSection.READING)
                 {
                     goto Label_0185;
@@ -1268,26 +1268,26 @@
                         num = 0;
                         goto Label_00C0;
 
-                    case QuestionType.TABEL:
+                    case QuestionType.TABLE:
                         if (!this.ckb_ShowAnswer.Checked)
                         {
                             goto Label_0109;
                         }
                         this.lbl_tableAnswer.Visible = true;
-                        this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                        this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
                         return;
 
                     default:
                         num = 0;
-                        while (num < question.RightAnswers.Length)
+                        while (num < question.CorrectAnswer.Length)
                         {
                             if (this.ckb_ShowAnswer.Checked)
                             {
-                                this.RtbReadingAnswers[question.RightAnswers[num] - 1].BackColor = Color.LightPink;
+                                this.RtbReadingAnswers[question.CorrectAnswer[num] - 1].BackColor = Color.LightPink;
                             }
                             else
                             {
-                                this.RtbReadingAnswers[question.RightAnswers[num] - 1].BackColor = SystemColors.ControlLight;
+                                this.RtbReadingAnswers[question.CorrectAnswer[num] - 1].BackColor = SystemColors.ControlLight;
                             }
                             num++;
                         }
@@ -1296,16 +1296,16 @@
             Label_0054:
                 if (this.ckb_ShowAnswer.Checked)
                 {
-                    this.RtbSumAnswersToBeSelected[question.RightAnswers[num] - 1].Visible = true;
-                    this.RtbSumAnswersToBeSelected[question.RightAnswers[num] - 1].BackColor = Color.LightPink;
+                    this.RtbSumAnswersToBeSelected[question.CorrectAnswer[num] - 1].Visible = true;
+                    this.RtbSumAnswersToBeSelected[question.CorrectAnswer[num] - 1].BackColor = Color.LightPink;
                 }
                 else
                 {
-                    this.RtbSumAnswersToBeSelected[question.RightAnswers[num] - 1].BackColor = SystemColors.ControlLightLight;
+                    this.RtbSumAnswersToBeSelected[question.CorrectAnswer[num] - 1].BackColor = SystemColors.ControlLightLight;
                 }
                 num++;
             Label_00C0:
-                if (num < question.RightAnswers.Length)
+                if (num < question.CorrectAnswer.Length)
                 {
                     goto Label_0054;
                 }
@@ -1318,13 +1318,13 @@
                 {
                     switch (question.QuestionType)
                     {
-                        case QuestionType.TABEL:
+                        case QuestionType.TABLE:
                             if (!this.ckb_ShowAnswer.Checked)
                             {
                                 goto Label_0233;
                             }
                             this.lbl_tableAnswer.Visible = true;
-                            this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                            this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
                             return;
 
                         case QuestionType.SORT:
@@ -1332,7 +1332,7 @@
                             {
                                 break;
                             }
-                            this.llbl_rightAnswer.Text = question.RightAnswersStr;
+                            this.llbl_rightAnswer.Text = question.CorrectAnswersStr;
                             this.llbl_rightAnswer.Visible = true;
                             return;
 
@@ -1347,15 +1347,15 @@
                 return;
             Label_0242:
                 num = 0;
-                while (num < question.RightAnswers.Length)
+                while (num < question.CorrectAnswer.Length)
                 {
                     if (this.ckb_ShowAnswer.Checked)
                     {
-                        this.LRtbAnswers[question.RightAnswers[num] - 1].BackColor = Color.LightPink;
+                        this.LRtbAnswers[question.CorrectAnswer[num] - 1].BackColor = Color.LightPink;
                     }
                     else
                     {
-                        this.LRtbAnswers[question.RightAnswers[num] - 1].BackColor = SystemColors.ControlLight;
+                        this.LRtbAnswers[question.CorrectAnswer[num] - 1].BackColor = SystemColors.ControlLight;
                     }
                     num++;
                 }
@@ -1560,7 +1560,7 @@
         private bool HasAnswered()
         {
             int num;
-            Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+            Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
             if ((question.QuestionType == QuestionType.SINGLE) || (question.QuestionType == QuestionType.MULTIPLE))
             {
                 for (num = 0; num < this.LCkbAnswers.Length; num++)
@@ -1571,7 +1571,7 @@
                     }
                 }
             }
-            else if (question.QuestionType == QuestionType.TABEL)
+            else if (question.QuestionType == QuestionType.TABLE)
             {
                 for (num = 0; num < this.LCkbTable.Length; num++)
                 {
@@ -6481,7 +6481,7 @@
             // 
             // bindingSource_Section
             // 
-            this.bindingSource_Section.DataSource = typeof(TPO.Common.Question);
+            this.bindingSource_Section.DataSource = typeof(TPO.Common.Section);
             // 
             // lbl_listeningScorereport
             // 
@@ -7213,7 +7213,7 @@
             this.pb_ListenScene1.Image = null;
             if (this.PassageNO <= 1)
             {
-                this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
+                this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
             }
             base.lbl_questionNO.Text = "Question " + this.QuestionNO.ToString() + " of 34";
             XMLFileReader reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
@@ -7257,13 +7257,13 @@
             {
                 this.LoadUserAnswer();
             }
-            Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+            Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
             base.lbl_questionNO.Text = "Question " + this.QuestionNO + " of 34";
             this.llbl_rightAnswer.Visible = this.ckb_ShowAnswer.Checked;
             this.IsPassageMP3 = false;
             switch (question.QuestionType)
             {
-                case QuestionType.TABEL:
+                case QuestionType.TABLE:
                     {
                         int num5;
                         this.tabf_test.SelectedIndex = LISTENING;
@@ -7323,7 +7323,7 @@
                         if (this.ckb_ShowAnswer.Checked)
                         {
                             this.lbl_tableAnswer.Visible = true;
-                            this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                            this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
                         }
                         else
                         {
@@ -7385,20 +7385,20 @@
                     {
                         this.LCkbAnswers[((int)question.UserAnswers[length]) - 1].Checked = true;
                     }
-                    for (int i = 0; i < question.RightAnswers.Length; i++)
+                    for (int i = 0; i < question.CorrectAnswer.Length; i++)
                     {
                         if (this.ckb_ShowAnswer.Checked)
                         {
-                            this.LRtbAnswers[question.RightAnswers[i] - 1].BackColor = Color.LightPink;
+                            this.LRtbAnswers[question.CorrectAnswer[i] - 1].BackColor = Color.LightPink;
                         }
                         else
                         {
-                            this.LRtbAnswers[question.RightAnswers[i] - 1].BackColor = SystemColors.ControlLight;
+                            this.LRtbAnswers[question.CorrectAnswer[i] - 1].BackColor = SystemColors.ControlLight;
                         }
                     }
                     goto Label_0656;
             }
-            this.llbl_rightAnswer.Text = question.RightAnswersStr;
+            this.llbl_rightAnswer.Text = question.CorrectAnswersStr;
         Label_0656:
             try
             {
@@ -7529,7 +7529,7 @@
                         this.btn_showtranslation.Visible = this.ckb_ShowAnswer.Visible;
                     }
                 }
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                 EXPLANATION = question.QuestionExplanation;
                 if (question.QuestionType == QuestionType.SUMMARY)
                 {
@@ -7547,9 +7547,9 @@
                     }
                     if (this.ckb_ShowAnswer.Checked)
                     {
-                        for (num = 0; num < question.RightAnswers.Length; num++)
+                        for (num = 0; num < question.CorrectAnswer.Length; num++)
                         {
-                            this.RtbSumAnswersToBeSelected[question.RightAnswers[num] - 1].BackColor = Color.LightPink;
+                            this.RtbSumAnswersToBeSelected[question.CorrectAnswer[num] - 1].BackColor = Color.LightPink;
                         }
                     }
                     this.rtb_sumPassage.Height = 500;
@@ -7560,13 +7560,13 @@
                     this.rtb_sumQuestion.Rtf = question.QuestionTitle;
                     this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
                     TRANSLATION = this.RMaterial.Translation;
-                    for (num = 0; (num < question.Answer.Length) && (num < this.CkbSummary.Length); num++)
+                    for (num = 0; (num < question.MyAnswer.Length) && (num < this.CkbSummary.Length); num++)
                     {
                         this.RtbSumAnswersToBeSelected[num].Visible = true;
                         this.CkbSummary[num].Visible = true;
-                        this.RtbSumAnswersToBeSelected[num].Rtf = question.Answer[num].ToString();
+                        this.RtbSumAnswersToBeSelected[num].Rtf = question.MyAnswer[num].ToString();
                     }
-                    for (num = 0; num < question.RightAnswers.Length; num++)
+                    for (num = 0; num < question.CorrectAnswer.Length; num++)
                     {
                         this.RtbSumSelected[num].Visible = true;
                     }
@@ -7580,7 +7580,7 @@
                         }
                     }
                 }
-                else if (question.QuestionType == QuestionType.TABEL)
+                else if (question.QuestionType == QuestionType.TABLE)
                 {
                     int num5;
                     this.tabf_test.SelectedIndex = LISTENING;
@@ -7616,7 +7616,7 @@
                     if (this.ckb_ShowAnswer.Checked)
                     {
                         this.lbl_tableAnswer.Visible = true;
-                        this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                        this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
                     }
                     else
                     {
@@ -7628,21 +7628,21 @@
                     this.rtb_question.Rtf = question.QuestionTitle;
                     this.tabf_test.SelectedIndex = READING;
                     this.tabf_Reading.SelectedIndex = RNORMALQUESTION;
-                    for (num = 0; (num < question.Answer.Length) && (num < this.CkbReading.Length); num++)
+                    for (num = 0; (num < question.MyAnswer.Length) && (num < this.CkbReading.Length); num++)
                     {
                         this.RtbReadingAnswers[num].Visible = true;
                         if (question.QuestionType != QuestionType.INSERT)
                         {
                             this.CkbReading[num].Visible = true;
                         }
-                        this.RtbReadingAnswers[num].Rtf = question.Answer[num].ToString();
+                        this.RtbReadingAnswers[num].Rtf = question.MyAnswer[num].ToString();
                         this.RtbReadingAnswers[num].BackColor = SystemColors.ControlLight;
                     }
                     if (this.ckb_ShowAnswer.Checked)
                     {
-                        for (int i = 0; i < question.RightAnswers.Length; i++)
+                        for (int i = 0; i < question.CorrectAnswer.Length; i++)
                         {
-                            this.RtbReadingAnswers[question.RightAnswers[i] - 1].BackColor = Color.LightPink;
+                            this.RtbReadingAnswers[question.CorrectAnswer[i] - 1].BackColor = Color.LightPink;
                         }
                     }
                     if (question.QuestionType == QuestionType.INSERT)
@@ -7743,7 +7743,7 @@
                     str2 = reader2.ReadLine();
                     if (num >= 2)
                     {
-                        Question question = (Question)this.TestQuestions.Questions[num - 2];
+                        Section question = (Section)this.TestQuestions.Questions[num - 2];
                         string str3 = str2.Substring(30, 15).TrimEnd(new char[0]);
                         question.UserAnswers.Clear();
                         for (int i = 0; i < str3.Length; i++)
@@ -7981,7 +7981,7 @@
                         {
                             this.bn_readText.Visible = false;
                         }
-                        this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
                         if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
@@ -8280,7 +8280,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if ((question.QuestionType == QuestionType.INSERT) && this.rtb_Passage.Text[charIndexFromPosition].Equals('█'))
                 {
                     int textLength = 1;
@@ -8326,7 +8326,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (question.QuestionType == QuestionType.INSERT)
                 {
                     char ch = this.rtb_Passage.Text[charIndexFromPosition];
@@ -8424,7 +8424,7 @@
 
         private void SaveUserAnswers()
         {
-            Question question;
+            Section question;
             int num;
             int count;
             bool flag;
@@ -8434,11 +8434,11 @@
                 case TestingSection.READING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SUMMARY)
                         {
-                            if (question.QuestionType == QuestionType.TABEL)
+                            if (question.QuestionType == QuestionType.TABLE)
                             {
                                 count = question.ColStrs.Count;
                                 flag = false;
@@ -8475,7 +8475,7 @@
                             break;
                         }
                         num = 0;
-                        while (num < question.RightAnswers.Length)
+                        while (num < question.CorrectAnswer.Length)
                         {
                             question.UserAnswers.Add(this.SummarySelectedAnswers[num]);
                             num++;
@@ -8486,11 +8486,11 @@
                 case TestingSection.LISTENING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SORT)
                         {
-                            if (question.QuestionType == QuestionType.TABEL)
+                            if (question.QuestionType == QuestionType.TABLE)
                             {
                                 count = question.ColStrs.Count;
                                 flag = false;
@@ -8525,7 +8525,7 @@
                         }
                         else
                         {
-                            for (num = 0; num < question.RightAnswers.Length; num++)
+                            for (num = 0; num < question.CorrectAnswer.Length; num++)
                             {
                                 question.UserAnswers.Add(this.SummarySelectedAnswers[num]);
                             }
@@ -8542,7 +8542,7 @@
 
         private string scoreReport(int type)
         {
-            Question question = null;
+            Section question = null;
             XMLFileReader reader = new XMLFileReader(@"Tests\Direction\Scoring.xml");
             int num = 0;
             int num2 = 0;
@@ -8550,13 +8550,13 @@
             int num4 = 0;
             for (int i = 0; i < this.TestQuestions.Questions.Count; i++)
             {
-                question = (Question)this.TestQuestions.Questions[i];
-                if (question.UserAnswersStr.Equals(question.RightAnswersStr))
+                question = (Section)this.TestQuestions.Questions[i];
+                if (question.MyAnswersStr.Equals(question.CorrectAnswersStr))
                 {
                     num4 += question.Score;
                     num++;
                 }
-                else if (question.UserAnswersStr.Equals(""))
+                else if (question.MyAnswersStr.Equals(""))
                 {
                     num3++;
                 }
@@ -8774,7 +8774,7 @@
                         {
                             this.bn_readText.Visible = false;
                         }
-                        this.TestQuestions = new TPOQuestions(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
                     }
@@ -8871,17 +8871,17 @@
                     }
                     if (this.QuestionNO >= 1)
                     {
-                        Question question = (Question)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
                         switch (question.QuestionType)
                         {
-                            case QuestionType.TABEL:
+                            case QuestionType.TABLE:
                                 if (!this.ckb_ShowAnswer.Checked)
                                 {
                                     this.lbl_tableAnswer.Visible = false;
                                     break;
                                 }
                                 this.lbl_tableAnswer.Visible = true;
-                                this.lbl_tableAnswer.Text = question.RightAnswersStr;
+                                this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
                                 break;
 
                             case QuestionType.SORT:
@@ -8890,14 +8890,14 @@
                                     this.rtb_sumQuestion.Rtf = question.QuestionTitle;
                                     this.rtb_sumQuestion.Visible = true;
                                     num4 = 0;
-                                    while ((num4 < question.Answer.Length) && (num4 < this.CkbSummary.Length))
+                                    while ((num4 < question.MyAnswer.Length) && (num4 < this.CkbSummary.Length))
                                     {
                                         this.RtbSumAnswersToBeSelected[num4].Visible = true;
                                         this.CkbSummary[num4].Visible = true;
-                                        this.RtbSumAnswersToBeSelected[num4].Rtf = (question.Answer[num4]).ToString();
+                                        this.RtbSumAnswersToBeSelected[num4].Rtf = (question.MyAnswer[num4]).ToString();
                                         num4++;
                                     }
-                                    for (num4 = 0; num4 < question.RightAnswers.Length; num4++)
+                                    for (num4 = 0; num4 < question.CorrectAnswer.Length; num4++)
                                     {
                                         this.RtbSumSelected[num4].Visible = true;
                                     }
@@ -8906,11 +8906,11 @@
                                 break;
 
                             default:
-                                for (num4 = 0; (num4 < question.Answer.Length) && (num4 < this.CkbReading.Length); num4++)
+                                for (num4 = 0; (num4 < question.MyAnswer.Length) && (num4 < this.CkbReading.Length); num4++)
                                 {
                                     this.LRtbAnswers[num4].Visible = true;
                                     this.LCkbAnswers[num4].Visible = true;
-                                    this.LRtbAnswers[num4].Rtf = (question.Answer[num4]).ToString();
+                                    this.LRtbAnswers[num4].Rtf = (question.MyAnswer[num4]).ToString();
                                 }
                                 break;
                         }
@@ -9626,15 +9626,15 @@
             {
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
-                    Question question = (Question)this.TestQuestions.Questions[i];
+                    Section question = (Section)this.TestQuestions.Questions[i];
 
                     DbCommand cmd = conn.CreateCommand();
                     cmd.CommandText = "insert　into　Answers　values(@QuestionNo,@QuestionType,@YourAnswers,@StandardAnswers,@Score);";
 
                     cmd.Parameters.Add(new SQLiteParameter("QuestionNo", question.AnswerID.ToString()));
                     cmd.Parameters.Add(new SQLiteParameter("QuestionType", question.QuestionType.ToString()));
-                    cmd.Parameters.Add(new SQLiteParameter("YourAnswers", question.UserAnswersStr.ToString()));
-                    cmd.Parameters.Add(new SQLiteParameter("StandardAnswers", question.RightAnswersStr.ToString()));
+                    cmd.Parameters.Add(new SQLiteParameter("YourAnswers", question.MyAnswersStr.ToString()));
+                    cmd.Parameters.Add(new SQLiteParameter("StandardAnswers", question.CorrectAnswersStr.ToString()));
                     cmd.Parameters.Add(new SQLiteParameter("Score", question.Score.ToString()));
 
                     cmd.ExecuteNonQuery();
@@ -9660,8 +9660,8 @@
                 writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { "QuestionNo".PadRight(15), "QuestionType".PadRight(15), "YourAnswers".PadRight(15), "StandardAnswers".PadRight(15), "Score".PadRight(15) }));
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
-                    Question question = (Question)this.TestQuestions.Questions[i];
-                    writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { question.AnswerID.ToString().PadRight(15), question.QuestionType.ToString().PadRight(15), question.UserAnswersStr.ToString().PadRight(15), question.RightAnswersStr.ToString().PadRight(15), question.Score.ToString().PadRight(15) }));
+                    Section question = (Section)this.TestQuestions.Questions[i];
+                    writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { question.AnswerID.ToString().PadRight(15), question.QuestionType.ToString().PadRight(15), question.MyAnswersStr.ToString().PadRight(15), question.CorrectAnswersStr.ToString().PadRight(15), question.Score.ToString().PadRight(15) }));
                 }
             }
             catch (Exception exception)

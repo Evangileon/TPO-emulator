@@ -2,21 +2,25 @@
 {
     using System;
     using System.Collections;
+    using System.Collections.Generic;
     using System.Windows.Forms;
     using TPO.Common;
     using TPO.TPOFile;
     using TPO.Utility;
 
-    internal class TPOQuestions
+    internal class TPOPart : IEnumerable
     {
         public int QuestionCount = 0;
-        public ArrayList Questions = new ArrayList();
+        //public ArrayList Questions = new ArrayList();
+        public List<Section> Questions;
+
         private string rtfStr = "";
 
-        public TPOQuestions(string rtfStr, string mp3XML, string explanationStr)
+        public TPOPart(string rtfStr, string mp3XML, string explanationStr)
         {
             this.rtfStr = rtfStr;
             this.ExtractQuestions(mp3XML, explanationStr);
+            this.Questions = new List<Section>(3);
         }
 
         public void ExtractQuestions(string mp3XML, string explanationStr)
@@ -39,9 +43,9 @@
                 num += num2;
                 box2.Rtf = selectedRtf;
                 string[] strArray2 = box2.Text.Split(new char[] { '\n' });
-                Question question = new Question();
+                Section question = new Section();
                 question.AnswerID = num3 + 1;
-                question.Answer = new string[strArray2.Length - 3];
+                question.MyAnswer = new ArrayList(strArray2.Length - 3);
                 int num4 = 0;
                 box2.SelectionStart = num4;
                 box2.SelectionLength = strArray2[0].Length;
@@ -50,10 +54,10 @@
                 question.Score = Convert.ToInt16(strArray3[0]);
                 question.QuestionType = (QuestionType) (Convert.ToInt16(strArray3[1]) - 1);
                 int num5 = Convert.ToInt16(strArray3[2]);
-                question.RightAnswers = new int[num5];
+                question.CorrectAnswer = new ArrayList(num5);
                 for (int i = 0; i < num5; i++)
                 {
-                    question.RightAnswers[i] = Convert.ToInt16(strArray3[3 + i]);
+                    question.CorrectAnswer[i] = Convert.ToInt16(strArray3[3 + i]);
                 }
                 box2.SelectionStart = num4;
                 box2.SelectionLength = strArray2[1].Length;
@@ -63,14 +67,14 @@
                 {
                     box2.SelectionStart = num4;
                     box2.SelectionLength = strArray2[j].Length;
-                    question.Answer[j - 2] = box2.SelectedRtf;
+                    question.MyAnswer[j - 2] = box2.SelectedRtf;
                     num4 = (num4 + strArray2[j].Length) + 1;
                 }
-                if (question.QuestionType == QuestionType.TABEL)
+                if (question.QuestionType == QuestionType.TABLE)
                 {
-                    for (int k = 0; k < question.Answer.Length; k++)
+                    foreach (string my in question.MyAnswer)
                     {
-                        string str5 = question.Answer[k];
+                        string str5 = my;
                         if (str5.Contains("</C>"))
                         {
                             question.ColStrs.Add(str5.Replace("</C>", ""));
@@ -85,8 +89,9 @@
                 {
                     int num9 = num3 + 1;
                     XMLFileReader reader = new XMLFileReader(mp3XML);
-                    question.MP3Path = reader.GetAttr("//question[@NO=" + num9 + "]/@Content");
-                    question.RepeatMP3Path = reader.GetAttr("//question[@NO=" + num9 + "]/@Repeat");
+                    ListeningSection listen = (ListeningSection)question;
+                    listen.MP3Path = reader.GetAttr("//question[@NO=" + num9 + "]/@Content");
+                    listen.RepeatMP3Path = reader.GetAttr("//question[@NO=" + num9 + "]/@Repeat");
                 }
                 this.Questions.Add(question);
             }
@@ -101,12 +106,20 @@
                     num11 = strArray4[num3].Length + 4;
                     box.SelectionStart = num10;
                     box.SelectionLength = num11 - 4;
-                    ((Question) this.Questions[num3]).QuestionExplanation = box.SelectedRtf;
+                    ((Section) this.Questions[num3]).QuestionExplanation = box.SelectedRtf;
                     num10 += num11;
                 }
             }
             box.Dispose();
             box2.Dispose();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            foreach(Section q in Questions)
+            {
+                yield return q;
+            }
         }
     }
 }

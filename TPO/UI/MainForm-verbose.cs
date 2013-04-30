@@ -416,7 +416,7 @@ namespace TPO.UI
         private TrackBar tb_currentpos1;
         private TrackBar tb_reading;
         private int TestMode;
-        private TPOQuestions TestQuestions;
+        private TPOPart TestQuestions;
         private TestingSection TestSection;
         private DateTime TimeLimitation;
         private Timer Timer_Listening;
