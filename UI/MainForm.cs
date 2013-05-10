@@ -2733,7 +2733,7 @@
             // 
             // btn_continue
             // 
-            this.btn_continue.BackgroundImage = global::Properties.Resources._continue;
+            this.btn_continue.BackgroundImage = Properties.Resources._continue;
             this.btn_continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_continue.FlatAppearance.BorderSize = 0;
             this.btn_continue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2746,7 +2746,7 @@
             // 
             // btn_mainmenu
             // 
-            this.btn_mainmenu.BackgroundImage = global::Properties.Resources.mainmenu;
+            this.btn_mainmenu.BackgroundImage = Properties.Resources.mainmenu;
             this.btn_mainmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_mainmenu.FlatAppearance.BorderSize = 0;
             this.btn_mainmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2760,7 +2760,7 @@
             // 
             this.btn_nextQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_nextQuestion.BackColor = System.Drawing.Color.White;
-            this.btn_nextQuestion.BackgroundImage = global::Properties.Resources.next;
+            this.btn_nextQuestion.BackgroundImage = Properties.Resources.next;
             this.btn_nextQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_nextQuestion.FlatAppearance.BorderSize = 0;
             this.btn_nextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2775,7 +2775,7 @@
             // 
             // btn_preQuestion
             // 
-            this.btn_preQuestion.BackgroundImage = global::Properties.Resources.back;
+            this.btn_preQuestion.BackgroundImage = Properties.Resources.back;
             this.btn_preQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_preQuestion.FlatAppearance.BorderSize = 0;
             this.btn_preQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2788,7 +2788,7 @@
             // 
             // btn_quit
             // 
-            this.btn_quit.BackgroundImage = global::Properties.Resources.exit;
+            this.btn_quit.BackgroundImage = Properties.Resources.exit;
             this.btn_quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_quit.FlatAppearance.BorderSize = 0;
             this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2800,7 +2800,7 @@
             // 
             // btn_review
             // 
-            this.btn_review.BackgroundImage = global::Properties.Resources.review;
+            this.btn_review.BackgroundImage = Properties.Resources.review;
             this.btn_review.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_review.FlatAppearance.BorderSize = 0;
             this.btn_review.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2813,7 +2813,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::Properties.Resources.hidetimer;
+            this.button1.BackgroundImage = Properties.Resources.hidetimer;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2853,7 +2853,7 @@
             // 
             // Sound_icon
             // 
-            this.Sound_icon.BackgroundImage = global::Properties.Resources.volumn;
+            this.Sound_icon.BackgroundImage = Properties.Resources.volumn;
             this.Sound_icon.Location = new System.Drawing.Point(597, 36);
             this.Sound_icon.Size = new System.Drawing.Size(74, 36);
             this.Sound_icon.Visible = false;
@@ -4099,7 +4099,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Properties.Resources.ReadingDirection;
+            this.pictureBox2.Image = Properties.Resources.ReadingDirection;
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(30, 5);
             this.pictureBox2.Name = "pictureBox2";
@@ -5190,7 +5190,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Properties.Resources.ListeningDirection3;
+            this.pictureBox1.Image = Properties.Resources.ListeningDirection3;
             this.pictureBox1.Location = new System.Drawing.Point(28, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1126, 492);
@@ -6567,7 +6567,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Properties.Resources.SpeakingDirection4;
+            this.pictureBox3.Image = Properties.Resources.SpeakingDirection4;
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(3, 7);
             this.pictureBox3.Name = "pictureBox3";
@@ -6701,7 +6701,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = global::Properties.Resources.WritingDirection1;
+            this.pictureBox4.Image = Properties.Resources.WritingDirection1;
             this.pictureBox4.InitialImage = null;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
@@ -7326,7 +7326,7 @@
             // 
             // btn_speakinganswer1
             // 
-            this.btn_speakinganswer1.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer1.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer1.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7339,7 +7339,7 @@
             // 
             // btn_speakinganswer2
             // 
-            this.btn_speakinganswer2.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer2.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer2.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7352,7 +7352,7 @@
             // 
             // btn_speakinganswer3
             // 
-            this.btn_speakinganswer3.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer3.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer3.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7365,7 +7365,7 @@
             // 
             // btn_speakinganswer4
             // 
-            this.btn_speakinganswer4.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer4.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer4.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7378,7 +7378,7 @@
             // 
             // btn_speakinganswer5
             // 
-            this.btn_speakinganswer5.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer5.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer5.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7391,7 +7391,7 @@
             // 
             // btn_speakinganswer6
             // 
-            this.btn_speakinganswer6.BackgroundImage = global::Properties.Resources.horn;
+            this.btn_speakinganswer6.BackgroundImage = Properties.Resources.horn;
             this.btn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer6.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7449,7 +7449,7 @@
             // 
             // btn_ShowText
             // 
-            this.btn_ShowText.BackgroundImage = global::Properties.Resources.viewtext;
+            this.btn_ShowText.BackgroundImage = Properties.Resources.viewtext;
             this.btn_ShowText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ShowText.FlatAppearance.BorderSize = 0;
             this.btn_ShowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7570,7 +7570,7 @@
             // 
             // btn_pause
             // 
-            this.btn_pause.BackgroundImage = global::Properties.Resources.pause;
+            this.btn_pause.BackgroundImage = Properties.Resources.pause;
             this.btn_pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_pause.FlatAppearance.BorderSize = 0;
             this.btn_pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7585,7 +7585,7 @@
             // 
             // btn_QUITapp
             // 
-            this.btn_QUITapp.BackgroundImage = global::Properties.Resources.exit1;
+            this.btn_QUITapp.BackgroundImage = Properties.Resources.exit1;
             this.btn_QUITapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_QUITapp.FlatAppearance.BorderSize = 0;
             this.btn_QUITapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7614,7 +7614,7 @@
             // btn_showexplanation
             // 
             this.btn_showexplanation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showexplanation.BackgroundImage = global::Properties.Resources.EXPLANATION;
+            this.btn_showexplanation.BackgroundImage = Properties.Resources.EXPLANATION;
             this.btn_showexplanation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showexplanation.FlatAppearance.BorderSize = 0;
             this.btn_showexplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7630,7 +7630,7 @@
             // btn_showtranslation
             // 
             this.btn_showtranslation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showtranslation.BackgroundImage = global::Properties.Resources.TRANSLATION;
+            this.btn_showtranslation.BackgroundImage = Properties.Resources.TRANSLATION;
             this.btn_showtranslation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showtranslation.FlatAppearance.BorderSize = 0;
             this.btn_showtranslation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7653,7 +7653,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Properties.Resources.bg1;
+            this.BackgroundImage = Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(788, 611);
             this.Controls.Add(this.btn_pause);
             this.Controls.Add(this.btn_NexPage);
