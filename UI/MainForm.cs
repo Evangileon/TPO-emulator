@@ -24,7 +24,7 @@
     {
         #region default UI interface
         private ImageList bgimagelist;
-        private Button bn_readText;
+        private Button rbtn_readText;
         private Button btn_Answer01;
         private Button btn_Answer02;
         private Button btn_Answer03;
@@ -98,16 +98,16 @@
         private Button btn_speakinganswer4;
         private Button btn_speakinganswer5;
         private Button btn_speakinganswer6;
-        private Button btn_stopReading;
+        private Button rbtn_stopReading;
         private Button[] BtnLoadTest;
-        private CheckBox ckb_A;
-        private CheckBox ckb_B;
-        private CheckBox ckb_C;
-        private CheckBox ckb_D;
-        private CheckBox ckb_E;
-        private CheckBox ckb_F;
-        private CheckBox ckb_G;
-        private CheckBox ckb_H;
+        private CheckBox rckb_A;
+        private CheckBox rckb_B;
+        private CheckBox rckb_C;
+        private CheckBox rckb_D;
+        private CheckBox rckb_E;
+        private CheckBox rckb_F;
+        private CheckBox rckb_G;
+        private CheckBox rckb_H;
         private CheckBox ckb_ShowAnswer;
         private CheckBox ckb_sumAnswer1;
         private CheckBox ckb_sumAnswer10;
@@ -142,8 +142,8 @@
         private ExplanationUI EXP;
         public static string EXPLANATION = "";
         private Timer flash_timer;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel r_flowLayoutPanel;
+        private FlowLayoutPanel r_flowLayoutPanel2;
         private FlowLayoutPanel flp_passage;
         public bool HasClickedNext;
         private bool HasLoadMP3;
@@ -171,7 +171,7 @@
         private Label label8;
         private Label label9;
         private Label lbl_listeningScorereport;
-        private Label lbl_readingIndication;
+        private Label rlbl_readingIndication;
         private Label lbl_readingscorereport;
         private Label lbl_rightAnswered;
         private Label lbl_scoreReport;
@@ -247,7 +247,7 @@
         private static int LDIRECTION1 = 0;
         private static int LDIRECTION2 = 1;
         private static int LISTENING = 2;
-        private Label llbl_rightAnswer;
+        private Label rlbl_rightAnswer;
         private TPOPassage LMaterial;
         private static int LMATERIALS = 2;
         private TabPage lMaterials1;
@@ -311,7 +311,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
-        private PictureBox pictureBox2;
+        private PictureBox r_pictureBox;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
@@ -341,16 +341,16 @@
         private TabPage rtab_NormalQuestion;
         private TabPage rtab_Review;
         private TabPage rtab_SumQuestion;
-        private RichTextBox rtb_answerA;
-        private RichTextBox rtb_answerB;
-        private RichTextBox rtb_answerC;
-        private RichTextBox rtb_answerD;
-        private RichTextBox rtb_answerE;
-        private RichTextBox rtb_answerF;
-        private RichTextBox rtb_answerG;
-        private RichTextBox rtb_answerH;
+        private RichTextBox rrtb_answerA;
+        private RichTextBox rrtb_answerB;
+        private RichTextBox rrtb_answerC;
+        private RichTextBox rrtb_answerD;
+        private RichTextBox rrtb_answerE;
+        private RichTextBox rrtb_answerF;
+        private RichTextBox rrtb_answerG;
+        private RichTextBox rrtb_answerH;
         private RichTextBox rtb_Passage;
-        private RichTextBox rtb_question;
+        private RichTextBox rrtb_question;
         private RichTextBox rtb_sumAnswer1;
         private RichTextBox rtb_sumAnswer10;
         private RichTextBox rtb_sumAnswer2;
@@ -375,10 +375,10 @@
         private RichTextBox[] RtbReadingAnswers;
         private RichTextBox[] RtbSumAnswersToBeSelected;
         private RichTextBox[] RtbSumSelected;
-        private TabPage sDirection;
+        private TabPage stab_Direction;
         private static int SDIRECTION = 0;
         private bool ShowPassage;
-        private TabPage sNormalQuestions;
+        private TabPage stab_NormalQuestions;
         private ProgressBar spb;
         private static int SPEAKING = 3;
         private string[] SpeakingQuestions;
@@ -393,13 +393,13 @@
         private int[] SummarySelectedAnswers;
         private TabPage tab_CoverForm;
         private TabPage tab_Listening;
-        private TabPage tab_listeninganswers;
+        private TabPage atab_listeninganswers;
         private TabPage tab_Reading;
-        private TabPage tab_readinganswer;
+        private TabPage atab_readinganswer;
         private TabPage tab_Speaking;
-        private TabPage tab_speakinganswers;
+        private TabPage atab_speakinganswers;
         private TabPage tab_Writing;
-        private TabPage tab_writinganswers;
+        private TabPage atab_writinganswers;
         private TabControl tabf_answer;
         private TabControl tabf_Listening;
         private TabControl tabf_Reading;
@@ -413,7 +413,7 @@
         private TabPage tab_Answers;
         private TrackBar tb_currentpos;
         private TrackBar tb_currentpos1;
-        private TrackBar tb_reading;
+        private TrackBar rtb_reading;
         private int TestMode;
         private TPOTest TestQuestions;
         private TestingSection TestSection;
@@ -421,7 +421,7 @@
         private Timer Timer_Listening;
         private Timer Timer_reading;
         private Timer Timer_Speaking;
-        private TableLayoutPanel tlp_answers;
+        private TableLayoutPanel rtlp_answers;
         private TableLayoutPanel tlp_sumAnswers;
         private TableLayoutPanel tlp_Summary;
         private int TotalQuestions;
@@ -437,14 +437,14 @@
         private Button wbtn_redo;
         private Button wbtn_undo;
         private Button wbtn_wordcount;
-        private TabPage wDirection;
+        private TabPage wtab_Direction;
         private static int WDIRECTION = 0;
         private static int WINDEPENDENT = 3;
         private static int WINTERGRATED = 1;
         private Label wlbl_wordcount;
         private Panel wpanel;
         private ProgressBar wpb_speak;
-        private TabPage wReading;
+        private TabPage wtab_Reading;
         private static int WRITING = 4;
         private string[] WritingQuestions;
         private int WrongAnsweredQuestions;
@@ -452,11 +452,11 @@
         private RichTextBox wrtb_writing1;
         private RichTextBox wrtb_writing2;
         private RichTextBox wrtbQuestion2;
-        private TabPage wSpeakingPassage;
+        private TabPage wtab_SpeakingPassage;
         private static int WSPEECH = 2;
         private TrackBar wtb_speak;
         private BindingSource bindingSource_Section;
-        private TabPage wWriting2;
+        private TabPage wtab_Writing2;
         #endregion
         private DataGridView dgv_readingSelect;
         private DataGridView dgv_listeningSelect;
@@ -532,18 +532,21 @@
             this.EXP = new ExplanationUI();
             this.TRANSUI = new TranslationUI();
             this.CurrentReadingPassage = 1;
-            this.InitializeComponent();
+
+            /// 主窗体控件初始化
+            InitializeComponent();
+
             this.PreFormHeight = base.Height;
             this.PreFormWidth = base.Width;
             base.WindowState = FormWindowState.Maximized;
-            this.CkbReading[0] = this.ckb_A;
-            this.CkbReading[1] = this.ckb_B;
-            this.CkbReading[2] = this.ckb_C;
-            this.CkbReading[3] = this.ckb_D;
-            this.CkbReading[4] = this.ckb_E;
-            this.CkbReading[5] = this.ckb_F;
-            this.CkbReading[6] = this.ckb_G;
-            this.CkbReading[7] = this.ckb_H;
+            this.CkbReading[0] = this.rckb_A;
+            this.CkbReading[1] = this.rckb_B;
+            this.CkbReading[2] = this.rckb_C;
+            this.CkbReading[3] = this.rckb_D;
+            this.CkbReading[4] = this.rckb_E;
+            this.CkbReading[5] = this.rckb_F;
+            this.CkbReading[6] = this.rckb_G;
+            this.CkbReading[7] = this.rckb_H;
             this.LCkbAnswers[0] = this.lckb_A;
             this.LCkbAnswers[1] = this.lckb_B;
             this.LCkbAnswers[2] = this.lckb_C;
@@ -552,14 +555,14 @@
             this.LCkbAnswers[5] = this.lckb_F;
             this.LCkbAnswers[6] = this.lckb_G;
             this.LCkbAnswers[7] = this.lckb_H;
-            this.RtbReadingAnswers[0] = this.rtb_answerA;
-            this.RtbReadingAnswers[1] = this.rtb_answerB;
-            this.RtbReadingAnswers[2] = this.rtb_answerC;
-            this.RtbReadingAnswers[3] = this.rtb_answerD;
-            this.RtbReadingAnswers[4] = this.rtb_answerE;
-            this.RtbReadingAnswers[5] = this.rtb_answerF;
-            this.RtbReadingAnswers[6] = this.rtb_answerG;
-            this.RtbReadingAnswers[7] = this.rtb_answerH;
+            this.RtbReadingAnswers[0] = this.rrtb_answerA;
+            this.RtbReadingAnswers[1] = this.rrtb_answerB;
+            this.RtbReadingAnswers[2] = this.rrtb_answerC;
+            this.RtbReadingAnswers[3] = this.rrtb_answerD;
+            this.RtbReadingAnswers[4] = this.rrtb_answerE;
+            this.RtbReadingAnswers[5] = this.rrtb_answerF;
+            this.RtbReadingAnswers[6] = this.rrtb_answerG;
+            this.RtbReadingAnswers[7] = this.rrtb_answerH;
             this.LRtbAnswers[0] = this.lrtb_answerA;
             this.LRtbAnswers[1] = this.lrtb_answerB;
             this.LRtbAnswers[2] = this.lrtb_answerC;
@@ -682,7 +685,7 @@
                 this.RtbSumSelected[num].TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
                 this.CkbSummarySelected[num].CheckedChanged += new EventHandler(this.CkbSummarySelected_CheckedChanged);
             }
-            this.rtb_question.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
+            this.rrtb_question.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
             this.rtb_sumQuestion.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
             this.BtnLoadTest[1] = this.btn_LoadReading01;
             this.BtnLoadTest[2] = this.btn_LoadReading02;
@@ -799,10 +802,10 @@
                     this.MP3Player.FileName = path;
                     this.MP3Player.play();
                     this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                    this.bn_readText.Enabled = false;
-                    this.btn_stopReading.Visible = true;
-                    this.tb_reading.Visible = true;
-                    this.tb_reading.Maximum = this.MP3Player.Duration;
+                    this.rbtn_readText.Enabled = false;
+                    this.rbtn_stopReading.Visible = true;
+                    this.rtb_reading.Visible = true;
+                    this.rtb_reading.Maximum = this.MP3Player.Duration;
                     this.Timer_reading.Start();
                 }
             }
@@ -1215,10 +1218,10 @@
                         this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (!File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") || !ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
-                            this.bn_readText.Visible = false;
+                            this.rbtn_readText.Visible = false;
                         }
-                        this.bn_readText.Visible = true;
-                        this.bn_readText.Enabled = true;
+                        this.rbtn_readText.Visible = true;
+                        this.rbtn_readText.Enabled = true;
                         this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5)));
                         //this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
@@ -1352,7 +1355,7 @@
                 this.PartNO = 0;
                 this.PassageNO = 0;
                 this.QuestionNO = 0;
-                this.rtb_question.Text = "";
+                this.rrtb_question.Text = "";
                 this.rb_TestMode.Visible = true;
                 this.rb_PracticeMode.Visible = true;
                 this.btn_NexPage.Visible = true;
@@ -1808,9 +1811,9 @@
         {
             this.MP3Player.StopT();
             this.MP3Player = new MP3MCI();
-            this.bn_readText.Enabled = true;
-            this.btn_stopReading.Visible = false;
-            this.tb_reading.Visible = false;
+            this.rbtn_readText.Enabled = true;
+            this.rbtn_stopReading.Visible = false;
+            this.rtb_reading.Visible = false;
             this.Timer_reading.Stop();
         }
 
@@ -2040,14 +2043,14 @@
                             {
                                 break;
                             }
-                            this.llbl_rightAnswer.Text = question.CorrectAnswersStr;
-                            this.llbl_rightAnswer.Visible = true;
+                            this.rlbl_rightAnswer.Text = question.CorrectAnswersStr;
+                            this.rlbl_rightAnswer.Visible = true;
                             return;
 
                         default:
                             goto Label_0242;
                     }
-                    this.llbl_rightAnswer.Visible = false;
+                    this.rlbl_rightAnswer.Visible = false;
                 }
                 return;
             Label_0233:
@@ -2387,35 +2390,35 @@
             this.tab_Reading = new System.Windows.Forms.TabPage();
             this.tabf_Reading = new System.Windows.Forms.TabControl();
             this.rtab_Direction = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.r_pictureBox = new System.Windows.Forms.PictureBox();
             this.rtab_NormalQuestion = new System.Windows.Forms.TabPage();
-            this.tb_reading = new System.Windows.Forms.TrackBar();
+            this.rtb_reading = new System.Windows.Forms.TrackBar();
             this.rtb_Passage = new System.Windows.Forms.RichTextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.rtb_question = new System.Windows.Forms.RichTextBox();
-            this.tlp_answers = new System.Windows.Forms.TableLayoutPanel();
-            this.rtb_answerE = new System.Windows.Forms.RichTextBox();
-            this.rtb_answerD = new System.Windows.Forms.RichTextBox();
-            this.rtb_answerC = new System.Windows.Forms.RichTextBox();
-            this.rtb_answerB = new System.Windows.Forms.RichTextBox();
-            this.ckb_A = new System.Windows.Forms.CheckBox();
-            this.ckb_B = new System.Windows.Forms.CheckBox();
-            this.ckb_C = new System.Windows.Forms.CheckBox();
-            this.ckb_D = new System.Windows.Forms.CheckBox();
-            this.ckb_E = new System.Windows.Forms.CheckBox();
-            this.rtb_answerA = new System.Windows.Forms.RichTextBox();
-            this.ckb_F = new System.Windows.Forms.CheckBox();
-            this.ckb_G = new System.Windows.Forms.CheckBox();
-            this.ckb_H = new System.Windows.Forms.CheckBox();
-            this.rtb_answerF = new System.Windows.Forms.RichTextBox();
-            this.rtb_answerG = new System.Windows.Forms.RichTextBox();
-            this.rtb_answerH = new System.Windows.Forms.RichTextBox();
-            this.btn_stopReading = new System.Windows.Forms.Button();
-            this.bn_readText = new System.Windows.Forms.Button();
-            this.lbl_readingIndication = new System.Windows.Forms.Label();
+            this.r_flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.rrtb_question = new System.Windows.Forms.RichTextBox();
+            this.rtlp_answers = new System.Windows.Forms.TableLayoutPanel();
+            this.rrtb_answerE = new System.Windows.Forms.RichTextBox();
+            this.rrtb_answerD = new System.Windows.Forms.RichTextBox();
+            this.rrtb_answerC = new System.Windows.Forms.RichTextBox();
+            this.rrtb_answerB = new System.Windows.Forms.RichTextBox();
+            this.rckb_A = new System.Windows.Forms.CheckBox();
+            this.rckb_B = new System.Windows.Forms.CheckBox();
+            this.rckb_C = new System.Windows.Forms.CheckBox();
+            this.rckb_D = new System.Windows.Forms.CheckBox();
+            this.rckb_E = new System.Windows.Forms.CheckBox();
+            this.rrtb_answerA = new System.Windows.Forms.RichTextBox();
+            this.rckb_F = new System.Windows.Forms.CheckBox();
+            this.rckb_G = new System.Windows.Forms.CheckBox();
+            this.rckb_H = new System.Windows.Forms.CheckBox();
+            this.rrtb_answerF = new System.Windows.Forms.RichTextBox();
+            this.rrtb_answerG = new System.Windows.Forms.RichTextBox();
+            this.rrtb_answerH = new System.Windows.Forms.RichTextBox();
+            this.rbtn_stopReading = new System.Windows.Forms.Button();
+            this.rbtn_readText = new System.Windows.Forms.Button();
+            this.rlbl_readingIndication = new System.Windows.Forms.Label();
             this.rtab_SumQuestion = new System.Windows.Forms.TabPage();
-            this.llbl_rightAnswer = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rlbl_rightAnswer = new System.Windows.Forms.Label();
+            this.r_flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.rtb_sumPassage = new System.Windows.Forms.RichTextBox();
             this.rtb_sumQuestion = new System.Windows.Forms.RichTextBox();
             this.tlp_sumAnswers = new System.Windows.Forms.TableLayoutPanel();
@@ -2561,9 +2564,9 @@
             this.lrtbTableCol4 = new System.Windows.Forms.RichTextBox();
             this.tab_Speaking = new System.Windows.Forms.TabPage();
             this.tabf_speaking = new System.Windows.Forms.TabControl();
-            this.sDirection = new System.Windows.Forms.TabPage();
+            this.stab_Direction = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.sNormalQuestions = new System.Windows.Forms.TabPage();
+            this.stab_NormalQuestions = new System.Windows.Forms.TabPage();
             this.spb = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.srtb_timer = new System.Windows.Forms.Label();
@@ -2572,16 +2575,16 @@
             this.pb_speakingScene = new System.Windows.Forms.PictureBox();
             this.tab_Writing = new System.Windows.Forms.TabPage();
             this.tabf_writing = new System.Windows.Forms.TabControl();
-            this.wDirection = new System.Windows.Forms.TabPage();
+            this.wtab_Direction = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.wReading = new System.Windows.Forms.TabPage();
+            this.wtab_Reading = new System.Windows.Forms.TabPage();
             this.wrtb_writing1 = new System.Windows.Forms.RichTextBox();
             this.wrtb_reading = new System.Windows.Forms.RichTextBox();
-            this.wSpeakingPassage = new System.Windows.Forms.TabPage();
+            this.wtab_SpeakingPassage = new System.Windows.Forms.TabPage();
             this.wpb_speak = new System.Windows.Forms.ProgressBar();
             this.wtb_speak = new System.Windows.Forms.TrackBar();
             this.pb_writingScene = new System.Windows.Forms.PictureBox();
-            this.wWriting2 = new System.Windows.Forms.TabPage();
+            this.wtab_Writing2 = new System.Windows.Forms.TabPage();
             this.lbl_writeDirection = new System.Windows.Forms.Label();
             this.wrtb_writing2 = new System.Windows.Forms.RichTextBox();
             this.wrtbQuestion2 = new System.Windows.Forms.RichTextBox();
@@ -2594,7 +2597,7 @@
             this.wbtn_cut = new System.Windows.Forms.Button();
             this.tab_Answers = new System.Windows.Forms.TabPage();
             this.tabf_answer = new System.Windows.Forms.TabControl();
-            this.tab_readinganswer = new System.Windows.Forms.TabPage();
+            this.atab_readinganswer = new System.Windows.Forms.TabPage();
             this.dgv_readingSelect = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_readingscorereport = new System.Windows.Forms.Label();
@@ -2605,7 +2608,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dgv_readinganswers = new System.Windows.Forms.DataGridView();
-            this.tab_listeninganswers = new System.Windows.Forms.TabPage();
+            this.atab_listeninganswers = new System.Windows.Forms.TabPage();
             this.dgv_listeningSelect = new System.Windows.Forms.DataGridView();
             this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
@@ -2618,7 +2621,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.tab_speakinganswers = new System.Windows.Forms.TabPage();
+            this.atab_speakinganswers = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -2632,7 +2635,7 @@
             this.btn_speakinganswer4 = new System.Windows.Forms.Button();
             this.btn_speakinganswer5 = new System.Windows.Forms.Button();
             this.btn_speakinganswer6 = new System.Windows.Forms.Button();
-            this.tab_writinganswers = new System.Windows.Forms.TabPage();
+            this.atab_writinganswers = new System.Windows.Forms.TabPage();
             this.rtb_writinganswers = new System.Windows.Forms.RichTextBox();
             this.rtb_writing2 = new System.Windows.Forms.RadioButton();
             this.rtb_writing1 = new System.Windows.Forms.RadioButton();
@@ -2660,13 +2663,13 @@
             this.tab_Reading.SuspendLayout();
             this.tabf_Reading.SuspendLayout();
             this.rtab_Direction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox)).BeginInit();
             this.rtab_NormalQuestion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_reading)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.tlp_answers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rtb_reading)).BeginInit();
+            this.r_flowLayoutPanel.SuspendLayout();
+            this.rtlp_answers.SuspendLayout();
             this.rtab_SumQuestion.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.r_flowLayoutPanel2.SuspendLayout();
             this.tlp_sumAnswers.SuspendLayout();
             this.tlp_Summary.SuspendLayout();
             this.rtab_Review.SuspendLayout();
@@ -2679,6 +2682,7 @@
             this.ltab_Direction1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ltab_Materials.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.l_splitContainer)).BeginInit();
             this.l_splitContainer.Panel1.SuspendLayout();
             this.l_splitContainer.Panel2.SuspendLayout();
             this.l_splitContainer.SuspendLayout();
@@ -2695,30 +2699,30 @@
             this.ltlp_table.SuspendLayout();
             this.tab_Speaking.SuspendLayout();
             this.tabf_speaking.SuspendLayout();
-            this.sDirection.SuspendLayout();
+            this.stab_Direction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.sNormalQuestions.SuspendLayout();
+            this.stab_NormalQuestions.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).BeginInit();
             this.tab_Writing.SuspendLayout();
             this.tabf_writing.SuspendLayout();
-            this.wDirection.SuspendLayout();
+            this.wtab_Direction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.wReading.SuspendLayout();
-            this.wSpeakingPassage.SuspendLayout();
+            this.wtab_Reading.SuspendLayout();
+            this.wtab_SpeakingPassage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).BeginInit();
-            this.wWriting2.SuspendLayout();
+            this.wtab_Writing2.SuspendLayout();
             this.wpanel.SuspendLayout();
             this.tab_Answers.SuspendLayout();
             this.tabf_answer.SuspendLayout();
-            this.tab_readinganswer.SuspendLayout();
+            this.atab_readinganswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readingSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).BeginInit();
-            this.tab_listeninganswers.SuspendLayout();
+            this.atab_listeninganswers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).BeginInit();
@@ -2726,14 +2730,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.tab_speakinganswers.SuspendLayout();
+            this.atab_speakinganswers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tab_writinganswers.SuspendLayout();
+            this.atab_writinganswers.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_continue
             // 
-            this.btn_continue.BackgroundImage = Properties.Resources._continue;
+            this.btn_continue.BackgroundImage = global::TPO.Properties.Resources._continue;
             this.btn_continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_continue.FlatAppearance.BorderSize = 0;
             this.btn_continue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2746,7 +2750,7 @@
             // 
             // btn_mainmenu
             // 
-            this.btn_mainmenu.BackgroundImage = Properties.Resources.mainmenu;
+            this.btn_mainmenu.BackgroundImage = global::TPO.Properties.Resources.mainmenu;
             this.btn_mainmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_mainmenu.FlatAppearance.BorderSize = 0;
             this.btn_mainmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2760,7 +2764,7 @@
             // 
             this.btn_nextQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_nextQuestion.BackColor = System.Drawing.Color.White;
-            this.btn_nextQuestion.BackgroundImage = Properties.Resources.next;
+            this.btn_nextQuestion.BackgroundImage = global::TPO.Properties.Resources.next;
             this.btn_nextQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_nextQuestion.FlatAppearance.BorderSize = 0;
             this.btn_nextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2775,7 +2779,7 @@
             // 
             // btn_preQuestion
             // 
-            this.btn_preQuestion.BackgroundImage = Properties.Resources.back;
+            this.btn_preQuestion.BackgroundImage = global::TPO.Properties.Resources.back;
             this.btn_preQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_preQuestion.FlatAppearance.BorderSize = 0;
             this.btn_preQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2788,7 +2792,7 @@
             // 
             // btn_quit
             // 
-            this.btn_quit.BackgroundImage = Properties.Resources.exit;
+            this.btn_quit.BackgroundImage = global::TPO.Properties.Resources.exit;
             this.btn_quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_quit.FlatAppearance.BorderSize = 0;
             this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2800,7 +2804,7 @@
             // 
             // btn_review
             // 
-            this.btn_review.BackgroundImage = Properties.Resources.review;
+            this.btn_review.BackgroundImage = global::TPO.Properties.Resources.review;
             this.btn_review.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_review.FlatAppearance.BorderSize = 0;
             this.btn_review.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2813,7 +2817,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = Properties.Resources.hidetimer;
+            this.button1.BackgroundImage = global::TPO.Properties.Resources.hidetimer;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2853,7 +2857,7 @@
             // 
             // Sound_icon
             // 
-            this.Sound_icon.BackgroundImage = Properties.Resources.volumn;
+            this.Sound_icon.BackgroundImage = global::TPO.Properties.Resources.volumn;
             this.Sound_icon.Location = new System.Drawing.Point(597, 36);
             this.Sound_icon.Size = new System.Drawing.Size(74, 36);
             this.Sound_icon.Visible = false;
@@ -4087,35 +4091,35 @@
             // rtab_Direction
             // 
             this.rtab_Direction.BackColor = System.Drawing.Color.White;
-            this.rtab_Direction.Controls.Add(this.pictureBox2);
+            this.rtab_Direction.Controls.Add(this.r_pictureBox);
             this.rtab_Direction.Location = new System.Drawing.Point(4, 25);
             this.rtab_Direction.Name = "rtab_Direction";
             this.rtab_Direction.Size = new System.Drawing.Size(763, 481);
             this.rtab_Direction.TabIndex = 3;
             this.rtab_Direction.Text = "rDirection";
             // 
-            // pictureBox2
+            // r_pictureBox
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.r_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = Properties.Resources.ReadingDirection;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1093, 506);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.r_pictureBox.Image = TPO.Properties.Resources.ReadingDirection;
+            this.r_pictureBox.InitialImage = null;
+            this.r_pictureBox.Location = new System.Drawing.Point(30, 5);
+            this.r_pictureBox.Name = "r_pictureBox";
+            this.r_pictureBox.Size = new System.Drawing.Size(1093, 506);
+            this.r_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.r_pictureBox.TabIndex = 17;
+            this.r_pictureBox.TabStop = false;
             // 
             // rtab_NormalQuestion
             // 
-            this.rtab_NormalQuestion.Controls.Add(this.tb_reading);
+            this.rtab_NormalQuestion.Controls.Add(this.rtb_reading);
             this.rtab_NormalQuestion.Controls.Add(this.rtb_Passage);
-            this.rtab_NormalQuestion.Controls.Add(this.flowLayoutPanel1);
-            this.rtab_NormalQuestion.Controls.Add(this.btn_stopReading);
-            this.rtab_NormalQuestion.Controls.Add(this.bn_readText);
-            this.rtab_NormalQuestion.Controls.Add(this.lbl_readingIndication);
+            this.rtab_NormalQuestion.Controls.Add(this.r_flowLayoutPanel);
+            this.rtab_NormalQuestion.Controls.Add(this.rbtn_stopReading);
+            this.rtab_NormalQuestion.Controls.Add(this.rbtn_readText);
+            this.rtab_NormalQuestion.Controls.Add(this.rlbl_readingIndication);
             this.rtab_NormalQuestion.Location = new System.Drawing.Point(4, 25);
             this.rtab_NormalQuestion.Name = "rtab_NormalQuestion";
             this.rtab_NormalQuestion.Padding = new System.Windows.Forms.Padding(3);
@@ -4124,16 +4128,16 @@
             this.rtab_NormalQuestion.Text = "rNormalQuestions";
             this.rtab_NormalQuestion.UseVisualStyleBackColor = true;
             // 
-            // tb_reading
+            // rtb_reading
             // 
-            this.tb_reading.AutoSize = false;
-            this.tb_reading.Location = new System.Drawing.Point(426, 0);
-            this.tb_reading.Name = "tb_reading";
-            this.tb_reading.Size = new System.Drawing.Size(282, 19);
-            this.tb_reading.TabIndex = 25;
-            this.tb_reading.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tb_reading.Visible = false;
-            this.tb_reading.Scroll += new System.EventHandler(this.tb_reading_Scroll);
+            this.rtb_reading.AutoSize = false;
+            this.rtb_reading.Location = new System.Drawing.Point(426, 0);
+            this.rtb_reading.Name = "tb_reading";
+            this.rtb_reading.Size = new System.Drawing.Size(282, 19);
+            this.rtb_reading.TabIndex = 25;
+            this.rtb_reading.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rtb_reading.Visible = false;
+            this.rtb_reading.Scroll += new System.EventHandler(this.tb_reading_Scroll);
             // 
             // rtb_Passage
             // 
@@ -4151,353 +4155,353 @@
             this.rtb_Passage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseClick);
             this.rtb_Passage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseMove);
             // 
-            // flowLayoutPanel1
+            // r_flowLayoutPanel
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanel1.Controls.Add(this.rtb_question);
-            this.flowLayoutPanel1.Controls.Add(this.tlp_answers);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 17);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 490);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.r_flowLayoutPanel.AutoSize = true;
+            this.r_flowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.r_flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.r_flowLayoutPanel.Controls.Add(this.rrtb_question);
+            this.r_flowLayoutPanel.Controls.Add(this.rtlp_answers);
+            this.r_flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.r_flowLayoutPanel.Location = new System.Drawing.Point(4, 17);
+            this.r_flowLayoutPanel.Name = "r_flowLayoutPanel";
+            this.r_flowLayoutPanel.Size = new System.Drawing.Size(346, 490);
+            this.r_flowLayoutPanel.TabIndex = 3;
             // 
-            // rtb_question
+            // rrtb_question
             // 
-            this.rtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_question.Location = new System.Drawing.Point(3, 3);
-            this.rtb_question.Name = "rtb_question";
-            this.rtb_question.ReadOnly = true;
-            this.rtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtb_question.Size = new System.Drawing.Size(331, 43);
-            this.rtb_question.TabIndex = 0;
-            this.rtb_question.TabStop = false;
-            this.rtb_question.Text = "";
+            this.rrtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_question.Location = new System.Drawing.Point(3, 3);
+            this.rrtb_question.Name = "rrtb_question";
+            this.rrtb_question.ReadOnly = true;
+            this.rrtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.rrtb_question.Size = new System.Drawing.Size(331, 43);
+            this.rrtb_question.TabIndex = 0;
+            this.rrtb_question.TabStop = false;
+            this.rrtb_question.Text = "";
             // 
-            // tlp_answers
+            // rtlp_answers
             // 
-            this.tlp_answers.AutoSize = true;
-            this.tlp_answers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlp_answers.ColumnCount = 2;
-            this.tlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp_answers.Controls.Add(this.rtb_answerE, 1, 4);
-            this.tlp_answers.Controls.Add(this.rtb_answerD, 1, 3);
-            this.tlp_answers.Controls.Add(this.rtb_answerC, 1, 2);
-            this.tlp_answers.Controls.Add(this.rtb_answerB, 1, 1);
-            this.tlp_answers.Controls.Add(this.ckb_A, 0, 0);
-            this.tlp_answers.Controls.Add(this.ckb_B, 0, 1);
-            this.tlp_answers.Controls.Add(this.ckb_C, 0, 2);
-            this.tlp_answers.Controls.Add(this.ckb_D, 0, 3);
-            this.tlp_answers.Controls.Add(this.ckb_E, 0, 4);
-            this.tlp_answers.Controls.Add(this.rtb_answerA, 1, 0);
-            this.tlp_answers.Controls.Add(this.ckb_F, 0, 5);
-            this.tlp_answers.Controls.Add(this.ckb_G, 0, 6);
-            this.tlp_answers.Controls.Add(this.ckb_H, 0, 7);
-            this.tlp_answers.Controls.Add(this.rtb_answerF, 1, 5);
-            this.tlp_answers.Controls.Add(this.rtb_answerG, 1, 6);
-            this.tlp_answers.Controls.Add(this.rtb_answerH, 1, 7);
-            this.tlp_answers.Location = new System.Drawing.Point(3, 52);
-            this.tlp_answers.Name = "tlp_answers";
-            this.tlp_answers.RowCount = 8;
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_answers.Size = new System.Drawing.Size(336, 368);
-            this.tlp_answers.TabIndex = 1;
+            this.rtlp_answers.AutoSize = true;
+            this.rtlp_answers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rtlp_answers.ColumnCount = 2;
+            this.rtlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.rtlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.rtlp_answers.Controls.Add(this.rrtb_answerE, 1, 4);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerD, 1, 3);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerC, 1, 2);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerB, 1, 1);
+            this.rtlp_answers.Controls.Add(this.rckb_A, 0, 0);
+            this.rtlp_answers.Controls.Add(this.rckb_B, 0, 1);
+            this.rtlp_answers.Controls.Add(this.rckb_C, 0, 2);
+            this.rtlp_answers.Controls.Add(this.rckb_D, 0, 3);
+            this.rtlp_answers.Controls.Add(this.rckb_E, 0, 4);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerA, 1, 0);
+            this.rtlp_answers.Controls.Add(this.rckb_F, 0, 5);
+            this.rtlp_answers.Controls.Add(this.rckb_G, 0, 6);
+            this.rtlp_answers.Controls.Add(this.rckb_H, 0, 7);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerF, 1, 5);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerG, 1, 6);
+            this.rtlp_answers.Controls.Add(this.rrtb_answerH, 1, 7);
+            this.rtlp_answers.Location = new System.Drawing.Point(3, 52);
+            this.rtlp_answers.Name = "rtlp_answers";
+            this.rtlp_answers.RowCount = 8;
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.rtlp_answers.Size = new System.Drawing.Size(336, 368);
+            this.rtlp_answers.TabIndex = 1;
             // 
-            // rtb_answerE
+            // rrtb_answerE
             // 
-            this.rtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerE.Location = new System.Drawing.Point(43, 187);
-            this.rtb_answerE.Name = "rtb_answerE";
-            this.rtb_answerE.ReadOnly = true;
-            this.rtb_answerE.ShortcutsEnabled = false;
-            this.rtb_answerE.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerE.TabIndex = 9;
-            this.rtb_answerE.TabStop = false;
-            this.rtb_answerE.Text = "";
-            this.rtb_answerE.Visible = false;
+            this.rrtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerE.Location = new System.Drawing.Point(43, 187);
+            this.rrtb_answerE.Name = "rrtb_answerE";
+            this.rrtb_answerE.ReadOnly = true;
+            this.rrtb_answerE.ShortcutsEnabled = false;
+            this.rrtb_answerE.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerE.TabIndex = 9;
+            this.rrtb_answerE.TabStop = false;
+            this.rrtb_answerE.Text = "";
+            this.rrtb_answerE.Visible = false;
             // 
-            // rtb_answerD
+            // rrtb_answerD
             // 
-            this.rtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerD.Location = new System.Drawing.Point(43, 141);
-            this.rtb_answerD.Name = "rtb_answerD";
-            this.rtb_answerD.ReadOnly = true;
-            this.rtb_answerD.ShortcutsEnabled = false;
-            this.rtb_answerD.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerD.TabIndex = 8;
-            this.rtb_answerD.TabStop = false;
-            this.rtb_answerD.Text = "";
-            this.rtb_answerD.Visible = false;
+            this.rrtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerD.Location = new System.Drawing.Point(43, 141);
+            this.rrtb_answerD.Name = "rrtb_answerD";
+            this.rrtb_answerD.ReadOnly = true;
+            this.rrtb_answerD.ShortcutsEnabled = false;
+            this.rrtb_answerD.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerD.TabIndex = 8;
+            this.rrtb_answerD.TabStop = false;
+            this.rrtb_answerD.Text = "";
+            this.rrtb_answerD.Visible = false;
             // 
-            // rtb_answerC
+            // rrtb_answerC
             // 
-            this.rtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerC.Location = new System.Drawing.Point(43, 95);
-            this.rtb_answerC.Name = "rtb_answerC";
-            this.rtb_answerC.ReadOnly = true;
-            this.rtb_answerC.ShortcutsEnabled = false;
-            this.rtb_answerC.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerC.TabIndex = 7;
-            this.rtb_answerC.TabStop = false;
-            this.rtb_answerC.Text = "";
-            this.rtb_answerC.Visible = false;
+            this.rrtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerC.Location = new System.Drawing.Point(43, 95);
+            this.rrtb_answerC.Name = "rrtb_answerC";
+            this.rrtb_answerC.ReadOnly = true;
+            this.rrtb_answerC.ShortcutsEnabled = false;
+            this.rrtb_answerC.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerC.TabIndex = 7;
+            this.rrtb_answerC.TabStop = false;
+            this.rrtb_answerC.Text = "";
+            this.rrtb_answerC.Visible = false;
             // 
-            // rtb_answerB
+            // rrtb_answerB
             // 
-            this.rtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerB.Location = new System.Drawing.Point(43, 49);
-            this.rtb_answerB.Name = "rtb_answerB";
-            this.rtb_answerB.ReadOnly = true;
-            this.rtb_answerB.ShortcutsEnabled = false;
-            this.rtb_answerB.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerB.TabIndex = 6;
-            this.rtb_answerB.TabStop = false;
-            this.rtb_answerB.Text = "";
-            this.rtb_answerB.Visible = false;
+            this.rrtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerB.Location = new System.Drawing.Point(43, 49);
+            this.rrtb_answerB.Name = "rrtb_answerB";
+            this.rrtb_answerB.ReadOnly = true;
+            this.rrtb_answerB.ShortcutsEnabled = false;
+            this.rrtb_answerB.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerB.TabIndex = 6;
+            this.rrtb_answerB.TabStop = false;
+            this.rrtb_answerB.Text = "";
+            this.rrtb_answerB.Visible = false;
             // 
-            // ckb_A
+            // rckb_A
             // 
-            this.ckb_A.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_A.AutoSize = true;
-            this.ckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_A.Location = new System.Drawing.Point(3, 3);
-            this.ckb_A.Name = "ckb_A";
-            this.ckb_A.Size = new System.Drawing.Size(21, 22);
-            this.ckb_A.TabIndex = 0;
-            this.ckb_A.TabStop = false;
-            this.ckb_A.Text = "A";
-            this.ckb_A.UseVisualStyleBackColor = true;
-            this.ckb_A.Visible = false;
+            this.rckb_A.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_A.AutoSize = true;
+            this.rckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_A.Location = new System.Drawing.Point(3, 3);
+            this.rckb_A.Name = "rckb_A";
+            this.rckb_A.Size = new System.Drawing.Size(21, 22);
+            this.rckb_A.TabIndex = 0;
+            this.rckb_A.TabStop = false;
+            this.rckb_A.Text = "A";
+            this.rckb_A.UseVisualStyleBackColor = true;
+            this.rckb_A.Visible = false;
             // 
-            // ckb_B
+            // rckb_B
             // 
-            this.ckb_B.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_B.AutoSize = true;
-            this.ckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_B.Location = new System.Drawing.Point(3, 49);
-            this.ckb_B.Name = "ckb_B";
-            this.ckb_B.Size = new System.Drawing.Size(21, 22);
-            this.ckb_B.TabIndex = 1;
-            this.ckb_B.TabStop = false;
-            this.ckb_B.Text = "B";
-            this.ckb_B.UseVisualStyleBackColor = true;
-            this.ckb_B.Visible = false;
+            this.rckb_B.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_B.AutoSize = true;
+            this.rckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_B.Location = new System.Drawing.Point(3, 49);
+            this.rckb_B.Name = "rckb_B";
+            this.rckb_B.Size = new System.Drawing.Size(21, 22);
+            this.rckb_B.TabIndex = 1;
+            this.rckb_B.TabStop = false;
+            this.rckb_B.Text = "B";
+            this.rckb_B.UseVisualStyleBackColor = true;
+            this.rckb_B.Visible = false;
             // 
-            // ckb_C
+            // rckb_C
             // 
-            this.ckb_C.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_C.AutoSize = true;
-            this.ckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_C.Location = new System.Drawing.Point(3, 95);
-            this.ckb_C.Name = "ckb_C";
-            this.ckb_C.Size = new System.Drawing.Size(21, 22);
-            this.ckb_C.TabIndex = 2;
-            this.ckb_C.TabStop = false;
-            this.ckb_C.Text = "C";
-            this.ckb_C.UseVisualStyleBackColor = true;
-            this.ckb_C.Visible = false;
+            this.rckb_C.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_C.AutoSize = true;
+            this.rckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_C.Location = new System.Drawing.Point(3, 95);
+            this.rckb_C.Name = "rckb_C";
+            this.rckb_C.Size = new System.Drawing.Size(21, 22);
+            this.rckb_C.TabIndex = 2;
+            this.rckb_C.TabStop = false;
+            this.rckb_C.Text = "C";
+            this.rckb_C.UseVisualStyleBackColor = true;
+            this.rckb_C.Visible = false;
             // 
-            // ckb_D
+            // rckb_D
             // 
-            this.ckb_D.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_D.AutoSize = true;
-            this.ckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_D.Location = new System.Drawing.Point(3, 141);
-            this.ckb_D.Name = "ckb_D";
-            this.ckb_D.Size = new System.Drawing.Size(21, 22);
-            this.ckb_D.TabIndex = 3;
-            this.ckb_D.TabStop = false;
-            this.ckb_D.Text = "D";
-            this.ckb_D.UseVisualStyleBackColor = true;
-            this.ckb_D.Visible = false;
+            this.rckb_D.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_D.AutoSize = true;
+            this.rckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_D.Location = new System.Drawing.Point(3, 141);
+            this.rckb_D.Name = "rckb_D";
+            this.rckb_D.Size = new System.Drawing.Size(21, 22);
+            this.rckb_D.TabIndex = 3;
+            this.rckb_D.TabStop = false;
+            this.rckb_D.Text = "D";
+            this.rckb_D.UseVisualStyleBackColor = true;
+            this.rckb_D.Visible = false;
             // 
-            // ckb_E
+            // rckb_E
             // 
-            this.ckb_E.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_E.AutoSize = true;
-            this.ckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_E.Location = new System.Drawing.Point(3, 187);
-            this.ckb_E.Name = "ckb_E";
-            this.ckb_E.Size = new System.Drawing.Size(21, 22);
-            this.ckb_E.TabIndex = 4;
-            this.ckb_E.TabStop = false;
-            this.ckb_E.Text = "E";
-            this.ckb_E.UseVisualStyleBackColor = true;
-            this.ckb_E.Visible = false;
+            this.rckb_E.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_E.AutoSize = true;
+            this.rckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_E.Location = new System.Drawing.Point(3, 187);
+            this.rckb_E.Name = "rckb_E";
+            this.rckb_E.Size = new System.Drawing.Size(21, 22);
+            this.rckb_E.TabIndex = 4;
+            this.rckb_E.TabStop = false;
+            this.rckb_E.Text = "E";
+            this.rckb_E.UseVisualStyleBackColor = true;
+            this.rckb_E.Visible = false;
             // 
-            // rtb_answerA
+            // rrtb_answerA
             // 
-            this.rtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerA.Location = new System.Drawing.Point(43, 3);
-            this.rtb_answerA.Name = "rtb_answerA";
-            this.rtb_answerA.ReadOnly = true;
-            this.rtb_answerA.ShortcutsEnabled = false;
-            this.rtb_answerA.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerA.TabIndex = 5;
-            this.rtb_answerA.TabStop = false;
-            this.rtb_answerA.Text = "";
-            this.rtb_answerA.Visible = false;
+            this.rrtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerA.Location = new System.Drawing.Point(43, 3);
+            this.rrtb_answerA.Name = "rrtb_answerA";
+            this.rrtb_answerA.ReadOnly = true;
+            this.rrtb_answerA.ShortcutsEnabled = false;
+            this.rrtb_answerA.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerA.TabIndex = 5;
+            this.rrtb_answerA.TabStop = false;
+            this.rrtb_answerA.Text = "";
+            this.rrtb_answerA.Visible = false;
             // 
-            // ckb_F
+            // rckb_F
             // 
-            this.ckb_F.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_F.AutoSize = true;
-            this.ckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_F.Location = new System.Drawing.Point(3, 233);
-            this.ckb_F.Name = "ckb_F";
-            this.ckb_F.Size = new System.Drawing.Size(21, 22);
-            this.ckb_F.TabIndex = 4;
-            this.ckb_F.TabStop = false;
-            this.ckb_F.Text = "F";
-            this.ckb_F.UseVisualStyleBackColor = true;
-            this.ckb_F.Visible = false;
+            this.rckb_F.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_F.AutoSize = true;
+            this.rckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_F.Location = new System.Drawing.Point(3, 233);
+            this.rckb_F.Name = "rckb_F";
+            this.rckb_F.Size = new System.Drawing.Size(21, 22);
+            this.rckb_F.TabIndex = 4;
+            this.rckb_F.TabStop = false;
+            this.rckb_F.Text = "F";
+            this.rckb_F.UseVisualStyleBackColor = true;
+            this.rckb_F.Visible = false;
             // 
-            // ckb_G
+            // rckb_G
             // 
-            this.ckb_G.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_G.AutoSize = true;
-            this.ckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_G.Location = new System.Drawing.Point(3, 279);
-            this.ckb_G.Name = "ckb_G";
-            this.ckb_G.Size = new System.Drawing.Size(21, 22);
-            this.ckb_G.TabIndex = 4;
-            this.ckb_G.TabStop = false;
-            this.ckb_G.Text = "G";
-            this.ckb_G.UseVisualStyleBackColor = true;
-            this.ckb_G.Visible = false;
+            this.rckb_G.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_G.AutoSize = true;
+            this.rckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_G.Location = new System.Drawing.Point(3, 279);
+            this.rckb_G.Name = "rckb_G";
+            this.rckb_G.Size = new System.Drawing.Size(21, 22);
+            this.rckb_G.TabIndex = 4;
+            this.rckb_G.TabStop = false;
+            this.rckb_G.Text = "G";
+            this.rckb_G.UseVisualStyleBackColor = true;
+            this.rckb_G.Visible = false;
             // 
-            // ckb_H
+            // rckb_H
             // 
-            this.ckb_H.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckb_H.AutoSize = true;
-            this.ckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.ckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.ckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckb_H.Location = new System.Drawing.Point(3, 325);
-            this.ckb_H.Name = "ckb_H";
-            this.ckb_H.Size = new System.Drawing.Size(21, 22);
-            this.ckb_H.TabIndex = 4;
-            this.ckb_H.TabStop = false;
-            this.ckb_H.Text = "H";
-            this.ckb_H.UseVisualStyleBackColor = true;
-            this.ckb_H.Visible = false;
+            this.rckb_H.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rckb_H.AutoSize = true;
+            this.rckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.rckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rckb_H.Location = new System.Drawing.Point(3, 325);
+            this.rckb_H.Name = "rckb_H";
+            this.rckb_H.Size = new System.Drawing.Size(21, 22);
+            this.rckb_H.TabIndex = 4;
+            this.rckb_H.TabStop = false;
+            this.rckb_H.Text = "H";
+            this.rckb_H.UseVisualStyleBackColor = true;
+            this.rckb_H.Visible = false;
             // 
-            // rtb_answerF
+            // rrtb_answerF
             // 
-            this.rtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerF.Location = new System.Drawing.Point(43, 233);
-            this.rtb_answerF.Name = "rtb_answerF";
-            this.rtb_answerF.ReadOnly = true;
-            this.rtb_answerF.ShortcutsEnabled = false;
-            this.rtb_answerF.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerF.TabIndex = 9;
-            this.rtb_answerF.TabStop = false;
-            this.rtb_answerF.Text = "";
-            this.rtb_answerF.Visible = false;
+            this.rrtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerF.Location = new System.Drawing.Point(43, 233);
+            this.rrtb_answerF.Name = "rrtb_answerF";
+            this.rrtb_answerF.ReadOnly = true;
+            this.rrtb_answerF.ShortcutsEnabled = false;
+            this.rrtb_answerF.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerF.TabIndex = 9;
+            this.rrtb_answerF.TabStop = false;
+            this.rrtb_answerF.Text = "";
+            this.rrtb_answerF.Visible = false;
             // 
-            // rtb_answerG
+            // rrtb_answerG
             // 
-            this.rtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerG.Location = new System.Drawing.Point(43, 279);
-            this.rtb_answerG.Name = "rtb_answerG";
-            this.rtb_answerG.ReadOnly = true;
-            this.rtb_answerG.ShortcutsEnabled = false;
-            this.rtb_answerG.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerG.TabIndex = 9;
-            this.rtb_answerG.TabStop = false;
-            this.rtb_answerG.Text = "";
-            this.rtb_answerG.Visible = false;
+            this.rrtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerG.Location = new System.Drawing.Point(43, 279);
+            this.rrtb_answerG.Name = "rrtb_answerG";
+            this.rrtb_answerG.ReadOnly = true;
+            this.rrtb_answerG.ShortcutsEnabled = false;
+            this.rrtb_answerG.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerG.TabIndex = 9;
+            this.rrtb_answerG.TabStop = false;
+            this.rrtb_answerG.Text = "";
+            this.rrtb_answerG.Visible = false;
             // 
-            // rtb_answerH
+            // rrtb_answerH
             // 
-            this.rtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_answerH.Location = new System.Drawing.Point(43, 325);
-            this.rtb_answerH.Name = "rtb_answerH";
-            this.rtb_answerH.ReadOnly = true;
-            this.rtb_answerH.ShortcutsEnabled = false;
-            this.rtb_answerH.Size = new System.Drawing.Size(290, 40);
-            this.rtb_answerH.TabIndex = 9;
-            this.rtb_answerH.TabStop = false;
-            this.rtb_answerH.Text = "";
-            this.rtb_answerH.Visible = false;
+            this.rrtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rrtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rrtb_answerH.Location = new System.Drawing.Point(43, 325);
+            this.rrtb_answerH.Name = "rrtb_answerH";
+            this.rrtb_answerH.ReadOnly = true;
+            this.rrtb_answerH.ShortcutsEnabled = false;
+            this.rrtb_answerH.Size = new System.Drawing.Size(290, 40);
+            this.rrtb_answerH.TabIndex = 9;
+            this.rrtb_answerH.TabStop = false;
+            this.rrtb_answerH.Text = "";
+            this.rrtb_answerH.Visible = false;
             // 
-            // btn_stopReading
+            // rbtn_stopReading
             // 
-            this.btn_stopReading.BackColor = System.Drawing.Color.Transparent;
-            this.btn_stopReading.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_stopReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_stopReading.Location = new System.Drawing.Point(711, 0);
-            this.btn_stopReading.Name = "btn_stopReading";
-            this.btn_stopReading.Size = new System.Drawing.Size(55, 19);
-            this.btn_stopReading.TabIndex = 24;
-            this.btn_stopReading.Text = "Stop";
-            this.btn_stopReading.UseVisualStyleBackColor = false;
-            this.btn_stopReading.Visible = false;
-            this.btn_stopReading.Click += new System.EventHandler(this.btn_stopReading_Click);
+            this.rbtn_stopReading.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn_stopReading.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rbtn_stopReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtn_stopReading.Location = new System.Drawing.Point(711, 0);
+            this.rbtn_stopReading.Name = "rbtn_stopReading";
+            this.rbtn_stopReading.Size = new System.Drawing.Size(55, 19);
+            this.rbtn_stopReading.TabIndex = 24;
+            this.rbtn_stopReading.Text = "Stop";
+            this.rbtn_stopReading.UseVisualStyleBackColor = false;
+            this.rbtn_stopReading.Visible = false;
+            this.rbtn_stopReading.Click += new System.EventHandler(this.btn_stopReading_Click);
             // 
-            // bn_readText
+            // rbtn_readText
             // 
-            this.bn_readText.BackColor = System.Drawing.Color.Transparent;
-            this.bn_readText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bn_readText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bn_readText.Location = new System.Drawing.Point(348, -1);
-            this.bn_readText.Name = "bn_readText";
-            this.bn_readText.Size = new System.Drawing.Size(75, 19);
-            this.bn_readText.TabIndex = 24;
-            this.bn_readText.Text = "ReadText";
-            this.bn_readText.UseVisualStyleBackColor = false;
-            this.bn_readText.Click += new System.EventHandler(this.bn_readText_Click);
+            this.rbtn_readText.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn_readText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rbtn_readText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtn_readText.Location = new System.Drawing.Point(348, -1);
+            this.rbtn_readText.Name = "rbtn_readText";
+            this.rbtn_readText.Size = new System.Drawing.Size(75, 19);
+            this.rbtn_readText.TabIndex = 24;
+            this.rbtn_readText.Text = "ReadText";
+            this.rbtn_readText.UseVisualStyleBackColor = false;
+            this.rbtn_readText.Click += new System.EventHandler(this.bn_readText_Click);
             // 
-            // lbl_readingIndication
+            // rlbl_readingIndication
             // 
-            this.lbl_readingIndication.BackColor = System.Drawing.Color.Teal;
-            this.lbl_readingIndication.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbl_readingIndication.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_readingIndication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_readingIndication.Location = new System.Drawing.Point(348, -1);
-            this.lbl_readingIndication.Name = "lbl_readingIndication";
-            this.lbl_readingIndication.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_readingIndication.Size = new System.Drawing.Size(416, 20);
-            this.lbl_readingIndication.TabIndex = 5;
-            this.lbl_readingIndication.Text = "Beginning";
+            this.rlbl_readingIndication.BackColor = System.Drawing.Color.Teal;
+            this.rlbl_readingIndication.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.rlbl_readingIndication.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rlbl_readingIndication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rlbl_readingIndication.Location = new System.Drawing.Point(348, -1);
+            this.rlbl_readingIndication.Name = "rlbl_readingIndication";
+            this.rlbl_readingIndication.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rlbl_readingIndication.Size = new System.Drawing.Size(416, 20);
+            this.rlbl_readingIndication.TabIndex = 5;
+            this.rlbl_readingIndication.Text = "Beginning";
             // 
             // rtab_SumQuestion
             // 
-            this.rtab_SumQuestion.Controls.Add(this.llbl_rightAnswer);
-            this.rtab_SumQuestion.Controls.Add(this.flowLayoutPanel2);
+            this.rtab_SumQuestion.Controls.Add(this.rlbl_rightAnswer);
+            this.rtab_SumQuestion.Controls.Add(this.r_flowLayoutPanel2);
             this.rtab_SumQuestion.Location = new System.Drawing.Point(4, 25);
             this.rtab_SumQuestion.Name = "rtab_SumQuestion";
             this.rtab_SumQuestion.Padding = new System.Windows.Forms.Padding(3);
@@ -4508,24 +4512,24 @@
             // 
             // llbl_rightAnswer
             // 
-            this.llbl_rightAnswer.AutoSize = true;
-            this.llbl_rightAnswer.Location = new System.Drawing.Point(7, 96);
-            this.llbl_rightAnswer.Name = "llbl_rightAnswer";
-            this.llbl_rightAnswer.Size = new System.Drawing.Size(71, 12);
-            this.llbl_rightAnswer.TabIndex = 2;
-            this.llbl_rightAnswer.Text = "rightAnswer";
-            this.llbl_rightAnswer.Visible = false;
+            this.rlbl_rightAnswer.AutoSize = true;
+            this.rlbl_rightAnswer.Location = new System.Drawing.Point(7, 96);
+            this.rlbl_rightAnswer.Name = "llbl_rightAnswer";
+            this.rlbl_rightAnswer.Size = new System.Drawing.Size(71, 12);
+            this.rlbl_rightAnswer.TabIndex = 2;
+            this.rlbl_rightAnswer.Text = "rightAnswer";
+            this.rlbl_rightAnswer.Visible = false;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.rtb_sumPassage);
-            this.flowLayoutPanel2.Controls.Add(this.rtb_sumQuestion);
-            this.flowLayoutPanel2.Controls.Add(this.tlp_sumAnswers);
-            this.flowLayoutPanel2.Controls.Add(this.tlp_Summary);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(77, 4);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(619, 474);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.r_flowLayoutPanel2.Controls.Add(this.rtb_sumPassage);
+            this.r_flowLayoutPanel2.Controls.Add(this.rtb_sumQuestion);
+            this.r_flowLayoutPanel2.Controls.Add(this.tlp_sumAnswers);
+            this.r_flowLayoutPanel2.Controls.Add(this.tlp_Summary);
+            this.r_flowLayoutPanel2.Location = new System.Drawing.Point(77, 4);
+            this.r_flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.r_flowLayoutPanel2.Size = new System.Drawing.Size(619, 474);
+            this.r_flowLayoutPanel2.TabIndex = 1;
             // 
             // rtb_sumPassage
             // 
@@ -5190,7 +5194,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = Properties.Resources.ListeningDirection3;
+            this.pictureBox1.Image = global::TPO.Properties.Resources.ListeningDirection3;
             this.pictureBox1.Location = new System.Drawing.Point(28, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1126, 492);
@@ -5236,7 +5240,7 @@
             this.l_splitContainer.Panel2.AutoScroll = true;
             this.l_splitContainer.Panel2.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.l_splitContainer.Panel2.Controls.Add(this.panel1);
-            this.l_splitContainer.Size = new System.Drawing.Size(766, 482);
+            this.l_splitContainer.Size = new System.Drawing.Size(766, 479);
             this.l_splitContainer.SplitterDistance = 342;
             this.l_splitContainer.TabIndex = 1;
             // 
@@ -6543,8 +6547,8 @@
             // tabf_speaking
             // 
             this.tabf_speaking.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_speaking.Controls.Add(this.sDirection);
-            this.tabf_speaking.Controls.Add(this.sNormalQuestions);
+            this.tabf_speaking.Controls.Add(this.stab_Direction);
+            this.tabf_speaking.Controls.Add(this.stab_NormalQuestions);
             this.tabf_speaking.Location = new System.Drawing.Point(5, -23);
             this.tabf_speaking.Name = "tabf_speaking";
             this.tabf_speaking.SelectedIndex = 0;
@@ -6554,20 +6558,20 @@
             // 
             // sDirection
             // 
-            this.sDirection.Controls.Add(this.pictureBox3);
-            this.sDirection.Location = new System.Drawing.Point(4, 25);
-            this.sDirection.Name = "sDirection";
-            this.sDirection.Size = new System.Drawing.Size(763, 448);
-            this.sDirection.TabIndex = 3;
-            this.sDirection.Text = "sDirection";
-            this.sDirection.UseVisualStyleBackColor = true;
+            this.stab_Direction.Controls.Add(this.pictureBox3);
+            this.stab_Direction.Location = new System.Drawing.Point(4, 25);
+            this.stab_Direction.Name = "sDirection";
+            this.stab_Direction.Size = new System.Drawing.Size(763, 448);
+            this.stab_Direction.TabIndex = 3;
+            this.stab_Direction.Text = "sDirection";
+            this.stab_Direction.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = Properties.Resources.SpeakingDirection4;
+            this.pictureBox3.Image = global::TPO.Properties.Resources.SpeakingDirection4;
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(3, 7);
             this.pictureBox3.Name = "pictureBox3";
@@ -6578,17 +6582,17 @@
             // 
             // sNormalQuestions
             // 
-            this.sNormalQuestions.Controls.Add(this.spb);
-            this.sNormalQuestions.Controls.Add(this.tableLayoutPanel3);
-            this.sNormalQuestions.Controls.Add(this.srtb_introduction);
-            this.sNormalQuestions.Controls.Add(this.pb_speakingScene);
-            this.sNormalQuestions.Location = new System.Drawing.Point(4, 25);
-            this.sNormalQuestions.Name = "sNormalQuestions";
-            this.sNormalQuestions.Padding = new System.Windows.Forms.Padding(3);
-            this.sNormalQuestions.Size = new System.Drawing.Size(763, 448);
-            this.sNormalQuestions.TabIndex = 0;
-            this.sNormalQuestions.Text = "sNormalQuestions";
-            this.sNormalQuestions.UseVisualStyleBackColor = true;
+            this.stab_NormalQuestions.Controls.Add(this.spb);
+            this.stab_NormalQuestions.Controls.Add(this.tableLayoutPanel3);
+            this.stab_NormalQuestions.Controls.Add(this.srtb_introduction);
+            this.stab_NormalQuestions.Controls.Add(this.pb_speakingScene);
+            this.stab_NormalQuestions.Location = new System.Drawing.Point(4, 25);
+            this.stab_NormalQuestions.Name = "sNormalQuestions";
+            this.stab_NormalQuestions.Padding = new System.Windows.Forms.Padding(3);
+            this.stab_NormalQuestions.Size = new System.Drawing.Size(763, 448);
+            this.stab_NormalQuestions.TabIndex = 0;
+            this.stab_NormalQuestions.Text = "sNormalQuestions";
+            this.stab_NormalQuestions.UseVisualStyleBackColor = true;
             // 
             // spb
             // 
@@ -6673,10 +6677,10 @@
             // tabf_writing
             // 
             this.tabf_writing.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_writing.Controls.Add(this.wDirection);
-            this.tabf_writing.Controls.Add(this.wReading);
-            this.tabf_writing.Controls.Add(this.wSpeakingPassage);
-            this.tabf_writing.Controls.Add(this.wWriting2);
+            this.tabf_writing.Controls.Add(this.wtab_Direction);
+            this.tabf_writing.Controls.Add(this.wtab_Reading);
+            this.tabf_writing.Controls.Add(this.wtab_SpeakingPassage);
+            this.tabf_writing.Controls.Add(this.wtab_Writing2);
             this.tabf_writing.Location = new System.Drawing.Point(5, -25);
             this.tabf_writing.Name = "tabf_writing";
             this.tabf_writing.SelectedIndex = 0;
@@ -6687,13 +6691,13 @@
             // 
             // wDirection
             // 
-            this.wDirection.Controls.Add(this.pictureBox4);
-            this.wDirection.Location = new System.Drawing.Point(4, 25);
-            this.wDirection.Name = "wDirection";
-            this.wDirection.Size = new System.Drawing.Size(763, 448);
-            this.wDirection.TabIndex = 3;
-            this.wDirection.Text = "wDirection";
-            this.wDirection.UseVisualStyleBackColor = true;
+            this.wtab_Direction.Controls.Add(this.pictureBox4);
+            this.wtab_Direction.Location = new System.Drawing.Point(4, 25);
+            this.wtab_Direction.Name = "wDirection";
+            this.wtab_Direction.Size = new System.Drawing.Size(763, 448);
+            this.wtab_Direction.TabIndex = 3;
+            this.wtab_Direction.Text = "wDirection";
+            this.wtab_Direction.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -6701,7 +6705,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = Properties.Resources.WritingDirection1;
+            this.pictureBox4.Image = global::TPO.Properties.Resources.WritingDirection1;
             this.pictureBox4.InitialImage = null;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
@@ -6712,14 +6716,14 @@
             // 
             // wReading
             // 
-            this.wReading.Controls.Add(this.wrtb_writing1);
-            this.wReading.Controls.Add(this.wrtb_reading);
-            this.wReading.Location = new System.Drawing.Point(4, 25);
-            this.wReading.Name = "wReading";
-            this.wReading.Size = new System.Drawing.Size(763, 448);
-            this.wReading.TabIndex = 5;
-            this.wReading.Text = "wReading";
-            this.wReading.UseVisualStyleBackColor = true;
+            this.wtab_Reading.Controls.Add(this.wrtb_writing1);
+            this.wtab_Reading.Controls.Add(this.wrtb_reading);
+            this.wtab_Reading.Location = new System.Drawing.Point(4, 25);
+            this.wtab_Reading.Name = "wReading";
+            this.wtab_Reading.Size = new System.Drawing.Size(763, 448);
+            this.wtab_Reading.TabIndex = 5;
+            this.wtab_Reading.Text = "wReading";
+            this.wtab_Reading.UseVisualStyleBackColor = true;
             // 
             // wrtb_writing1
             // 
@@ -6748,16 +6752,16 @@
             // 
             // wSpeakingPassage
             // 
-            this.wSpeakingPassage.Controls.Add(this.wpb_speak);
-            this.wSpeakingPassage.Controls.Add(this.wtb_speak);
-            this.wSpeakingPassage.Controls.Add(this.pb_writingScene);
-            this.wSpeakingPassage.Location = new System.Drawing.Point(4, 25);
-            this.wSpeakingPassage.Name = "wSpeakingPassage";
-            this.wSpeakingPassage.Padding = new System.Windows.Forms.Padding(3);
-            this.wSpeakingPassage.Size = new System.Drawing.Size(763, 448);
-            this.wSpeakingPassage.TabIndex = 0;
-            this.wSpeakingPassage.Text = "wSpeakingPassage";
-            this.wSpeakingPassage.UseVisualStyleBackColor = true;
+            this.wtab_SpeakingPassage.Controls.Add(this.wpb_speak);
+            this.wtab_SpeakingPassage.Controls.Add(this.wtb_speak);
+            this.wtab_SpeakingPassage.Controls.Add(this.pb_writingScene);
+            this.wtab_SpeakingPassage.Location = new System.Drawing.Point(4, 25);
+            this.wtab_SpeakingPassage.Name = "wSpeakingPassage";
+            this.wtab_SpeakingPassage.Padding = new System.Windows.Forms.Padding(3);
+            this.wtab_SpeakingPassage.Size = new System.Drawing.Size(763, 448);
+            this.wtab_SpeakingPassage.TabIndex = 0;
+            this.wtab_SpeakingPassage.Text = "wSpeakingPassage";
+            this.wtab_SpeakingPassage.UseVisualStyleBackColor = true;
             // 
             // wpb_speak
             // 
@@ -6791,16 +6795,16 @@
             // 
             // wWriting2
             // 
-            this.wWriting2.Controls.Add(this.lbl_writeDirection);
-            this.wWriting2.Controls.Add(this.wrtb_writing2);
-            this.wWriting2.Controls.Add(this.wrtbQuestion2);
-            this.wWriting2.Controls.Add(this.wpanel);
-            this.wWriting2.Location = new System.Drawing.Point(4, 25);
-            this.wWriting2.Name = "wWriting2";
-            this.wWriting2.Size = new System.Drawing.Size(763, 448);
-            this.wWriting2.TabIndex = 4;
-            this.wWriting2.Text = "wWriting2";
-            this.wWriting2.UseVisualStyleBackColor = true;
+            this.wtab_Writing2.Controls.Add(this.lbl_writeDirection);
+            this.wtab_Writing2.Controls.Add(this.wrtb_writing2);
+            this.wtab_Writing2.Controls.Add(this.wrtbQuestion2);
+            this.wtab_Writing2.Controls.Add(this.wpanel);
+            this.wtab_Writing2.Location = new System.Drawing.Point(4, 25);
+            this.wtab_Writing2.Name = "wWriting2";
+            this.wtab_Writing2.Size = new System.Drawing.Size(763, 448);
+            this.wtab_Writing2.TabIndex = 4;
+            this.wtab_Writing2.Text = "wWriting2";
+            this.wtab_Writing2.UseVisualStyleBackColor = true;
             // 
             // lbl_writeDirection
             // 
@@ -6928,10 +6932,10 @@
             // 
             // tabf_answer
             // 
-            this.tabf_answer.Controls.Add(this.tab_readinganswer);
-            this.tabf_answer.Controls.Add(this.tab_listeninganswers);
-            this.tabf_answer.Controls.Add(this.tab_speakinganswers);
-            this.tabf_answer.Controls.Add(this.tab_writinganswers);
+            this.tabf_answer.Controls.Add(this.atab_readinganswer);
+            this.tabf_answer.Controls.Add(this.atab_listeninganswers);
+            this.tabf_answer.Controls.Add(this.atab_speakinganswers);
+            this.tabf_answer.Controls.Add(this.atab_writinganswers);
             this.tabf_answer.Location = new System.Drawing.Point(3, 3);
             this.tabf_answer.Name = "tabf_answer";
             this.tabf_answer.SelectedIndex = 0;
@@ -6941,23 +6945,23 @@
             // 
             // tab_readinganswer
             // 
-            this.tab_readinganswer.Controls.Add(this.dgv_readingSelect);
-            this.tab_readinganswer.Controls.Add(this.label2);
-            this.tab_readinganswer.Controls.Add(this.lbl_readingscorereport);
-            this.tab_readinganswer.Controls.Add(this.label3);
-            this.tab_readinganswer.Controls.Add(this.pictureBox6);
-            this.tab_readinganswer.Controls.Add(this.label4);
-            this.tab_readinganswer.Controls.Add(this.pictureBox7);
-            this.tab_readinganswer.Controls.Add(this.label5);
-            this.tab_readinganswer.Controls.Add(this.pictureBox8);
-            this.tab_readinganswer.Controls.Add(this.dgv_readinganswers);
-            this.tab_readinganswer.Location = new System.Drawing.Point(4, 22);
-            this.tab_readinganswer.Name = "tab_readinganswer";
-            this.tab_readinganswer.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_readinganswer.Size = new System.Drawing.Size(773, 484);
-            this.tab_readinganswer.TabIndex = 0;
-            this.tab_readinganswer.Text = "Reading";
-            this.tab_readinganswer.UseVisualStyleBackColor = true;
+            this.atab_readinganswer.Controls.Add(this.dgv_readingSelect);
+            this.atab_readinganswer.Controls.Add(this.label2);
+            this.atab_readinganswer.Controls.Add(this.lbl_readingscorereport);
+            this.atab_readinganswer.Controls.Add(this.label3);
+            this.atab_readinganswer.Controls.Add(this.pictureBox6);
+            this.atab_readinganswer.Controls.Add(this.label4);
+            this.atab_readinganswer.Controls.Add(this.pictureBox7);
+            this.atab_readinganswer.Controls.Add(this.label5);
+            this.atab_readinganswer.Controls.Add(this.pictureBox8);
+            this.atab_readinganswer.Controls.Add(this.dgv_readinganswers);
+            this.atab_readinganswer.Location = new System.Drawing.Point(4, 22);
+            this.atab_readinganswer.Name = "tab_readinganswer";
+            this.atab_readinganswer.Padding = new System.Windows.Forms.Padding(3);
+            this.atab_readinganswer.Size = new System.Drawing.Size(773, 484);
+            this.atab_readinganswer.TabIndex = 0;
+            this.atab_readinganswer.Text = "Reading";
+            this.atab_readinganswer.UseVisualStyleBackColor = true;
             // 
             // dgv_readingSelect
             // 
@@ -7081,23 +7085,23 @@
             // 
             // tab_listeninganswers
             // 
-            this.tab_listeninganswers.Controls.Add(this.dgv_listeningSelect);
-            this.tab_listeninganswers.Controls.Add(this.label16);
-            this.tab_listeninganswers.Controls.Add(this.dgv_listeninganswers);
-            this.tab_listeninganswers.Controls.Add(this.lbl_listeningScorereport);
-            this.tab_listeninganswers.Controls.Add(this.label7);
-            this.tab_listeninganswers.Controls.Add(this.pictureBox9);
-            this.tab_listeninganswers.Controls.Add(this.label8);
-            this.tab_listeninganswers.Controls.Add(this.pictureBox10);
-            this.tab_listeninganswers.Controls.Add(this.label9);
-            this.tab_listeninganswers.Controls.Add(this.pictureBox11);
-            this.tab_listeninganswers.Location = new System.Drawing.Point(4, 22);
-            this.tab_listeninganswers.Name = "tab_listeninganswers";
-            this.tab_listeninganswers.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_listeninganswers.Size = new System.Drawing.Size(773, 484);
-            this.tab_listeninganswers.TabIndex = 1;
-            this.tab_listeninganswers.Text = "Listening";
-            this.tab_listeninganswers.UseVisualStyleBackColor = true;
+            this.atab_listeninganswers.Controls.Add(this.dgv_listeningSelect);
+            this.atab_listeninganswers.Controls.Add(this.label16);
+            this.atab_listeninganswers.Controls.Add(this.dgv_listeninganswers);
+            this.atab_listeninganswers.Controls.Add(this.lbl_listeningScorereport);
+            this.atab_listeninganswers.Controls.Add(this.label7);
+            this.atab_listeninganswers.Controls.Add(this.pictureBox9);
+            this.atab_listeninganswers.Controls.Add(this.label8);
+            this.atab_listeninganswers.Controls.Add(this.pictureBox10);
+            this.atab_listeninganswers.Controls.Add(this.label9);
+            this.atab_listeninganswers.Controls.Add(this.pictureBox11);
+            this.atab_listeninganswers.Location = new System.Drawing.Point(4, 22);
+            this.atab_listeninganswers.Name = "tab_listeninganswers";
+            this.atab_listeninganswers.Padding = new System.Windows.Forms.Padding(3);
+            this.atab_listeninganswers.Size = new System.Drawing.Size(773, 484);
+            this.atab_listeninganswers.TabIndex = 1;
+            this.atab_listeninganswers.Text = "Listening";
+            this.atab_listeninganswers.UseVisualStyleBackColor = true;
             // 
             // dgv_listeningSelect
             // 
@@ -7222,16 +7226,16 @@
             // 
             // tab_speakinganswers
             // 
-            this.tab_speakinganswers.AutoScroll = true;
-            this.tab_speakinganswers.Controls.Add(this.tableLayoutPanel2);
-            this.tab_speakinganswers.Location = new System.Drawing.Point(4, 22);
-            this.tab_speakinganswers.Name = "tab_speakinganswers";
-            this.tab_speakinganswers.Size = new System.Drawing.Size(773, 484);
-            this.tab_speakinganswers.TabIndex = 2;
-            this.tab_speakinganswers.Text = "Speaking";
-            this.tab_speakinganswers.UseVisualStyleBackColor = true;
-            this.tab_speakinganswers.Click += new System.EventHandler(this.tab_speakinganswers_Click);
-            this.tab_speakinganswers.Leave += new System.EventHandler(this.tab_speakinganswers_Leave);
+            this.atab_speakinganswers.AutoScroll = true;
+            this.atab_speakinganswers.Controls.Add(this.tableLayoutPanel2);
+            this.atab_speakinganswers.Location = new System.Drawing.Point(4, 22);
+            this.atab_speakinganswers.Name = "tab_speakinganswers";
+            this.atab_speakinganswers.Size = new System.Drawing.Size(773, 484);
+            this.atab_speakinganswers.TabIndex = 2;
+            this.atab_speakinganswers.Text = "Speaking";
+            this.atab_speakinganswers.UseVisualStyleBackColor = true;
+            this.atab_speakinganswers.Click += new System.EventHandler(this.tab_speakinganswers_Click);
+            this.atab_speakinganswers.Leave += new System.EventHandler(this.tab_speakinganswers_Leave);
             // 
             // tableLayoutPanel2
             // 
@@ -7326,7 +7330,7 @@
             // 
             // btn_speakinganswer1
             // 
-            this.btn_speakinganswer1.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer1.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer1.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7339,7 +7343,7 @@
             // 
             // btn_speakinganswer2
             // 
-            this.btn_speakinganswer2.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer2.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer2.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7352,7 +7356,7 @@
             // 
             // btn_speakinganswer3
             // 
-            this.btn_speakinganswer3.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer3.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer3.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7365,7 +7369,7 @@
             // 
             // btn_speakinganswer4
             // 
-            this.btn_speakinganswer4.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer4.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer4.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7378,7 +7382,7 @@
             // 
             // btn_speakinganswer5
             // 
-            this.btn_speakinganswer5.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer5.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer5.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7391,7 +7395,7 @@
             // 
             // btn_speakinganswer6
             // 
-            this.btn_speakinganswer6.BackgroundImage = Properties.Resources.horn;
+            this.btn_speakinganswer6.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.btn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_speakinganswer6.FlatAppearance.BorderSize = 0;
             this.btn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7404,15 +7408,15 @@
             // 
             // tab_writinganswers
             // 
-            this.tab_writinganswers.Controls.Add(this.rtb_writinganswers);
-            this.tab_writinganswers.Controls.Add(this.rtb_writing2);
-            this.tab_writinganswers.Controls.Add(this.rtb_writing1);
-            this.tab_writinganswers.Location = new System.Drawing.Point(4, 22);
-            this.tab_writinganswers.Name = "tab_writinganswers";
-            this.tab_writinganswers.Size = new System.Drawing.Size(773, 484);
-            this.tab_writinganswers.TabIndex = 3;
-            this.tab_writinganswers.Text = "Writing";
-            this.tab_writinganswers.UseVisualStyleBackColor = true;
+            this.atab_writinganswers.Controls.Add(this.rtb_writinganswers);
+            this.atab_writinganswers.Controls.Add(this.rtb_writing2);
+            this.atab_writinganswers.Controls.Add(this.rtb_writing1);
+            this.atab_writinganswers.Location = new System.Drawing.Point(4, 22);
+            this.atab_writinganswers.Name = "tab_writinganswers";
+            this.atab_writinganswers.Size = new System.Drawing.Size(773, 484);
+            this.atab_writinganswers.TabIndex = 3;
+            this.atab_writinganswers.Text = "Writing";
+            this.atab_writinganswers.UseVisualStyleBackColor = true;
             // 
             // rtb_writinganswers
             // 
@@ -7449,7 +7453,7 @@
             // 
             // btn_ShowText
             // 
-            this.btn_ShowText.BackgroundImage = Properties.Resources.viewtext;
+            this.btn_ShowText.BackgroundImage = global::TPO.Properties.Resources.viewtext;
             this.btn_ShowText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ShowText.FlatAppearance.BorderSize = 0;
             this.btn_ShowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7570,7 +7574,7 @@
             // 
             // btn_pause
             // 
-            this.btn_pause.BackgroundImage = Properties.Resources.pause;
+            this.btn_pause.BackgroundImage = global::TPO.Properties.Resources.pause;
             this.btn_pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_pause.FlatAppearance.BorderSize = 0;
             this.btn_pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7585,7 +7589,7 @@
             // 
             // btn_QUITapp
             // 
-            this.btn_QUITapp.BackgroundImage = Properties.Resources.exit1;
+            this.btn_QUITapp.BackgroundImage = global::TPO.Properties.Resources.exit1;
             this.btn_QUITapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_QUITapp.FlatAppearance.BorderSize = 0;
             this.btn_QUITapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7614,7 +7618,7 @@
             // btn_showexplanation
             // 
             this.btn_showexplanation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showexplanation.BackgroundImage = Properties.Resources.EXPLANATION;
+            this.btn_showexplanation.BackgroundImage = global::TPO.Properties.Resources.EXPLANATION;
             this.btn_showexplanation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showexplanation.FlatAppearance.BorderSize = 0;
             this.btn_showexplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7630,7 +7634,7 @@
             // btn_showtranslation
             // 
             this.btn_showtranslation.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showtranslation.BackgroundImage = Properties.Resources.TRANSLATION;
+            this.btn_showtranslation.BackgroundImage = global::TPO.Properties.Resources.TRANSLATION;
             this.btn_showtranslation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showtranslation.FlatAppearance.BorderSize = 0;
             this.btn_showtranslation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -7653,7 +7657,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = Properties.Resources.bg1;
+            this.BackgroundImage = global::TPO.Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(788, 611);
             this.Controls.Add(this.btn_pause);
             this.Controls.Add(this.btn_NexPage);
@@ -7711,18 +7715,18 @@
             this.tabf_Reading.ResumeLayout(false);
             this.rtab_Direction.ResumeLayout(false);
             this.rtab_Direction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox)).EndInit();
             this.rtab_NormalQuestion.ResumeLayout(false);
             this.rtab_NormalQuestion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_reading)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.tlp_answers.ResumeLayout(false);
-            this.tlp_answers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rtb_reading)).EndInit();
+            this.r_flowLayoutPanel.ResumeLayout(false);
+            this.r_flowLayoutPanel.PerformLayout();
+            this.rtlp_answers.ResumeLayout(false);
+            this.rtlp_answers.PerformLayout();
             this.rtab_SumQuestion.ResumeLayout(false);
             this.rtab_SumQuestion.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.r_flowLayoutPanel2.ResumeLayout(false);
+            this.r_flowLayoutPanel2.PerformLayout();
             this.tlp_sumAnswers.ResumeLayout(false);
             this.tlp_sumAnswers.PerformLayout();
             this.tlp_Summary.ResumeLayout(false);
@@ -7741,6 +7745,7 @@
             this.l_splitContainer.Panel1.ResumeLayout(false);
             this.l_splitContainer.Panel1.PerformLayout();
             this.l_splitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.l_splitContainer)).EndInit();
             this.l_splitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene)).EndInit();
@@ -7759,36 +7764,36 @@
             this.ltlp_table.ResumeLayout(false);
             this.tab_Speaking.ResumeLayout(false);
             this.tabf_speaking.ResumeLayout(false);
-            this.sDirection.ResumeLayout(false);
-            this.sDirection.PerformLayout();
+            this.stab_Direction.ResumeLayout(false);
+            this.stab_Direction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.sNormalQuestions.ResumeLayout(false);
-            this.sNormalQuestions.PerformLayout();
+            this.stab_NormalQuestions.ResumeLayout(false);
+            this.stab_NormalQuestions.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).EndInit();
             this.tab_Writing.ResumeLayout(false);
             this.tabf_writing.ResumeLayout(false);
-            this.wDirection.ResumeLayout(false);
-            this.wDirection.PerformLayout();
+            this.wtab_Direction.ResumeLayout(false);
+            this.wtab_Direction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.wReading.ResumeLayout(false);
-            this.wSpeakingPassage.ResumeLayout(false);
+            this.wtab_Reading.ResumeLayout(false);
+            this.wtab_SpeakingPassage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).EndInit();
-            this.wWriting2.ResumeLayout(false);
+            this.wtab_Writing2.ResumeLayout(false);
             this.wpanel.ResumeLayout(false);
             this.wpanel.PerformLayout();
             this.tab_Answers.ResumeLayout(false);
             this.tabf_answer.ResumeLayout(false);
-            this.tab_readinganswer.ResumeLayout(false);
-            this.tab_readinganswer.PerformLayout();
+            this.atab_readinganswer.ResumeLayout(false);
+            this.atab_readinganswer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readingSelect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).EndInit();
-            this.tab_listeninganswers.ResumeLayout(false);
-            this.tab_listeninganswers.PerformLayout();
+            this.atab_listeninganswers.ResumeLayout(false);
+            this.atab_listeninganswers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).EndInit();
@@ -7796,10 +7801,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.tab_speakinganswers.ResumeLayout(false);
+            this.atab_speakinganswers.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tab_writinganswers.ResumeLayout(false);
-            this.tab_writinganswers.PerformLayout();
+            this.atab_writinganswers.ResumeLayout(false);
+            this.atab_writinganswers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7816,15 +7821,15 @@
             this.MP3Player = new MP3MCI();
             this.MP3Recorder = new MP3Record();
             this.Timer_reading.Stop();
-            this.tb_reading.Visible = false;
-            this.bn_readText.Visible = false;
-            this.btn_stopReading.Visible = false;
+            this.rtb_reading.Visible = false;
+            this.rbtn_readText.Visible = false;
+            this.rbtn_stopReading.Visible = false;
             this.Timer_Listening.Stop();
             this.flash_timer.Stop();
             this.Timer_Speaking.Stop();
             this.btn_pause.BackgroundImage = (Image)this.resmgr.GetObject("pause");
             this.btn_pause.Visible = false;
-            this.llbl_rightAnswer.Visible = false;
+            this.rlbl_rightAnswer.Visible = false;
             base.btn_mainmenu.Visible = false;
             base.btn_quit.Visible = false;
             this.lbl_testingSection.Visible = false;
@@ -7932,7 +7937,7 @@
             }
             Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
             base.lbl_questionNO.Text = "Question " + this.QuestionNO + " of 34";
-            this.llbl_rightAnswer.Visible = this.ckb_ShowAnswer.Checked;
+            this.rlbl_rightAnswer.Visible = this.ckb_ShowAnswer.Checked;
             this.IsPassageMP3 = false;
             switch (question.QuestionType)
             {
@@ -8071,7 +8076,7 @@
                     }
                     goto Label_0656;
             }
-            this.llbl_rightAnswer.Text = question.CorrectAnswersStr;
+            this.rlbl_rightAnswer.Text = question.CorrectAnswersStr;
         Label_0656:
             try
             {
@@ -8228,7 +8233,7 @@
                     this.rtb_sumPassage.Height = 500;
                     this.rtb_sumQuestion.Visible = !this.ShowPassage;
                     this.rtb_sumPassage.Visible = this.ShowPassage;
-                    this.tlp_answers.Visible = !this.ShowPassage;
+                    this.rtlp_answers.Visible = !this.ShowPassage;
                     this.tlp_Summary.Visible = !this.ShowPassage;
                     this.rtb_sumQuestion.Rtf = question.QuestionTitle;
                     this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
@@ -8261,7 +8266,7 @@
                     this.rtb_sumPassage.Height = 500;
                     this.rtb_sumQuestion.Visible = !this.ShowPassage;
                     this.rtb_sumPassage.Visible = this.ShowPassage;
-                    this.tlp_answers.Visible = !this.ShowPassage;
+                    this.rtlp_answers.Visible = !this.ShowPassage;
                     this.tlp_Summary.Visible = !this.ShowPassage;
                     this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
                     TRANSLATION = this.RMaterial.Translation;
@@ -8298,7 +8303,7 @@
                 }
                 else
                 {
-                    this.rtb_question.Rtf = question.QuestionTitle;
+                    this.rrtb_question.Rtf = question.QuestionTitle;
                     this.tabf_test.SelectedIndex = READING;
                     this.tabf_Reading.SelectedIndex = RNORMALQUESTION;
                     for (num = 0; (num < question.MyAnswer.Length) && (num < this.CkbReading.Length); num++)
@@ -8322,23 +8327,23 @@
                     {
                         string str = "<i>";
                         string str2 = "</i>";
-                        int index = this.rtb_question.Text.IndexOf(str);
-                        int num8 = this.rtb_question.Text.IndexOf(str2);
+                        int index = this.rrtb_question.Text.IndexOf(str);
+                        int num8 = this.rrtb_question.Text.IndexOf(str2);
                         if (index >= 0)
                         {
-                            this.rtb_question.SelectionStart = index;
-                            this.rtb_question.SelectionLength = str.Length;
-                            this.rtb_question.SelectedText = "\n";
+                            this.rrtb_question.SelectionStart = index;
+                            this.rrtb_question.SelectionLength = str.Length;
+                            this.rrtb_question.SelectedText = "\n";
                         }
                         if (num8 >= 0)
                         {
-                            this.rtb_question.SelectionStart = (num8 - str.Length) + 1;
-                            this.rtb_question.SelectionLength = str2.Length;
-                            this.rtb_question.SelectedText = "\n";
+                            this.rrtb_question.SelectionStart = (num8 - str.Length) + 1;
+                            this.rrtb_question.SelectionLength = str2.Length;
+                            this.rrtb_question.SelectedText = "\n";
                         }
-                        this.rtb_question.SelectionStart = index + 1;
-                        this.rtb_question.SelectionLength = ((num8 - index) - str.Length) - 1;
-                        this.InsertSetenceRtf = this.rtb_question.SelectedRtf;
+                        this.rrtb_question.SelectionStart = index + 1;
+                        this.rrtb_question.SelectionLength = ((num8 - index) - str.Length) - 1;
+                        this.InsertSetenceRtf = this.rrtb_question.SelectedRtf;
                     }
                     for (num = 0; num < question.UserAnswers.Count; num++)
                     {
@@ -8647,12 +8652,12 @@
                         this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") && ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
-                            this.bn_readText.Visible = true;
-                            this.bn_readText.Enabled = true;
+                            this.rbtn_readText.Visible = true;
+                            this.rbtn_readText.Enabled = true;
                         }
                         else
                         {
-                            this.bn_readText.Visible = false;
+                            this.rbtn_readText.Visible = false;
                         }
                         this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
@@ -9375,7 +9380,7 @@
 
         private void tb_reading_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long)(this.tb_reading.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.rtb_reading.Value * 0x3e8));
         }
 
         private void tb_sound_Scroll(object sender, EventArgs e)
@@ -9440,12 +9445,12 @@
                         this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") && ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
-                            this.bn_readText.Visible = true;
-                            this.bn_readText.Enabled = true;
+                            this.rbtn_readText.Visible = true;
+                            this.rbtn_readText.Enabled = true;
                         }
                         else
                         {
-                            this.bn_readText.Visible = false;
+                            this.rbtn_readText.Visible = false;
                         }
                         this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
@@ -9606,13 +9611,13 @@
 
         private void Timer_reading_Tick(object sender, EventArgs e)
         {
-            this.tb_reading.Value = this.MP3Player.CurrentPosition;
+            this.rtb_reading.Value = this.MP3Player.CurrentPosition;
             if (this.MP3Player.CurrentPosition >= this.MP3Player.Duration)
             {
-                this.bn_readText.Enabled = true;
-                this.bn_readText.Enabled = true;
-                this.btn_stopReading.Visible = false;
-                this.tb_reading.Visible = false;
+                this.rbtn_readText.Enabled = true;
+                this.rbtn_readText.Enabled = true;
+                this.rbtn_stopReading.Visible = false;
+                this.rtb_reading.Visible = false;
                 this.Timer_reading.Stop();
             }
         }
