@@ -6,7 +6,7 @@
     using System.Collections;
     using System.Reflection;
 
-    internal enum QuestionType
+    public enum QuestionType
     {
         SINGLE,
         MULTIPLE,

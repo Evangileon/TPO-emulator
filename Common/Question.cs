@@ -5,10 +5,17 @@ using System.Text;
 
 namespace TPO.Common
 {
-	class Question
+	public class Question
 	{
         private string question;
         private ArrayList options;
+        private ArrayList answers;
+        
+        public Question()
+        {
+            question = "";
+            options = new ArrayList(4);
+        }
 
         public Question(string questionStr)
         {
@@ -21,6 +28,11 @@ namespace TPO.Common
             this.options.Add(option);
         }
 
+        public void AddAnswer(string answer)
+        {
+            this.answers.Add(answer);
+        }
+
         public string GetQuestion()
         {
             return question;
@@ -29,6 +41,17 @@ namespace TPO.Common
         ArrayList GetOptions()
         {
             return options;
+        }
+
+        ArrayList GetAnswers()
+        {
+            return answers;
+        }
+
+        public bool IsAnswered
+        {
+            get;
+            set;
         }
 	}
 
@@ -39,6 +62,7 @@ namespace TPO.Common
 
     class QuestionMulti : Question
     {
+        int AnsNumRequired;
 
     }
 

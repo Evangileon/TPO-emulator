@@ -8,8 +8,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>TPO</AssemblyName>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,7 +23,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -31,7 +31,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\新托福突破口TPO（1-24） 模考软件网友破解版【无老师力荐】\</OutputPath>
+    <OutputPath>D:\NewTPOEmulator\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,38 +46,44 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TPO.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TPO</RootNamespace>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\CoverForm.resx">
+    <EmbeddedResource Include="UI\CoverForm.resx">
       <DependentUpon>CoverForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\ExplanationUI.resx">
+    <EmbeddedResource Include="UI\ExplanationUI.resx">
       <DependentUpon>ExplanationUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\File2Acces.resx">
+    <EmbeddedResource Include="UI\File2Acces.resx">
       <DependentUpon>File2Acces.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\Login.resx">
+    <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\MainForm.resx">
+    <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\RegisterForm.resx">
+    <EmbeddedResource Include="UI\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\TestBaseForm.resx">
+    <EmbeddedResource Include="UI\TestBaseForm.resx">
       <DependentUpon>TestBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TPO\UI\TranslationUI.resx">
+    <EmbeddedResource Include="UI\TranslationUI.resx">
       <DependentUpon>TranslationUI.cs</DependentUpon>
     </EmbeddedResource>
     <Reference Include="System.Data.SQLite">
-      <HintPath>TPO\SQLite\System.Data.SQLite.dll</HintPath>
+      <HintPath>SQLite\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
@@ -99,63 +105,65 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="TPO\Common\FTabControl.cs">
+    <Compile Include="Common\FTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TPO\Common\Question.cs" />
-    <Compile Include="TPO\SQLite\CaseTestFunc.cs" />
-    <Compile Include="TPO\SQLite\InconclusiveException.cs" />
-    <Compile Include="TPO\SQLite\MyCount.cs" />
-    <Compile Include="TPO\SQLite\MyRegEx.cs" />
-    <Compile Include="TPO\SQLite\MySequence.cs" />
-    <Compile Include="TPO\SQLite\SQLiteHandler.cs" />
-    <Compile Include="TPO\SQLite\TestAttribute.cs" />
-    <Compile Include="TPO\SQLite\TestCaseBase.cs" />
-    <Compile Include="TPO\SQLite\TestCases.cs" />
-    <Compile Include="TPO\SQLite\TestCompletedEvent.cs" />
-    <Compile Include="TPO\SQLite\TestEventArgs.cs" />
-    <Compile Include="TPO\SQLite\TestFunc.cs" />
-    <Compile Include="TPO\SQLite\TestResultEnum.cs" />
-    <Compile Include="TPO\SQLite\TestStartingEvent.cs" />
-    <Compile Include="TPO\TPOFile\LyricsReader.cs" />
-    <Compile Include="TPO\Common\MD5Generate.cs" />
-    <Compile Include="TPO\UI\CoverForm.cs">
+    <Compile Include="Common\IDisplayable.cs" />
+    <Compile Include="Common\Question.cs" />
+    <Compile Include="Quiz\TPOTest.cs" />
+    <Compile Include="SQLite\CaseTestFunc.cs" />
+    <Compile Include="SQLite\InconclusiveException.cs" />
+    <Compile Include="SQLite\MyCount.cs" />
+    <Compile Include="SQLite\MyRegEx.cs" />
+    <Compile Include="SQLite\MySequence.cs" />
+    <Compile Include="SQLite\SQLiteHandler.cs" />
+    <Compile Include="SQLite\TestAttribute.cs" />
+    <Compile Include="SQLite\TestCaseBase.cs" />
+    <Compile Include="SQLite\TestCases.cs" />
+    <Compile Include="SQLite\TestCompletedEvent.cs" />
+    <Compile Include="SQLite\TestEventArgs.cs" />
+    <Compile Include="SQLite\TestFunc.cs" />
+    <Compile Include="SQLite\TestResultEnum.cs" />
+    <Compile Include="SQLite\TestStartingEvent.cs" />
+    <Compile Include="TPOFile\LyricsReader.cs" />
+    <Compile Include="Common\MD5Generate.cs" />
+    <Compile Include="UI\CoverForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\ExplanationUI.cs">
+    <Compile Include="UI\ExplanationUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\File2Acces.cs">
+    <Compile Include="UI\File2Acces.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\Login.cs">
+    <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\MainForm.cs">
+    <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\RegisterForm.cs">
+    <Compile Include="UI\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\TestBaseForm.cs">
+    <Compile Include="UI\TestBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\UI\TranslationUI.cs">
+    <Compile Include="UI\TranslationUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPO\Utility\TestingSection.cs" />
-    <Compile Include="TPO\Quiz\TPOPart.cs" />
-    <Compile Include="TPO\Common\Section.cs" />
-    <Compile Include="TPO\Media\MP3Record.cs" />
-    <Compile Include="TPO\Utility\QuestionType.cs" />
-    <Compile Include="TPO\Utility\ConstantValues.cs" />
-    <Compile Include="TPO\Media\MP3MCI.cs" />
-    <Compile Include="TPO\Media\APIClass.cs" />
-    <Compile Include="TPO\Quiz\TPOPassage.cs" />
-    <Compile Include="TPO\TPOFile\XMLFileReader.cs" />
-    <Compile Include="TPO\Common\Encode.cs" />
-    <Compile Include="TPO\Program.cs" />
-    <Compile Include="TPO\TPOFile\RtfReader.cs" />
+    <Compile Include="Utility\TestingSection.cs" />
+    <Compile Include="Quiz\TPOPart.cs" />
+    <Compile Include="Common\Section.cs" />
+    <Compile Include="Media\MP3Record.cs" />
+    <Compile Include="Utility\QuestionType.cs" />
+    <Compile Include="Utility\ConstantValues.cs" />
+    <Compile Include="Media\MP3MCI.cs" />
+    <Compile Include="Media\APIClass.cs" />
+    <Compile Include="Quiz\TPOPassage.cs" />
+    <Compile Include="TPOFile\XMLReader.cs" />
+    <Compile Include="Common\Encode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="TPOFile\RtfReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

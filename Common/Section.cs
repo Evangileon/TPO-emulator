@@ -3,19 +3,21 @@
     using System;
     using System.Collections;
     using TPO.Utility;
+    using System.Collections.Generic;
 
 
     /// <summary>
     /// 一场考试包含四个Part，一个Part包含二或三个Section，一个Section包含若干个Question
     /// Section是一个测试单元，包含一段题目（一篇文章，听力或者作文），和若干个问题(Question)
     /// </summary>
-    public class Section
+    public class Section : IEnumerable
     {
+        #region 原来
         public int AnswerID;//no need
         public int TPONO;//no need
         public int Score;
         public ArrayList CorrectAnswer;
-        public QuestionType QuestionType;
+        public QuestionType QuestionType;  //no need
 
         public ArrayList MyAnswer;
               
@@ -24,6 +26,10 @@
                  
         public ArrayList RowStrs = new ArrayList();
         public ArrayList ColStrs = new ArrayList();   
+        #endregion 原来
+
+        List<Question> Questions;
+        private int timeLimitMin;
 
         public Section()
         {
@@ -44,7 +50,7 @@
                 }
                 return (num != 0);
             }
-            set;
+            //set;
         }
 
         public string CorrectAnswersStr
@@ -85,6 +91,11 @@
             }
         }
 
+        public int GetTimeLimitMin()
+        {
+            return this.timeLimitMin;
+        }
+
         //QuestionNo TEXT(5) PRIMARY KEY AUTOINCREMENT, QuestionType TEXT(15), YourAnswers TEXT(5), StandardAnswers TEXT(5), Score TEXT(5)
         public int QuestionNo
         {
@@ -116,6 +127,14 @@
         {
             set;
             get;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            foreach (Question q in Questions)
+            {
+                yield return q;
+            }
         }
     }
 

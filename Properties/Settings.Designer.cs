@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Properties {
+namespace TPO.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

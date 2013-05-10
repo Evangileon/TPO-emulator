@@ -410,12 +410,12 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
-        private TabPage tabPage1;
+        private TabPage tab_Answers;
         private TrackBar tb_currentpos;
         private TrackBar tb_currentpos1;
         private TrackBar tb_reading;
         private int TestMode;
-        private TPOQuestions TestQuestions;
+        private TPOTest TestQuestions;
         private TestingSection TestSection;
         private DateTime TimeLimitation;
         private Timer Timer_Listening;
@@ -760,7 +760,7 @@
                 ConstantValues.TPOACTIVED[num] = false;
                 ConstantValues.TPOEXPLANATION[num] = false;
             }
-            XMLFileReader reader = new XMLFileReader("license.xml");
+            XMLReader reader = new XMLReader("license.xml");
             for (num = 1; num < 0x1c; num++)
             {
                 string attr = reader.GetAttr("//licenses/license[@name='TPO" + num.ToString() + "']/@value");
@@ -811,7 +811,7 @@
             }
         }
 
-        private void BottonsStatus()
+        private void ButtonsStatus()
         {
             switch (this.TestSection)
             {
@@ -1129,30 +1129,29 @@
                 this.flash_timer.Stop();
                 Button button = (Button)sender;
                 string name = button.Name;
-                if (name.Contains("Reading"))
+                string title = button.Text;
+                switch (title)
                 {
-                    this.TestSection = TestingSection.READING;
+                    case "READING":
+                        this.TestSection = TestingSection.READING;
+                        break;
+                    case "LISTENING":
+                        this.TestSection = TestingSection.LISTENING;
+                        break;
+                    case "SPEAKING":
+                        this.TestSection = TestingSection.SPEAKING;
+                        break;
+                    case "WRITING":
+                        this.TestSection = TestingSection.WRITING;
+                        break;
+                    case "REVIEW":
+                        this.TestSection = TestingSection.REVIEW;
+                        break;
+                    case "VIEWANSWERS":
+                        this.TestSection = TestingSection.VIEWANSWERS;
+                        break;
                 }
-                if (name.Contains("Listening"))
-                {
-                    this.TestSection = TestingSection.LISTENING;
-                }
-                if (name.Contains("Speaking"))
-                {
-                    this.TestSection = TestingSection.SPEAKING;
-                }
-                if (name.Contains("Writing"))
-                {
-                    this.TestSection = TestingSection.WRITING;
-                }
-                if (name.Contains("Review"))
-                {
-                    this.TestSection = TestingSection.REVIEW;
-                }
-                if (name.Contains("Answer"))
-                {
-                    this.TestSection = TestingSection.VIEWANSWERS;
-                }
+
                 if (this.TPONO <= 0)
                 {
                     this.TPONO = Convert.ToInt16(name.Substring(name.Length - 2)) + ((this.CurrentTPOPage - 1) * 10);
@@ -1165,7 +1164,9 @@
                 {
                     this.PassageNO = 1;
                 }
-                if (!ConstantValues.TPOACTIVED[this.TPONO])
+
+                ///不需要授权模块
+                /*if (!ConstantValues.TPOACTIVED[this.TPONO])
                 {
                     if (MessageBox.Show("The TPO" + this.TPONO.ToString() + " is not actived yet, Do you want to buy the product?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                     {
@@ -1176,152 +1177,152 @@
                     this.PartNO = 0;
                     this.PassageNO = 0;
                     this.QuestionNO = 0;
-                }
-                else if (this.CheckFileConsistence())
+                }*/
+                if (!this.CheckFileConsistence())
+                    return;
+                base.btn_continue.Enabled = true;
+                base.btn_continue.Visible = true;
+                this.ButtonsStatus();
+                this.rb_PracticeMode.Visible = false;
+                this.rb_TestMode.Visible = false;
+                if (this.rb_PracticeMode.Checked)
                 {
-                    base.btn_continue.Enabled = true;
-                    base.btn_continue.Visible = true;
-                    this.BottonsStatus();
-                    this.rb_PracticeMode.Visible = false;
-                    this.rb_TestMode.Visible = false;
-                    if (this.rb_PracticeMode.Checked)
-                    {
-                        base.lbl_mode.Text = "PRACTICE MODE";
-                    }
-                    else
-                    {
-                        base.lbl_mode.Text = "TEST MODE";
-                    }
-                    XMLFileReader reader = new XMLFileReader();
-                    switch (this.TestSection)
-                    {
-                        case TestingSection.READING:
-                            this.Timer_Listening.Start();
-                            this.lbl_testingSection.Visible = true;
-                            this.lbl_testingSection.Text = "Reading Section";
-                            base.lbl_timeremain.ForeColor = SystemColors.ControlText;
-                            base.lbl_timeremain.Text = "20:00";
-                            this.ReadingPassageNo = 1;
-                            this.QuestionNO = 0;
-                            this.tabf_test.SelectedIndex = READING;
-                            this.tabf_Reading.SelectedIndex = RDIRECTION;
-                            reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
-                            this.RSpiltQuestionNO = int.Parse(reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@spiltQuestionNO"));
-                            this.PassageCount = int.Parse(reader.GetAttr("//@passageCount"));
-                            base.lbl_timeremain.Text = reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@time");
-                            this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
-                            if (!File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") || !ConstantValues.TPOEXPLANATION[this.TPONO])
-                            {
-                                goto Label_0597;
-                            }
-                            this.bn_readText.Visible = true;
-                            this.bn_readText.Enabled = true;
-                            goto Label_05A6;
-
-                        case TestingSection.LISTENING:
-                            {
-                                this.lbl_testingSection.Visible = true;
-                                base.btn_nextQuestion.Enabled = false;
-                                base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
-                                base.btn_preQuestion.Enabled = false;
-                                base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
-                                base.lbl_timeremain.ForeColor = SystemColors.ControlText;
-                                base.lbl_timeremain.Text = "10:00";
-                                this.lbl_testingSection.Text = "Listening Section";
-                                reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
-                                this.PartCount = int.Parse(reader.GetAttr("//parts/@partCount"));
-                                string attr = reader.GetAttr("//passage[@NO=" + 2 + "]/pictures/picture/@pictureName");
-                                base.lbl_timeremain.Text = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation");
-                                this.TimeLimitation = DateTime.ParseExact(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation"), "mm:ss", null);
-                                this.QuestionCount = int.Parse(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@questionCount"));
-                                this.tabf_test.SelectedIndex = LISTENING;
-                                this.tabf_Listening.SelectedIndex = LDIRECTION1;
-                                if (this.PassageNO <= 1)
-                                {
-                                    this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", "");
-                                }
-                                string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
-                                try
-                                {
-                                    this.MP3Player = new MP3MCI();
-                                    string str5 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", str4 });
-                                    this.MP3Player.FileName = str5;
-                                    this.PlayFileName.Text = str5;
-                                    this.pb_currentpos.Maximum = this.MP3Player.Duration;
-                                    this.pb_currentpos1.Maximum = this.MP3Player.Duration;
-                                    this.tb_currentpos.Maximum = this.MP3Player.Duration;
-                                    this.tb_currentpos1.Maximum = this.MP3Player.Duration;
-                                    this.MP3Player.play();
-                                    this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                                    this.Timer_Listening.Start();
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("open出错!");
-                                }
-                                break;
-                            }
-                        case TestingSection.SPEAKING:
-                            this.lbl_testingSection.Visible = true;
-                            this.lbl_testingSection.Text = "Speaking Section";
-                            base.btn_nextQuestion.Visible = false;
-                            base.btn_preQuestion.Visible = false;
-                            this.LoadSpeakingQuestion();
-                            this.tabf_test.SelectedIndex = SPEAKING;
-                            this.tabf_speaking.SelectedIndex = SDIRECTION;
-                            this.QuestionNO = 1;
-                            this.CurrentSpeakingStep = 0;
-                            this.Timer_Speaking.Start();
-                            break;
-
-                        case TestingSection.WRITING:
-                            this.Timer_Listening.Start();
-                            this.lbl_testingSection.Visible = true;
-                            base.btn_nextQuestion.Enabled = false;
-                            base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
-                            base.lbl_timeremain.ForeColor = SystemColors.ControlText;
-                            base.lbl_timeremain.Text = "03:00";
-                            this.lbl_testingSection.Text = "Writing Section";
-                            base.lbl_questionNO.Text = "Question 1 of 2";
-                            this.LoadWritingQuestion();
-                            this.tabf_test.SelectedIndex = WRITING;
-                            this.tabf_writing.SelectedIndex = WDIRECTION;
-                            this.CurrentWritingStep = 0;
-                            this.Timer_Speaking.Start();
-                            break;
-
-                        case TestingSection.REVIEW:
-                            {
-                                this.rb_TestMode.Checked = true;
-                                int index = this.TPONO % 10;
-                                if (index == 0)
-                                {
-                                    index = 10;
-                                }
-                                this.btn_LoadTest_Click(this.BtnLoadTest[index], e);
-                                break;
-                            }
-                        case TestingSection.VIEWANSWERS:
-                            base.btn_continue.Visible = false;
-                            this.ReportingScores();
-                            this.tabf_test.SelectedIndex = USERANSWERS;
-                            this.btn_NexPage.Visible = false;
-                            this.btn_LastPage.Visible = false;
-                            base.btn_mainmenu.Visible = true;
-                            break;
-                    }
+                    base.lbl_mode.Text = "PRACTICE MODE";
                 }
+                else
+                {
+                    base.lbl_mode.Text = "TEST MODE";
+                }
+                XMLReader reader = new XMLReader();
+
+                //this.tabf_test.SelectedIndex = this.
+                switch (this.TestSection)
+                {
+                    case TestingSection.READING:
+                        this.Timer_Listening.Start();
+                        this.lbl_testingSection.Visible = true;
+                        this.lbl_testingSection.Text = "Reading Section";
+                        base.lbl_timeremain.ForeColor = SystemColors.ControlText;
+                        base.lbl_timeremain.Text = "20:00";
+                        this.ReadingPassageNo = 1;
+                        this.QuestionNO = 0;
+                        this.tabf_test.SelectedIndex = READING;
+                        this.tabf_Reading.SelectedIndex = RDIRECTION;
+                        reader = new XMLReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
+                        this.RSpiltQuestionNO = int.Parse(reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@spiltQuestionNO"));
+                        this.PassageCount = int.Parse(reader.GetAttr("//@passageCount"));
+                        base.lbl_timeremain.Text = reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@time");
+                        this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        if (!File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") || !ConstantValues.TPOEXPLANATION[this.TPONO])
+                        {
+                            this.bn_readText.Visible = false;
+                        }
+                        this.bn_readText.Visible = true;
+                        this.bn_readText.Enabled = true;
+                        this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5)));
+                        //this.QuestionCount = this.TestQuestions.QuestionCount;
+                        this.LoadReadingMaterialAndQA();
+                        if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
+                        {
+                            this.LoadUserAnswer();
+                        }
+                        break;
+
+                    case TestingSection.LISTENING:
+
+                        this.lbl_testingSection.Visible = true;
+                        base.btn_nextQuestion.Enabled = false;
+                        base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
+                        base.btn_preQuestion.Enabled = false;
+                        base.btn_preQuestion.BackgroundImage = (Image)this.resmgr.GetObject("ok");
+                        base.lbl_timeremain.ForeColor = SystemColors.ControlText;
+                        base.lbl_timeremain.Text = "10:00";
+                        this.lbl_testingSection.Text = "Listening Section";
+                        reader = new XMLReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
+                        this.PartCount = int.Parse(reader.GetAttr("//parts/@partCount"));
+                        string attr = reader.GetAttr("//passage[@NO=" + 2 + "]/pictures/picture/@pictureName");
+                        base.lbl_timeremain.Text = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation");
+                        this.TimeLimitation = DateTime.ParseExact(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@timeLimitation"), "mm:ss", null);
+                        this.QuestionCount = int.Parse(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@questionCount"));
+                        //this.tabf_test.SelectedIndex = LISTENING;
+                        this.tabf_Listening.SelectedIndex = LDIRECTION1;
+                        if (this.PassageNO <= 1)
+                        {
+                            this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", ""));
+                        }
+                        string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
+                        try
+                        {
+                            this.MP3Player = new MP3MCI();
+                            string str5 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", str4 });
+                            this.MP3Player.FileName = str5;
+                            this.PlayFileName.Text = str5;
+                            this.pb_currentpos.Maximum = this.MP3Player.Duration;
+                            this.pb_currentpos1.Maximum = this.MP3Player.Duration;
+                            this.tb_currentpos.Maximum = this.MP3Player.Duration;
+                            this.tb_currentpos1.Maximum = this.MP3Player.Duration;
+                            this.MP3Player.play();
+                            this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
+                            this.Timer_Listening.Start();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("open出错!");
+                        }
+                        break;
+
+                    case TestingSection.SPEAKING:
+                        this.lbl_testingSection.Visible = true;
+                        this.lbl_testingSection.Text = "Speaking Section";
+                        base.btn_nextQuestion.Visible = false;
+                        base.btn_preQuestion.Visible = false;
+                        this.LoadSpeakingQuestion();
+                        //this.tabf_test.SelectedIndex = SPEAKING;
+                        this.tabf_speaking.SelectedIndex = SDIRECTION;
+                        this.QuestionNO = 1;
+                        this.CurrentSpeakingStep = 0;
+                        this.Timer_Speaking.Start();
+                        break;
+
+                    case TestingSection.WRITING:
+                        this.Timer_Listening.Start();
+                        this.lbl_testingSection.Visible = true;
+                        base.btn_nextQuestion.Enabled = false;
+                        base.btn_nextQuestion.BackgroundImage = (Image)this.resmgr.GetObject("next");
+                        base.lbl_timeremain.ForeColor = SystemColors.ControlText;
+                        base.lbl_timeremain.Text = "03:00";
+                        this.lbl_testingSection.Text = "Writing Section";
+                        base.lbl_questionNO.Text = "Question 1 of 2";
+                        this.LoadWritingQuestion();
+                        //this.tabf_test.SelectedIndex = WRITING;
+                        this.tabf_writing.SelectedIndex = WDIRECTION;
+                        this.CurrentWritingStep = 0;
+                        this.Timer_Speaking.Start();
+                        break;
+
+                    case TestingSection.REVIEW:
+                        {
+                            this.rb_TestMode.Checked = true;
+                            int index = this.TPONO % 10;
+                            if (index == 0)
+                            {
+                                index = 10;
+                            }
+                            this.btn_LoadTest_Click(this.BtnLoadTest[index], e);
+                            break;
+                        }
+                    case TestingSection.VIEWANSWERS:
+                        base.btn_continue.Visible = false;
+                        this.ReportingScores();
+                        //this.tabf_test.SelectedIndex = USERANSWERS;
+                        this.btn_NexPage.Visible = false;
+                        this.btn_LastPage.Visible = false;
+                        base.btn_mainmenu.Visible = true;
+                        break;
+                }
+
                 return;
-            Label_0597:
-                this.bn_readText.Visible = false;
-            Label_05A6: ;
-                this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
-                this.QuestionCount = this.TestQuestions.QuestionCount;
-                this.LoadReadingMaterialAndQA();
-                if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
-                {
-                    this.LoadUserAnswer();
-                }
+
             }
             catch (Exception exception)
             {
@@ -2591,7 +2592,7 @@
             this.wbtn_undo = new System.Windows.Forms.Button();
             this.wbtn_paste = new System.Windows.Forms.Button();
             this.wbtn_cut = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tab_Answers = new System.Windows.Forms.TabPage();
             this.tabf_answer = new System.Windows.Forms.TabControl();
             this.tab_readinganswer = new System.Windows.Forms.TabPage();
             this.dgv_readingSelect = new System.Windows.Forms.DataGridView();
@@ -2609,9 +2610,6 @@
             this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.dgv_listeninganswers = new System.Windows.Forms.DataGridView();
-            this.isAnsweredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.rightAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userAnswersStrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);
             this.lbl_listeningScorereport = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -2712,7 +2710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).BeginInit();
             this.wWriting2.SuspendLayout();
             this.wpanel.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tab_Answers.SuspendLayout();
             this.tabf_answer.SuspendLayout();
             this.tab_readinganswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_readingSelect)).BeginInit();
@@ -2889,7 +2887,7 @@
             this.tabf_test.Controls.Add(this.tab_Listening);
             this.tabf_test.Controls.Add(this.tab_Speaking);
             this.tabf_test.Controls.Add(this.tab_Writing);
-            this.tabf_test.Controls.Add(this.tabPage1);
+            this.tabf_test.Controls.Add(this.tab_Answers);
             this.tabf_test.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabf_test.Location = new System.Drawing.Point(-1, 73);
             this.tabf_test.Multiline = true;
@@ -4098,8 +4096,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Properties.Resources.ReadingDirection;
             this.pictureBox2.InitialImage = null;
@@ -5188,8 +5186,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::Properties.Resources.ListeningDirection3;
@@ -6566,8 +6564,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Properties.Resources.SpeakingDirection4;
             this.pictureBox3.InitialImage = null;
@@ -6699,8 +6697,8 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.ErrorImage = null;
             this.pictureBox4.Image = global::Properties.Resources.WritingDirection1;
@@ -6918,15 +6916,15 @@
             this.wbtn_cut.UseVisualStyleBackColor = true;
             this.wbtn_cut.Click += new System.EventHandler(this.wbtn_cut_Click);
             // 
-            // tabPage1
+            // tab_Answers
             // 
-            this.tabPage1.Controls.Add(this.tabf_answer);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(780, 484);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "tab_anwers";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tab_Answers.Controls.Add(this.tabf_answer);
+            this.tab_Answers.Location = new System.Drawing.Point(4, 22);
+            this.tab_Answers.Name = "tab_Answers";
+            this.tab_Answers.Size = new System.Drawing.Size(780, 484);
+            this.tab_Answers.TabIndex = 5;
+            this.tab_Answers.Text = "Answers";
+            this.tab_Answers.UseVisualStyleBackColor = true;
             // 
             // tabf_answer
             // 
@@ -7142,10 +7140,6 @@
             this.dgv_listeninganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_listeninganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgv_listeninganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_listeninganswers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.isAnsweredDataGridViewCheckBoxColumn,
-            this.rightAnswersStrDataGridViewTextBoxColumn,
-            this.userAnswersStrDataGridViewTextBoxColumn});
             this.dgv_listeninganswers.DataSource = this.bindingSource_Section;
             this.dgv_listeninganswers.Location = new System.Drawing.Point(64, 64);
             this.dgv_listeninganswers.MultiSelect = false;
@@ -7161,34 +7155,6 @@
             this.dgv_listeninganswers.TabIndex = 22;
             this.dgv_listeninganswers.TabStop = false;
             this.dgv_listeninganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
-            // 
-            // isAnsweredDataGridViewCheckBoxColumn
-            // 
-            this.isAnsweredDataGridViewCheckBoxColumn.DataPropertyName = "IsAnswered";
-            this.isAnsweredDataGridViewCheckBoxColumn.HeaderText = "IsAnswered";
-            this.isAnsweredDataGridViewCheckBoxColumn.Name = "isAnsweredDataGridViewCheckBoxColumn";
-            this.isAnsweredDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isAnsweredDataGridViewCheckBoxColumn.Width = 71;
-            // 
-            // rightAnswersStrDataGridViewTextBoxColumn
-            // 
-            this.rightAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "RightAnswersStr";
-            this.rightAnswersStrDataGridViewTextBoxColumn.HeaderText = "RightAnswersStr";
-            this.rightAnswersStrDataGridViewTextBoxColumn.Name = "rightAnswersStrDataGridViewTextBoxColumn";
-            this.rightAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rightAnswersStrDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // userAnswersStrDataGridViewTextBoxColumn
-            // 
-            this.userAnswersStrDataGridViewTextBoxColumn.DataPropertyName = "UserAnswersStr";
-            this.userAnswersStrDataGridViewTextBoxColumn.HeaderText = "UserAnswersStr";
-            this.userAnswersStrDataGridViewTextBoxColumn.Name = "userAnswersStrDataGridViewTextBoxColumn";
-            this.userAnswersStrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userAnswersStrDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // bindingSource_Section
-            // 
-            //this.bindingSource_Section.DataSource = typeof(TPO.Common.Section);
             // 
             // lbl_listeningScorereport
             // 
@@ -7812,7 +7778,7 @@
             this.wWriting2.ResumeLayout(false);
             this.wpanel.ResumeLayout(false);
             this.wpanel.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tab_Answers.ResumeLayout(false);
             this.tabf_answer.ResumeLayout(false);
             this.tab_readinganswer.ResumeLayout(false);
             this.tab_readinganswer.PerformLayout();
@@ -7923,7 +7889,7 @@
                 this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
             }
             base.lbl_questionNO.Text = "Question " + this.QuestionNO.ToString() + " of 34";
-            XMLFileReader reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
+            XMLReader reader = new XMLReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
             string attr = reader.GetAttr(string.Concat(new object[] { "//part[@NO=", this.PartNO, "]/passage[@NO=", this.PassageNO, "]/@Content" }));
             this.PassageLastQuestionIndex = int.Parse(reader.GetAttr(string.Concat(new object[] { "//part[@NO=", this.PartNO, "]/passage[@NO=", this.PassageNO, "]/@lastQuestionIndex" })));
             this.PartLastPassageIndex = int.Parse(reader.GetAttr("//part[@NO=" + this.PartNO + "]/@lastPassageIndex"));
@@ -8121,7 +8087,7 @@
                 this.MP3Player.play();
                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                 this.Timer_Listening.Start();
-                this.BottonsStatus();
+                this.ButtonsStatus();
             }
             catch
             {
@@ -8193,7 +8159,7 @@
             {
                 this.btn_stopReading_Click(new object(), new EventArgs());
             }
-            this.BottonsStatus();
+            this.ButtonsStatus();
             this.SummarySelectedAnswers = new int[5];
             base.lbl_questionNO.Text = "Question " + this.QuestionNO.ToString() + " of " + this.QuestionCount.ToString();
             for (num = 0; num < this.CkbReading.Length; num++)
@@ -8426,7 +8392,7 @@
 
         public void LoadUserAnswer()
         {
-            XMLFileReader reader = new XMLFileReader();
+            XMLReader reader = new XMLReader();
             string path = string.Concat(new object[] { Application.StartupPath, @"\users\", USERNAME, @"\", this.TPONO });
             if (this.TestSection == TestingSection.READING)
             {
@@ -8672,7 +8638,7 @@
                         this.PreInsertPosition = -1;
                         this.PassageNO++;
                         this.PartNO++;
-                        XMLFileReader reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
+                        XMLReader reader = new XMLReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
                         this.RSpiltQuestionNO = int.Parse(reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@spiltQuestionNO"));
                         base.lbl_timeremain.Text = reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@time");
                         this.tabf_test.SelectedIndex = READING;
@@ -8841,7 +8807,7 @@
                 }
             }
             this.dgv_readinganswers.DataSource = table;
-            XMLFileReader reader2 = new XMLFileReader(@"Tests\Direction\Scoring.xml");
+            XMLReader reader2 = new XMLReader(@"Tests\Direction\Scoring.xml");
             num7 = int.Parse(reader2.GetAttr("//ScoreSections//Section[@NO=1]//Score[@TestScore='" + num4 + "']//@IBTScore"));
             string str9 = string.Concat(new object[] { "Your score is (total score): ", num4, "         Your standard score is (in 30 scores): ", num7, "\nRight answered: ", num2, "      Wrong answered: ", num3, "      Not answered: ", num6 });
             this.lbl_readingscorereport.Text = str9;
@@ -9250,7 +9216,7 @@
         private string scoreReport(int type)
         {
             Section question = null;
-            XMLFileReader reader = new XMLFileReader(@"Tests\Direction\Scoring.xml");
+            XMLReader reader = new XMLReader(@"Tests\Direction\Scoring.xml");
             int num = 0;
             int num2 = 0;
             int num3 = 0;
@@ -9465,7 +9431,7 @@
                     {
                         this.scoreReport(2);
                         this.PreInsertPosition = -1;
-                        XMLFileReader reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
+                        XMLReader reader = new XMLReader(@"Tests\" + this.TPONO + @"\Reading\config.xml");
                         this.RSpiltQuestionNO = int.Parse(reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@spiltQuestionNO"));
                         base.lbl_timeremain.Text = reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@time");
                         this.tabf_test.SelectedIndex = READING;
@@ -9903,7 +9869,7 @@
             }
             else
             {
-                XMLFileReader reader = new XMLFileReader(@"Tests\" + this.TPONO + @"\Speaking\questions.xml");
+                XMLReader reader = new XMLReader(@"Tests\" + this.TPONO + @"\Speaking\questions.xml");
                 string attr = reader.GetAttr("//question[@NO=" + this.QuestionNO + "]/@SpeakingIntro");
                 string str3 = reader.GetAttr("//question[@NO=" + this.QuestionNO + "]/@SpeakingMP3");
                 string str4 = reader.GetAttr("//question[@NO=" + this.QuestionNO + "]/@ReadingMP3");

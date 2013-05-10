@@ -3,15 +3,15 @@
     using System;
     using System.Xml;
 
-    internal class XMLFileReader
+    internal class XMLReader
     {
         private string path;
 
-        public XMLFileReader()
+        public XMLReader()
         {
         }
 
-        public XMLFileReader(string path)
+        public XMLReader(string path)
         {
             this.path = path;
         }

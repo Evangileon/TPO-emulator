@@ -2,11 +2,11 @@
 
 [assembly: System.Reflection.AssemblyConfiguration("")]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
-[assembly: System.Reflection.AssemblyCopyright("Copyright \x00a9 微软中国 2011")]
+[assembly: System.Reflection.AssemblyCopyright("Copyright \x00a9 V-Bird Studio 2011")]
 [assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
 [assembly: System.Reflection.AssemblyTitle("TPO")]
 [assembly: System.Reflection.AssemblyDescription("")]
-[assembly: System.Reflection.AssemblyCompany("微软中国")]
+[assembly: System.Reflection.AssemblyCompany("V-Bird")]
 [assembly: System.Reflection.AssemblyProduct("TPO")]
 [assembly: System.Reflection.AssemblyTrademark("")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
