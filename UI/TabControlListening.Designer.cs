@@ -129,6 +129,8 @@
             this.l_pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lpb_ListenScene = new System.Windows.Forms.PictureBox();
             this.lpb_ListenScene1 = new System.Windows.Forms.PictureBox();
+
+            this.SuspendLayout();
             this.tabf_Listening.SuspendLayout();
             this.ltab_Direction1.SuspendLayout();
             this.ltab_Materials.SuspendLayout();

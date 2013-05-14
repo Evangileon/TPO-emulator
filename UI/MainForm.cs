@@ -201,14 +201,14 @@
         private int PassageNO;
         
         
-        private PictureBox pb_speakingScene;
+        
         private PictureBox pb_writingScene;
         
         
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         
-        private PictureBox pictureBox3;
+       
         private PictureBox pictureBox4;
         
         private PictureBox pictureBox6;
@@ -244,20 +244,17 @@
         private RichTextBox[] RtbReadingAnswers;
         private RichTextBox[] RtbSumAnswersToBeSelected;
         private RichTextBox[] RtbSumSelected;
-        private TabPage stab_Direction;
+        
         private static int SDIRECTION = 0;
         private bool ShowPassage;
-        private TabPage stab_NormalQuestions;
-        private ProgressBar spb;
+        
         private static int SPEAKING = 3;
         private string[] SpeakingQuestions;
         private string[] SPicturePaths;
         private string[] SPictureTimeLines;
         private static int SQUESTION = 1;
         private string[] SReadingMaterials;
-        private RichTextBox srtb_introduction;
-        private Label srtb_timeindicator;
-        private Label srtb_timer;
+        
         private int SummarySelectedAnswerIndex;
         private int[] SummarySelectedAnswers;
         private TabPage tab_CoverForm;
@@ -278,7 +275,7 @@
         private TabControl tabf_writing;
         
         private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel3;
+        
         private TabPage tab_Answers;
         
         
@@ -2139,16 +2136,8 @@
             this.tab_Listening = new System.Windows.Forms.TabPage();
             
             this.tab_Speaking = new System.Windows.Forms.TabPage();
-            this.tabf_speaking = new System.Windows.Forms.TabControl();
-            this.stab_Direction = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.stab_NormalQuestions = new System.Windows.Forms.TabPage();
-            this.spb = new System.Windows.Forms.ProgressBar();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.srtb_timer = new System.Windows.Forms.Label();
-            this.srtb_timeindicator = new System.Windows.Forms.Label();
-            this.srtb_introduction = new System.Windows.Forms.RichTextBox();
-            this.pb_speakingScene = new System.Windows.Forms.PictureBox();
+            
+            
             this.tab_Writing = new System.Windows.Forms.TabPage();
             this.tabf_writing = new System.Windows.Forms.TabControl();
             this.wtab_Direction = new System.Windows.Forms.TabPage();
@@ -2243,20 +2232,15 @@
             this.tabf_Reading.SuspendLayout();
             
             
-            ((System.ComponentModel.ISupportInitialize)(this.rtb_reading)).BeginInit();
+            
             
             this.rtlp_answers.SuspendLayout();
            
-            this.tab_Listening.SuspendLayout();
-            this.tabf_Listening.SuspendLayout();
+            
             
             this.tab_Speaking.SuspendLayout();
             this.tabf_speaking.SuspendLayout();
-            this.stab_Direction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.stab_NormalQuestions.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).BeginInit();
+           
             this.tab_Writing.SuspendLayout();
             this.tabf_writing.SuspendLayout();
             this.wtab_Direction.SuspendLayout();
@@ -3626,21 +3610,7 @@
             this.tab_Reading.TabIndex = 0;
             this.tab_Reading.Text = "Reading";
             this.tab_Reading.UseVisualStyleBackColor = true;
-            // 
-            // tabf_Reading
-            // 
-            this.tabf_Reading.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_Reading.Controls.Add(this.rtab_Direction);
-            this.tabf_Reading.Controls.Add(this.rtab_NormalQuestion);
-            this.tabf_Reading.Controls.Add(this.rtab_SumQuestion);
-            this.tabf_Reading.Controls.Add(this.rtab_Review);
-            this.tabf_Reading.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabf_Reading.Location = new System.Drawing.Point(3, -18);
-            this.tabf_Reading.Name = "tabf_Reading";
-            this.tabf_Reading.SelectedIndex = 0;
-            this.tabf_Reading.Size = new System.Drawing.Size(771, 510);
-            this.tabf_Reading.TabIndex = 0;
-            this.tabf_Reading.TabStop = false;
+            
             
             // 
             // tab_Listening
@@ -3665,126 +3635,7 @@
             this.tab_Speaking.TabIndex = 2;
             this.tab_Speaking.Text = "Speaking";
             this.tab_Speaking.UseVisualStyleBackColor = true;
-            // 
-            // tabf_speaking
-            // 
-            this.tabf_speaking.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_speaking.Controls.Add(this.stab_Direction);
-            this.tabf_speaking.Controls.Add(this.stab_NormalQuestions);
-            this.tabf_speaking.Location = new System.Drawing.Point(5, -23);
-            this.tabf_speaking.Name = "tabf_speaking";
-            this.tabf_speaking.SelectedIndex = 0;
-            this.tabf_speaking.Size = new System.Drawing.Size(771, 477);
-            this.tabf_speaking.TabIndex = 1;
-            this.tabf_speaking.TabStop = false;
-            // 
-            // stab_Direction
-            // 
-            this.stab_Direction.Controls.Add(this.pictureBox3);
-            this.stab_Direction.Location = new System.Drawing.Point(4, 25);
-            this.stab_Direction.Name = "stab_Direction";
-            this.stab_Direction.Size = new System.Drawing.Size(763, 448);
-            this.stab_Direction.TabIndex = 3;
-            this.stab_Direction.Text = "sDirection";
-            this.stab_Direction.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::TPO.Properties.Resources.SpeakingDirection4;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(904, 523);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // stab_NormalQuestions
-            // 
-            this.stab_NormalQuestions.Controls.Add(this.spb);
-            this.stab_NormalQuestions.Controls.Add(this.tableLayoutPanel3);
-            this.stab_NormalQuestions.Controls.Add(this.srtb_introduction);
-            this.stab_NormalQuestions.Controls.Add(this.pb_speakingScene);
-            this.stab_NormalQuestions.Location = new System.Drawing.Point(4, 25);
-            this.stab_NormalQuestions.Name = "stab_NormalQuestions";
-            this.stab_NormalQuestions.Padding = new System.Windows.Forms.Padding(3);
-            this.stab_NormalQuestions.Size = new System.Drawing.Size(763, 448);
-            this.stab_NormalQuestions.TabIndex = 0;
-            this.stab_NormalQuestions.Text = "sNormalQuestions";
-            this.stab_NormalQuestions.UseVisualStyleBackColor = true;
-            // 
-            // spb
-            // 
-            this.spb.Location = new System.Drawing.Point(190, 371);
-            this.spb.Name = "spb";
-            this.spb.Size = new System.Drawing.Size(350, 21);
-            this.spb.TabIndex = 41;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.AutoSize = true;
-            this.tableLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.srtb_timer, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.srtb_timeindicator, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(267, 228);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 72);
-            this.tableLayoutPanel3.TabIndex = 4;
-            // 
-            // srtb_timer
-            // 
-            this.srtb_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.srtb_timer.Location = new System.Drawing.Point(3, 36);
-            this.srtb_timer.Name = "srtb_timer";
-            this.srtb_timer.Size = new System.Drawing.Size(194, 36);
-            this.srtb_timer.TabIndex = 1;
-            this.srtb_timer.Text = "label1";
-            this.srtb_timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // srtb_timeindicator
-            // 
-            this.srtb_timeindicator.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.srtb_timeindicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.srtb_timeindicator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.srtb_timeindicator.Location = new System.Drawing.Point(3, 0);
-            this.srtb_timeindicator.Name = "srtb_timeindicator";
-            this.srtb_timeindicator.Size = new System.Drawing.Size(194, 36);
-            this.srtb_timeindicator.TabIndex = 1;
-            this.srtb_timeindicator.Text = "PREPARATION TIME";
-            this.srtb_timeindicator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // srtb_introduction
-            // 
-            this.srtb_introduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.srtb_introduction.Location = new System.Drawing.Point(129, 69);
-            this.srtb_introduction.Name = "srtb_introduction";
-            this.srtb_introduction.ReadOnly = true;
-            this.srtb_introduction.ShortcutsEnabled = false;
-            this.srtb_introduction.Size = new System.Drawing.Size(461, 90);
-            this.srtb_introduction.TabIndex = 3;
-            this.srtb_introduction.TabStop = false;
-            this.srtb_introduction.Text = "Introduction";
-            this.srtb_introduction.Visible = false;
-            this.srtb_introduction.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
-            // 
-            // pb_speakingScene
-            // 
-            this.pb_speakingScene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pb_speakingScene.Image = ((System.Drawing.Image)(resources.GetObject("pb_speakingScene.Image")));
-            this.pb_speakingScene.Location = new System.Drawing.Point(190, 18);
-            this.pb_speakingScene.Name = "pb_speakingScene";
-            this.pb_speakingScene.Size = new System.Drawing.Size(350, 323);
-            this.pb_speakingScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_speakingScene.TabIndex = 0;
-            this.pb_speakingScene.TabStop = false;
+            
             // 
             // tab_Writing
             // 
@@ -4849,13 +4700,8 @@
             
             this.tab_Speaking.ResumeLayout(false);
             this.tabf_speaking.ResumeLayout(false);
-            this.stab_Direction.ResumeLayout(false);
-            this.stab_Direction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.stab_NormalQuestions.ResumeLayout(false);
-            this.stab_NormalQuestions.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_speakingScene)).EndInit();
+            
+            
             this.tab_Writing.ResumeLayout(false);
             this.tabf_writing.ResumeLayout(false);
             this.wtab_Direction.ResumeLayout(false);
@@ -6986,7 +6832,7 @@
                                 this.srtb_introduction.Visible = true;
                                 this.srtb_timeindicator.Visible = false;
                                 this.srtb_timer.Visible = false;
-                                this.spb.Visible = false;
+                                this.spb_progress.Visible = false;
                             }
                             catch
                             {
@@ -7007,11 +6853,11 @@
                             {
                                 try
                                 {
-                                    this.pb_speakingScene.Load(Application.StartupPath + @"\Tests\images\WaitPerson.jpg");
+                                    this.spb_speakingScene.Load(Application.StartupPath + @"\Tests\images\WaitPerson.jpg");
                                     base.lbl_questionNO.Text = "Question " + this.QuestionNO + " of 6";
                                     this.tabf_test.SelectedIndex = SPEAKING;
                                     this.tabf_speaking.SelectedIndex = SQUESTION;
-                                    this.pb_speakingScene.Visible = true;
+                                    this.spb_speakingScene.Visible = true;
                                     this.srtb_introduction.Visible = false;
                                     this.MP3Player = new MP3MCI();
                                     str = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Speaking\", attr });
@@ -7020,7 +6866,7 @@
                                     this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                                     this.srtb_timeindicator.Visible = false;
                                     this.srtb_timer.Visible = false;
-                                    this.spb.Visible = false;
+                                    this.spb_progress.Visible = false;
                                     this.HasLoadMP3 = true;
                                 }
                                 catch
@@ -7055,7 +6901,7 @@
                                 this.MP3Player.FileName = str;
                                 this.MP3Player.play();
                                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                                this.pb_speakingScene.Visible = false;
+                                this.spb_speakingScene.Visible = false;
                                 base.lbl_timeremain.Text = "00:45";
                                 this.srtb_timeindicator.Text = "READING TIME";
                                 this.srtb_introduction.Rtf = this.SReadingMaterials[this.QuestionNO - 3];
@@ -7063,7 +6909,7 @@
                                 this.srtb_introduction.Visible = true;
                                 this.srtb_timeindicator.Visible = true;
                                 this.srtb_timer.Visible = true;
-                                this.spb.Visible = false;
+                                this.spb_progress.Visible = false;
                                 this.HasLoadMP3 = true;
                             }
                             catch
@@ -7085,13 +6931,13 @@
                             this.tabf_speaking.SelectedIndex = SQUESTION;
                             this.srtb_introduction.Rtf = this.SReadingMaterials[this.QuestionNO - 3];
                             this.srtb_introduction.Visible = true;
-                            this.pb_speakingScene.Visible = false;
+                            this.spb_speakingScene.Visible = false;
                             base.lbl_timeremain.Text = "00:45";
                             this.srtb_timeindicator.Text = "READING TIME";
                             this.srtb_timer.Text = "00:" + base.lbl_timeremain.Text;
                             this.srtb_timeindicator.Visible = true;
                             this.srtb_timer.Visible = true;
-                            this.spb.Visible = false;
+                            this.spb_progress.Visible = false;
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
@@ -7118,28 +6964,28 @@
                                 this.MP3Player.FileName = str;
                                 this.MP3Player.play();
                                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                                this.spb.Maximum = this.MP3Player.Duration;
+                                this.spb_progress.Maximum = this.MP3Player.Duration;
                                 if (this.QuestionNO > 2)
                                 {
-                                    this.spb.Visible = true;
+                                    this.spb_progress.Visible = true;
                                 }
                                 else
                                 {
-                                    this.spb.Visible = false;
+                                    this.spb_progress.Visible = false;
                                 }
                                 this.srtb_introduction.Rtf = this.SpeakingQuestions[this.QuestionNO - 1];
                                 if ((this.QuestionNO == 1) || (this.QuestionNO == 2))
                                 {
                                     this.srtb_introduction.Visible = true;
-                                    this.pb_speakingScene.Visible = false;
+                                    this.spb_speakingScene.Visible = false;
                                 }
                                 else
                                 {
                                     this.srtb_introduction.Visible = false;
-                                    this.pb_speakingScene.Load(string.Concat(new object[] { Application.StartupPath, @"\Tests\images\speak", this.QuestionNO, ".jpg" }));
+                                    this.spb_speakingScene.Load(string.Concat(new object[] { Application.StartupPath, @"\Tests\images\speak", this.QuestionNO, ".jpg" }));
                                     this.srtb_timeindicator.Visible = false;
                                     this.srtb_timer.Visible = false;
-                                    this.pb_speakingScene.Visible = true;
+                                    this.spb_speakingScene.Visible = true;
                                 }
                                 this.HasLoadMP3 = true;
                             }
@@ -7148,13 +6994,13 @@
                                 MessageBox.Show("open" + str + "出错!");
                             }
                         }
-                        this.spb.Value = this.MP3Player.CurrentPosition;
+                        this.spb_progress.Value = this.MP3Player.CurrentPosition;
                         if (this.MP3Player.CurrentPosition >= this.MP3Player.Duration)
                         {
                             if ((this.QuestionNO == 1) || (this.QuestionNO == 2))
                             {
                                 this.CurrentSpeakingStep = 6;
-                                this.spb.Visible = false;
+                                this.spb_progress.Visible = false;
                                 base.lbl_timeremain.Text = "00:15";
                                 this.srtb_timeindicator.Text = "PREPARATION TIME";
                                 this.srtb_timeindicator.Visible = true;
@@ -7178,13 +7024,13 @@
                                 this.tabf_speaking.SelectedIndex = SQUESTION;
                                 this.MP3Player = new MP3MCI();
                                 str = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Speaking\", str5 });
-                                this.spb.Visible = false;
+                                this.spb_progress.Visible = false;
                                 this.MP3Player.FileName = str;
                                 this.MP3Player.play();
                                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                                 this.srtb_introduction.Rtf = this.SpeakingQuestions[this.QuestionNO - 1];
                                 this.srtb_introduction.Visible = true;
-                                this.pb_speakingScene.Visible = false;
+                                this.spb_speakingScene.Visible = false;
                                 if ((this.QuestionNO == 3) || (this.QuestionNO == 4))
                                 {
                                     base.lbl_timeremain.Text = "00:30";
@@ -7220,12 +7066,12 @@
                                 this.tabf_speaking.SelectedIndex = SQUESTION;
                                 this.MP3Player = new MP3MCI();
                                 str = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Speaking\", str6 });
-                                this.spb.Visible = false;
+                                this.spb_progress.Visible = false;
                                 this.MP3Player.FileName = str;
                                 this.MP3Player.play();
                                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                                 this.srtb_introduction.Visible = true;
-                                this.pb_speakingScene.Visible = false;
+                                this.spb_speakingScene.Visible = false;
                                 this.HasLoadMP3 = true;
                             }
                             catch
@@ -7246,7 +7092,7 @@
                             this.tabf_test.SelectedIndex = SPEAKING;
                             this.tabf_speaking.SelectedIndex = SQUESTION;
                             this.srtb_introduction.Visible = true;
-                            this.pb_speakingScene.Visible = false;
+                            this.spb_speakingScene.Visible = false;
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
@@ -7285,7 +7131,7 @@
                                 this.MP3Player.play();
                                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                                 this.srtb_introduction.Visible = true;
-                                this.pb_speakingScene.Visible = false;
+                                this.spb_speakingScene.Visible = false;
                                 this.HasLoadMP3 = true;
                             }
                             catch
@@ -7309,7 +7155,7 @@
                             this.MP3Recorder.SetFilePath(string.Concat(new object[] { @"users\", USERNAME, @"\", this.TPONO, @"\SpeakingAnswer", this.QuestionNO, ".wav" }));
                             this.MP3Recorder.Start();
                             this.srtb_introduction.Visible = true;
-                            this.pb_speakingScene.Visible = false;
+                            this.spb_speakingScene.Visible = false;
                             this.HasLoadMP3 = true;
                         }
                         time = DateTime.ParseExact("00:01", "mm:ss", null);
@@ -7338,7 +7184,7 @@
                             this.QuestionNO++;
                             this.CurrentSpeakingStep = 1;
                             this.srtb_introduction.Visible = false;
-                            this.pb_speakingScene.Visible = true;
+                            this.spb_speakingScene.Visible = true;
                             this.srtb_timeindicator.Visible = false;
                             this.srtb_timer.Visible = false;
                         }

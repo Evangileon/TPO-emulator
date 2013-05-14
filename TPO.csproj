@@ -83,6 +83,9 @@
     <EmbeddedResource Include="UI\TabControlReading.resx">
       <DependentUpon>TabControlReading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TabControlSpeaking.resx">
+      <DependentUpon>TabControlSpeaking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TestBaseForm.resx">
       <DependentUpon>TestBaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +167,12 @@
     <Compile Include="UI\TabControlReading.Designer.cs">
       <DependentUpon>TabControlReading.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TabControlSpeaking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TabControlSpeaking.Designer.cs">
+      <DependentUpon>TabControlSpeaking.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TestBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +211,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UI\TextFile1.txt" />
     <EmbeddedResource Include="Resources\back.jpg" />
     <EmbeddedResource Include="Resources\back1.jpg" />
     <EmbeddedResource Include="Resources\bg1.jpg" />
