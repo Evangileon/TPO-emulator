@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            
+
             this.tabf_Listening = new System.Windows.Forms.TabControl();
             this.ltab_Direction1 = new System.Windows.Forms.TabPage();
             this.ltab_Direction2 = new System.Windows.Forms.TabPage();

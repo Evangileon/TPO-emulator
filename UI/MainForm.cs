@@ -167,8 +167,8 @@
         private Label lbl_writeDirection;
         
         
-        private CheckBox[] LCkbAnswers;
-        private CheckBox[][] LCkbTable;
+        
+        
         
        
         
@@ -184,10 +184,7 @@
         public bool LOADLASTQUESTION;
         private static int LQUESTIONS = 4;
         
-        private RichTextBox[] LRtbAnswers;
-        private RichTextBox[] LRtbTableCol;
-       
-        private RichTextBox[] LRtbTableRow;
+        
         
         private static int LTABLEQUESTION = 5;
         
@@ -388,11 +385,7 @@
             this.SummarySelectedAnswerIndex = -1;
             this.ShowPassage = false;
             this.SummarySelectedAnswers = new int[5];
-            this.LCkbAnswers = new CheckBox[8];
-            this.LRtbAnswers = new RichTextBox[8];
-            this.LRtbTableRow = new RichTextBox[9];
-            this.LRtbTableCol = new RichTextBox[5];
-            this.LCkbTable = new CheckBox[9][];
+            
             this.IsPause = false;
             this.LOADLASTQUESTION = false;
             this.HasClickedNext = false;
@@ -415,14 +408,7 @@
             this.PreFormWidth = base.Width;
             base.WindowState = FormWindowState.Maximized;
             
-            this.LCkbAnswers[0] = this.lckb_A;
-            this.LCkbAnswers[1] = this.lckb_B;
-            this.LCkbAnswers[2] = this.lckb_C;
-            this.LCkbAnswers[3] = this.lckb_D;
-            this.LCkbAnswers[4] = this.lckb_E;
-            this.LCkbAnswers[5] = this.lckb_F;
-            this.LCkbAnswers[6] = this.lckb_G;
-            this.LCkbAnswers[7] = this.lckb_H;
+            
 
             for (num = 0; num < 8; num++)
             {
@@ -431,14 +417,7 @@
                 this.LCkbAnswers[num].CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
             }
 
-            this.LRtbAnswers[0] = this.lrtb_answerA;
-            this.LRtbAnswers[1] = this.lrtb_answerB;
-            this.LRtbAnswers[2] = this.lrtb_answerC;
-            this.LRtbAnswers[3] = this.lrtb_answerD;
-            this.LRtbAnswers[4] = this.lrtb_answerE;
-            this.LRtbAnswers[5] = this.lrtb_answerF;
-            this.LRtbAnswers[6] = this.lrtb_answerG;
-            this.LRtbAnswers[7] = this.lrtb_answerH;
+            
 
             for (num = 0; num < 9; num++)
             {
@@ -448,65 +427,7 @@
                     this.LCkbTable[num][i] = new CheckBox();
                 }
             }
-            this.LCkbTable[0][0] = this.lckb_Table11;
-            this.LCkbTable[0][1] = this.lckb_Table12;
-            this.LCkbTable[0][2] = this.lckb_Table13;
-            this.LCkbTable[0][3] = this.lckb_Table14;
-            this.LCkbTable[0][4] = this.lckb_Table15;
-            this.LCkbTable[1][0] = this.lckb_Table21;
-            this.LCkbTable[1][1] = this.lckb_Table22;
-            this.LCkbTable[1][2] = this.lckb_Table23;
-            this.LCkbTable[1][3] = this.lckb_Table24;
-            this.LCkbTable[1][4] = this.lckb_Table25;
-            this.LCkbTable[2][0] = this.lckb_Table31;
-            this.LCkbTable[2][1] = this.lckb_Table32;
-            this.LCkbTable[2][2] = this.lckb_Table33;
-            this.LCkbTable[2][3] = this.lckb_Table34;
-            this.LCkbTable[2][4] = this.lckb_Table35;
-            this.LCkbTable[3][0] = this.lckb_Table41;
-            this.LCkbTable[3][1] = this.lckb_Table42;
-            this.LCkbTable[3][2] = this.lckb_Table43;
-            this.LCkbTable[3][3] = this.lckb_Table44;
-            this.LCkbTable[3][4] = this.lckb_Table45;
-            this.LCkbTable[4][0] = this.lckb_Table51;
-            this.LCkbTable[4][1] = this.lckb_Table52;
-            this.LCkbTable[4][2] = this.lckb_Table53;
-            this.LCkbTable[4][3] = this.lckb_Table54;
-            this.LCkbTable[4][4] = this.lckb_Table55;
-            this.LCkbTable[5][0] = this.lckb_Table61;
-            this.LCkbTable[5][1] = this.lckb_Table62;
-            this.LCkbTable[5][2] = this.lckb_Table63;
-            this.LCkbTable[5][3] = this.lckb_Table64;
-            this.LCkbTable[5][4] = this.lckb_Table65;
-            this.LCkbTable[6][0] = this.lckb_Table71;
-            this.LCkbTable[6][1] = this.lckb_Table72;
-            this.LCkbTable[6][2] = this.lckb_Table73;
-            this.LCkbTable[6][3] = this.lckb_Table74;
-            this.LCkbTable[6][4] = this.lckb_Table75;
-            this.LCkbTable[7][0] = this.lckb_Table81;
-            this.LCkbTable[7][1] = this.lckb_Table82;
-            this.LCkbTable[7][2] = this.lckb_Table83;
-            this.LCkbTable[7][3] = this.lckb_Table84;
-            this.LCkbTable[7][4] = this.lckbTable85;
-            this.LCkbTable[8][0] = this.lckbTable91;
-            this.LCkbTable[8][1] = this.lckbTable92;
-            this.LCkbTable[8][2] = this.lckbTable93;
-            this.LCkbTable[8][3] = this.lckbTable94;
-            this.LCkbTable[8][4] = this.lckbTable95;
-            this.LRtbTableRow[0] = this.lrtb_TableRow1;
-            this.LRtbTableRow[1] = this.lrtb_TableRow2;
-            this.LRtbTableRow[2] = this.lrtb_TableRow3;
-            this.LRtbTableRow[3] = this.lrtb_TableRow4;
-            this.LRtbTableRow[4] = this.lrtb_TableRow5;
-            this.LRtbTableRow[5] = this.lrtb_TableRow6;
-            this.LRtbTableRow[6] = this.lrtb_TableRow7;
-            this.LRtbTableRow[7] = this.lrtb_TableRow8;
-            this.LRtbTableRow[8] = this.lrtb_TableRow9;
-            this.LRtbTableCol[0] = this.lrtb_TableCol1;
-            this.LRtbTableCol[1] = this.lrtb_TableCol2;
-            this.LRtbTableCol[2] = this.lrtb_TableCol3;
-            this.LRtbTableCol[3] = this.lrtb_TableCol4;
-            this.LRtbTableCol[4] = this.lrtb_TableCol5;
+            
             
             
             this.BtnLoadTest[1] = this.btn_LoadReading01;
@@ -4916,19 +4837,13 @@
             this.TPO10.PerformLayout();
             this.tab_Reading.ResumeLayout(false);
             this.tabf_Reading.ResumeLayout(false);
-            this.rtab_Direction.ResumeLayout(false);
-            this.rtab_Direction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox)).EndInit();
-            this.rtab_NormalQuestion.ResumeLayout(false);
-            this.rtab_NormalQuestion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rtb_reading)).EndInit();
-            this.r_flowLayoutPanel.ResumeLayout(false);
-            this.r_flowLayoutPanel.PerformLayout();
+            
+            
+            
+            
             this.rtlp_answers.ResumeLayout(false);
             this.rtlp_answers.PerformLayout();
-            this.rtab_SumQuestion.ResumeLayout(false);
-            this.rtab_SumQuestion.PerformLayout();
-            this.r_flowLayoutPanel2.ResumeLayout(false);
+            
             this.tab_Listening.ResumeLayout(false);
             this.tabf_Listening.ResumeLayout(false);
             
@@ -4975,10 +4890,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.atab_writinganswers.ResumeLayout(false);
             this.atab_writinganswers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rpb_wrongAnswered)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpb_rightAnswered)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdgv_readingReview)).EndInit();
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

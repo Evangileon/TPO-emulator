@@ -1237,6 +1237,10 @@
             this.rtlp_answers.PerformLayout();
             this.rtab_SumQuestion.ResumeLayout(false);
             this.rtab_SumQuestion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rpb_wrongAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpb_rightAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgv_readingReview)).EndInit();
             this.ResumeLayout(false);
 
         }
