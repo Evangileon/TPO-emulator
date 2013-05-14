@@ -164,7 +164,7 @@
         private Label lbl_top7;
         private Label lbl_top8;
         private Label lbl_top9;
-        private Label lbl_writeDirection;
+        
         
         
         
@@ -202,14 +202,14 @@
         
         
         
-        private PictureBox pb_writingScene;
+        
         
         
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         
        
-        private PictureBox pictureBox4;
+        
         
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
@@ -297,31 +297,19 @@
         private TranslationUI TRANSUI;
         private static int USERANSWERS = 5;
         public static string USERNAME = "";
-        private Button wbtn_cut;
-        private Button wbtn_paste;
-        private Button wbtn_redo;
-        private Button wbtn_undo;
-        private Button wbtn_wordcount;
-        private TabPage wtab_Direction;
+       
         private static int WDIRECTION = 0;
         private static int WINDEPENDENT = 3;
         private static int WINTERGRATED = 1;
-        private Label wlbl_wordcount;
-        private Panel wpanel;
-        private ProgressBar wpb_speak;
-        private TabPage wtab_Reading;
+        
         private static int WRITING = 4;
         private string[] WritingQuestions;
         private int WrongAnsweredQuestions;
-        private RichTextBox wrtb_reading;
-        private RichTextBox wrtb_writing1;
-        private RichTextBox wrtb_writing2;
-        private RichTextBox wrtbQuestion2;
-        private TabPage wtab_SpeakingPassage;
+       
         private static int WSPEECH = 2;
-        private TrackBar wtb_speak;
+        
         private BindingSource bindingSource_Section;
-        private TabPage wtab_Writing2;
+        
         #endregion
         private DataGridView dgv_readingSelect;
         private DataGridView dgv_listeningSelect;
@@ -2140,26 +2128,7 @@
             
             this.tab_Writing = new System.Windows.Forms.TabPage();
             this.tabf_writing = new System.Windows.Forms.TabControl();
-            this.wtab_Direction = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.wtab_Reading = new System.Windows.Forms.TabPage();
-            this.wrtb_writing1 = new System.Windows.Forms.RichTextBox();
-            this.wrtb_reading = new System.Windows.Forms.RichTextBox();
-            this.wtab_SpeakingPassage = new System.Windows.Forms.TabPage();
-            this.wpb_speak = new System.Windows.Forms.ProgressBar();
-            this.wtb_speak = new System.Windows.Forms.TrackBar();
-            this.pb_writingScene = new System.Windows.Forms.PictureBox();
-            this.wtab_Writing2 = new System.Windows.Forms.TabPage();
-            this.lbl_writeDirection = new System.Windows.Forms.Label();
-            this.wrtb_writing2 = new System.Windows.Forms.RichTextBox();
-            this.wrtbQuestion2 = new System.Windows.Forms.RichTextBox();
-            this.wpanel = new System.Windows.Forms.Panel();
-            this.wlbl_wordcount = new System.Windows.Forms.Label();
-            this.wbtn_wordcount = new System.Windows.Forms.Button();
-            this.wbtn_redo = new System.Windows.Forms.Button();
-            this.wbtn_undo = new System.Windows.Forms.Button();
-            this.wbtn_paste = new System.Windows.Forms.Button();
-            this.wbtn_cut = new System.Windows.Forms.Button();
+            
             this.tab_Answers = new System.Windows.Forms.TabPage();
             this.tabf_answer = new System.Windows.Forms.TabControl();
             this.atab_readinganswer = new System.Windows.Forms.TabPage();
@@ -2243,14 +2212,7 @@
            
             this.tab_Writing.SuspendLayout();
             this.tabf_writing.SuspendLayout();
-            this.wtab_Direction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.wtab_Reading.SuspendLayout();
-            this.wtab_SpeakingPassage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).BeginInit();
-            this.wtab_Writing2.SuspendLayout();
-            this.wpanel.SuspendLayout();
+            
             this.tab_Answers.SuspendLayout();
             this.tabf_answer.SuspendLayout();
             this.atab_readinganswer.SuspendLayout();
@@ -3646,252 +3608,7 @@
             this.tab_Writing.TabIndex = 3;
             this.tab_Writing.Text = "Writing";
             this.tab_Writing.UseVisualStyleBackColor = true;
-            // 
-            // tabf_writing
-            // 
-            this.tabf_writing.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_writing.Controls.Add(this.wtab_Direction);
-            this.tabf_writing.Controls.Add(this.wtab_Reading);
-            this.tabf_writing.Controls.Add(this.wtab_SpeakingPassage);
-            this.tabf_writing.Controls.Add(this.wtab_Writing2);
-            this.tabf_writing.Location = new System.Drawing.Point(5, -25);
-            this.tabf_writing.Name = "tabf_writing";
-            this.tabf_writing.SelectedIndex = 0;
-            this.tabf_writing.Size = new System.Drawing.Size(771, 477);
-            this.tabf_writing.TabIndex = 2;
-            this.tabf_writing.TabStop = false;
-            this.tabf_writing.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
-            // 
-            // wtab_Direction
-            // 
-            this.wtab_Direction.Controls.Add(this.pictureBox4);
-            this.wtab_Direction.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Direction.Name = "wtab_Direction";
-            this.wtab_Direction.Size = new System.Drawing.Size(763, 448);
-            this.wtab_Direction.TabIndex = 3;
-            this.wtab_Direction.Text = "wDirection";
-            this.wtab_Direction.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = global::TPO.Properties.Resources.WritingDirection1;
-            this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1081, 490);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            // 
-            // wtab_Reading
-            // 
-            this.wtab_Reading.Controls.Add(this.wrtb_writing1);
-            this.wtab_Reading.Controls.Add(this.wrtb_reading);
-            this.wtab_Reading.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Reading.Name = "wtab_Reading";
-            this.wtab_Reading.Size = new System.Drawing.Size(763, 448);
-            this.wtab_Reading.TabIndex = 5;
-            this.wtab_Reading.Text = "wReading";
-            this.wtab_Reading.UseVisualStyleBackColor = true;
-            // 
-            // wrtb_writing1
-            // 
-            this.wrtb_writing1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.wrtb_writing1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wrtb_writing1.Location = new System.Drawing.Point(387, 3);
-            this.wrtb_writing1.Name = "wrtb_writing1";
-            this.wrtb_writing1.ShortcutsEnabled = false;
-            this.wrtb_writing1.Size = new System.Drawing.Size(373, 443);
-            this.wrtb_writing1.TabIndex = 4;
-            this.wrtb_writing1.TabStop = false;
-            this.wrtb_writing1.Text = "Introduction";
-            // 
-            // wrtb_reading
-            // 
-            this.wrtb_reading.BackColor = System.Drawing.SystemColors.Control;
-            this.wrtb_reading.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wrtb_reading.Location = new System.Drawing.Point(3, 3);
-            this.wrtb_reading.Name = "wrtb_reading";
-            this.wrtb_reading.ReadOnly = true;
-            this.wrtb_reading.ShortcutsEnabled = false;
-            this.wrtb_reading.Size = new System.Drawing.Size(384, 443);
-            this.wrtb_reading.TabIndex = 4;
-            this.wrtb_reading.TabStop = false;
-            this.wrtb_reading.Text = "Introduction";
-            // 
-            // wtab_SpeakingPassage
-            // 
-            this.wtab_SpeakingPassage.Controls.Add(this.wpb_speak);
-            this.wtab_SpeakingPassage.Controls.Add(this.wtb_speak);
-            this.wtab_SpeakingPassage.Controls.Add(this.pb_writingScene);
-            this.wtab_SpeakingPassage.Location = new System.Drawing.Point(4, 25);
-            this.wtab_SpeakingPassage.Name = "wtab_SpeakingPassage";
-            this.wtab_SpeakingPassage.Padding = new System.Windows.Forms.Padding(3);
-            this.wtab_SpeakingPassage.Size = new System.Drawing.Size(763, 448);
-            this.wtab_SpeakingPassage.TabIndex = 0;
-            this.wtab_SpeakingPassage.Text = "wSpeakingPassage";
-            this.wtab_SpeakingPassage.UseVisualStyleBackColor = true;
-            // 
-            // wpb_speak
-            // 
-            this.wpb_speak.Location = new System.Drawing.Point(206, 388);
-            this.wpb_speak.Name = "wpb_speak";
-            this.wpb_speak.Size = new System.Drawing.Size(350, 21);
-            this.wpb_speak.TabIndex = 40;
-            // 
-            // wtb_speak
-            // 
-            this.wtb_speak.AutoSize = false;
-            this.wtb_speak.LargeChange = 1;
-            this.wtb_speak.Location = new System.Drawing.Point(206, 18);
-            this.wtb_speak.Name = "wtb_speak";
-            this.wtb_speak.Size = new System.Drawing.Size(350, 23);
-            this.wtb_speak.TabIndex = 39;
-            this.wtb_speak.TabStop = false;
-            this.wtb_speak.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.wtb_speak.Scroll += new System.EventHandler(this.wtb_speak_Scroll);
-            // 
-            // pb_writingScene
-            // 
-            this.pb_writingScene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pb_writingScene.Image = ((System.Drawing.Image)(resources.GetObject("pb_writingScene.Image")));
-            this.pb_writingScene.Location = new System.Drawing.Point(206, 46);
-            this.pb_writingScene.Name = "pb_writingScene";
-            this.pb_writingScene.Size = new System.Drawing.Size(350, 323);
-            this.pb_writingScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_writingScene.TabIndex = 1;
-            this.pb_writingScene.TabStop = false;
-            // 
-            // wtab_Writing2
-            // 
-            this.wtab_Writing2.Controls.Add(this.lbl_writeDirection);
-            this.wtab_Writing2.Controls.Add(this.wrtb_writing2);
-            this.wtab_Writing2.Controls.Add(this.wrtbQuestion2);
-            this.wtab_Writing2.Controls.Add(this.wpanel);
-            this.wtab_Writing2.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Writing2.Name = "wtab_Writing2";
-            this.wtab_Writing2.Size = new System.Drawing.Size(763, 448);
-            this.wtab_Writing2.TabIndex = 4;
-            this.wtab_Writing2.Text = "wWriting2";
-            this.wtab_Writing2.UseVisualStyleBackColor = true;
-            // 
-            // lbl_writeDirection
-            // 
-            this.lbl_writeDirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_writeDirection.Location = new System.Drawing.Point(3, 21);
-            this.lbl_writeDirection.Name = "lbl_writeDirection";
-            this.lbl_writeDirection.Size = new System.Drawing.Size(760, 45);
-            this.lbl_writeDirection.TabIndex = 8;
-            this.lbl_writeDirection.Text = resources.GetString("lbl_writeDirection.Text");
-            // 
-            // wrtb_writing2
-            // 
-            this.wrtb_writing2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.wrtb_writing2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wrtb_writing2.Location = new System.Drawing.Point(351, 106);
-            this.wrtb_writing2.Name = "wrtb_writing2";
-            this.wrtb_writing2.ShortcutsEnabled = false;
-            this.wrtb_writing2.Size = new System.Drawing.Size(417, 345);
-            this.wrtb_writing2.TabIndex = 6;
-            this.wrtb_writing2.TabStop = false;
-            this.wrtb_writing2.Text = "";
-            this.wrtb_writing2.TextChanged += new System.EventHandler(this.wrtb_writing2_TextChanged);
-            // 
-            // wrtbQuestion2
-            // 
-            this.wrtbQuestion2.BackColor = System.Drawing.SystemColors.Control;
-            this.wrtbQuestion2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wrtbQuestion2.Location = new System.Drawing.Point(3, 69);
-            this.wrtbQuestion2.Name = "wrtbQuestion2";
-            this.wrtbQuestion2.ReadOnly = true;
-            this.wrtbQuestion2.ShortcutsEnabled = false;
-            this.wrtbQuestion2.Size = new System.Drawing.Size(347, 381);
-            this.wrtbQuestion2.TabIndex = 5;
-            this.wrtbQuestion2.TabStop = false;
-            this.wrtbQuestion2.Text = "Introduction";
-            // 
-            // wpanel
-            // 
-            this.wpanel.BackColor = System.Drawing.Color.LightGray;
-            this.wpanel.Controls.Add(this.wlbl_wordcount);
-            this.wpanel.Controls.Add(this.wbtn_wordcount);
-            this.wpanel.Controls.Add(this.wbtn_redo);
-            this.wpanel.Controls.Add(this.wbtn_undo);
-            this.wpanel.Controls.Add(this.wbtn_paste);
-            this.wpanel.Controls.Add(this.wbtn_cut);
-            this.wpanel.Location = new System.Drawing.Point(350, 69);
-            this.wpanel.Name = "wpanel";
-            this.wpanel.Size = new System.Drawing.Size(425, 38);
-            this.wpanel.TabIndex = 7;
-            // 
-            // wlbl_wordcount
-            // 
-            this.wlbl_wordcount.AutoSize = true;
-            this.wlbl_wordcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wlbl_wordcount.Location = new System.Drawing.Point(371, 7);
-            this.wlbl_wordcount.Name = "wlbl_wordcount";
-            this.wlbl_wordcount.Size = new System.Drawing.Size(19, 20);
-            this.wlbl_wordcount.TabIndex = 1;
-            this.wlbl_wordcount.Text = "0";
-            // 
-            // wbtn_wordcount
-            // 
-            this.wbtn_wordcount.Location = new System.Drawing.Point(246, 5);
-            this.wbtn_wordcount.Name = "wbtn_wordcount";
-            this.wbtn_wordcount.Size = new System.Drawing.Size(119, 27);
-            this.wbtn_wordcount.TabIndex = 0;
-            this.wbtn_wordcount.TabStop = false;
-            this.wbtn_wordcount.Text = "Hide Word Count";
-            this.wbtn_wordcount.UseVisualStyleBackColor = true;
-            this.wbtn_wordcount.Click += new System.EventHandler(this.wbtn_wordcount_Click);
-            // 
-            // wbtn_redo
-            // 
-            this.wbtn_redo.Location = new System.Drawing.Point(174, 5);
-            this.wbtn_redo.Name = "wbtn_redo";
-            this.wbtn_redo.Size = new System.Drawing.Size(45, 27);
-            this.wbtn_redo.TabIndex = 0;
-            this.wbtn_redo.TabStop = false;
-            this.wbtn_redo.Text = "Redo";
-            this.wbtn_redo.UseVisualStyleBackColor = true;
-            this.wbtn_redo.Click += new System.EventHandler(this.wbtn_redo_Click);
-            // 
-            // wbtn_undo
-            // 
-            this.wbtn_undo.Location = new System.Drawing.Point(115, 5);
-            this.wbtn_undo.Name = "wbtn_undo";
-            this.wbtn_undo.Size = new System.Drawing.Size(45, 27);
-            this.wbtn_undo.TabIndex = 0;
-            this.wbtn_undo.TabStop = false;
-            this.wbtn_undo.Text = "Undo";
-            this.wbtn_undo.UseVisualStyleBackColor = true;
-            this.wbtn_undo.Click += new System.EventHandler(this.wbtn_undo_Click);
-            // 
-            // wbtn_paste
-            // 
-            this.wbtn_paste.Location = new System.Drawing.Point(59, 5);
-            this.wbtn_paste.Name = "wbtn_paste";
-            this.wbtn_paste.Size = new System.Drawing.Size(45, 27);
-            this.wbtn_paste.TabIndex = 0;
-            this.wbtn_paste.TabStop = false;
-            this.wbtn_paste.Text = "Paste";
-            this.wbtn_paste.UseVisualStyleBackColor = true;
-            this.wbtn_paste.Click += new System.EventHandler(this.wbtn_paste_Click);
-            // 
-            // wbtn_cut
-            // 
-            this.wbtn_cut.Location = new System.Drawing.Point(6, 5);
-            this.wbtn_cut.Name = "wbtn_cut";
-            this.wbtn_cut.Size = new System.Drawing.Size(45, 27);
-            this.wbtn_cut.TabIndex = 0;
-            this.wbtn_cut.TabStop = false;
-            this.wbtn_cut.Text = "Cut";
-            this.wbtn_cut.UseVisualStyleBackColor = true;
-            this.wbtn_cut.Click += new System.EventHandler(this.wbtn_cut_Click);
+            
             // 
             // tab_Answers
             // 
@@ -4704,16 +4421,7 @@
             
             this.tab_Writing.ResumeLayout(false);
             this.tabf_writing.ResumeLayout(false);
-            this.wtab_Direction.ResumeLayout(false);
-            this.wtab_Direction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.wtab_Reading.ResumeLayout(false);
-            this.wtab_SpeakingPassage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.wtb_speak)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_writingScene)).EndInit();
-            this.wtab_Writing2.ResumeLayout(false);
-            this.wpanel.ResumeLayout(false);
-            this.wpanel.PerformLayout();
+            
             this.tab_Answers.ResumeLayout(false);
             this.tabf_answer.ResumeLayout(false);
             this.atab_readinganswer.ResumeLayout(false);
@@ -6606,7 +6314,7 @@
                                     this.MP3Player.FileName = str;
                                     this.MP3Player.play();
                                     this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                                    this.pb_writingScene.Load(Application.StartupPath + @"\Tests\images\WaitPerson.jpg");
+                                    this.wpb_writingScene.Load(Application.StartupPath + @"\Tests\images\WaitPerson.jpg");
                                     this.wpb_speak.Maximum = this.MP3Player.Duration;
                                     this.wtb_speak.Maximum = this.MP3Player.Duration;
                                     this.HasLoadMP3 = true;
@@ -6635,7 +6343,7 @@
                                 this.tabf_test.SelectedIndex = WRITING;
                                 this.tabf_writing.SelectedIndex = WINDEPENDENT;
                                 this.wrtb_writing2.ReadOnly = true;
-                                this.wrtbQuestion2.Rtf = this.WritingQuestions[0];
+                                this.wrtb_Question2.Rtf = this.WritingQuestions[0];
                                 base.lbl_timeremain.Text = "03:00";
                                 base.lbl_timeremain.ForeColor = SystemColors.ControlText;
                                 this.HasLoadMP3 = true;
@@ -6673,7 +6381,7 @@
                                     this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                                     this.wpb_speak.Maximum = this.MP3Player.Duration;
                                     this.wtb_speak.Maximum = this.MP3Player.Duration;
-                                    this.pb_writingScene.Load(Application.StartupPath + @"\Tests\images\write" + this.TPONO.ToString() + ".jpg");
+                                    this.wpb_writingScene.Load(Application.StartupPath + @"\Tests\images\write" + this.TPONO.ToString() + ".jpg");
                                     this.HasLoadMP3 = true;
                                 }
                                 catch
@@ -6740,9 +6448,9 @@
                                 this.tabf_test.SelectedIndex = WRITING;
                                 this.tabf_writing.SelectedIndex = WINDEPENDENT;
                                 base.lbl_questionNO.Text = "Question 1 of 2";
-                                this.wrtbQuestion2.Rtf = this.WritingQuestions[0];
+                                this.wrtb_Question2.Rtf = this.WritingQuestions[0];
                                 this.wrtb_writing2.ReadOnly = false;
-                                this.lbl_writeDirection.Text = "Directions: You have 20 minutes to plan and write your response. Your response will be judged on the basis of the quality of your writing and on how well your response presents in the lecture and their relationship to the reading passage. Typically, an effective response will be 150 to 225 words.\n Question: Summarize the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage.";
+                                this.wlbl_writeDirection.Text = "Directions: You have 20 minutes to plan and write your response. Your response will be judged on the basis of the quality of your writing and on how well your response presents in the lecture and their relationship to the reading passage. Typically, an effective response will be 150 to 225 words.\n Question: Summarize the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage.";
                                 base.lbl_timeremain.Text = "20:00";
                                 base.lbl_timeremain.ForeColor = SystemColors.ControlText;
                                 this.HasLoadMP3 = true;
@@ -6776,10 +6484,10 @@
                                 this.WriteWritingAnswers("write1.txt", this.wrtb_writing2.Text);
                                 this.tabf_test.SelectedIndex = WRITING;
                                 this.tabf_writing.SelectedIndex = WINDEPENDENT;
-                                this.lbl_writeDirection.Text = "Directions: Read the question below. You have 30 minutes to plan, write, and revise your essay. Typically, an effective response will contain a minimum of 300 words.";
+                                this.wlbl_writeDirection.Text = "Directions: Read the question below. You have 30 minutes to plan, write, and revise your essay. Typically, an effective response will contain a minimum of 300 words.";
                                 this.wrtb_writing2.Text = "";
                                 this.wrtb_writing2.ReadOnly = false;
-                                this.wrtbQuestion2.Rtf = this.WritingQuestions[1];
+                                this.wrtb_Question2.Rtf = this.WritingQuestions[1];
                                 base.lbl_questionNO.Text = "Question 2 of 2";
                                 base.lbl_timeremain.Text = "30:00";
                                 base.lbl_timeremain.ForeColor = SystemColors.ControlText;
