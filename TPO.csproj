@@ -77,6 +77,9 @@
     <EmbeddedResource Include="UI\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TabControlListening.resx">
+      <DependentUpon>TabControlListening.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TabControlReading.resx">
       <DependentUpon>TabControlReading.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +151,12 @@
     </Compile>
     <Compile Include="UI\RegisterForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabControlListening.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TabControlListening.Designer.cs">
+      <DependentUpon>TabControlListening.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TabControlReading.cs">
       <SubType>UserControl</SubType>

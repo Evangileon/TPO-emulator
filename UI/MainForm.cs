@@ -24,7 +24,7 @@
     {
         #region default UI interface
         private ImageList bgimagelist;
-        private Button rbtn_readText;
+        
         private Button btn_Answer01;
         private Button btn_Answer02;
         private Button btn_Answer03;
@@ -98,32 +98,11 @@
         private Button btn_speakinganswer4;
         private Button btn_speakinganswer5;
         private Button btn_speakinganswer6;
-        private Button rbtn_stopReading;
+        
         private Button[] BtnLoadTest;
-        private CheckBox rckb_A;
-        private CheckBox rckb_B;
-        private CheckBox rckb_C;
-        private CheckBox rckb_D;
-        private CheckBox rckb_E;
-        private CheckBox rckb_F;
-        private CheckBox rckb_G;
-        private CheckBox rckb_H;
+        
         private CheckBox ckb_ShowAnswer;
-        private CheckBox ckb_sumAnswer1;
-        private CheckBox ckb_sumAnswer10;
-        private CheckBox ckb_sumAnswer2;
-        private CheckBox ckb_sumAnswer3;
-        private CheckBox ckb_sumAnswer4;
-        private CheckBox ckb_sumAnswer5;
-        private CheckBox ckb_sumAnswer6;
-        private CheckBox ckb_sumAnswer7;
-        private CheckBox ckb_sumAnswer8;
-        private CheckBox ckb_sumAnswer9;
-        private CheckBox ckb_SumSelected1;
-        private CheckBox ckb_SumSelected2;
-        private CheckBox ckb_SumSelected3;
-        private CheckBox ckb_SumSelected4;
-        private CheckBox ckb_SumSelected5;
+        
         private CheckBox ckb_viewSpeakingText;
         private CheckBox[] CkbReading;
         private CheckBox[] CkbSummary;
@@ -138,13 +117,12 @@
         private int CurrentWritingStep;
         private DataGridView dgv_listeninganswers;
         private DataGridView dgv_readinganswers;
-        private DataGridView dgv_readingReview;
+        
         private ExplanationUI EXP;
         public static string EXPLANATION = "";
         private Timer flash_timer;
-        private FlowLayoutPanel r_flowLayoutPanel;
-        private FlowLayoutPanel r_flowLayoutPanel2;
-        private FlowLayoutPanel flp_passage;
+        
+        
         public bool HasClickedNext;
         private bool HasLoadMP3;
         private int IBTScore;
@@ -154,8 +132,8 @@
         public bool IsPause;
         private bool IsQuestionAfter;
         private bool IsRepeated;
-        private SplitContainer l_splitContainer;
-        private Label label1;
+        
+        private Label r_label1;
         private Label label10;
         private Label label11;
         private Label label12;
@@ -171,11 +149,10 @@
         private Label label8;
         private Label label9;
         private Label lbl_listeningScorereport;
-        private Label rlbl_readingIndication;
+        
         private Label lbl_readingscorereport;
-        private Label lbl_rightAnswered;
-        private Label lbl_scoreReport;
-        private Label lbl_tableAnswer;
+        
+        
         private Label lbl_testingSection;
         private Label lbl_top1;
         private Label lbl_top10;
@@ -188,138 +165,60 @@
         private Label lbl_top8;
         private Label lbl_top9;
         private Label lbl_writeDirection;
-        private Label lbl_wrongAnswered;
-        private CheckBox lckb_A;
-        private CheckBox lckb_B;
-        private CheckBox lckb_C;
-        private CheckBox lckb_D;
-        private CheckBox lckb_E;
-        private CheckBox lckb_F;
-        private CheckBox lckb_G;
-        private CheckBox lckb_H;
+        
+        
         private CheckBox[] LCkbAnswers;
         private CheckBox[][] LCkbTable;
-        private CheckBox lckbTable11;
-        private CheckBox lckbTable12;
-        private CheckBox lckbTable13;
-        private CheckBox lckbTable14;
-        private CheckBox lckbTable15;
-        private CheckBox lckbTable21;
-        private CheckBox lckbTable22;
-        private CheckBox lckbTable23;
-        private CheckBox lckbTable24;
-        private CheckBox lckbTable25;
-        private CheckBox lckbTable31;
-        private CheckBox lckbTable32;
-        private CheckBox lckbTable33;
-        private CheckBox lckbTable34;
-        private CheckBox lckbTable35;
-        private CheckBox lckbTable41;
-        private CheckBox lckbTable42;
-        private CheckBox lckbTable43;
-        private CheckBox lckbTable44;
-        private CheckBox lckbTable45;
-        private CheckBox lckbTable51;
-        private CheckBox lckbTable52;
-        private CheckBox lckbTable53;
-        private CheckBox lckbTable54;
-        private CheckBox lckbTable55;
-        private CheckBox lckbTable61;
-        private CheckBox lckbTable62;
-        private CheckBox lckbTable63;
-        private CheckBox lckbTable64;
-        private CheckBox lckbTable65;
-        private CheckBox lckbTable71;
-        private CheckBox lckbTable72;
-        private CheckBox lckbTable73;
-        private CheckBox lckbTable74;
-        private CheckBox lckbTable75;
-        private CheckBox lckbTable81;
-        private CheckBox lckbTable82;
-        private CheckBox lckbTable83;
-        private CheckBox lckbTable84;
-        private CheckBox lckbTable85;
-        private CheckBox lckbTable91;
-        private CheckBox lckbTable92;
-        private CheckBox lckbTable93;
-        private CheckBox lckbTable94;
-        private CheckBox lckbTable95;
+        
+       
+        
         private static int LDIRECTION1 = 0;
         private static int LDIRECTION2 = 1;
         private static int LISTENING = 2;
-        private Label rlbl_rightAnswer;
-        private TPOPassage LMaterial;
+        
+        
         private static int LMATERIALS = 2;
-        private TabPage lMaterials1;
+        
         private static int LMATERIALS1 = 3;
-        private LinkLabel lnk_passage;
+        
         public bool LOADLASTQUESTION;
         private static int LQUESTIONS = 4;
-        private RichTextBox lrtb_answerA;
-        private RichTextBox lrtb_answerB;
-        private RichTextBox lrtb_answerC;
-        private RichTextBox lrtb_answerD;
-        private RichTextBox lrtb_answerE;
-        private RichTextBox lrtb_answerF;
-        private RichTextBox lrtb_answerG;
-        private RichTextBox lrtb_answerH;
-        private RichTextBox lrtb_question;
+        
         private RichTextBox[] LRtbAnswers;
         private RichTextBox[] LRtbTableCol;
-        private RichTextBox lrtbTableCol1;
-        private RichTextBox lrtbTableCol2;
-        private RichTextBox lrtbTableCol3;
-        private RichTextBox lrtbTableCol4;
-        private RichTextBox lrtbTableCol5;
-        private RichTextBox lrtbTableQuestion;
+       
         private RichTextBox[] LRtbTableRow;
-        private RichTextBox lrtbTableRow1;
-        private RichTextBox lrtbTableRow2;
-        private RichTextBox lrtbTableRow3;
-        private RichTextBox lrtbTableRow4;
-        private RichTextBox lrtbTableRow5;
-        private RichTextBox lrtbTableRow6;
-        private RichTextBox lrtbTableRow7;
-        private RichTextBox lrtbTableRow8;
-        private RichTextBox lrtbTableRow9;
-        private TabPage ltab_Direction1;
-        private TabPage ltab_Direction2;
-        private TabPage ltab_Materials;
-        private TabPage ltab_Question;
-        private TabPage lTableQuestion;
+        
         private static int LTABLEQUESTION = 5;
-        private TableLayoutPanel ltlp_table;
+        
         private MP3MCI MP3Player;
         private MP3Record MP3Recorder;
         private int NotAnsweredQuestions;
         private OpenFileDialog openMp3File;
-        private Panel panel1;
+        
         private int PartCount;
         private int PartLastPassageIndex;
         private int PartNO;
         private int PassageCount;
         private int PassageLastQuestionIndex;
         private int PassageNO;
-        private ProgressBar pb_currentpos;
-        private ProgressBar pb_currentpos1;
-        private PictureBox pb_ListenScene;
-        private PictureBox pb_ListenScene1;
-        private PictureBox pb_rightAnswered;
+        
+        
         private PictureBox pb_speakingScene;
         private PictureBox pb_writingScene;
-        private PictureBox pb_wrongAnswered;
-        private PictureBox pictureBox1;
+        
+        
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
-        private PictureBox r_pictureBox;
+        
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
+        
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
-        private Label PlayFileName;
+        
         private int PreFormHeight;
         private int PreFormWidth;
         private int PreInsertPosition;
@@ -337,37 +236,10 @@
         private static int RREVIEW = 3;
         private int RSpiltQuestionNO;
         private static int RSUMMARYQUESTION = 2;
-        private TabPage rtab_Direction;
-        private TabPage rtab_NormalQuestion;
-        private TabPage rtab_Review;
-        private TabPage rtab_SumQuestion;
-        private RichTextBox rrtb_answerA;
-        private RichTextBox rrtb_answerB;
-        private RichTextBox rrtb_answerC;
-        private RichTextBox rrtb_answerD;
-        private RichTextBox rrtb_answerE;
-        private RichTextBox rrtb_answerF;
-        private RichTextBox rrtb_answerG;
-        private RichTextBox rrtb_answerH;
+        
+        
         private RichTextBox rtb_Passage;
-        private RichTextBox rrtb_question;
-        private RichTextBox rtb_sumAnswer1;
-        private RichTextBox rtb_sumAnswer10;
-        private RichTextBox rtb_sumAnswer2;
-        private RichTextBox rtb_sumAnswer3;
-        private RichTextBox rtb_sumAnswer4;
-        private RichTextBox rtb_sumAnswer5;
-        private RichTextBox rtb_sumAnswer6;
-        private RichTextBox rtb_sumAnswer7;
-        private RichTextBox rtb_sumAnswer8;
-        private RichTextBox rtb_sumAnswer9;
-        private RichTextBox rtb_sumPassage;
-        private RichTextBox rtb_sumQuestion;
-        private RichTextBox rtb_SumSelected1;
-        private RichTextBox rtb_SumSelected2;
-        private RichTextBox rtb_SumSelected3;
-        private RichTextBox rtb_SumSelected4;
-        private RichTextBox rtb_SumSelected5;
+        
         private RadioButton rtb_writing1;
         private RadioButton rtb_writing2;
         private RichTextBox rtb_writinganswers;
@@ -402,18 +274,17 @@
         private TabPage atab_writinganswers;
         private TabControl tabf_answer;
         private TabControl tabf_Listening;
-        private TabControl tabf_Reading;
+        
         private TabControl tabf_speaking;
         private TabControl tabf_test;
         private TabControl tabf_tposelection;
         private TabControl tabf_writing;
-        private TableLayoutPanel tableLayoutPanel1;
+        
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private TabPage tab_Answers;
-        private TrackBar tb_currentpos;
-        private TrackBar tb_currentpos1;
-        private TrackBar rtb_reading;
+        
+        
         private int TestMode;
         private TPOTest TestQuestions;
         private TestingSection TestSection;
@@ -422,8 +293,8 @@
         private Timer Timer_reading;
         private Timer Timer_Speaking;
         private TableLayoutPanel rtlp_answers;
-        private TableLayoutPanel tlp_sumAnswers;
-        private TableLayoutPanel tlp_Summary;
+        private TableLayoutPanel rtlp_sumAnswers;
+        private TableLayoutPanel rtlp_Summary;
         private int TotalQuestions;
         private int TotalScore;
         private TabPage TPO10;
@@ -473,6 +344,10 @@
         private event EventHandler OnClickNextButton;
         private event EventHandler OnClickPrevButton;
         #endregion event
+
+        #region my module
+        private TabControlReading tabf_Reading;
+        #endregion my module
 
         public MainForm()
         {
@@ -539,14 +414,7 @@
             this.PreFormHeight = base.Height;
             this.PreFormWidth = base.Width;
             base.WindowState = FormWindowState.Maximized;
-            this.CkbReading[0] = this.rckb_A;
-            this.CkbReading[1] = this.rckb_B;
-            this.CkbReading[2] = this.rckb_C;
-            this.CkbReading[3] = this.rckb_D;
-            this.CkbReading[4] = this.rckb_E;
-            this.CkbReading[5] = this.rckb_F;
-            this.CkbReading[6] = this.rckb_G;
-            this.CkbReading[7] = this.rckb_H;
+            
             this.LCkbAnswers[0] = this.lckb_A;
             this.LCkbAnswers[1] = this.lckb_B;
             this.LCkbAnswers[2] = this.lckb_C;
@@ -555,14 +423,14 @@
             this.LCkbAnswers[5] = this.lckb_F;
             this.LCkbAnswers[6] = this.lckb_G;
             this.LCkbAnswers[7] = this.lckb_H;
-            this.RtbReadingAnswers[0] = this.rrtb_answerA;
-            this.RtbReadingAnswers[1] = this.rrtb_answerB;
-            this.RtbReadingAnswers[2] = this.rrtb_answerC;
-            this.RtbReadingAnswers[3] = this.rrtb_answerD;
-            this.RtbReadingAnswers[4] = this.rrtb_answerE;
-            this.RtbReadingAnswers[5] = this.rrtb_answerF;
-            this.RtbReadingAnswers[6] = this.rrtb_answerG;
-            this.RtbReadingAnswers[7] = this.rrtb_answerH;
+
+            for (num = 0; num < 8; num++)
+            {
+                this.RtbReadingAnswers[num].TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
+                this.CkbReading[num].CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
+                this.LCkbAnswers[num].CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
+            }
+
             this.LRtbAnswers[0] = this.lrtb_answerA;
             this.LRtbAnswers[1] = this.lrtb_answerB;
             this.LRtbAnswers[2] = this.lrtb_answerC;
@@ -571,6 +439,7 @@
             this.LRtbAnswers[5] = this.lrtb_answerF;
             this.LRtbAnswers[6] = this.lrtb_answerG;
             this.LRtbAnswers[7] = this.lrtb_answerH;
+
             for (num = 0; num < 9; num++)
             {
                 this.LCkbTable[num] = new CheckBox[5];
@@ -579,114 +448,67 @@
                     this.LCkbTable[num][i] = new CheckBox();
                 }
             }
-            this.LCkbTable[0][0] = this.lckbTable11;
-            this.LCkbTable[0][1] = this.lckbTable12;
-            this.LCkbTable[0][2] = this.lckbTable13;
-            this.LCkbTable[0][3] = this.lckbTable14;
-            this.LCkbTable[0][4] = this.lckbTable15;
-            this.LCkbTable[1][0] = this.lckbTable21;
-            this.LCkbTable[1][1] = this.lckbTable22;
-            this.LCkbTable[1][2] = this.lckbTable23;
-            this.LCkbTable[1][3] = this.lckbTable24;
-            this.LCkbTable[1][4] = this.lckbTable25;
-            this.LCkbTable[2][0] = this.lckbTable31;
-            this.LCkbTable[2][1] = this.lckbTable32;
-            this.LCkbTable[2][2] = this.lckbTable33;
-            this.LCkbTable[2][3] = this.lckbTable34;
-            this.LCkbTable[2][4] = this.lckbTable35;
-            this.LCkbTable[3][0] = this.lckbTable41;
-            this.LCkbTable[3][1] = this.lckbTable42;
-            this.LCkbTable[3][2] = this.lckbTable43;
-            this.LCkbTable[3][3] = this.lckbTable44;
-            this.LCkbTable[3][4] = this.lckbTable45;
-            this.LCkbTable[4][0] = this.lckbTable51;
-            this.LCkbTable[4][1] = this.lckbTable52;
-            this.LCkbTable[4][2] = this.lckbTable53;
-            this.LCkbTable[4][3] = this.lckbTable54;
-            this.LCkbTable[4][4] = this.lckbTable55;
-            this.LCkbTable[5][0] = this.lckbTable61;
-            this.LCkbTable[5][1] = this.lckbTable62;
-            this.LCkbTable[5][2] = this.lckbTable63;
-            this.LCkbTable[5][3] = this.lckbTable64;
-            this.LCkbTable[5][4] = this.lckbTable65;
-            this.LCkbTable[6][0] = this.lckbTable71;
-            this.LCkbTable[6][1] = this.lckbTable72;
-            this.LCkbTable[6][2] = this.lckbTable73;
-            this.LCkbTable[6][3] = this.lckbTable74;
-            this.LCkbTable[6][4] = this.lckbTable75;
-            this.LCkbTable[7][0] = this.lckbTable81;
-            this.LCkbTable[7][1] = this.lckbTable82;
-            this.LCkbTable[7][2] = this.lckbTable83;
-            this.LCkbTable[7][3] = this.lckbTable84;
+            this.LCkbTable[0][0] = this.lckb_Table11;
+            this.LCkbTable[0][1] = this.lckb_Table12;
+            this.LCkbTable[0][2] = this.lckb_Table13;
+            this.LCkbTable[0][3] = this.lckb_Table14;
+            this.LCkbTable[0][4] = this.lckb_Table15;
+            this.LCkbTable[1][0] = this.lckb_Table21;
+            this.LCkbTable[1][1] = this.lckb_Table22;
+            this.LCkbTable[1][2] = this.lckb_Table23;
+            this.LCkbTable[1][3] = this.lckb_Table24;
+            this.LCkbTable[1][4] = this.lckb_Table25;
+            this.LCkbTable[2][0] = this.lckb_Table31;
+            this.LCkbTable[2][1] = this.lckb_Table32;
+            this.LCkbTable[2][2] = this.lckb_Table33;
+            this.LCkbTable[2][3] = this.lckb_Table34;
+            this.LCkbTable[2][4] = this.lckb_Table35;
+            this.LCkbTable[3][0] = this.lckb_Table41;
+            this.LCkbTable[3][1] = this.lckb_Table42;
+            this.LCkbTable[3][2] = this.lckb_Table43;
+            this.LCkbTable[3][3] = this.lckb_Table44;
+            this.LCkbTable[3][4] = this.lckb_Table45;
+            this.LCkbTable[4][0] = this.lckb_Table51;
+            this.LCkbTable[4][1] = this.lckb_Table52;
+            this.LCkbTable[4][2] = this.lckb_Table53;
+            this.LCkbTable[4][3] = this.lckb_Table54;
+            this.LCkbTable[4][4] = this.lckb_Table55;
+            this.LCkbTable[5][0] = this.lckb_Table61;
+            this.LCkbTable[5][1] = this.lckb_Table62;
+            this.LCkbTable[5][2] = this.lckb_Table63;
+            this.LCkbTable[5][3] = this.lckb_Table64;
+            this.LCkbTable[5][4] = this.lckb_Table65;
+            this.LCkbTable[6][0] = this.lckb_Table71;
+            this.LCkbTable[6][1] = this.lckb_Table72;
+            this.LCkbTable[6][2] = this.lckb_Table73;
+            this.LCkbTable[6][3] = this.lckb_Table74;
+            this.LCkbTable[6][4] = this.lckb_Table75;
+            this.LCkbTable[7][0] = this.lckb_Table81;
+            this.LCkbTable[7][1] = this.lckb_Table82;
+            this.LCkbTable[7][2] = this.lckb_Table83;
+            this.LCkbTable[7][3] = this.lckb_Table84;
             this.LCkbTable[7][4] = this.lckbTable85;
             this.LCkbTable[8][0] = this.lckbTable91;
             this.LCkbTable[8][1] = this.lckbTable92;
             this.LCkbTable[8][2] = this.lckbTable93;
             this.LCkbTable[8][3] = this.lckbTable94;
             this.LCkbTable[8][4] = this.lckbTable95;
-            this.LRtbTableRow[0] = this.lrtbTableRow1;
-            this.LRtbTableRow[1] = this.lrtbTableRow2;
-            this.LRtbTableRow[2] = this.lrtbTableRow3;
-            this.LRtbTableRow[3] = this.lrtbTableRow4;
-            this.LRtbTableRow[4] = this.lrtbTableRow5;
-            this.LRtbTableRow[5] = this.lrtbTableRow6;
-            this.LRtbTableRow[6] = this.lrtbTableRow7;
-            this.LRtbTableRow[7] = this.lrtbTableRow8;
-            this.LRtbTableRow[8] = this.lrtbTableRow9;
-            this.LRtbTableCol[0] = this.lrtbTableCol1;
-            this.LRtbTableCol[1] = this.lrtbTableCol2;
-            this.LRtbTableCol[2] = this.lrtbTableCol3;
-            this.LRtbTableCol[3] = this.lrtbTableCol4;
-            this.LRtbTableCol[4] = this.lrtbTableCol5;
-            for (num = 0; num < 8; num++)
-            {
-                this.RtbReadingAnswers[num].TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-                this.CkbReading[num].CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-                this.LCkbAnswers[num].CheckedChanged += new EventHandler(this.Ckb_CheckedChanged);
-            }
-            this.CkbSummary[0] = this.ckb_sumAnswer1;
-            this.CkbSummary[1] = this.ckb_sumAnswer2;
-            this.CkbSummary[2] = this.ckb_sumAnswer3;
-            this.CkbSummary[3] = this.ckb_sumAnswer4;
-            this.CkbSummary[4] = this.ckb_sumAnswer5;
-            this.CkbSummary[5] = this.ckb_sumAnswer6;
-            this.CkbSummary[6] = this.ckb_sumAnswer7;
-            this.CkbSummary[7] = this.ckb_sumAnswer8;
-            this.CkbSummary[8] = this.ckb_sumAnswer9;
-            this.CkbSummary[9] = this.ckb_sumAnswer10;
-            this.RtbSumAnswersToBeSelected[0] = this.rtb_sumAnswer1;
-            this.RtbSumAnswersToBeSelected[1] = this.rtb_sumAnswer2;
-            this.RtbSumAnswersToBeSelected[2] = this.rtb_sumAnswer3;
-            this.RtbSumAnswersToBeSelected[3] = this.rtb_sumAnswer4;
-            this.RtbSumAnswersToBeSelected[4] = this.rtb_sumAnswer5;
-            this.RtbSumAnswersToBeSelected[5] = this.rtb_sumAnswer6;
-            this.RtbSumAnswersToBeSelected[6] = this.rtb_sumAnswer7;
-            this.RtbSumAnswersToBeSelected[7] = this.rtb_sumAnswer8;
-            this.RtbSumAnswersToBeSelected[8] = this.rtb_sumAnswer9;
-            this.RtbSumAnswersToBeSelected[9] = this.rtb_sumAnswer10;
-            for (num = 0; num < 10; num++)
-            {
-                this.RtbSumAnswersToBeSelected[num].TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-                this.CkbSummary[num].CheckedChanged += new EventHandler(this.CkbSummary_CheckedChanged);
-            }
-            this.CkbSummarySelected[0] = this.ckb_SumSelected1;
-            this.CkbSummarySelected[1] = this.ckb_SumSelected2;
-            this.CkbSummarySelected[2] = this.ckb_SumSelected3;
-            this.CkbSummarySelected[3] = this.ckb_SumSelected4;
-            this.CkbSummarySelected[4] = this.ckb_SumSelected5;
-            this.RtbSumSelected[0] = this.rtb_SumSelected1;
-            this.RtbSumSelected[1] = this.rtb_SumSelected2;
-            this.RtbSumSelected[2] = this.rtb_SumSelected3;
-            this.RtbSumSelected[3] = this.rtb_SumSelected4;
-            this.RtbSumSelected[4] = this.rtb_SumSelected5;
-            for (num = 0; num < 5; num++)
-            {
-                this.RtbSumSelected[num].Click += new EventHandler(this.RtbSumSelected_Click);
-                this.RtbSumSelected[num].TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-                this.CkbSummarySelected[num].CheckedChanged += new EventHandler(this.CkbSummarySelected_CheckedChanged);
-            }
-            this.rrtb_question.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
-            this.rtb_sumQuestion.TextChanged += new EventHandler(this.RtbAnswers_TextChanged);
+            this.LRtbTableRow[0] = this.lrtb_TableRow1;
+            this.LRtbTableRow[1] = this.lrtb_TableRow2;
+            this.LRtbTableRow[2] = this.lrtb_TableRow3;
+            this.LRtbTableRow[3] = this.lrtb_TableRow4;
+            this.LRtbTableRow[4] = this.lrtb_TableRow5;
+            this.LRtbTableRow[5] = this.lrtb_TableRow6;
+            this.LRtbTableRow[6] = this.lrtb_TableRow7;
+            this.LRtbTableRow[7] = this.lrtb_TableRow8;
+            this.LRtbTableRow[8] = this.lrtb_TableRow9;
+            this.LRtbTableCol[0] = this.lrtb_TableCol1;
+            this.LRtbTableCol[1] = this.lrtb_TableCol2;
+            this.LRtbTableCol[2] = this.lrtb_TableCol3;
+            this.LRtbTableCol[3] = this.lrtb_TableCol4;
+            this.LRtbTableCol[4] = this.lrtb_TableCol5;
+            
+            
             this.BtnLoadTest[1] = this.btn_LoadReading01;
             this.BtnLoadTest[2] = this.btn_LoadReading02;
             this.BtnLoadTest[3] = this.btn_LoadReading03;
@@ -802,8 +624,8 @@
                     this.MP3Player.FileName = path;
                     this.MP3Player.play();
                     this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
-                    this.rbtn_readText.Enabled = false;
-                    this.rbtn_stopReading.Visible = true;
+                    //this.rbtn_readText.Enabled = false;
+                    //this.rbtn_stopReading.Visible = true;
                     this.rtb_reading.Visible = true;
                     this.rtb_reading.Maximum = this.MP3Player.Duration;
                     this.Timer_reading.Start();
@@ -821,10 +643,10 @@
                 case TestingSection.READING:
                     if (!this.rb_PracticeMode.Checked)
                     {
-                        this.lbl_scoreReport.Visible = false;
+                        //this.rlbl_scoreReport.Visible = false;
                         break;
                     }
-                    this.lbl_scoreReport.Visible = true;
+                    //this.rlbl_scoreReport.Visible = true;
                     break;
 
                 case TestingSection.LISTENING:
@@ -976,7 +798,7 @@
             }
             else
             {
-                this.tb_currentpos1.Visible = false;
+                this.ltb_currentpos1.Visible = false;
                 this.wtb_speak.Visible = false;
             }
             if (base.btn_continue.Visible)
@@ -1218,10 +1040,10 @@
                         this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (!File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") || !ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
-                            this.rbtn_readText.Visible = false;
+                            //this.rbtn_readText.Visible = false;
                         }
-                        this.rbtn_readText.Visible = true;
-                        this.rbtn_readText.Enabled = true;
+                        //this.rbtn_readText.Visible = true;
+                        //this.rbtn_readText.Enabled = true;
                         this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5)));
                         //this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
@@ -1259,11 +1081,11 @@
                             this.MP3Player = new MP3MCI();
                             string str5 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", str4 });
                             this.MP3Player.FileName = str5;
-                            this.PlayFileName.Text = str5;
-                            this.pb_currentpos.Maximum = this.MP3Player.Duration;
-                            this.pb_currentpos1.Maximum = this.MP3Player.Duration;
-                            this.tb_currentpos.Maximum = this.MP3Player.Duration;
-                            this.tb_currentpos1.Maximum = this.MP3Player.Duration;
+                            this.l_PlayFileName.Text = str5;
+                            this.lpb_currentpos.Maximum = this.MP3Player.Duration;
+                            this.lpb_currentpos1.Maximum = this.MP3Player.Duration;
+                            this.ltb_currentpos.Maximum = this.MP3Player.Duration;
+                            this.ltb_currentpos1.Maximum = this.MP3Player.Duration;
                             this.MP3Player.play();
                             this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                             this.Timer_Listening.Start();
@@ -1355,7 +1177,7 @@
                 this.PartNO = 0;
                 this.PassageNO = 0;
                 this.QuestionNO = 0;
-                this.rrtb_question.Text = "";
+                //this.rrtb_question.Text = "";
                 this.rb_TestMode.Visible = true;
                 this.rb_PracticeMode.Visible = true;
                 this.btn_NexPage.Visible = true;
@@ -1666,27 +1488,27 @@
             this.SaveUserAnswers();
             if (this.PartNO == 1)
             {
-                this.lbl_scoreReport.Text = this.scoreReport(1);
+                //this.rlbl_scoreReport.Text = this.scoreReport(1);
             }
             else
             {
-                this.lbl_scoreReport.Text = this.scoreReport(3);
+                //this.rlbl_scoreReport.Text = this.scoreReport(3);
             }
             this.tabf_test.SelectedIndex = READING;
             this.tabf_Reading.SelectedIndex = RREVIEW;
             if (this.rb_PracticeMode.Checked)
             {
-                this.lbl_wrongAnswered.Visible = true;
-                this.pb_wrongAnswered.Visible = true;
-                this.lbl_rightAnswered.Visible = true;
-                this.pb_rightAnswered.Visible = true;
+                //this.rlbl_wrongAnswered.Visible = true;
+                //this.rpb_wrongAnswered.Visible = true;
+                //this.rlbl_rightAnswered.Visible = true;
+                //this.rpb_rightAnswered.Visible = true;
             }
             else
             {
-                this.lbl_wrongAnswered.Visible = false;
-                this.pb_wrongAnswered.Visible = false;
-                this.lbl_rightAnswered.Visible = false;
-                this.pb_rightAnswered.Visible = false;
+                //this.rlbl_wrongAnswered.Visible = false;
+                //this.rpb_wrongAnswered.Visible = false;
+                //this.rlbl_rightAnswered.Visible = false;
+                //this.rpb_rightAnswered.Visible = false;
             }
             if (this.TestSection == TestingSection.READING)
             {
@@ -1735,7 +1557,7 @@
                     }
                     table.Rows.Add(row);
                 }
-                this.dgv_readingReview.DataSource = table;
+                //this.rdgv_readingReview.DataSource = table;
             }
         }
 
@@ -1748,10 +1570,10 @@
         private void btn_ShowText_Click(object sender, EventArgs e)
         {
             this.ShowPassage = !this.ShowPassage;
-            this.rtb_sumQuestion.Visible = !this.ShowPassage;
-            this.rtb_sumPassage.Visible = this.ShowPassage;
-            this.tlp_sumAnswers.Visible = !this.ShowPassage;
-            this.tlp_Summary.Visible = !this.ShowPassage;
+            //this.rrtb_sumQuestion.Visible = !this.ShowPassage;
+            //this.rrtb_sumPassage.Visible = this.ShowPassage;
+            this.rtlp_sumAnswers.Visible = !this.ShowPassage;
+            this.rtlp_Summary.Visible = !this.ShowPassage;
             if (this.ShowPassage)
             {
                 this.tabf_test.SelectedIndex = READING;
@@ -1811,8 +1633,8 @@
         {
             this.MP3Player.StopT();
             this.MP3Player = new MP3MCI();
-            this.rbtn_readText.Enabled = true;
-            this.rbtn_stopReading.Visible = false;
+            //this.rbtn_readText.Enabled = true;
+            //this.rbtn_stopReading.Visible = false;
             this.rtb_reading.Visible = false;
             this.Timer_reading.Stop();
         }
@@ -1984,8 +1806,8 @@
                         {
                             goto Label_0109;
                         }
-                        this.lbl_tableAnswer.Visible = true;
-                        this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
+                        this.llbl_tableAnswer.Visible = true;
+                        this.llbl_tableAnswer.Text = question.CorrectAnswersStr;
                         return;
 
                     default:
@@ -2022,7 +1844,7 @@
                 }
                 return;
             Label_0109:
-                this.lbl_tableAnswer.Visible = false;
+                this.llbl_tableAnswer.Visible = false;
                 return;
             Label_0185:
                 if (this.TestSection == TestingSection.LISTENING)
@@ -2034,8 +1856,8 @@
                             {
                                 goto Label_0233;
                             }
-                            this.lbl_tableAnswer.Visible = true;
-                            this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
+                            this.llbl_tableAnswer.Visible = true;
+                            this.llbl_tableAnswer.Text = question.CorrectAnswersStr;
                             return;
 
                         case QuestionType.SORT:
@@ -2054,7 +1876,7 @@
                 }
                 return;
             Label_0233:
-                this.lbl_tableAnswer.Visible = false;
+                this.llbl_tableAnswer.Visible = false;
                 return;
             Label_0242:
                 num = 0;
@@ -2178,9 +2000,9 @@
 
         private void dgv_readingReview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((this.dgv_readingReview.SelectedRows != null) && (this.dgv_readingReview.SelectedRows.Count > 0))
+            if ((this.rdgv_readingReview.SelectedRows != null) && (this.rdgv_readingReview.SelectedRows.Count > 0))
             {
-                this.ReviewSelectedQuestionNO = Convert.ToInt16(this.dgv_readingReview.SelectedRows[0].Cells["QuestionID"].Value);
+                this.ReviewSelectedQuestionNO = Convert.ToInt16(this.rdgv_readingReview.SelectedRows[0].Cells["QuestionID"].Value);
                 if (this.ReviewSelectedQuestionNO != -1)
                 {
                     int num;
@@ -2210,15 +2032,15 @@
 
         private void dgv_readingReview_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            this.dgv_readingReview.ClearSelection();
+            this.rdgv_readingReview.ClearSelection();
             this.ReviewSelectedQuestionNO = -1;
         }
 
         private void dgv_readingReview_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            for (int i = 0; i < this.dgv_readingReview.Rows.Count; i++)
+            for (int i = 0; i < this.rdgv_readingReview.Rows.Count; i++)
             {
-                DataGridViewRow row = this.dgv_readingReview.Rows[i];
+                DataGridViewRow row = this.rdgv_readingReview.Rows[i];
                 if ((i % 2) == 0)
                 {
                     row.DefaultCellStyle.BackColor = Color.White;
@@ -2388,180 +2210,13 @@
             this.lbl_top2 = new System.Windows.Forms.Label();
             this.lbl_top1 = new System.Windows.Forms.Label();
             this.tab_Reading = new System.Windows.Forms.TabPage();
-            this.tabf_Reading = new System.Windows.Forms.TabControl();
-            this.rtab_Direction = new System.Windows.Forms.TabPage();
-            this.r_pictureBox = new System.Windows.Forms.PictureBox();
-            this.rtab_NormalQuestion = new System.Windows.Forms.TabPage();
-            this.rtb_reading = new System.Windows.Forms.TrackBar();
-            this.rtb_Passage = new System.Windows.Forms.RichTextBox();
-            this.r_flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.rrtb_question = new System.Windows.Forms.RichTextBox();
-            this.rtlp_answers = new System.Windows.Forms.TableLayoutPanel();
-            this.rrtb_answerE = new System.Windows.Forms.RichTextBox();
-            this.rrtb_answerD = new System.Windows.Forms.RichTextBox();
-            this.rrtb_answerC = new System.Windows.Forms.RichTextBox();
-            this.rrtb_answerB = new System.Windows.Forms.RichTextBox();
-            this.rckb_A = new System.Windows.Forms.CheckBox();
-            this.rckb_B = new System.Windows.Forms.CheckBox();
-            this.rckb_C = new System.Windows.Forms.CheckBox();
-            this.rckb_D = new System.Windows.Forms.CheckBox();
-            this.rckb_E = new System.Windows.Forms.CheckBox();
-            this.rrtb_answerA = new System.Windows.Forms.RichTextBox();
-            this.rckb_F = new System.Windows.Forms.CheckBox();
-            this.rckb_G = new System.Windows.Forms.CheckBox();
-            this.rckb_H = new System.Windows.Forms.CheckBox();
-            this.rrtb_answerF = new System.Windows.Forms.RichTextBox();
-            this.rrtb_answerG = new System.Windows.Forms.RichTextBox();
-            this.rrtb_answerH = new System.Windows.Forms.RichTextBox();
-            this.rbtn_stopReading = new System.Windows.Forms.Button();
-            this.rbtn_readText = new System.Windows.Forms.Button();
-            this.rlbl_readingIndication = new System.Windows.Forms.Label();
-            this.rtab_SumQuestion = new System.Windows.Forms.TabPage();
-            this.rlbl_rightAnswer = new System.Windows.Forms.Label();
-            this.r_flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.rtb_sumPassage = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumQuestion = new System.Windows.Forms.RichTextBox();
-            this.tlp_sumAnswers = new System.Windows.Forms.TableLayoutPanel();
-            this.rtb_SumSelected5 = new System.Windows.Forms.RichTextBox();
-            this.rtb_SumSelected1 = new System.Windows.Forms.RichTextBox();
-            this.rtb_SumSelected2 = new System.Windows.Forms.RichTextBox();
-            this.rtb_SumSelected3 = new System.Windows.Forms.RichTextBox();
-            this.rtb_SumSelected4 = new System.Windows.Forms.RichTextBox();
-            this.ckb_SumSelected1 = new System.Windows.Forms.CheckBox();
-            this.ckb_SumSelected2 = new System.Windows.Forms.CheckBox();
-            this.ckb_SumSelected3 = new System.Windows.Forms.CheckBox();
-            this.ckb_SumSelected4 = new System.Windows.Forms.CheckBox();
-            this.ckb_SumSelected5 = new System.Windows.Forms.CheckBox();
-            this.tlp_Summary = new System.Windows.Forms.TableLayoutPanel();
-            this.rtb_sumAnswer5 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer1 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer2 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer3 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer4 = new System.Windows.Forms.RichTextBox();
-            this.ckb_sumAnswer1 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer2 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer3 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer4 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer5 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer6 = new System.Windows.Forms.CheckBox();
-            this.rtb_sumAnswer6 = new System.Windows.Forms.RichTextBox();
-            this.ckb_sumAnswer7 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer8 = new System.Windows.Forms.CheckBox();
-            this.rtb_sumAnswer7 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer8 = new System.Windows.Forms.RichTextBox();
-            this.ckb_sumAnswer9 = new System.Windows.Forms.CheckBox();
-            this.ckb_sumAnswer10 = new System.Windows.Forms.CheckBox();
-            this.rtb_sumAnswer9 = new System.Windows.Forms.RichTextBox();
-            this.rtb_sumAnswer10 = new System.Windows.Forms.RichTextBox();
-            this.rtab_Review = new System.Windows.Forms.TabPage();
-            this.lbl_scoreReport = new System.Windows.Forms.Label();
-            this.lbl_wrongAnswered = new System.Windows.Forms.Label();
-            this.pb_wrongAnswered = new System.Windows.Forms.PictureBox();
-            this.lbl_rightAnswered = new System.Windows.Forms.Label();
-            this.pb_rightAnswered = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.dgv_readingReview = new System.Windows.Forms.DataGridView();
+            
+            this.tabf_Reading = new TPO.UI.TabControlReading();
+           
+            
+            
             this.tab_Listening = new System.Windows.Forms.TabPage();
-            this.tabf_Listening = new System.Windows.Forms.TabControl();
-            this.ltab_Direction1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ltab_Direction2 = new System.Windows.Forms.TabPage();
-            this.ltab_Materials = new System.Windows.Forms.TabPage();
-            this.l_splitContainer = new System.Windows.Forms.SplitContainer();
-            this.pb_currentpos = new System.Windows.Forms.ProgressBar();
-            this.tb_currentpos = new System.Windows.Forms.TrackBar();
-            this.PlayFileName = new System.Windows.Forms.Label();
-            this.pb_ListenScene = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flp_passage = new System.Windows.Forms.FlowLayoutPanel();
-            this.lnk_passage = new System.Windows.Forms.LinkLabel();
-            this.lMaterials1 = new System.Windows.Forms.TabPage();
-            this.tb_currentpos1 = new System.Windows.Forms.TrackBar();
-            this.pb_currentpos1 = new System.Windows.Forms.ProgressBar();
-            this.pb_ListenScene1 = new System.Windows.Forms.PictureBox();
-            this.ltab_Question = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lrtb_question = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerE = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerD = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerC = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerB = new System.Windows.Forms.RichTextBox();
-            this.lckb_A = new System.Windows.Forms.CheckBox();
-            this.lckb_B = new System.Windows.Forms.CheckBox();
-            this.lckb_C = new System.Windows.Forms.CheckBox();
-            this.lckb_D = new System.Windows.Forms.CheckBox();
-            this.lckb_E = new System.Windows.Forms.CheckBox();
-            this.lckb_F = new System.Windows.Forms.CheckBox();
-            this.lckb_G = new System.Windows.Forms.CheckBox();
-            this.lckb_H = new System.Windows.Forms.CheckBox();
-            this.lrtb_answerF = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerG = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerH = new System.Windows.Forms.RichTextBox();
-            this.lrtb_answerA = new System.Windows.Forms.RichTextBox();
-            this.lTableQuestion = new System.Windows.Forms.TabPage();
-            this.lbl_tableAnswer = new System.Windows.Forms.Label();
-            this.lrtbTableQuestion = new System.Windows.Forms.RichTextBox();
-            this.ltlp_table = new System.Windows.Forms.TableLayoutPanel();
-            this.lckbTable11 = new System.Windows.Forms.CheckBox();
-            this.lckbTable12 = new System.Windows.Forms.CheckBox();
-            this.lckbTable13 = new System.Windows.Forms.CheckBox();
-            this.lckbTable14 = new System.Windows.Forms.CheckBox();
-            this.lckbTable15 = new System.Windows.Forms.CheckBox();
-            this.lckbTable25 = new System.Windows.Forms.CheckBox();
-            this.lckbTable24 = new System.Windows.Forms.CheckBox();
-            this.lckbTable23 = new System.Windows.Forms.CheckBox();
-            this.lckbTable22 = new System.Windows.Forms.CheckBox();
-            this.lckbTable21 = new System.Windows.Forms.CheckBox();
-            this.lckbTable32 = new System.Windows.Forms.CheckBox();
-            this.lckbTable33 = new System.Windows.Forms.CheckBox();
-            this.lckbTable34 = new System.Windows.Forms.CheckBox();
-            this.lckbTable35 = new System.Windows.Forms.CheckBox();
-            this.lckbTable43 = new System.Windows.Forms.CheckBox();
-            this.lckbTable41 = new System.Windows.Forms.CheckBox();
-            this.lckbTable31 = new System.Windows.Forms.CheckBox();
-            this.lckbTable42 = new System.Windows.Forms.CheckBox();
-            this.lckbTable44 = new System.Windows.Forms.CheckBox();
-            this.lckbTable45 = new System.Windows.Forms.CheckBox();
-            this.lckbTable55 = new System.Windows.Forms.CheckBox();
-            this.lckbTable54 = new System.Windows.Forms.CheckBox();
-            this.lckbTable53 = new System.Windows.Forms.CheckBox();
-            this.lckbTable52 = new System.Windows.Forms.CheckBox();
-            this.lckbTable51 = new System.Windows.Forms.CheckBox();
-            this.lckbTable61 = new System.Windows.Forms.CheckBox();
-            this.lckbTable62 = new System.Windows.Forms.CheckBox();
-            this.lckbTable63 = new System.Windows.Forms.CheckBox();
-            this.lckbTable64 = new System.Windows.Forms.CheckBox();
-            this.lckbTable65 = new System.Windows.Forms.CheckBox();
-            this.lckbTable71 = new System.Windows.Forms.CheckBox();
-            this.lckbTable72 = new System.Windows.Forms.CheckBox();
-            this.lckbTable73 = new System.Windows.Forms.CheckBox();
-            this.lckbTable74 = new System.Windows.Forms.CheckBox();
-            this.lckbTable75 = new System.Windows.Forms.CheckBox();
-            this.lckbTable85 = new System.Windows.Forms.CheckBox();
-            this.lckbTable84 = new System.Windows.Forms.CheckBox();
-            this.lckbTable83 = new System.Windows.Forms.CheckBox();
-            this.lckbTable82 = new System.Windows.Forms.CheckBox();
-            this.lckbTable81 = new System.Windows.Forms.CheckBox();
-            this.lckbTable91 = new System.Windows.Forms.CheckBox();
-            this.lckbTable92 = new System.Windows.Forms.CheckBox();
-            this.lckbTable93 = new System.Windows.Forms.CheckBox();
-            this.lckbTable94 = new System.Windows.Forms.CheckBox();
-            this.lckbTable95 = new System.Windows.Forms.CheckBox();
-            this.lrtbTableCol1 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableCol2 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableCol3 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableCol5 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow1 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow2 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow3 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow4 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow5 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow6 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow7 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow8 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableRow9 = new System.Windows.Forms.RichTextBox();
-            this.lrtbTableCol4 = new System.Windows.Forms.RichTextBox();
+            
             this.tab_Speaking = new System.Windows.Forms.TabPage();
             this.tabf_speaking = new System.Windows.Forms.TabControl();
             this.stab_Direction = new System.Windows.Forms.TabPage();
@@ -2639,6 +2294,9 @@
             this.rtb_writinganswers = new System.Windows.Forms.RichTextBox();
             this.rtb_writing2 = new System.Windows.Forms.RadioButton();
             this.rtb_writing1 = new System.Windows.Forms.RadioButton();
+            
+            
+            
             this.btn_ShowText = new System.Windows.Forms.Button();
             this.flash_timer = new System.Windows.Forms.Timer(this.components);
             this.Timer_Speaking = new System.Windows.Forms.Timer(this.components);
@@ -2662,41 +2320,15 @@
             this.TPO10.SuspendLayout();
             this.tab_Reading.SuspendLayout();
             this.tabf_Reading.SuspendLayout();
-            this.rtab_Direction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox)).BeginInit();
-            this.rtab_NormalQuestion.SuspendLayout();
+            
+            
             ((System.ComponentModel.ISupportInitialize)(this.rtb_reading)).BeginInit();
-            this.r_flowLayoutPanel.SuspendLayout();
+            
             this.rtlp_answers.SuspendLayout();
-            this.rtab_SumQuestion.SuspendLayout();
-            this.r_flowLayoutPanel2.SuspendLayout();
-            this.tlp_sumAnswers.SuspendLayout();
-            this.tlp_Summary.SuspendLayout();
-            this.rtab_Review.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_wrongAnswered)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightAnswered)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingReview)).BeginInit();
+           
             this.tab_Listening.SuspendLayout();
             this.tabf_Listening.SuspendLayout();
-            this.ltab_Direction1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.ltab_Materials.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.l_splitContainer)).BeginInit();
-            this.l_splitContainer.Panel1.SuspendLayout();
-            this.l_splitContainer.Panel2.SuspendLayout();
-            this.l_splitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.flp_passage.SuspendLayout();
-            this.lMaterials1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene1)).BeginInit();
-            this.ltab_Question.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.lTableQuestion.SuspendLayout();
-            this.ltlp_table.SuspendLayout();
+            
             this.tab_Speaking.SuspendLayout();
             this.tabf_speaking.SuspendLayout();
             this.stab_Direction.SuspendLayout();
@@ -2733,6 +2365,7 @@
             this.atab_speakinganswers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.atab_writinganswers.SuspendLayout();
+            
             this.SuspendLayout();
             // 
             // btn_continue
@@ -4087,1068 +3720,7 @@
             this.tabf_Reading.Size = new System.Drawing.Size(771, 510);
             this.tabf_Reading.TabIndex = 0;
             this.tabf_Reading.TabStop = false;
-            // 
-            // rtab_Direction
-            // 
-            this.rtab_Direction.BackColor = System.Drawing.Color.White;
-            this.rtab_Direction.Controls.Add(this.r_pictureBox);
-            this.rtab_Direction.Location = new System.Drawing.Point(4, 25);
-            this.rtab_Direction.Name = "rtab_Direction";
-            this.rtab_Direction.Size = new System.Drawing.Size(763, 481);
-            this.rtab_Direction.TabIndex = 3;
-            this.rtab_Direction.Text = "rDirection";
-            // 
-            // r_pictureBox
-            // 
-            this.r_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.r_pictureBox.Image = TPO.Properties.Resources.ReadingDirection;
-            this.r_pictureBox.InitialImage = null;
-            this.r_pictureBox.Location = new System.Drawing.Point(30, 5);
-            this.r_pictureBox.Name = "r_pictureBox";
-            this.r_pictureBox.Size = new System.Drawing.Size(1093, 506);
-            this.r_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.r_pictureBox.TabIndex = 17;
-            this.r_pictureBox.TabStop = false;
-            // 
-            // rtab_NormalQuestion
-            // 
-            this.rtab_NormalQuestion.Controls.Add(this.rtb_reading);
-            this.rtab_NormalQuestion.Controls.Add(this.rtb_Passage);
-            this.rtab_NormalQuestion.Controls.Add(this.r_flowLayoutPanel);
-            this.rtab_NormalQuestion.Controls.Add(this.rbtn_stopReading);
-            this.rtab_NormalQuestion.Controls.Add(this.rbtn_readText);
-            this.rtab_NormalQuestion.Controls.Add(this.rlbl_readingIndication);
-            this.rtab_NormalQuestion.Location = new System.Drawing.Point(4, 25);
-            this.rtab_NormalQuestion.Name = "rtab_NormalQuestion";
-            this.rtab_NormalQuestion.Padding = new System.Windows.Forms.Padding(3);
-            this.rtab_NormalQuestion.Size = new System.Drawing.Size(763, 481);
-            this.rtab_NormalQuestion.TabIndex = 0;
-            this.rtab_NormalQuestion.Text = "rNormalQuestions";
-            this.rtab_NormalQuestion.UseVisualStyleBackColor = true;
-            // 
-            // rtb_reading
-            // 
-            this.rtb_reading.AutoSize = false;
-            this.rtb_reading.Location = new System.Drawing.Point(426, 0);
-            this.rtb_reading.Name = "tb_reading";
-            this.rtb_reading.Size = new System.Drawing.Size(282, 19);
-            this.rtb_reading.TabIndex = 25;
-            this.rtb_reading.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rtb_reading.Visible = false;
-            this.rtb_reading.Scroll += new System.EventHandler(this.tb_reading_Scroll);
-            // 
-            // rtb_Passage
-            // 
-            this.rtb_Passage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rtb_Passage.EnableAutoDragDrop = true;
-            this.rtb_Passage.Location = new System.Drawing.Point(348, 19);
-            this.rtb_Passage.Name = "rtb_Passage";
-            this.rtb_Passage.ReadOnly = true;
-            this.rtb_Passage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtb_Passage.ShortcutsEnabled = false;
-            this.rtb_Passage.Size = new System.Drawing.Size(412, 436);
-            this.rtb_Passage.TabIndex = 4;
-            this.rtb_Passage.TabStop = false;
-            this.rtb_Passage.Text = "";
-            this.rtb_Passage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseClick);
-            this.rtb_Passage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rtb_Passage_MouseMove);
-            // 
-            // r_flowLayoutPanel
-            // 
-            this.r_flowLayoutPanel.AutoSize = true;
-            this.r_flowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.r_flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.r_flowLayoutPanel.Controls.Add(this.rrtb_question);
-            this.r_flowLayoutPanel.Controls.Add(this.rtlp_answers);
-            this.r_flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.r_flowLayoutPanel.Location = new System.Drawing.Point(4, 17);
-            this.r_flowLayoutPanel.Name = "r_flowLayoutPanel";
-            this.r_flowLayoutPanel.Size = new System.Drawing.Size(346, 490);
-            this.r_flowLayoutPanel.TabIndex = 3;
-            // 
-            // rrtb_question
-            // 
-            this.rrtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_question.Location = new System.Drawing.Point(3, 3);
-            this.rrtb_question.Name = "rrtb_question";
-            this.rrtb_question.ReadOnly = true;
-            this.rrtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rrtb_question.Size = new System.Drawing.Size(331, 43);
-            this.rrtb_question.TabIndex = 0;
-            this.rrtb_question.TabStop = false;
-            this.rrtb_question.Text = "";
-            // 
-            // rtlp_answers
-            // 
-            this.rtlp_answers.AutoSize = true;
-            this.rtlp_answers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.rtlp_answers.ColumnCount = 2;
-            this.rtlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.rtlp_answers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.rtlp_answers.Controls.Add(this.rrtb_answerE, 1, 4);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerD, 1, 3);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerC, 1, 2);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerB, 1, 1);
-            this.rtlp_answers.Controls.Add(this.rckb_A, 0, 0);
-            this.rtlp_answers.Controls.Add(this.rckb_B, 0, 1);
-            this.rtlp_answers.Controls.Add(this.rckb_C, 0, 2);
-            this.rtlp_answers.Controls.Add(this.rckb_D, 0, 3);
-            this.rtlp_answers.Controls.Add(this.rckb_E, 0, 4);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerA, 1, 0);
-            this.rtlp_answers.Controls.Add(this.rckb_F, 0, 5);
-            this.rtlp_answers.Controls.Add(this.rckb_G, 0, 6);
-            this.rtlp_answers.Controls.Add(this.rckb_H, 0, 7);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerF, 1, 5);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerG, 1, 6);
-            this.rtlp_answers.Controls.Add(this.rrtb_answerH, 1, 7);
-            this.rtlp_answers.Location = new System.Drawing.Point(3, 52);
-            this.rtlp_answers.Name = "rtlp_answers";
-            this.rtlp_answers.RowCount = 8;
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.rtlp_answers.Size = new System.Drawing.Size(336, 368);
-            this.rtlp_answers.TabIndex = 1;
-            // 
-            // rrtb_answerE
-            // 
-            this.rrtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerE.Location = new System.Drawing.Point(43, 187);
-            this.rrtb_answerE.Name = "rrtb_answerE";
-            this.rrtb_answerE.ReadOnly = true;
-            this.rrtb_answerE.ShortcutsEnabled = false;
-            this.rrtb_answerE.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerE.TabIndex = 9;
-            this.rrtb_answerE.TabStop = false;
-            this.rrtb_answerE.Text = "";
-            this.rrtb_answerE.Visible = false;
-            // 
-            // rrtb_answerD
-            // 
-            this.rrtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerD.Location = new System.Drawing.Point(43, 141);
-            this.rrtb_answerD.Name = "rrtb_answerD";
-            this.rrtb_answerD.ReadOnly = true;
-            this.rrtb_answerD.ShortcutsEnabled = false;
-            this.rrtb_answerD.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerD.TabIndex = 8;
-            this.rrtb_answerD.TabStop = false;
-            this.rrtb_answerD.Text = "";
-            this.rrtb_answerD.Visible = false;
-            // 
-            // rrtb_answerC
-            // 
-            this.rrtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerC.Location = new System.Drawing.Point(43, 95);
-            this.rrtb_answerC.Name = "rrtb_answerC";
-            this.rrtb_answerC.ReadOnly = true;
-            this.rrtb_answerC.ShortcutsEnabled = false;
-            this.rrtb_answerC.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerC.TabIndex = 7;
-            this.rrtb_answerC.TabStop = false;
-            this.rrtb_answerC.Text = "";
-            this.rrtb_answerC.Visible = false;
-            // 
-            // rrtb_answerB
-            // 
-            this.rrtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerB.Location = new System.Drawing.Point(43, 49);
-            this.rrtb_answerB.Name = "rrtb_answerB";
-            this.rrtb_answerB.ReadOnly = true;
-            this.rrtb_answerB.ShortcutsEnabled = false;
-            this.rrtb_answerB.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerB.TabIndex = 6;
-            this.rrtb_answerB.TabStop = false;
-            this.rrtb_answerB.Text = "";
-            this.rrtb_answerB.Visible = false;
-            // 
-            // rckb_A
-            // 
-            this.rckb_A.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_A.AutoSize = true;
-            this.rckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_A.Location = new System.Drawing.Point(3, 3);
-            this.rckb_A.Name = "rckb_A";
-            this.rckb_A.Size = new System.Drawing.Size(21, 22);
-            this.rckb_A.TabIndex = 0;
-            this.rckb_A.TabStop = false;
-            this.rckb_A.Text = "A";
-            this.rckb_A.UseVisualStyleBackColor = true;
-            this.rckb_A.Visible = false;
-            // 
-            // rckb_B
-            // 
-            this.rckb_B.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_B.AutoSize = true;
-            this.rckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_B.Location = new System.Drawing.Point(3, 49);
-            this.rckb_B.Name = "rckb_B";
-            this.rckb_B.Size = new System.Drawing.Size(21, 22);
-            this.rckb_B.TabIndex = 1;
-            this.rckb_B.TabStop = false;
-            this.rckb_B.Text = "B";
-            this.rckb_B.UseVisualStyleBackColor = true;
-            this.rckb_B.Visible = false;
-            // 
-            // rckb_C
-            // 
-            this.rckb_C.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_C.AutoSize = true;
-            this.rckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_C.Location = new System.Drawing.Point(3, 95);
-            this.rckb_C.Name = "rckb_C";
-            this.rckb_C.Size = new System.Drawing.Size(21, 22);
-            this.rckb_C.TabIndex = 2;
-            this.rckb_C.TabStop = false;
-            this.rckb_C.Text = "C";
-            this.rckb_C.UseVisualStyleBackColor = true;
-            this.rckb_C.Visible = false;
-            // 
-            // rckb_D
-            // 
-            this.rckb_D.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_D.AutoSize = true;
-            this.rckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_D.Location = new System.Drawing.Point(3, 141);
-            this.rckb_D.Name = "rckb_D";
-            this.rckb_D.Size = new System.Drawing.Size(21, 22);
-            this.rckb_D.TabIndex = 3;
-            this.rckb_D.TabStop = false;
-            this.rckb_D.Text = "D";
-            this.rckb_D.UseVisualStyleBackColor = true;
-            this.rckb_D.Visible = false;
-            // 
-            // rckb_E
-            // 
-            this.rckb_E.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_E.AutoSize = true;
-            this.rckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_E.Location = new System.Drawing.Point(3, 187);
-            this.rckb_E.Name = "rckb_E";
-            this.rckb_E.Size = new System.Drawing.Size(21, 22);
-            this.rckb_E.TabIndex = 4;
-            this.rckb_E.TabStop = false;
-            this.rckb_E.Text = "E";
-            this.rckb_E.UseVisualStyleBackColor = true;
-            this.rckb_E.Visible = false;
-            // 
-            // rrtb_answerA
-            // 
-            this.rrtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerA.Location = new System.Drawing.Point(43, 3);
-            this.rrtb_answerA.Name = "rrtb_answerA";
-            this.rrtb_answerA.ReadOnly = true;
-            this.rrtb_answerA.ShortcutsEnabled = false;
-            this.rrtb_answerA.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerA.TabIndex = 5;
-            this.rrtb_answerA.TabStop = false;
-            this.rrtb_answerA.Text = "";
-            this.rrtb_answerA.Visible = false;
-            // 
-            // rckb_F
-            // 
-            this.rckb_F.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_F.AutoSize = true;
-            this.rckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_F.Location = new System.Drawing.Point(3, 233);
-            this.rckb_F.Name = "rckb_F";
-            this.rckb_F.Size = new System.Drawing.Size(21, 22);
-            this.rckb_F.TabIndex = 4;
-            this.rckb_F.TabStop = false;
-            this.rckb_F.Text = "F";
-            this.rckb_F.UseVisualStyleBackColor = true;
-            this.rckb_F.Visible = false;
-            // 
-            // rckb_G
-            // 
-            this.rckb_G.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_G.AutoSize = true;
-            this.rckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_G.Location = new System.Drawing.Point(3, 279);
-            this.rckb_G.Name = "rckb_G";
-            this.rckb_G.Size = new System.Drawing.Size(21, 22);
-            this.rckb_G.TabIndex = 4;
-            this.rckb_G.TabStop = false;
-            this.rckb_G.Text = "G";
-            this.rckb_G.UseVisualStyleBackColor = true;
-            this.rckb_G.Visible = false;
-            // 
-            // rckb_H
-            // 
-            this.rckb_H.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rckb_H.AutoSize = true;
-            this.rckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.rckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rckb_H.Location = new System.Drawing.Point(3, 325);
-            this.rckb_H.Name = "rckb_H";
-            this.rckb_H.Size = new System.Drawing.Size(21, 22);
-            this.rckb_H.TabIndex = 4;
-            this.rckb_H.TabStop = false;
-            this.rckb_H.Text = "H";
-            this.rckb_H.UseVisualStyleBackColor = true;
-            this.rckb_H.Visible = false;
-            // 
-            // rrtb_answerF
-            // 
-            this.rrtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerF.Location = new System.Drawing.Point(43, 233);
-            this.rrtb_answerF.Name = "rrtb_answerF";
-            this.rrtb_answerF.ReadOnly = true;
-            this.rrtb_answerF.ShortcutsEnabled = false;
-            this.rrtb_answerF.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerF.TabIndex = 9;
-            this.rrtb_answerF.TabStop = false;
-            this.rrtb_answerF.Text = "";
-            this.rrtb_answerF.Visible = false;
-            // 
-            // rrtb_answerG
-            // 
-            this.rrtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerG.Location = new System.Drawing.Point(43, 279);
-            this.rrtb_answerG.Name = "rrtb_answerG";
-            this.rrtb_answerG.ReadOnly = true;
-            this.rrtb_answerG.ShortcutsEnabled = false;
-            this.rrtb_answerG.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerG.TabIndex = 9;
-            this.rrtb_answerG.TabStop = false;
-            this.rrtb_answerG.Text = "";
-            this.rrtb_answerG.Visible = false;
-            // 
-            // rrtb_answerH
-            // 
-            this.rrtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rrtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rrtb_answerH.Location = new System.Drawing.Point(43, 325);
-            this.rrtb_answerH.Name = "rrtb_answerH";
-            this.rrtb_answerH.ReadOnly = true;
-            this.rrtb_answerH.ShortcutsEnabled = false;
-            this.rrtb_answerH.Size = new System.Drawing.Size(290, 40);
-            this.rrtb_answerH.TabIndex = 9;
-            this.rrtb_answerH.TabStop = false;
-            this.rrtb_answerH.Text = "";
-            this.rrtb_answerH.Visible = false;
-            // 
-            // rbtn_stopReading
-            // 
-            this.rbtn_stopReading.BackColor = System.Drawing.Color.Transparent;
-            this.rbtn_stopReading.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rbtn_stopReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtn_stopReading.Location = new System.Drawing.Point(711, 0);
-            this.rbtn_stopReading.Name = "rbtn_stopReading";
-            this.rbtn_stopReading.Size = new System.Drawing.Size(55, 19);
-            this.rbtn_stopReading.TabIndex = 24;
-            this.rbtn_stopReading.Text = "Stop";
-            this.rbtn_stopReading.UseVisualStyleBackColor = false;
-            this.rbtn_stopReading.Visible = false;
-            this.rbtn_stopReading.Click += new System.EventHandler(this.btn_stopReading_Click);
-            // 
-            // rbtn_readText
-            // 
-            this.rbtn_readText.BackColor = System.Drawing.Color.Transparent;
-            this.rbtn_readText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rbtn_readText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtn_readText.Location = new System.Drawing.Point(348, -1);
-            this.rbtn_readText.Name = "rbtn_readText";
-            this.rbtn_readText.Size = new System.Drawing.Size(75, 19);
-            this.rbtn_readText.TabIndex = 24;
-            this.rbtn_readText.Text = "ReadText";
-            this.rbtn_readText.UseVisualStyleBackColor = false;
-            this.rbtn_readText.Click += new System.EventHandler(this.bn_readText_Click);
-            // 
-            // rlbl_readingIndication
-            // 
-            this.rlbl_readingIndication.BackColor = System.Drawing.Color.Teal;
-            this.rlbl_readingIndication.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.rlbl_readingIndication.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rlbl_readingIndication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rlbl_readingIndication.Location = new System.Drawing.Point(348, -1);
-            this.rlbl_readingIndication.Name = "rlbl_readingIndication";
-            this.rlbl_readingIndication.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rlbl_readingIndication.Size = new System.Drawing.Size(416, 20);
-            this.rlbl_readingIndication.TabIndex = 5;
-            this.rlbl_readingIndication.Text = "Beginning";
-            // 
-            // rtab_SumQuestion
-            // 
-            this.rtab_SumQuestion.Controls.Add(this.rlbl_rightAnswer);
-            this.rtab_SumQuestion.Controls.Add(this.r_flowLayoutPanel2);
-            this.rtab_SumQuestion.Location = new System.Drawing.Point(4, 25);
-            this.rtab_SumQuestion.Name = "rtab_SumQuestion";
-            this.rtab_SumQuestion.Padding = new System.Windows.Forms.Padding(3);
-            this.rtab_SumQuestion.Size = new System.Drawing.Size(763, 481);
-            this.rtab_SumQuestion.TabIndex = 1;
-            this.rtab_SumQuestion.Text = "rSumQuestion";
-            this.rtab_SumQuestion.UseVisualStyleBackColor = true;
-            // 
-            // llbl_rightAnswer
-            // 
-            this.rlbl_rightAnswer.AutoSize = true;
-            this.rlbl_rightAnswer.Location = new System.Drawing.Point(7, 96);
-            this.rlbl_rightAnswer.Name = "llbl_rightAnswer";
-            this.rlbl_rightAnswer.Size = new System.Drawing.Size(71, 12);
-            this.rlbl_rightAnswer.TabIndex = 2;
-            this.rlbl_rightAnswer.Text = "rightAnswer";
-            this.rlbl_rightAnswer.Visible = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.r_flowLayoutPanel2.Controls.Add(this.rtb_sumPassage);
-            this.r_flowLayoutPanel2.Controls.Add(this.rtb_sumQuestion);
-            this.r_flowLayoutPanel2.Controls.Add(this.tlp_sumAnswers);
-            this.r_flowLayoutPanel2.Controls.Add(this.tlp_Summary);
-            this.r_flowLayoutPanel2.Location = new System.Drawing.Point(77, 4);
-            this.r_flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.r_flowLayoutPanel2.Size = new System.Drawing.Size(619, 474);
-            this.r_flowLayoutPanel2.TabIndex = 1;
-            // 
-            // rtb_sumPassage
-            // 
-            this.rtb_sumPassage.BackColor = System.Drawing.SystemColors.Window;
-            this.rtb_sumPassage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumPassage.Location = new System.Drawing.Point(3, 3);
-            this.rtb_sumPassage.Name = "rtb_sumPassage";
-            this.rtb_sumPassage.ReadOnly = true;
-            this.rtb_sumPassage.ShortcutsEnabled = false;
-            this.rtb_sumPassage.Size = new System.Drawing.Size(613, 20);
-            this.rtb_sumPassage.TabIndex = 5;
-            this.rtb_sumPassage.TabStop = false;
-            this.rtb_sumPassage.Text = "";
-            this.rtb_sumPassage.Visible = false;
-            // 
-            // rtb_sumQuestion
-            // 
-            this.rtb_sumQuestion.BackColor = System.Drawing.SystemColors.Window;
-            this.rtb_sumQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumQuestion.Location = new System.Drawing.Point(3, 29);
-            this.rtb_sumQuestion.Name = "rtb_sumQuestion";
-            this.rtb_sumQuestion.ReadOnly = true;
-            this.rtb_sumQuestion.Size = new System.Drawing.Size(613, 17);
-            this.rtb_sumQuestion.TabIndex = 2;
-            this.rtb_sumQuestion.TabStop = false;
-            this.rtb_sumQuestion.Text = "";
-            this.rtb_sumQuestion.Visible = false;
-            // 
-            // tlp_sumAnswers
-            // 
-            this.tlp_sumAnswers.AutoSize = true;
-            this.tlp_sumAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlp_sumAnswers.BackColor = System.Drawing.Color.Transparent;
-            this.tlp_sumAnswers.ColumnCount = 2;
-            this.tlp_sumAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp_sumAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected5, 1, 4);
-            this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected1, 1, 0);
-            this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected2, 1, 1);
-            this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected3, 1, 2);
-            this.tlp_sumAnswers.Controls.Add(this.rtb_SumSelected4, 1, 3);
-            this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected1, 0, 0);
-            this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected2, 0, 1);
-            this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected3, 0, 2);
-            this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected4, 0, 3);
-            this.tlp_sumAnswers.Controls.Add(this.ckb_SumSelected5, 0, 4);
-            this.tlp_sumAnswers.Location = new System.Drawing.Point(3, 52);
-            this.tlp_sumAnswers.Name = "tlp_sumAnswers";
-            this.tlp_sumAnswers.RowCount = 5;
-            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_sumAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_sumAnswers.Size = new System.Drawing.Size(613, 130);
-            this.tlp_sumAnswers.TabIndex = 3;
-            // 
-            // rtb_SumSelected5
-            // 
-            this.rtb_SumSelected5.BackColor = System.Drawing.Color.LightGray;
-            this.rtb_SumSelected5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_SumSelected5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rtb_SumSelected5.Location = new System.Drawing.Point(43, 107);
-            this.rtb_SumSelected5.Name = "rtb_SumSelected5";
-            this.rtb_SumSelected5.ReadOnly = true;
-            this.rtb_SumSelected5.ShortcutsEnabled = false;
-            this.rtb_SumSelected5.Size = new System.Drawing.Size(567, 20);
-            this.rtb_SumSelected5.TabIndex = 1;
-            this.rtb_SumSelected5.TabStop = false;
-            this.rtb_SumSelected5.Text = "";
-            this.rtb_SumSelected5.Visible = false;
-            // 
-            // rtb_SumSelected1
-            // 
-            this.rtb_SumSelected1.BackColor = System.Drawing.Color.LightGray;
-            this.rtb_SumSelected1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_SumSelected1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rtb_SumSelected1.Location = new System.Drawing.Point(43, 3);
-            this.rtb_SumSelected1.Name = "rtb_SumSelected1";
-            this.rtb_SumSelected1.ReadOnly = true;
-            this.rtb_SumSelected1.ShortcutsEnabled = false;
-            this.rtb_SumSelected1.Size = new System.Drawing.Size(567, 17);
-            this.rtb_SumSelected1.TabIndex = 0;
-            this.rtb_SumSelected1.TabStop = false;
-            this.rtb_SumSelected1.Text = "";
-            this.rtb_SumSelected1.Visible = false;
-            // 
-            // rtb_SumSelected2
-            // 
-            this.rtb_SumSelected2.BackColor = System.Drawing.Color.LightGray;
-            this.rtb_SumSelected2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_SumSelected2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rtb_SumSelected2.Location = new System.Drawing.Point(43, 29);
-            this.rtb_SumSelected2.Name = "rtb_SumSelected2";
-            this.rtb_SumSelected2.ReadOnly = true;
-            this.rtb_SumSelected2.ShortcutsEnabled = false;
-            this.rtb_SumSelected2.Size = new System.Drawing.Size(567, 17);
-            this.rtb_SumSelected2.TabIndex = 0;
-            this.rtb_SumSelected2.TabStop = false;
-            this.rtb_SumSelected2.Text = "";
-            this.rtb_SumSelected2.Visible = false;
-            // 
-            // rtb_SumSelected3
-            // 
-            this.rtb_SumSelected3.BackColor = System.Drawing.Color.LightGray;
-            this.rtb_SumSelected3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_SumSelected3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rtb_SumSelected3.Location = new System.Drawing.Point(43, 55);
-            this.rtb_SumSelected3.Name = "rtb_SumSelected3";
-            this.rtb_SumSelected3.ReadOnly = true;
-            this.rtb_SumSelected3.ShortcutsEnabled = false;
-            this.rtb_SumSelected3.Size = new System.Drawing.Size(567, 17);
-            this.rtb_SumSelected3.TabIndex = 0;
-            this.rtb_SumSelected3.TabStop = false;
-            this.rtb_SumSelected3.Text = "";
-            this.rtb_SumSelected3.Visible = false;
-            // 
-            // rtb_SumSelected4
-            // 
-            this.rtb_SumSelected4.BackColor = System.Drawing.Color.LightGray;
-            this.rtb_SumSelected4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_SumSelected4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rtb_SumSelected4.Location = new System.Drawing.Point(43, 81);
-            this.rtb_SumSelected4.Name = "rtb_SumSelected4";
-            this.rtb_SumSelected4.ReadOnly = true;
-            this.rtb_SumSelected4.ShortcutsEnabled = false;
-            this.rtb_SumSelected4.Size = new System.Drawing.Size(567, 17);
-            this.rtb_SumSelected4.TabIndex = 0;
-            this.rtb_SumSelected4.TabStop = false;
-            this.rtb_SumSelected4.Text = "";
-            this.rtb_SumSelected4.Visible = false;
-            // 
-            // ckb_SumSelected1
-            // 
-            this.ckb_SumSelected1.AutoSize = true;
-            this.ckb_SumSelected1.BackColor = System.Drawing.Color.LightGray;
-            this.ckb_SumSelected1.Checked = true;
-            this.ckb_SumSelected1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_SumSelected1.Location = new System.Drawing.Point(3, 3);
-            this.ckb_SumSelected1.Name = "ckb_SumSelected1";
-            this.ckb_SumSelected1.Size = new System.Drawing.Size(15, 14);
-            this.ckb_SumSelected1.TabIndex = 2;
-            this.ckb_SumSelected1.TabStop = false;
-            this.ckb_SumSelected1.UseVisualStyleBackColor = false;
-            this.ckb_SumSelected1.Visible = false;
-            // 
-            // ckb_SumSelected2
-            // 
-            this.ckb_SumSelected2.AutoSize = true;
-            this.ckb_SumSelected2.BackColor = System.Drawing.Color.LightGray;
-            this.ckb_SumSelected2.Checked = true;
-            this.ckb_SumSelected2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_SumSelected2.Location = new System.Drawing.Point(3, 29);
-            this.ckb_SumSelected2.Name = "ckb_SumSelected2";
-            this.ckb_SumSelected2.Size = new System.Drawing.Size(15, 14);
-            this.ckb_SumSelected2.TabIndex = 2;
-            this.ckb_SumSelected2.TabStop = false;
-            this.ckb_SumSelected2.UseVisualStyleBackColor = false;
-            this.ckb_SumSelected2.Visible = false;
-            // 
-            // ckb_SumSelected3
-            // 
-            this.ckb_SumSelected3.AutoSize = true;
-            this.ckb_SumSelected3.BackColor = System.Drawing.Color.LightGray;
-            this.ckb_SumSelected3.Checked = true;
-            this.ckb_SumSelected3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_SumSelected3.Location = new System.Drawing.Point(3, 55);
-            this.ckb_SumSelected3.Name = "ckb_SumSelected3";
-            this.ckb_SumSelected3.Size = new System.Drawing.Size(15, 14);
-            this.ckb_SumSelected3.TabIndex = 2;
-            this.ckb_SumSelected3.TabStop = false;
-            this.ckb_SumSelected3.UseVisualStyleBackColor = false;
-            this.ckb_SumSelected3.Visible = false;
-            // 
-            // ckb_SumSelected4
-            // 
-            this.ckb_SumSelected4.AutoSize = true;
-            this.ckb_SumSelected4.BackColor = System.Drawing.Color.LightGray;
-            this.ckb_SumSelected4.Checked = true;
-            this.ckb_SumSelected4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_SumSelected4.Location = new System.Drawing.Point(3, 81);
-            this.ckb_SumSelected4.Name = "ckb_SumSelected4";
-            this.ckb_SumSelected4.Size = new System.Drawing.Size(15, 14);
-            this.ckb_SumSelected4.TabIndex = 2;
-            this.ckb_SumSelected4.TabStop = false;
-            this.ckb_SumSelected4.UseVisualStyleBackColor = false;
-            this.ckb_SumSelected4.Visible = false;
-            // 
-            // ckb_SumSelected5
-            // 
-            this.ckb_SumSelected5.AutoSize = true;
-            this.ckb_SumSelected5.BackColor = System.Drawing.Color.LightGray;
-            this.ckb_SumSelected5.Checked = true;
-            this.ckb_SumSelected5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_SumSelected5.Location = new System.Drawing.Point(3, 107);
-            this.ckb_SumSelected5.Name = "ckb_SumSelected5";
-            this.ckb_SumSelected5.Size = new System.Drawing.Size(15, 14);
-            this.ckb_SumSelected5.TabIndex = 2;
-            this.ckb_SumSelected5.TabStop = false;
-            this.ckb_SumSelected5.UseVisualStyleBackColor = false;
-            this.ckb_SumSelected5.Visible = false;
-            // 
-            // tlp_Summary
-            // 
-            this.tlp_Summary.AutoSize = true;
-            this.tlp_Summary.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlp_Summary.ColumnCount = 2;
-            this.tlp_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer5, 1, 4);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer1, 1, 0);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer2, 1, 1);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer3, 1, 2);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer4, 1, 3);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer1, 0, 0);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer2, 0, 1);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer3, 0, 2);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer4, 0, 3);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer5, 0, 4);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer6, 0, 5);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer6, 1, 5);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer7, 0, 6);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer8, 0, 7);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer7, 1, 6);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer8, 1, 7);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer9, 0, 8);
-            this.tlp_Summary.Controls.Add(this.ckb_sumAnswer10, 0, 9);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer9, 1, 8);
-            this.tlp_Summary.Controls.Add(this.rtb_sumAnswer10, 1, 9);
-            this.tlp_Summary.Location = new System.Drawing.Point(3, 188);
-            this.tlp_Summary.Name = "tlp_Summary";
-            this.tlp_Summary.RowCount = 10;
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp_Summary.Size = new System.Drawing.Size(613, 260);
-            this.tlp_Summary.TabIndex = 4;
-            // 
-            // rtb_sumAnswer5
-            // 
-            this.rtb_sumAnswer5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer5.Location = new System.Drawing.Point(43, 107);
-            this.rtb_sumAnswer5.Name = "rtb_sumAnswer5";
-            this.rtb_sumAnswer5.ReadOnly = true;
-            this.rtb_sumAnswer5.ShortcutsEnabled = false;
-            this.rtb_sumAnswer5.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer5.TabIndex = 1;
-            this.rtb_sumAnswer5.TabStop = false;
-            this.rtb_sumAnswer5.Text = "";
-            this.rtb_sumAnswer5.Visible = false;
-            // 
-            // rtb_sumAnswer1
-            // 
-            this.rtb_sumAnswer1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer1.Location = new System.Drawing.Point(43, 3);
-            this.rtb_sumAnswer1.Name = "rtb_sumAnswer1";
-            this.rtb_sumAnswer1.ReadOnly = true;
-            this.rtb_sumAnswer1.ShortcutsEnabled = false;
-            this.rtb_sumAnswer1.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer1.TabIndex = 0;
-            this.rtb_sumAnswer1.TabStop = false;
-            this.rtb_sumAnswer1.Text = "";
-            this.rtb_sumAnswer1.Visible = false;
-            // 
-            // rtb_sumAnswer2
-            // 
-            this.rtb_sumAnswer2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer2.Location = new System.Drawing.Point(43, 29);
-            this.rtb_sumAnswer2.Name = "rtb_sumAnswer2";
-            this.rtb_sumAnswer2.ReadOnly = true;
-            this.rtb_sumAnswer2.ShortcutsEnabled = false;
-            this.rtb_sumAnswer2.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer2.TabIndex = 0;
-            this.rtb_sumAnswer2.TabStop = false;
-            this.rtb_sumAnswer2.Text = "";
-            this.rtb_sumAnswer2.Visible = false;
-            // 
-            // rtb_sumAnswer3
-            // 
-            this.rtb_sumAnswer3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer3.Location = new System.Drawing.Point(43, 55);
-            this.rtb_sumAnswer3.Name = "rtb_sumAnswer3";
-            this.rtb_sumAnswer3.ReadOnly = true;
-            this.rtb_sumAnswer3.ShortcutsEnabled = false;
-            this.rtb_sumAnswer3.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer3.TabIndex = 0;
-            this.rtb_sumAnswer3.TabStop = false;
-            this.rtb_sumAnswer3.Text = "";
-            this.rtb_sumAnswer3.Visible = false;
-            // 
-            // rtb_sumAnswer4
-            // 
-            this.rtb_sumAnswer4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer4.Location = new System.Drawing.Point(43, 81);
-            this.rtb_sumAnswer4.Name = "rtb_sumAnswer4";
-            this.rtb_sumAnswer4.ReadOnly = true;
-            this.rtb_sumAnswer4.ShortcutsEnabled = false;
-            this.rtb_sumAnswer4.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer4.TabIndex = 0;
-            this.rtb_sumAnswer4.TabStop = false;
-            this.rtb_sumAnswer4.Text = "";
-            this.rtb_sumAnswer4.Visible = false;
-            // 
-            // ckb_sumAnswer1
-            // 
-            this.ckb_sumAnswer1.AutoSize = true;
-            this.ckb_sumAnswer1.Enabled = false;
-            this.ckb_sumAnswer1.Location = new System.Drawing.Point(3, 3);
-            this.ckb_sumAnswer1.Name = "ckb_sumAnswer1";
-            this.ckb_sumAnswer1.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer1.TabIndex = 2;
-            this.ckb_sumAnswer1.TabStop = false;
-            this.ckb_sumAnswer1.Text = "A";
-            this.ckb_sumAnswer1.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer1.Visible = false;
-            // 
-            // ckb_sumAnswer2
-            // 
-            this.ckb_sumAnswer2.AutoSize = true;
-            this.ckb_sumAnswer2.Enabled = false;
-            this.ckb_sumAnswer2.Location = new System.Drawing.Point(3, 29);
-            this.ckb_sumAnswer2.Name = "ckb_sumAnswer2";
-            this.ckb_sumAnswer2.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer2.TabIndex = 2;
-            this.ckb_sumAnswer2.TabStop = false;
-            this.ckb_sumAnswer2.Text = "B";
-            this.ckb_sumAnswer2.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer2.Visible = false;
-            // 
-            // ckb_sumAnswer3
-            // 
-            this.ckb_sumAnswer3.AutoSize = true;
-            this.ckb_sumAnswer3.Enabled = false;
-            this.ckb_sumAnswer3.Location = new System.Drawing.Point(3, 55);
-            this.ckb_sumAnswer3.Name = "ckb_sumAnswer3";
-            this.ckb_sumAnswer3.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer3.TabIndex = 2;
-            this.ckb_sumAnswer3.TabStop = false;
-            this.ckb_sumAnswer3.Text = "C";
-            this.ckb_sumAnswer3.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer3.Visible = false;
-            // 
-            // ckb_sumAnswer4
-            // 
-            this.ckb_sumAnswer4.AutoSize = true;
-            this.ckb_sumAnswer4.Enabled = false;
-            this.ckb_sumAnswer4.Location = new System.Drawing.Point(3, 81);
-            this.ckb_sumAnswer4.Name = "ckb_sumAnswer4";
-            this.ckb_sumAnswer4.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer4.TabIndex = 2;
-            this.ckb_sumAnswer4.TabStop = false;
-            this.ckb_sumAnswer4.Text = "D";
-            this.ckb_sumAnswer4.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer4.Visible = false;
-            // 
-            // ckb_sumAnswer5
-            // 
-            this.ckb_sumAnswer5.AutoSize = true;
-            this.ckb_sumAnswer5.Enabled = false;
-            this.ckb_sumAnswer5.Location = new System.Drawing.Point(3, 107);
-            this.ckb_sumAnswer5.Name = "ckb_sumAnswer5";
-            this.ckb_sumAnswer5.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer5.TabIndex = 2;
-            this.ckb_sumAnswer5.TabStop = false;
-            this.ckb_sumAnswer5.Text = "E";
-            this.ckb_sumAnswer5.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer5.Visible = false;
-            // 
-            // ckb_sumAnswer6
-            // 
-            this.ckb_sumAnswer6.AutoSize = true;
-            this.ckb_sumAnswer6.Enabled = false;
-            this.ckb_sumAnswer6.Location = new System.Drawing.Point(3, 133);
-            this.ckb_sumAnswer6.Name = "ckb_sumAnswer6";
-            this.ckb_sumAnswer6.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer6.TabIndex = 2;
-            this.ckb_sumAnswer6.TabStop = false;
-            this.ckb_sumAnswer6.Text = "F";
-            this.ckb_sumAnswer6.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer6.Visible = false;
-            // 
-            // rtb_sumAnswer6
-            // 
-            this.rtb_sumAnswer6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer6.Location = new System.Drawing.Point(43, 133);
-            this.rtb_sumAnswer6.Name = "rtb_sumAnswer6";
-            this.rtb_sumAnswer6.ReadOnly = true;
-            this.rtb_sumAnswer6.ShortcutsEnabled = false;
-            this.rtb_sumAnswer6.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer6.TabIndex = 1;
-            this.rtb_sumAnswer6.TabStop = false;
-            this.rtb_sumAnswer6.Text = "";
-            this.rtb_sumAnswer6.Visible = false;
-            // 
-            // ckb_sumAnswer7
-            // 
-            this.ckb_sumAnswer7.AutoSize = true;
-            this.ckb_sumAnswer7.Enabled = false;
-            this.ckb_sumAnswer7.Location = new System.Drawing.Point(3, 159);
-            this.ckb_sumAnswer7.Name = "ckb_sumAnswer7";
-            this.ckb_sumAnswer7.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer7.TabIndex = 2;
-            this.ckb_sumAnswer7.TabStop = false;
-            this.ckb_sumAnswer7.Text = "G";
-            this.ckb_sumAnswer7.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer7.Visible = false;
-            // 
-            // ckb_sumAnswer8
-            // 
-            this.ckb_sumAnswer8.AutoSize = true;
-            this.ckb_sumAnswer8.Enabled = false;
-            this.ckb_sumAnswer8.Location = new System.Drawing.Point(3, 185);
-            this.ckb_sumAnswer8.Name = "ckb_sumAnswer8";
-            this.ckb_sumAnswer8.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer8.TabIndex = 2;
-            this.ckb_sumAnswer8.TabStop = false;
-            this.ckb_sumAnswer8.Text = "H";
-            this.ckb_sumAnswer8.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer8.Visible = false;
-            // 
-            // rtb_sumAnswer7
-            // 
-            this.rtb_sumAnswer7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer7.Location = new System.Drawing.Point(43, 159);
-            this.rtb_sumAnswer7.Name = "rtb_sumAnswer7";
-            this.rtb_sumAnswer7.ReadOnly = true;
-            this.rtb_sumAnswer7.ShortcutsEnabled = false;
-            this.rtb_sumAnswer7.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer7.TabIndex = 1;
-            this.rtb_sumAnswer7.TabStop = false;
-            this.rtb_sumAnswer7.Text = "";
-            this.rtb_sumAnswer7.Visible = false;
-            // 
-            // rtb_sumAnswer8
-            // 
-            this.rtb_sumAnswer8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer8.Location = new System.Drawing.Point(43, 185);
-            this.rtb_sumAnswer8.Name = "rtb_sumAnswer8";
-            this.rtb_sumAnswer8.ReadOnly = true;
-            this.rtb_sumAnswer8.ShortcutsEnabled = false;
-            this.rtb_sumAnswer8.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer8.TabIndex = 1;
-            this.rtb_sumAnswer8.TabStop = false;
-            this.rtb_sumAnswer8.Text = "";
-            this.rtb_sumAnswer8.Visible = false;
-            // 
-            // ckb_sumAnswer9
-            // 
-            this.ckb_sumAnswer9.AutoSize = true;
-            this.ckb_sumAnswer9.Enabled = false;
-            this.ckb_sumAnswer9.Location = new System.Drawing.Point(3, 211);
-            this.ckb_sumAnswer9.Name = "ckb_sumAnswer9";
-            this.ckb_sumAnswer9.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer9.TabIndex = 2;
-            this.ckb_sumAnswer9.TabStop = false;
-            this.ckb_sumAnswer9.Text = "I";
-            this.ckb_sumAnswer9.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer9.Visible = false;
-            // 
-            // ckb_sumAnswer10
-            // 
-            this.ckb_sumAnswer10.AutoSize = true;
-            this.ckb_sumAnswer10.Enabled = false;
-            this.ckb_sumAnswer10.Location = new System.Drawing.Point(3, 237);
-            this.ckb_sumAnswer10.Name = "ckb_sumAnswer10";
-            this.ckb_sumAnswer10.Size = new System.Drawing.Size(30, 16);
-            this.ckb_sumAnswer10.TabIndex = 2;
-            this.ckb_sumAnswer10.Text = "J";
-            this.ckb_sumAnswer10.UseVisualStyleBackColor = true;
-            this.ckb_sumAnswer10.Visible = false;
-            // 
-            // rtb_sumAnswer9
-            // 
-            this.rtb_sumAnswer9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer9.Location = new System.Drawing.Point(43, 211);
-            this.rtb_sumAnswer9.Name = "rtb_sumAnswer9";
-            this.rtb_sumAnswer9.ReadOnly = true;
-            this.rtb_sumAnswer9.ShortcutsEnabled = false;
-            this.rtb_sumAnswer9.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer9.TabIndex = 1;
-            this.rtb_sumAnswer9.TabStop = false;
-            this.rtb_sumAnswer9.Text = "";
-            this.rtb_sumAnswer9.Visible = false;
-            // 
-            // rtb_sumAnswer10
-            // 
-            this.rtb_sumAnswer10.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtb_sumAnswer10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_sumAnswer10.Location = new System.Drawing.Point(43, 237);
-            this.rtb_sumAnswer10.Name = "rtb_sumAnswer10";
-            this.rtb_sumAnswer10.ReadOnly = true;
-            this.rtb_sumAnswer10.ShortcutsEnabled = false;
-            this.rtb_sumAnswer10.Size = new System.Drawing.Size(567, 20);
-            this.rtb_sumAnswer10.TabIndex = 1;
-            this.rtb_sumAnswer10.Text = "";
-            this.rtb_sumAnswer10.Visible = false;
-            // 
-            // rtab_Review
-            // 
-            this.rtab_Review.Controls.Add(this.lbl_scoreReport);
-            this.rtab_Review.Controls.Add(this.lbl_wrongAnswered);
-            this.rtab_Review.Controls.Add(this.pb_wrongAnswered);
-            this.rtab_Review.Controls.Add(this.lbl_rightAnswered);
-            this.rtab_Review.Controls.Add(this.pb_rightAnswered);
-            this.rtab_Review.Controls.Add(this.label1);
-            this.rtab_Review.Controls.Add(this.pictureBox5);
-            this.rtab_Review.Controls.Add(this.dgv_readingReview);
-            this.rtab_Review.Location = new System.Drawing.Point(4, 25);
-            this.rtab_Review.Name = "rtab_Review";
-            this.rtab_Review.Size = new System.Drawing.Size(763, 481);
-            this.rtab_Review.TabIndex = 2;
-            this.rtab_Review.Text = "rReview";
-            this.rtab_Review.UseVisualStyleBackColor = true;
-            // 
-            // lbl_scoreReport
-            // 
-            this.lbl_scoreReport.AutoSize = true;
-            this.lbl_scoreReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_scoreReport.Location = new System.Drawing.Point(68, 19);
-            this.lbl_scoreReport.Name = "lbl_scoreReport";
-            this.lbl_scoreReport.Size = new System.Drawing.Size(97, 17);
-            this.lbl_scoreReport.TabIndex = 5;
-            this.lbl_scoreReport.Text = "scoreReport";
-            // 
-            // lbl_wrongAnswered
-            // 
-            this.lbl_wrongAnswered.AutoSize = true;
-            this.lbl_wrongAnswered.Location = new System.Drawing.Point(339, 53);
-            this.lbl_wrongAnswered.Name = "lbl_wrongAnswered";
-            this.lbl_wrongAnswered.Size = new System.Drawing.Size(89, 12);
-            this.lbl_wrongAnswered.TabIndex = 4;
-            this.lbl_wrongAnswered.Text = "Wrong Answered";
-            // 
-            // pb_wrongAnswered
-            // 
-            this.pb_wrongAnswered.BackColor = System.Drawing.Color.Yellow;
-            this.pb_wrongAnswered.Location = new System.Drawing.Point(306, 44);
-            this.pb_wrongAnswered.Name = "pb_wrongAnswered";
-            this.pb_wrongAnswered.Size = new System.Drawing.Size(27, 20);
-            this.pb_wrongAnswered.TabIndex = 3;
-            this.pb_wrongAnswered.TabStop = false;
-            // 
-            // lbl_rightAnswered
-            // 
-            this.lbl_rightAnswered.AutoSize = true;
-            this.lbl_rightAnswered.Location = new System.Drawing.Point(222, 53);
-            this.lbl_rightAnswered.Name = "lbl_rightAnswered";
-            this.lbl_rightAnswered.Size = new System.Drawing.Size(89, 12);
-            this.lbl_rightAnswered.TabIndex = 4;
-            this.lbl_rightAnswered.Text = "Right Answered";
-            // 
-            // pb_rightAnswered
-            // 
-            this.pb_rightAnswered.BackColor = System.Drawing.Color.Green;
-            this.pb_rightAnswered.Location = new System.Drawing.Point(189, 44);
-            this.pb_rightAnswered.Name = "pb_rightAnswered";
-            this.pb_rightAnswered.Size = new System.Drawing.Size(27, 20);
-            this.pb_rightAnswered.TabIndex = 3;
-            this.pb_rightAnswered.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Not Answered";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Red;
-            this.pictureBox5.Location = new System.Drawing.Point(71, 44);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // dgv_readingReview
-            // 
-            this.dgv_readingReview.AllowUserToAddRows = false;
-            this.dgv_readingReview.AllowUserToDeleteRows = false;
-            this.dgv_readingReview.AllowUserToResizeColumns = false;
-            this.dgv_readingReview.AllowUserToResizeRows = false;
-            this.dgv_readingReview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_readingReview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_readingReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_readingReview.Location = new System.Drawing.Point(71, 70);
-            this.dgv_readingReview.MultiSelect = false;
-            this.dgv_readingReview.Name = "dgv_readingReview";
-            this.dgv_readingReview.ReadOnly = true;
-            this.dgv_readingReview.RowHeadersVisible = false;
-            this.dgv_readingReview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_readingReview.RowTemplate.Height = 23;
-            this.dgv_readingReview.RowTemplate.ReadOnly = true;
-            this.dgv_readingReview.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_readingReview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_readingReview.Size = new System.Drawing.Size(644, 313);
-            this.dgv_readingReview.TabIndex = 2;
-            this.dgv_readingReview.TabStop = false;
-            this.dgv_readingReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_readingReview_CellContentClick);
-            this.dgv_readingReview.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_readingReview_ColumnHeaderMouseClick);
-            this.dgv_readingReview.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readingReview_DataBindingComplete);
+            
             // 
             // tab_Listening
             // 
@@ -5160,1379 +3732,8 @@
             this.tab_Listening.TabIndex = 1;
             this.tab_Listening.Text = "Listening";
             this.tab_Listening.UseVisualStyleBackColor = true;
-            // 
-            // tabf_Listening
-            // 
-            this.tabf_Listening.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabf_Listening.Controls.Add(this.ltab_Direction1);
-            this.tabf_Listening.Controls.Add(this.ltab_Direction2);
-            this.tabf_Listening.Controls.Add(this.ltab_Materials);
-            this.tabf_Listening.Controls.Add(this.lMaterials1);
-            this.tabf_Listening.Controls.Add(this.ltab_Question);
-            this.tabf_Listening.Controls.Add(this.lTableQuestion);
-            this.tabf_Listening.Location = new System.Drawing.Point(4, -24);
-            this.tabf_Listening.Name = "tabf_Listening";
-            this.tabf_Listening.SelectedIndex = 0;
-            this.tabf_Listening.Size = new System.Drawing.Size(780, 514);
-            this.tabf_Listening.TabIndex = 1;
-            this.tabf_Listening.TabStop = false;
-            // 
-            // ltab_Direction1
-            // 
-            this.ltab_Direction1.Controls.Add(this.pictureBox1);
-            this.ltab_Direction1.Location = new System.Drawing.Point(4, 25);
-            this.ltab_Direction1.Name = "ltab_Direction1";
-            this.ltab_Direction1.Padding = new System.Windows.Forms.Padding(3);
-            this.ltab_Direction1.Size = new System.Drawing.Size(772, 485);
-            this.ltab_Direction1.TabIndex = 0;
-            this.ltab_Direction1.Text = "lDirection1";
-            this.ltab_Direction1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::TPO.Properties.Resources.ListeningDirection3;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1126, 492);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ltab_Direction2
-            // 
-            this.ltab_Direction2.Location = new System.Drawing.Point(4, 25);
-            this.ltab_Direction2.Name = "ltab_Direction2";
-            this.ltab_Direction2.Size = new System.Drawing.Size(772, 485);
-            this.ltab_Direction2.TabIndex = 3;
-            this.ltab_Direction2.Text = "lDirection2";
-            this.ltab_Direction2.UseVisualStyleBackColor = true;
-            // 
-            // ltab_Materials
-            // 
-            this.ltab_Materials.Controls.Add(this.l_splitContainer);
-            this.ltab_Materials.Location = new System.Drawing.Point(4, 25);
-            this.ltab_Materials.Name = "ltab_Materials";
-            this.ltab_Materials.Padding = new System.Windows.Forms.Padding(3);
-            this.ltab_Materials.Size = new System.Drawing.Size(772, 485);
-            this.ltab_Materials.TabIndex = 1;
-            this.ltab_Materials.Text = "lMaterials";
-            this.ltab_Materials.UseVisualStyleBackColor = true;
-            // 
-            // l_splitContainer
-            // 
-            this.l_splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.l_splitContainer.IsSplitterFixed = true;
-            this.l_splitContainer.Location = new System.Drawing.Point(3, 3);
-            this.l_splitContainer.Name = "l_splitContainer";
-            // 
-            // l_splitContainer.Panel1
-            // 
-            this.l_splitContainer.Panel1.Controls.Add(this.pb_currentpos);
-            this.l_splitContainer.Panel1.Controls.Add(this.tb_currentpos);
-            this.l_splitContainer.Panel1.Controls.Add(this.PlayFileName);
-            this.l_splitContainer.Panel1.Controls.Add(this.pb_ListenScene);
-            // 
-            // l_splitContainer.Panel2
-            // 
-            this.l_splitContainer.Panel2.AutoScroll = true;
-            this.l_splitContainer.Panel2.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.l_splitContainer.Panel2.Controls.Add(this.panel1);
-            this.l_splitContainer.Size = new System.Drawing.Size(766, 479);
-            this.l_splitContainer.SplitterDistance = 342;
-            this.l_splitContainer.TabIndex = 1;
-            // 
-            // pb_currentpos
-            // 
-            this.pb_currentpos.Location = new System.Drawing.Point(18, 380);
-            this.pb_currentpos.Name = "pb_currentpos";
-            this.pb_currentpos.Size = new System.Drawing.Size(308, 21);
-            this.pb_currentpos.TabIndex = 38;
-            // 
-            // tb_currentpos
-            // 
-            this.tb_currentpos.AutoSize = false;
-            this.tb_currentpos.Location = new System.Drawing.Point(18, 7);
-            this.tb_currentpos.Name = "tb_currentpos";
-            this.tb_currentpos.Size = new System.Drawing.Size(308, 18);
-            this.tb_currentpos.TabIndex = 36;
-            this.tb_currentpos.TabStop = false;
-            this.tb_currentpos.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tb_currentpos.Visible = false;
-            this.tb_currentpos.Scroll += new System.EventHandler(this.tb_currentpos_Scroll);
-            // 
-            // PlayFileName
-            // 
-            this.PlayFileName.AutoSize = true;
-            this.PlayFileName.Location = new System.Drawing.Point(-25, 443);
-            this.PlayFileName.Name = "PlayFileName";
-            this.PlayFileName.Size = new System.Drawing.Size(41, 12);
-            this.PlayFileName.TabIndex = 35;
-            this.PlayFileName.Text = "label1";
-            // 
-            // pb_ListenScene
-            // 
-            this.pb_ListenScene.Location = new System.Drawing.Point(18, 47);
-            this.pb_ListenScene.Name = "pb_ListenScene";
-            this.pb_ListenScene.Size = new System.Drawing.Size(308, 285);
-            this.pb_ListenScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_ListenScene.TabIndex = 37;
-            this.pb_ListenScene.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.flp_passage);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 421);
-            this.panel1.TabIndex = 29;
-            // 
-            // flp_passage
-            // 
-            this.flp_passage.Controls.Add(this.lnk_passage);
-            this.flp_passage.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flp_passage.Location = new System.Drawing.Point(3, 11);
-            this.flp_passage.Name = "flp_passage";
-            this.flp_passage.Size = new System.Drawing.Size(374, 1108);
-            this.flp_passage.TabIndex = 28;
-            // 
-            // lnk_passage
-            // 
-            this.lnk_passage.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_passage.AutoSize = true;
-            this.lnk_passage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_passage.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_passage.LinkColor = System.Drawing.Color.Black;
-            this.lnk_passage.Location = new System.Drawing.Point(3, 0);
-            this.lnk_passage.Name = "lnk_passage";
-            this.lnk_passage.Size = new System.Drawing.Size(26, 17);
-            this.lnk_passage.TabIndex = 0;
-            this.lnk_passage.TabStop = true;
-            this.lnk_passage.Text = "lnk\r\n";
-            // 
-            // lMaterials1
-            // 
-            this.lMaterials1.Controls.Add(this.tb_currentpos1);
-            this.lMaterials1.Controls.Add(this.pb_currentpos1);
-            this.lMaterials1.Controls.Add(this.pb_ListenScene1);
-            this.lMaterials1.Location = new System.Drawing.Point(4, 25);
-            this.lMaterials1.Name = "lMaterials1";
-            this.lMaterials1.Size = new System.Drawing.Size(772, 485);
-            this.lMaterials1.TabIndex = 5;
-            this.lMaterials1.Text = "lMaterials1";
-            this.lMaterials1.UseVisualStyleBackColor = true;
-            // 
-            // tb_currentpos1
-            // 
-            this.tb_currentpos1.AutoSize = false;
-            this.tb_currentpos1.LargeChange = 1;
-            this.tb_currentpos1.Location = new System.Drawing.Point(204, 11);
-            this.tb_currentpos1.Name = "tb_currentpos1";
-            this.tb_currentpos1.Size = new System.Drawing.Size(400, 18);
-            this.tb_currentpos1.TabIndex = 38;
-            this.tb_currentpos1.TabStop = false;
-            this.tb_currentpos1.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tb_currentpos1.Visible = false;
-            this.tb_currentpos1.Scroll += new System.EventHandler(this.tb_currentpos1_Scroll);
-            // 
-            // pb_currentpos1
-            // 
-            this.pb_currentpos1.Location = new System.Drawing.Point(204, 405);
-            this.pb_currentpos1.Name = "pb_currentpos1";
-            this.pb_currentpos1.Size = new System.Drawing.Size(400, 21);
-            this.pb_currentpos1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pb_currentpos1.TabIndex = 40;
-            // 
-            // pb_ListenScene1
-            // 
-            this.pb_ListenScene1.Location = new System.Drawing.Point(204, 30);
-            this.pb_ListenScene1.Name = "pb_ListenScene1";
-            this.pb_ListenScene1.Size = new System.Drawing.Size(400, 369);
-            this.pb_ListenScene1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_ListenScene1.TabIndex = 39;
-            this.pb_ListenScene1.TabStop = false;
-            // 
-            // ltab_Question
-            // 
-            this.ltab_Question.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ltab_Question.Controls.Add(this.tableLayoutPanel1);
-            this.ltab_Question.Location = new System.Drawing.Point(4, 25);
-            this.ltab_Question.Name = "ltab_Question";
-            this.ltab_Question.Size = new System.Drawing.Size(772, 485);
-            this.ltab_Question.TabIndex = 2;
-            this.ltab_Question.Text = "lQuestion";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_question, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerE, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerD, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerC, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerB, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_A, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_B, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_C, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_D, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_E, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_F, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_G, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lckb_H, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerF, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerG, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerH, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.lrtb_answerA, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(87, 9);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(620, 434);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // lrtb_question
-            // 
-            this.lrtb_question.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_question.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_question.Location = new System.Drawing.Point(43, 3);
-            this.lrtb_question.Name = "lrtb_question";
-            this.lrtb_question.ReadOnly = true;
-            this.lrtb_question.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtb_question.ShortcutsEnabled = false;
-            this.lrtb_question.Size = new System.Drawing.Size(574, 60);
-            this.lrtb_question.TabIndex = 3;
-            this.lrtb_question.TabStop = false;
-            this.lrtb_question.Text = "";
-            // 
-            // lrtb_answerE
-            // 
-            this.lrtb_answerE.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerE.Location = new System.Drawing.Point(43, 253);
-            this.lrtb_answerE.Name = "lrtb_answerE";
-            this.lrtb_answerE.ReadOnly = true;
-            this.lrtb_answerE.ShortcutsEnabled = false;
-            this.lrtb_answerE.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerE.TabIndex = 9;
-            this.lrtb_answerE.TabStop = false;
-            this.lrtb_answerE.Text = "";
-            this.lrtb_answerE.Visible = false;
-            // 
-            // lrtb_answerD
-            // 
-            this.lrtb_answerD.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerD.Location = new System.Drawing.Point(43, 207);
-            this.lrtb_answerD.Name = "lrtb_answerD";
-            this.lrtb_answerD.ReadOnly = true;
-            this.lrtb_answerD.ShortcutsEnabled = false;
-            this.lrtb_answerD.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerD.TabIndex = 8;
-            this.lrtb_answerD.TabStop = false;
-            this.lrtb_answerD.Text = "";
-            this.lrtb_answerD.Visible = false;
-            // 
-            // lrtb_answerC
-            // 
-            this.lrtb_answerC.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerC.Location = new System.Drawing.Point(43, 161);
-            this.lrtb_answerC.Name = "lrtb_answerC";
-            this.lrtb_answerC.ReadOnly = true;
-            this.lrtb_answerC.ShortcutsEnabled = false;
-            this.lrtb_answerC.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerC.TabIndex = 7;
-            this.lrtb_answerC.TabStop = false;
-            this.lrtb_answerC.Text = "";
-            this.lrtb_answerC.Visible = false;
-            // 
-            // lrtb_answerB
-            // 
-            this.lrtb_answerB.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerB.Location = new System.Drawing.Point(43, 115);
-            this.lrtb_answerB.Name = "lrtb_answerB";
-            this.lrtb_answerB.ReadOnly = true;
-            this.lrtb_answerB.ShortcutsEnabled = false;
-            this.lrtb_answerB.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerB.TabIndex = 6;
-            this.lrtb_answerB.TabStop = false;
-            this.lrtb_answerB.Text = "";
-            this.lrtb_answerB.Visible = false;
-            // 
-            // lckb_A
-            // 
-            this.lckb_A.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_A.AutoSize = true;
-            this.lckb_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_A.Location = new System.Drawing.Point(3, 69);
-            this.lckb_A.Name = "lckb_A";
-            this.lckb_A.Size = new System.Drawing.Size(21, 22);
-            this.lckb_A.TabIndex = 0;
-            this.lckb_A.TabStop = false;
-            this.lckb_A.Text = "A";
-            this.lckb_A.UseVisualStyleBackColor = true;
-            this.lckb_A.Visible = false;
-            // 
-            // lckb_B
-            // 
-            this.lckb_B.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_B.AutoSize = true;
-            this.lckb_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_B.Location = new System.Drawing.Point(3, 115);
-            this.lckb_B.Name = "lckb_B";
-            this.lckb_B.Size = new System.Drawing.Size(21, 22);
-            this.lckb_B.TabIndex = 1;
-            this.lckb_B.TabStop = false;
-            this.lckb_B.Text = "B";
-            this.lckb_B.UseVisualStyleBackColor = true;
-            this.lckb_B.Visible = false;
-            // 
-            // lckb_C
-            // 
-            this.lckb_C.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_C.AutoSize = true;
-            this.lckb_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_C.Location = new System.Drawing.Point(3, 161);
-            this.lckb_C.Name = "lckb_C";
-            this.lckb_C.Size = new System.Drawing.Size(21, 22);
-            this.lckb_C.TabIndex = 2;
-            this.lckb_C.TabStop = false;
-            this.lckb_C.Text = "C";
-            this.lckb_C.UseVisualStyleBackColor = true;
-            this.lckb_C.Visible = false;
-            // 
-            // lckb_D
-            // 
-            this.lckb_D.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_D.AutoSize = true;
-            this.lckb_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_D.Location = new System.Drawing.Point(3, 207);
-            this.lckb_D.Name = "lckb_D";
-            this.lckb_D.Size = new System.Drawing.Size(21, 22);
-            this.lckb_D.TabIndex = 3;
-            this.lckb_D.TabStop = false;
-            this.lckb_D.Text = "D";
-            this.lckb_D.UseVisualStyleBackColor = true;
-            this.lckb_D.Visible = false;
-            // 
-            // lckb_E
-            // 
-            this.lckb_E.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_E.AutoSize = true;
-            this.lckb_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_E.Location = new System.Drawing.Point(3, 253);
-            this.lckb_E.Name = "lckb_E";
-            this.lckb_E.Size = new System.Drawing.Size(21, 22);
-            this.lckb_E.TabIndex = 4;
-            this.lckb_E.TabStop = false;
-            this.lckb_E.Text = "E";
-            this.lckb_E.UseVisualStyleBackColor = true;
-            this.lckb_E.Visible = false;
-            // 
-            // lckb_F
-            // 
-            this.lckb_F.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_F.AutoSize = true;
-            this.lckb_F.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_F.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_F.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_F.Location = new System.Drawing.Point(3, 299);
-            this.lckb_F.Name = "lckb_F";
-            this.lckb_F.Size = new System.Drawing.Size(21, 22);
-            this.lckb_F.TabIndex = 4;
-            this.lckb_F.TabStop = false;
-            this.lckb_F.Text = "F";
-            this.lckb_F.UseVisualStyleBackColor = true;
-            this.lckb_F.Visible = false;
-            // 
-            // lckb_G
-            // 
-            this.lckb_G.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_G.AutoSize = true;
-            this.lckb_G.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_G.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_G.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_G.Location = new System.Drawing.Point(3, 345);
-            this.lckb_G.Name = "lckb_G";
-            this.lckb_G.Size = new System.Drawing.Size(21, 22);
-            this.lckb_G.TabIndex = 4;
-            this.lckb_G.TabStop = false;
-            this.lckb_G.Text = "G";
-            this.lckb_G.UseVisualStyleBackColor = true;
-            this.lckb_G.Visible = false;
-            // 
-            // lckb_H
-            // 
-            this.lckb_H.Appearance = System.Windows.Forms.Appearance.Button;
-            this.lckb_H.AutoSize = true;
-            this.lckb_H.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.lckb_H.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.lckb_H.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckb_H.Location = new System.Drawing.Point(3, 391);
-            this.lckb_H.Name = "lckb_H";
-            this.lckb_H.Size = new System.Drawing.Size(21, 22);
-            this.lckb_H.TabIndex = 4;
-            this.lckb_H.TabStop = false;
-            this.lckb_H.Text = "H";
-            this.lckb_H.UseVisualStyleBackColor = true;
-            this.lckb_H.Visible = false;
-            // 
-            // lrtb_answerF
-            // 
-            this.lrtb_answerF.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerF.Location = new System.Drawing.Point(43, 299);
-            this.lrtb_answerF.Name = "lrtb_answerF";
-            this.lrtb_answerF.ReadOnly = true;
-            this.lrtb_answerF.ShortcutsEnabled = false;
-            this.lrtb_answerF.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerF.TabIndex = 9;
-            this.lrtb_answerF.TabStop = false;
-            this.lrtb_answerF.Text = "";
-            this.lrtb_answerF.Visible = false;
-            // 
-            // lrtb_answerG
-            // 
-            this.lrtb_answerG.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerG.Location = new System.Drawing.Point(43, 345);
-            this.lrtb_answerG.Name = "lrtb_answerG";
-            this.lrtb_answerG.ReadOnly = true;
-            this.lrtb_answerG.ShortcutsEnabled = false;
-            this.lrtb_answerG.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerG.TabIndex = 9;
-            this.lrtb_answerG.TabStop = false;
-            this.lrtb_answerG.Text = "";
-            this.lrtb_answerG.Visible = false;
-            // 
-            // lrtb_answerH
-            // 
-            this.lrtb_answerH.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerH.Location = new System.Drawing.Point(43, 391);
-            this.lrtb_answerH.Name = "lrtb_answerH";
-            this.lrtb_answerH.ReadOnly = true;
-            this.lrtb_answerH.ShortcutsEnabled = false;
-            this.lrtb_answerH.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerH.TabIndex = 9;
-            this.lrtb_answerH.TabStop = false;
-            this.lrtb_answerH.Text = "";
-            this.lrtb_answerH.Visible = false;
-            // 
-            // lrtb_answerA
-            // 
-            this.lrtb_answerA.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtb_answerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtb_answerA.Location = new System.Drawing.Point(43, 69);
-            this.lrtb_answerA.Name = "lrtb_answerA";
-            this.lrtb_answerA.ReadOnly = true;
-            this.lrtb_answerA.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtb_answerA.ShortcutsEnabled = false;
-            this.lrtb_answerA.Size = new System.Drawing.Size(574, 40);
-            this.lrtb_answerA.TabIndex = 5;
-            this.lrtb_answerA.TabStop = false;
-            this.lrtb_answerA.Text = "";
-            this.lrtb_answerA.Visible = false;
-            // 
-            // lTableQuestion
-            // 
-            this.lTableQuestion.Controls.Add(this.lbl_tableAnswer);
-            this.lTableQuestion.Controls.Add(this.lrtbTableQuestion);
-            this.lTableQuestion.Controls.Add(this.ltlp_table);
-            this.lTableQuestion.Location = new System.Drawing.Point(4, 25);
-            this.lTableQuestion.Name = "lTableQuestion";
-            this.lTableQuestion.Padding = new System.Windows.Forms.Padding(3);
-            this.lTableQuestion.Size = new System.Drawing.Size(772, 485);
-            this.lTableQuestion.TabIndex = 4;
-            this.lTableQuestion.Text = "lTableQuestion";
-            this.lTableQuestion.UseVisualStyleBackColor = true;
-            // 
-            // lbl_tableAnswer
-            // 
-            this.lbl_tableAnswer.AutoSize = true;
-            this.lbl_tableAnswer.Location = new System.Drawing.Point(13, 6);
-            this.lbl_tableAnswer.Name = "lbl_tableAnswer";
-            this.lbl_tableAnswer.Size = new System.Drawing.Size(41, 12);
-            this.lbl_tableAnswer.TabIndex = 5;
-            this.lbl_tableAnswer.Text = "label6";
-            // 
-            // lrtbTableQuestion
-            // 
-            this.lrtbTableQuestion.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableQuestion.Location = new System.Drawing.Point(13, 22);
-            this.lrtbTableQuestion.Name = "lrtbTableQuestion";
-            this.lrtbTableQuestion.ReadOnly = true;
-            this.lrtbTableQuestion.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableQuestion.ShortcutsEnabled = false;
-            this.lrtbTableQuestion.Size = new System.Drawing.Size(753, 44);
-            this.lrtbTableQuestion.TabIndex = 4;
-            this.lrtbTableQuestion.TabStop = false;
-            this.lrtbTableQuestion.Text = "";
-            // 
-            // ltlp_table
-            // 
-            this.ltlp_table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.ltlp_table.ColumnCount = 6;
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.ltlp_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.ltlp_table.Controls.Add(this.lckbTable11, 1, 1);
-            this.ltlp_table.Controls.Add(this.lckbTable12, 2, 1);
-            this.ltlp_table.Controls.Add(this.lckbTable13, 3, 1);
-            this.ltlp_table.Controls.Add(this.lckbTable14, 4, 1);
-            this.ltlp_table.Controls.Add(this.lckbTable15, 5, 1);
-            this.ltlp_table.Controls.Add(this.lckbTable25, 5, 2);
-            this.ltlp_table.Controls.Add(this.lckbTable24, 4, 2);
-            this.ltlp_table.Controls.Add(this.lckbTable23, 3, 2);
-            this.ltlp_table.Controls.Add(this.lckbTable22, 2, 2);
-            this.ltlp_table.Controls.Add(this.lckbTable21, 1, 2);
-            this.ltlp_table.Controls.Add(this.lckbTable32, 2, 3);
-            this.ltlp_table.Controls.Add(this.lckbTable33, 3, 3);
-            this.ltlp_table.Controls.Add(this.lckbTable34, 4, 3);
-            this.ltlp_table.Controls.Add(this.lckbTable35, 5, 3);
-            this.ltlp_table.Controls.Add(this.lckbTable43, 3, 4);
-            this.ltlp_table.Controls.Add(this.lckbTable41, 1, 4);
-            this.ltlp_table.Controls.Add(this.lckbTable31, 1, 3);
-            this.ltlp_table.Controls.Add(this.lckbTable42, 2, 4);
-            this.ltlp_table.Controls.Add(this.lckbTable44, 4, 4);
-            this.ltlp_table.Controls.Add(this.lckbTable45, 5, 4);
-            this.ltlp_table.Controls.Add(this.lckbTable55, 5, 5);
-            this.ltlp_table.Controls.Add(this.lckbTable54, 4, 5);
-            this.ltlp_table.Controls.Add(this.lckbTable53, 3, 5);
-            this.ltlp_table.Controls.Add(this.lckbTable52, 2, 5);
-            this.ltlp_table.Controls.Add(this.lckbTable51, 1, 5);
-            this.ltlp_table.Controls.Add(this.lckbTable61, 1, 6);
-            this.ltlp_table.Controls.Add(this.lckbTable62, 2, 6);
-            this.ltlp_table.Controls.Add(this.lckbTable63, 3, 6);
-            this.ltlp_table.Controls.Add(this.lckbTable64, 4, 6);
-            this.ltlp_table.Controls.Add(this.lckbTable65, 5, 6);
-            this.ltlp_table.Controls.Add(this.lckbTable71, 1, 7);
-            this.ltlp_table.Controls.Add(this.lckbTable72, 2, 7);
-            this.ltlp_table.Controls.Add(this.lckbTable73, 3, 7);
-            this.ltlp_table.Controls.Add(this.lckbTable74, 4, 7);
-            this.ltlp_table.Controls.Add(this.lckbTable75, 5, 7);
-            this.ltlp_table.Controls.Add(this.lckbTable85, 5, 8);
-            this.ltlp_table.Controls.Add(this.lckbTable84, 4, 8);
-            this.ltlp_table.Controls.Add(this.lckbTable83, 3, 8);
-            this.ltlp_table.Controls.Add(this.lckbTable82, 2, 8);
-            this.ltlp_table.Controls.Add(this.lckbTable81, 1, 8);
-            this.ltlp_table.Controls.Add(this.lckbTable91, 1, 9);
-            this.ltlp_table.Controls.Add(this.lckbTable92, 2, 9);
-            this.ltlp_table.Controls.Add(this.lckbTable93, 3, 9);
-            this.ltlp_table.Controls.Add(this.lckbTable94, 4, 9);
-            this.ltlp_table.Controls.Add(this.lckbTable95, 5, 9);
-            this.ltlp_table.Controls.Add(this.lrtbTableCol1, 1, 0);
-            this.ltlp_table.Controls.Add(this.lrtbTableCol2, 2, 0);
-            this.ltlp_table.Controls.Add(this.lrtbTableCol3, 3, 0);
-            this.ltlp_table.Controls.Add(this.lrtbTableCol5, 5, 0);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow1, 0, 1);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow2, 0, 2);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow3, 0, 3);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow4, 0, 4);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow5, 0, 5);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow6, 0, 6);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow7, 0, 7);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow8, 0, 8);
-            this.ltlp_table.Controls.Add(this.lrtbTableRow9, 0, 9);
-            this.ltlp_table.Controls.Add(this.lrtbTableCol4, 4, 0);
-            this.ltlp_table.Location = new System.Drawing.Point(12, 70);
-            this.ltlp_table.Name = "ltlp_table";
-            this.ltlp_table.RowCount = 10;
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.90476F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.ltlp_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.ltlp_table.Size = new System.Drawing.Size(754, 368);
-            this.ltlp_table.TabIndex = 0;
-            // 
-            // lckbTable11
-            // 
-            this.lckbTable11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable11.Location = new System.Drawing.Point(160, 47);
-            this.lckbTable11.Name = "lckbTable11";
-            this.lckbTable11.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable11.TabIndex = 0;
-            this.lckbTable11.TabStop = false;
-            this.lckbTable11.UseVisualStyleBackColor = false;
-            this.lckbTable11.Visible = false;
-            this.lckbTable11.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable12
-            // 
-            this.lckbTable12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable12.Location = new System.Drawing.Point(316, 47);
-            this.lckbTable12.Name = "lckbTable12";
-            this.lckbTable12.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable12.TabIndex = 0;
-            this.lckbTable12.TabStop = false;
-            this.lckbTable12.UseVisualStyleBackColor = false;
-            this.lckbTable12.Visible = false;
-            this.lckbTable12.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable13
-            // 
-            this.lckbTable13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable13.Location = new System.Drawing.Point(472, 47);
-            this.lckbTable13.Name = "lckbTable13";
-            this.lckbTable13.Size = new System.Drawing.Size(62, 25);
-            this.lckbTable13.TabIndex = 0;
-            this.lckbTable13.TabStop = false;
-            this.lckbTable13.UseVisualStyleBackColor = false;
-            this.lckbTable13.Visible = false;
-            this.lckbTable13.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable14
-            // 
-            this.lckbTable14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable14.Location = new System.Drawing.Point(628, 47);
-            this.lckbTable14.Name = "lckbTable14";
-            this.lckbTable14.Size = new System.Drawing.Size(56, 28);
-            this.lckbTable14.TabIndex = 0;
-            this.lckbTable14.TabStop = false;
-            this.lckbTable14.UseVisualStyleBackColor = false;
-            this.lckbTable14.Visible = false;
-            this.lckbTable14.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable15
-            // 
-            this.lckbTable15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable15.Location = new System.Drawing.Point(691, 47);
-            this.lckbTable15.Name = "lckbTable15";
-            this.lckbTable15.Size = new System.Drawing.Size(59, 28);
-            this.lckbTable15.TabIndex = 0;
-            this.lckbTable15.TabStop = false;
-            this.lckbTable15.UseVisualStyleBackColor = false;
-            this.lckbTable15.Visible = false;
-            this.lckbTable15.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable25
-            // 
-            this.lckbTable25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable25.Location = new System.Drawing.Point(691, 90);
-            this.lckbTable25.Name = "lckbTable25";
-            this.lckbTable25.Size = new System.Drawing.Size(59, 28);
-            this.lckbTable25.TabIndex = 0;
-            this.lckbTable25.TabStop = false;
-            this.lckbTable25.UseVisualStyleBackColor = false;
-            this.lckbTable25.Visible = false;
-            this.lckbTable25.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable24
-            // 
-            this.lckbTable24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable24.Location = new System.Drawing.Point(628, 90);
-            this.lckbTable24.Name = "lckbTable24";
-            this.lckbTable24.Size = new System.Drawing.Size(56, 28);
-            this.lckbTable24.TabIndex = 0;
-            this.lckbTable24.TabStop = false;
-            this.lckbTable24.UseVisualStyleBackColor = false;
-            this.lckbTable24.Visible = false;
-            this.lckbTable24.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable23
-            // 
-            this.lckbTable23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable23.Location = new System.Drawing.Point(472, 90);
-            this.lckbTable23.Name = "lckbTable23";
-            this.lckbTable23.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable23.TabIndex = 0;
-            this.lckbTable23.TabStop = false;
-            this.lckbTable23.UseVisualStyleBackColor = false;
-            this.lckbTable23.Visible = false;
-            this.lckbTable23.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable22
-            // 
-            this.lckbTable22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable22.Location = new System.Drawing.Point(316, 90);
-            this.lckbTable22.Name = "lckbTable22";
-            this.lckbTable22.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable22.TabIndex = 0;
-            this.lckbTable22.TabStop = false;
-            this.lckbTable22.UseVisualStyleBackColor = false;
-            this.lckbTable22.Visible = false;
-            this.lckbTable22.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable21
-            // 
-            this.lckbTable21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable21.Location = new System.Drawing.Point(160, 90);
-            this.lckbTable21.Name = "lckbTable21";
-            this.lckbTable21.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable21.TabIndex = 0;
-            this.lckbTable21.TabStop = false;
-            this.lckbTable21.UseVisualStyleBackColor = false;
-            this.lckbTable21.Visible = false;
-            this.lckbTable21.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable32
-            // 
-            this.lckbTable32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable32.Location = new System.Drawing.Point(316, 133);
-            this.lckbTable32.Name = "lckbTable32";
-            this.lckbTable32.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable32.TabIndex = 0;
-            this.lckbTable32.TabStop = false;
-            this.lckbTable32.UseVisualStyleBackColor = false;
-            this.lckbTable32.Visible = false;
-            this.lckbTable32.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable33
-            // 
-            this.lckbTable33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable33.Location = new System.Drawing.Point(472, 133);
-            this.lckbTable33.Name = "lckbTable33";
-            this.lckbTable33.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable33.TabIndex = 0;
-            this.lckbTable33.TabStop = false;
-            this.lckbTable33.UseVisualStyleBackColor = false;
-            this.lckbTable33.Visible = false;
-            this.lckbTable33.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable34
-            // 
-            this.lckbTable34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable34.Location = new System.Drawing.Point(628, 133);
-            this.lckbTable34.Name = "lckbTable34";
-            this.lckbTable34.Size = new System.Drawing.Size(56, 28);
-            this.lckbTable34.TabIndex = 0;
-            this.lckbTable34.TabStop = false;
-            this.lckbTable34.UseVisualStyleBackColor = false;
-            this.lckbTable34.Visible = false;
-            this.lckbTable34.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable35
-            // 
-            this.lckbTable35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable35.Location = new System.Drawing.Point(691, 133);
-            this.lckbTable35.Name = "lckbTable35";
-            this.lckbTable35.Size = new System.Drawing.Size(59, 28);
-            this.lckbTable35.TabIndex = 0;
-            this.lckbTable35.TabStop = false;
-            this.lckbTable35.UseVisualStyleBackColor = false;
-            this.lckbTable35.Visible = false;
-            this.lckbTable35.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable43
-            // 
-            this.lckbTable43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable43.Location = new System.Drawing.Point(472, 176);
-            this.lckbTable43.Name = "lckbTable43";
-            this.lckbTable43.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable43.TabIndex = 0;
-            this.lckbTable43.TabStop = false;
-            this.lckbTable43.UseVisualStyleBackColor = false;
-            this.lckbTable43.Visible = false;
-            this.lckbTable43.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable41
-            // 
-            this.lckbTable41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable41.Location = new System.Drawing.Point(160, 176);
-            this.lckbTable41.Name = "lckbTable41";
-            this.lckbTable41.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable41.TabIndex = 0;
-            this.lckbTable41.TabStop = false;
-            this.lckbTable41.UseVisualStyleBackColor = false;
-            this.lckbTable41.Visible = false;
-            this.lckbTable41.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable31
-            // 
-            this.lckbTable31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable31.Location = new System.Drawing.Point(160, 133);
-            this.lckbTable31.Name = "lckbTable31";
-            this.lckbTable31.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable31.TabIndex = 0;
-            this.lckbTable31.TabStop = false;
-            this.lckbTable31.UseVisualStyleBackColor = false;
-            this.lckbTable31.Visible = false;
-            this.lckbTable31.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable42
-            // 
-            this.lckbTable42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable42.Location = new System.Drawing.Point(316, 176);
-            this.lckbTable42.Name = "lckbTable42";
-            this.lckbTable42.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable42.TabIndex = 0;
-            this.lckbTable42.TabStop = false;
-            this.lckbTable42.UseVisualStyleBackColor = false;
-            this.lckbTable42.Visible = false;
-            this.lckbTable42.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable44
-            // 
-            this.lckbTable44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable44.Location = new System.Drawing.Point(628, 176);
-            this.lckbTable44.Name = "lckbTable44";
-            this.lckbTable44.Size = new System.Drawing.Size(56, 28);
-            this.lckbTable44.TabIndex = 0;
-            this.lckbTable44.TabStop = false;
-            this.lckbTable44.UseVisualStyleBackColor = false;
-            this.lckbTable44.Visible = false;
-            this.lckbTable44.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable45
-            // 
-            this.lckbTable45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable45.Location = new System.Drawing.Point(691, 176);
-            this.lckbTable45.Name = "lckbTable45";
-            this.lckbTable45.Size = new System.Drawing.Size(59, 28);
-            this.lckbTable45.TabIndex = 0;
-            this.lckbTable45.TabStop = false;
-            this.lckbTable45.UseVisualStyleBackColor = false;
-            this.lckbTable45.Visible = false;
-            this.lckbTable45.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable55
-            // 
-            this.lckbTable55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable55.Location = new System.Drawing.Point(691, 219);
-            this.lckbTable55.Name = "lckbTable55";
-            this.lckbTable55.Size = new System.Drawing.Size(59, 28);
-            this.lckbTable55.TabIndex = 0;
-            this.lckbTable55.TabStop = false;
-            this.lckbTable55.UseVisualStyleBackColor = false;
-            this.lckbTable55.Visible = false;
-            this.lckbTable55.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable54
-            // 
-            this.lckbTable54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable54.Location = new System.Drawing.Point(628, 219);
-            this.lckbTable54.Name = "lckbTable54";
-            this.lckbTable54.Size = new System.Drawing.Size(56, 28);
-            this.lckbTable54.TabIndex = 0;
-            this.lckbTable54.TabStop = false;
-            this.lckbTable54.UseVisualStyleBackColor = false;
-            this.lckbTable54.Visible = false;
-            this.lckbTable54.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable53
-            // 
-            this.lckbTable53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable53.Location = new System.Drawing.Point(472, 219);
-            this.lckbTable53.Name = "lckbTable53";
-            this.lckbTable53.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable53.TabIndex = 0;
-            this.lckbTable53.TabStop = false;
-            this.lckbTable53.UseVisualStyleBackColor = false;
-            this.lckbTable53.Visible = false;
-            this.lckbTable53.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable52
-            // 
-            this.lckbTable52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable52.Location = new System.Drawing.Point(316, 219);
-            this.lckbTable52.Name = "lckbTable52";
-            this.lckbTable52.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable52.TabIndex = 0;
-            this.lckbTable52.TabStop = false;
-            this.lckbTable52.UseVisualStyleBackColor = false;
-            this.lckbTable52.Visible = false;
-            this.lckbTable52.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable51
-            // 
-            this.lckbTable51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable51.Location = new System.Drawing.Point(160, 219);
-            this.lckbTable51.Name = "lckbTable51";
-            this.lckbTable51.Size = new System.Drawing.Size(94, 28);
-            this.lckbTable51.TabIndex = 0;
-            this.lckbTable51.TabStop = false;
-            this.lckbTable51.UseVisualStyleBackColor = false;
-            this.lckbTable51.Visible = false;
-            this.lckbTable51.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable61
-            // 
-            this.lckbTable61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable61.Location = new System.Drawing.Point(160, 262);
-            this.lckbTable61.Name = "lckbTable61";
-            this.lckbTable61.Size = new System.Drawing.Size(94, 19);
-            this.lckbTable61.TabIndex = 0;
-            this.lckbTable61.TabStop = false;
-            this.lckbTable61.UseVisualStyleBackColor = false;
-            this.lckbTable61.Visible = false;
-            this.lckbTable61.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable62
-            // 
-            this.lckbTable62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable62.Location = new System.Drawing.Point(316, 262);
-            this.lckbTable62.Name = "lckbTable62";
-            this.lckbTable62.Size = new System.Drawing.Size(94, 19);
-            this.lckbTable62.TabIndex = 0;
-            this.lckbTable62.TabStop = false;
-            this.lckbTable62.UseVisualStyleBackColor = false;
-            this.lckbTable62.Visible = false;
-            this.lckbTable62.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable63
-            // 
-            this.lckbTable63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable63.Location = new System.Drawing.Point(472, 262);
-            this.lckbTable63.Name = "lckbTable63";
-            this.lckbTable63.Size = new System.Drawing.Size(94, 19);
-            this.lckbTable63.TabIndex = 0;
-            this.lckbTable63.TabStop = false;
-            this.lckbTable63.UseVisualStyleBackColor = false;
-            this.lckbTable63.Visible = false;
-            this.lckbTable63.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable64
-            // 
-            this.lckbTable64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable64.Location = new System.Drawing.Point(628, 262);
-            this.lckbTable64.Name = "lckbTable64";
-            this.lckbTable64.Size = new System.Drawing.Size(56, 19);
-            this.lckbTable64.TabIndex = 0;
-            this.lckbTable64.TabStop = false;
-            this.lckbTable64.UseVisualStyleBackColor = false;
-            this.lckbTable64.Visible = false;
-            this.lckbTable64.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable65
-            // 
-            this.lckbTable65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable65.Location = new System.Drawing.Point(691, 262);
-            this.lckbTable65.Name = "lckbTable65";
-            this.lckbTable65.Size = new System.Drawing.Size(59, 19);
-            this.lckbTable65.TabIndex = 0;
-            this.lckbTable65.TabStop = false;
-            this.lckbTable65.UseVisualStyleBackColor = false;
-            this.lckbTable65.Visible = false;
-            this.lckbTable65.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable71
-            // 
-            this.lckbTable71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable71.Location = new System.Drawing.Point(160, 288);
-            this.lckbTable71.Name = "lckbTable71";
-            this.lckbTable71.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable71.TabIndex = 0;
-            this.lckbTable71.TabStop = false;
-            this.lckbTable71.UseVisualStyleBackColor = false;
-            this.lckbTable71.Visible = false;
-            this.lckbTable71.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable72
-            // 
-            this.lckbTable72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable72.Location = new System.Drawing.Point(316, 288);
-            this.lckbTable72.Name = "lckbTable72";
-            this.lckbTable72.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable72.TabIndex = 0;
-            this.lckbTable72.TabStop = false;
-            this.lckbTable72.UseVisualStyleBackColor = false;
-            this.lckbTable72.Visible = false;
-            this.lckbTable72.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable73
-            // 
-            this.lckbTable73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable73.Location = new System.Drawing.Point(472, 288);
-            this.lckbTable73.Name = "lckbTable73";
-            this.lckbTable73.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable73.TabIndex = 0;
-            this.lckbTable73.TabStop = false;
-            this.lckbTable73.UseVisualStyleBackColor = false;
-            this.lckbTable73.Visible = false;
-            this.lckbTable73.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable74
-            // 
-            this.lckbTable74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable74.Location = new System.Drawing.Point(628, 288);
-            this.lckbTable74.Name = "lckbTable74";
-            this.lckbTable74.Size = new System.Drawing.Size(56, 19);
-            this.lckbTable74.TabIndex = 0;
-            this.lckbTable74.TabStop = false;
-            this.lckbTable74.UseVisualStyleBackColor = false;
-            this.lckbTable74.Visible = false;
-            this.lckbTable74.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable75
-            // 
-            this.lckbTable75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable75.Location = new System.Drawing.Point(691, 288);
-            this.lckbTable75.Name = "lckbTable75";
-            this.lckbTable75.Size = new System.Drawing.Size(59, 19);
-            this.lckbTable75.TabIndex = 0;
-            this.lckbTable75.TabStop = false;
-            this.lckbTable75.UseVisualStyleBackColor = false;
-            this.lckbTable75.Visible = false;
-            this.lckbTable75.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable85
-            // 
-            this.lckbTable85.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable85.Location = new System.Drawing.Point(691, 314);
-            this.lckbTable85.Name = "lckbTable85";
-            this.lckbTable85.Size = new System.Drawing.Size(59, 19);
-            this.lckbTable85.TabIndex = 0;
-            this.lckbTable85.TabStop = false;
-            this.lckbTable85.UseVisualStyleBackColor = false;
-            this.lckbTable85.Visible = false;
-            this.lckbTable85.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable84
-            // 
-            this.lckbTable84.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable84.Location = new System.Drawing.Point(628, 314);
-            this.lckbTable84.Name = "lckbTable84";
-            this.lckbTable84.Size = new System.Drawing.Size(56, 19);
-            this.lckbTable84.TabIndex = 0;
-            this.lckbTable84.TabStop = false;
-            this.lckbTable84.UseVisualStyleBackColor = false;
-            this.lckbTable84.Visible = false;
-            this.lckbTable84.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable83
-            // 
-            this.lckbTable83.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable83.Location = new System.Drawing.Point(472, 314);
-            this.lckbTable83.Name = "lckbTable83";
-            this.lckbTable83.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable83.TabIndex = 0;
-            this.lckbTable83.TabStop = false;
-            this.lckbTable83.UseVisualStyleBackColor = false;
-            this.lckbTable83.Visible = false;
-            this.lckbTable83.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable82
-            // 
-            this.lckbTable82.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable82.Location = new System.Drawing.Point(316, 314);
-            this.lckbTable82.Name = "lckbTable82";
-            this.lckbTable82.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable82.TabIndex = 0;
-            this.lckbTable82.TabStop = false;
-            this.lckbTable82.UseVisualStyleBackColor = false;
-            this.lckbTable82.Visible = false;
-            this.lckbTable82.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable81
-            // 
-            this.lckbTable81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable81.Location = new System.Drawing.Point(160, 314);
-            this.lckbTable81.Name = "lckbTable81";
-            this.lckbTable81.Size = new System.Drawing.Size(62, 19);
-            this.lckbTable81.TabIndex = 0;
-            this.lckbTable81.TabStop = false;
-            this.lckbTable81.UseVisualStyleBackColor = false;
-            this.lckbTable81.Visible = false;
-            this.lckbTable81.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable91
-            // 
-            this.lckbTable91.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable91.Location = new System.Drawing.Point(160, 340);
-            this.lckbTable91.Name = "lckbTable91";
-            this.lckbTable91.Size = new System.Drawing.Size(62, 23);
-            this.lckbTable91.TabIndex = 0;
-            this.lckbTable91.TabStop = false;
-            this.lckbTable91.UseVisualStyleBackColor = false;
-            this.lckbTable91.Visible = false;
-            this.lckbTable91.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable92
-            // 
-            this.lckbTable92.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable92.Location = new System.Drawing.Point(316, 340);
-            this.lckbTable92.Name = "lckbTable92";
-            this.lckbTable92.Size = new System.Drawing.Size(62, 23);
-            this.lckbTable92.TabIndex = 0;
-            this.lckbTable92.TabStop = false;
-            this.lckbTable92.UseVisualStyleBackColor = false;
-            this.lckbTable92.Visible = false;
-            this.lckbTable92.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable93
-            // 
-            this.lckbTable93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable93.Location = new System.Drawing.Point(472, 340);
-            this.lckbTable93.Name = "lckbTable93";
-            this.lckbTable93.Size = new System.Drawing.Size(62, 23);
-            this.lckbTable93.TabIndex = 0;
-            this.lckbTable93.TabStop = false;
-            this.lckbTable93.UseVisualStyleBackColor = false;
-            this.lckbTable93.Visible = false;
-            this.lckbTable93.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable94
-            // 
-            this.lckbTable94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable94.Location = new System.Drawing.Point(628, 340);
-            this.lckbTable94.Name = "lckbTable94";
-            this.lckbTable94.Size = new System.Drawing.Size(56, 23);
-            this.lckbTable94.TabIndex = 0;
-            this.lckbTable94.TabStop = false;
-            this.lckbTable94.UseVisualStyleBackColor = false;
-            this.lckbTable94.Visible = false;
-            this.lckbTable94.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lckbTable95
-            // 
-            this.lckbTable95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lckbTable95.Location = new System.Drawing.Point(691, 340);
-            this.lckbTable95.Name = "lckbTable95";
-            this.lckbTable95.Size = new System.Drawing.Size(59, 23);
-            this.lckbTable95.TabIndex = 0;
-            this.lckbTable95.TabStop = false;
-            this.lckbTable95.UseVisualStyleBackColor = false;
-            this.lckbTable95.Visible = false;
-            this.lckbTable95.CheckedChanged += new System.EventHandler(this.Ckb_CheckedChanged);
-            // 
-            // lrtbTableCol1
-            // 
-            this.lrtbTableCol1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableCol1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableCol1.Location = new System.Drawing.Point(160, 4);
-            this.lrtbTableCol1.Name = "lrtbTableCol1";
-            this.lrtbTableCol1.ReadOnly = true;
-            this.lrtbTableCol1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableCol1.ShortcutsEnabled = false;
-            this.lrtbTableCol1.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableCol1.TabIndex = 1;
-            this.lrtbTableCol1.TabStop = false;
-            this.lrtbTableCol1.Text = "";
-            this.lrtbTableCol1.Visible = false;
-            // 
-            // lrtbTableCol2
-            // 
-            this.lrtbTableCol2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableCol2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableCol2.Location = new System.Drawing.Point(316, 4);
-            this.lrtbTableCol2.Name = "lrtbTableCol2";
-            this.lrtbTableCol2.ReadOnly = true;
-            this.lrtbTableCol2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableCol2.ShortcutsEnabled = false;
-            this.lrtbTableCol2.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableCol2.TabIndex = 1;
-            this.lrtbTableCol2.TabStop = false;
-            this.lrtbTableCol2.Text = "";
-            this.lrtbTableCol2.Visible = false;
-            // 
-            // lrtbTableCol3
-            // 
-            this.lrtbTableCol3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableCol3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableCol3.Location = new System.Drawing.Point(472, 4);
-            this.lrtbTableCol3.Name = "lrtbTableCol3";
-            this.lrtbTableCol3.ReadOnly = true;
-            this.lrtbTableCol3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableCol3.ShortcutsEnabled = false;
-            this.lrtbTableCol3.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableCol3.TabIndex = 1;
-            this.lrtbTableCol3.TabStop = false;
-            this.lrtbTableCol3.Text = "";
-            this.lrtbTableCol3.Visible = false;
-            // 
-            // lrtbTableCol5
-            // 
-            this.lrtbTableCol5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableCol5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableCol5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableCol5.Location = new System.Drawing.Point(691, 4);
-            this.lrtbTableCol5.Name = "lrtbTableCol5";
-            this.lrtbTableCol5.ReadOnly = true;
-            this.lrtbTableCol5.ShortcutsEnabled = false;
-            this.lrtbTableCol5.Size = new System.Drawing.Size(36, 28);
-            this.lrtbTableCol5.TabIndex = 1;
-            this.lrtbTableCol5.TabStop = false;
-            this.lrtbTableCol5.Text = "";
-            this.lrtbTableCol5.Visible = false;
-            // 
-            // lrtbTableRow1
-            // 
-            this.lrtbTableRow1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow1.Location = new System.Drawing.Point(4, 47);
-            this.lrtbTableRow1.Name = "lrtbTableRow1";
-            this.lrtbTableRow1.ReadOnly = true;
-            this.lrtbTableRow1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow1.ShortcutsEnabled = false;
-            this.lrtbTableRow1.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableRow1.TabIndex = 1;
-            this.lrtbTableRow1.TabStop = false;
-            this.lrtbTableRow1.Text = "";
-            this.lrtbTableRow1.Visible = false;
-            // 
-            // lrtbTableRow2
-            // 
-            this.lrtbTableRow2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow2.Location = new System.Drawing.Point(4, 90);
-            this.lrtbTableRow2.Name = "lrtbTableRow2";
-            this.lrtbTableRow2.ReadOnly = true;
-            this.lrtbTableRow2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow2.ShortcutsEnabled = false;
-            this.lrtbTableRow2.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableRow2.TabIndex = 1;
-            this.lrtbTableRow2.TabStop = false;
-            this.lrtbTableRow2.Text = "";
-            this.lrtbTableRow2.Visible = false;
-            // 
-            // lrtbTableRow3
-            // 
-            this.lrtbTableRow3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow3.Location = new System.Drawing.Point(4, 133);
-            this.lrtbTableRow3.Name = "lrtbTableRow3";
-            this.lrtbTableRow3.ReadOnly = true;
-            this.lrtbTableRow3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow3.ShortcutsEnabled = false;
-            this.lrtbTableRow3.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableRow3.TabIndex = 1;
-            this.lrtbTableRow3.TabStop = false;
-            this.lrtbTableRow3.Text = "";
-            this.lrtbTableRow3.Visible = false;
-            // 
-            // lrtbTableRow4
-            // 
-            this.lrtbTableRow4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow4.Location = new System.Drawing.Point(4, 176);
-            this.lrtbTableRow4.Name = "lrtbTableRow4";
-            this.lrtbTableRow4.ReadOnly = true;
-            this.lrtbTableRow4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow4.ShortcutsEnabled = false;
-            this.lrtbTableRow4.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableRow4.TabIndex = 1;
-            this.lrtbTableRow4.TabStop = false;
-            this.lrtbTableRow4.Text = "";
-            this.lrtbTableRow4.Visible = false;
-            // 
-            // lrtbTableRow5
-            // 
-            this.lrtbTableRow5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow5.Location = new System.Drawing.Point(4, 219);
-            this.lrtbTableRow5.Name = "lrtbTableRow5";
-            this.lrtbTableRow5.ReadOnly = true;
-            this.lrtbTableRow5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow5.ShortcutsEnabled = false;
-            this.lrtbTableRow5.Size = new System.Drawing.Size(149, 36);
-            this.lrtbTableRow5.TabIndex = 1;
-            this.lrtbTableRow5.TabStop = false;
-            this.lrtbTableRow5.Text = "";
-            this.lrtbTableRow5.Visible = false;
-            // 
-            // lrtbTableRow6
-            // 
-            this.lrtbTableRow6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableRow6.Location = new System.Drawing.Point(4, 262);
-            this.lrtbTableRow6.Name = "lrtbTableRow6";
-            this.lrtbTableRow6.ReadOnly = true;
-            this.lrtbTableRow6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow6.ShortcutsEnabled = false;
-            this.lrtbTableRow6.Size = new System.Drawing.Size(149, 19);
-            this.lrtbTableRow6.TabIndex = 1;
-            this.lrtbTableRow6.TabStop = false;
-            this.lrtbTableRow6.Text = "";
-            this.lrtbTableRow6.Visible = false;
-            // 
-            // lrtbTableRow7
-            // 
-            this.lrtbTableRow7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableRow7.Location = new System.Drawing.Point(4, 288);
-            this.lrtbTableRow7.Name = "lrtbTableRow7";
-            this.lrtbTableRow7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow7.ShortcutsEnabled = false;
-            this.lrtbTableRow7.Size = new System.Drawing.Size(149, 19);
-            this.lrtbTableRow7.TabIndex = 1;
-            this.lrtbTableRow7.TabStop = false;
-            this.lrtbTableRow7.Text = "";
-            this.lrtbTableRow7.Visible = false;
-            this.lrtbTableRow7.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
-            // 
-            // lrtbTableRow8
-            // 
-            this.lrtbTableRow8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableRow8.Location = new System.Drawing.Point(4, 314);
-            this.lrtbTableRow8.Name = "lrtbTableRow8";
-            this.lrtbTableRow8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableRow8.ShortcutsEnabled = false;
-            this.lrtbTableRow8.Size = new System.Drawing.Size(149, 19);
-            this.lrtbTableRow8.TabIndex = 1;
-            this.lrtbTableRow8.TabStop = false;
-            this.lrtbTableRow8.Text = "";
-            this.lrtbTableRow8.Visible = false;
-            this.lrtbTableRow8.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
-            // 
-            // lrtbTableRow9
-            // 
-            this.lrtbTableRow9.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableRow9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableRow9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableRow9.Location = new System.Drawing.Point(4, 340);
-            this.lrtbTableRow9.Name = "lrtbTableRow9";
-            this.lrtbTableRow9.ShortcutsEnabled = false;
-            this.lrtbTableRow9.Size = new System.Drawing.Size(149, 23);
-            this.lrtbTableRow9.TabIndex = 1;
-            this.lrtbTableRow9.TabStop = false;
-            this.lrtbTableRow9.Text = "";
-            this.lrtbTableRow9.Visible = false;
-            this.lrtbTableRow9.TextChanged += new System.EventHandler(this.RtbAnswers_TextChanged);
-            // 
-            // lrtbTableCol4
-            // 
-            this.lrtbTableCol4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lrtbTableCol4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lrtbTableCol4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lrtbTableCol4.Location = new System.Drawing.Point(628, 4);
-            this.lrtbTableCol4.Name = "lrtbTableCol4";
-            this.lrtbTableCol4.ReadOnly = true;
-            this.lrtbTableCol4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lrtbTableCol4.ShortcutsEnabled = false;
-            this.lrtbTableCol4.Size = new System.Drawing.Size(56, 36);
-            this.lrtbTableCol4.TabIndex = 1;
-            this.lrtbTableCol4.TabStop = false;
-            this.lrtbTableCol4.Text = "";
-            this.lrtbTableCol4.Visible = false;
+            
+            
             // 
             // tab_Speaking
             // 
@@ -6556,11 +3757,11 @@
             this.tabf_speaking.TabIndex = 1;
             this.tabf_speaking.TabStop = false;
             // 
-            // sDirection
+            // stab_Direction
             // 
             this.stab_Direction.Controls.Add(this.pictureBox3);
             this.stab_Direction.Location = new System.Drawing.Point(4, 25);
-            this.stab_Direction.Name = "sDirection";
+            this.stab_Direction.Name = "stab_Direction";
             this.stab_Direction.Size = new System.Drawing.Size(763, 448);
             this.stab_Direction.TabIndex = 3;
             this.stab_Direction.Text = "sDirection";
@@ -6580,14 +3781,14 @@
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
-            // sNormalQuestions
+            // stab_NormalQuestions
             // 
             this.stab_NormalQuestions.Controls.Add(this.spb);
             this.stab_NormalQuestions.Controls.Add(this.tableLayoutPanel3);
             this.stab_NormalQuestions.Controls.Add(this.srtb_introduction);
             this.stab_NormalQuestions.Controls.Add(this.pb_speakingScene);
             this.stab_NormalQuestions.Location = new System.Drawing.Point(4, 25);
-            this.stab_NormalQuestions.Name = "sNormalQuestions";
+            this.stab_NormalQuestions.Name = "stab_NormalQuestions";
             this.stab_NormalQuestions.Padding = new System.Windows.Forms.Padding(3);
             this.stab_NormalQuestions.Size = new System.Drawing.Size(763, 448);
             this.stab_NormalQuestions.TabIndex = 0;
@@ -6689,11 +3890,11 @@
             this.tabf_writing.TabStop = false;
             this.tabf_writing.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
             // 
-            // wDirection
+            // wtab_Direction
             // 
             this.wtab_Direction.Controls.Add(this.pictureBox4);
             this.wtab_Direction.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Direction.Name = "wDirection";
+            this.wtab_Direction.Name = "wtab_Direction";
             this.wtab_Direction.Size = new System.Drawing.Size(763, 448);
             this.wtab_Direction.TabIndex = 3;
             this.wtab_Direction.Text = "wDirection";
@@ -6714,12 +3915,12 @@
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
             // 
-            // wReading
+            // wtab_Reading
             // 
             this.wtab_Reading.Controls.Add(this.wrtb_writing1);
             this.wtab_Reading.Controls.Add(this.wrtb_reading);
             this.wtab_Reading.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Reading.Name = "wReading";
+            this.wtab_Reading.Name = "wtab_Reading";
             this.wtab_Reading.Size = new System.Drawing.Size(763, 448);
             this.wtab_Reading.TabIndex = 5;
             this.wtab_Reading.Text = "wReading";
@@ -6750,13 +3951,13 @@
             this.wrtb_reading.TabStop = false;
             this.wrtb_reading.Text = "Introduction";
             // 
-            // wSpeakingPassage
+            // wtab_SpeakingPassage
             // 
             this.wtab_SpeakingPassage.Controls.Add(this.wpb_speak);
             this.wtab_SpeakingPassage.Controls.Add(this.wtb_speak);
             this.wtab_SpeakingPassage.Controls.Add(this.pb_writingScene);
             this.wtab_SpeakingPassage.Location = new System.Drawing.Point(4, 25);
-            this.wtab_SpeakingPassage.Name = "wSpeakingPassage";
+            this.wtab_SpeakingPassage.Name = "wtab_SpeakingPassage";
             this.wtab_SpeakingPassage.Padding = new System.Windows.Forms.Padding(3);
             this.wtab_SpeakingPassage.Size = new System.Drawing.Size(763, 448);
             this.wtab_SpeakingPassage.TabIndex = 0;
@@ -6793,14 +3994,14 @@
             this.pb_writingScene.TabIndex = 1;
             this.pb_writingScene.TabStop = false;
             // 
-            // wWriting2
+            // wtab_Writing2
             // 
             this.wtab_Writing2.Controls.Add(this.lbl_writeDirection);
             this.wtab_Writing2.Controls.Add(this.wrtb_writing2);
             this.wtab_Writing2.Controls.Add(this.wrtbQuestion2);
             this.wtab_Writing2.Controls.Add(this.wpanel);
             this.wtab_Writing2.Location = new System.Drawing.Point(4, 25);
-            this.wtab_Writing2.Name = "wWriting2";
+            this.wtab_Writing2.Name = "wtab_Writing2";
             this.wtab_Writing2.Size = new System.Drawing.Size(763, 448);
             this.wtab_Writing2.TabIndex = 4;
             this.wtab_Writing2.Text = "wWriting2";
@@ -6943,7 +4144,7 @@
             this.tabf_answer.TabIndex = 0;
             this.tabf_answer.SelectedIndexChanged += new System.EventHandler(this.tabf_answer_SelectedIndexChanged);
             // 
-            // tab_readinganswer
+            // atab_readinganswer
             // 
             this.atab_readinganswer.Controls.Add(this.dgv_readingSelect);
             this.atab_readinganswer.Controls.Add(this.label2);
@@ -6956,7 +4157,7 @@
             this.atab_readinganswer.Controls.Add(this.pictureBox8);
             this.atab_readinganswer.Controls.Add(this.dgv_readinganswers);
             this.atab_readinganswer.Location = new System.Drawing.Point(4, 22);
-            this.atab_readinganswer.Name = "tab_readinganswer";
+            this.atab_readinganswer.Name = "atab_readinganswer";
             this.atab_readinganswer.Padding = new System.Windows.Forms.Padding(3);
             this.atab_readinganswer.Size = new System.Drawing.Size(773, 484);
             this.atab_readinganswer.TabIndex = 0;
@@ -7083,7 +4284,7 @@
             this.dgv_readinganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
             this.dgv_readinganswers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_readinganswers_MouseDoubleClick);
             // 
-            // tab_listeninganswers
+            // atab_listeninganswers
             // 
             this.atab_listeninganswers.Controls.Add(this.dgv_listeningSelect);
             this.atab_listeninganswers.Controls.Add(this.label16);
@@ -7096,7 +4297,7 @@
             this.atab_listeninganswers.Controls.Add(this.label9);
             this.atab_listeninganswers.Controls.Add(this.pictureBox11);
             this.atab_listeninganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_listeninganswers.Name = "tab_listeninganswers";
+            this.atab_listeninganswers.Name = "atab_listeninganswers";
             this.atab_listeninganswers.Padding = new System.Windows.Forms.Padding(3);
             this.atab_listeninganswers.Size = new System.Drawing.Size(773, 484);
             this.atab_listeninganswers.TabIndex = 1;
@@ -7224,12 +4425,12 @@
             this.pictureBox11.TabIndex = 17;
             this.pictureBox11.TabStop = false;
             // 
-            // tab_speakinganswers
+            // atab_speakinganswers
             // 
             this.atab_speakinganswers.AutoScroll = true;
             this.atab_speakinganswers.Controls.Add(this.tableLayoutPanel2);
             this.atab_speakinganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_speakinganswers.Name = "tab_speakinganswers";
+            this.atab_speakinganswers.Name = "atab_speakinganswers";
             this.atab_speakinganswers.Size = new System.Drawing.Size(773, 484);
             this.atab_speakinganswers.TabIndex = 2;
             this.atab_speakinganswers.Text = "Speaking";
@@ -7406,13 +4607,13 @@
             this.btn_speakinganswer6.UseVisualStyleBackColor = true;
             this.btn_speakinganswer6.Click += new System.EventHandler(this.btn_speakinganswer_Click);
             // 
-            // tab_writinganswers
+            // atab_writinganswers
             // 
             this.atab_writinganswers.Controls.Add(this.rtb_writinganswers);
             this.atab_writinganswers.Controls.Add(this.rtb_writing2);
             this.atab_writinganswers.Controls.Add(this.rtb_writing1);
             this.atab_writinganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_writinganswers.Name = "tab_writinganswers";
+            this.atab_writinganswers.Name = "atab_writinganswers";
             this.atab_writinganswers.Size = new System.Drawing.Size(773, 484);
             this.atab_writinganswers.TabIndex = 3;
             this.atab_writinganswers.Text = "Writing";
@@ -7450,6 +4651,8 @@
             this.rtb_writing1.TabStop = true;
             this.rtb_writing1.Text = "Integrated Wrting";
             this.rtb_writing1.UseVisualStyleBackColor = true;
+            
+            
             // 
             // btn_ShowText
             // 
@@ -7726,42 +4929,9 @@
             this.rtab_SumQuestion.ResumeLayout(false);
             this.rtab_SumQuestion.PerformLayout();
             this.r_flowLayoutPanel2.ResumeLayout(false);
-            this.r_flowLayoutPanel2.PerformLayout();
-            this.tlp_sumAnswers.ResumeLayout(false);
-            this.tlp_sumAnswers.PerformLayout();
-            this.tlp_Summary.ResumeLayout(false);
-            this.tlp_Summary.PerformLayout();
-            this.rtab_Review.ResumeLayout(false);
-            this.rtab_Review.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_wrongAnswered)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightAnswered)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingReview)).EndInit();
             this.tab_Listening.ResumeLayout(false);
             this.tabf_Listening.ResumeLayout(false);
-            this.ltab_Direction1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ltab_Materials.ResumeLayout(false);
-            this.l_splitContainer.Panel1.ResumeLayout(false);
-            this.l_splitContainer.Panel1.PerformLayout();
-            this.l_splitContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.l_splitContainer)).EndInit();
-            this.l_splitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.flp_passage.ResumeLayout(false);
-            this.flp_passage.PerformLayout();
-            this.lMaterials1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tb_currentpos1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ListenScene1)).EndInit();
-            this.ltab_Question.ResumeLayout(false);
-            this.ltab_Question.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.lTableQuestion.ResumeLayout(false);
-            this.lTableQuestion.PerformLayout();
-            this.ltlp_table.ResumeLayout(false);
+            
             this.tab_Speaking.ResumeLayout(false);
             this.tabf_speaking.ResumeLayout(false);
             this.stab_Direction.ResumeLayout(false);
@@ -7805,6 +4975,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.atab_writinganswers.ResumeLayout(false);
             this.atab_writinganswers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rpb_wrongAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpb_rightAnswered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r_pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgv_readingReview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7887,8 +5061,8 @@
             {
                 this.tabf_Listening.SelectedIndex = LMATERIALS1;
             }
-            this.pb_ListenScene.Image = null;
-            this.pb_ListenScene1.Image = null;
+            this.lpb_ListenScene.Image = null;
+            this.lpb_ListenScene1.Image = null;
             if (this.PassageNO <= 1)
             {
                 this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
@@ -7912,11 +5086,11 @@
                 this.MP3Player = new MP3MCI();
                 string str2 = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", attr });
                 this.MP3Player.FileName = str2;
-                this.PlayFileName.Text = str2;
-                this.pb_currentpos.Maximum = this.MP3Player.Duration;
-                this.pb_currentpos1.Maximum = this.MP3Player.Duration;
-                this.tb_currentpos.Maximum = this.MP3Player.Duration;
-                this.tb_currentpos1.Maximum = this.MP3Player.Duration;
+                this.l_PlayFileName.Text = str2;
+                this.lpb_currentpos.Maximum = this.MP3Player.Duration;
+                this.lpb_currentpos1.Maximum = this.MP3Player.Duration;
+                this.ltb_currentpos.Maximum = this.MP3Player.Duration;
+                this.ltb_currentpos1.Maximum = this.MP3Player.Duration;
                 this.MP3Player.play();
                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                 this.Timer_Listening.Start();
@@ -7946,7 +5120,7 @@
                         int num5;
                         this.tabf_test.SelectedIndex = LISTENING;
                         this.tabf_Listening.SelectedIndex = LTABLEQUESTION;
-                        this.lrtbTableQuestion.Rtf = question.QuestionTitle;
+                        this.lrtb_TableQuestion.Rtf = question.QuestionTitle;
                         int count = question.ColStrs.Count;
                         int num4 = question.RowStrs.Count;
                         this.ltlp_table.RowCount = num4 + 1;
@@ -8000,12 +5174,12 @@
                         }
                         if (this.ckb_ShowAnswer.Checked)
                         {
-                            this.lbl_tableAnswer.Visible = true;
-                            this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
+                            this.llbl_tableAnswer.Visible = true;
+                            this.llbl_tableAnswer.Text = question.CorrectAnswersStr;
                         }
                         else
                         {
-                            this.lbl_tableAnswer.Visible = false;
+                            this.llbl_tableAnswer.Visible = false;
                         }
                         goto Label_0656;
                     }
@@ -8014,8 +5188,8 @@
                     {
                         this.tabf_test.SelectedIndex = READING;
                         this.tabf_Reading.SelectedIndex = RSUMMARYQUESTION;
-                        this.rtb_sumQuestion.Rtf = question.QuestionTitle;
-                        this.rtb_sumQuestion.Visible = true;
+                        this.rrtb_sumQuestion.Rtf = question.QuestionTitle;
+                        this.rrtb_sumQuestion.Visible = true;
                         length = 0;
                         while (length < this.CkbSummarySelected.Length)
                         {
@@ -8084,11 +5258,11 @@
                 string str = "";
                 str = string.Concat(new object[] { @"Tests\", this.TPONO, @"\Listening\", question.MP3Path });
                 this.MP3Player.FileName = str;
-                this.PlayFileName.Text = str;
-                this.pb_currentpos.Maximum = this.MP3Player.Duration;
-                this.pb_currentpos1.Maximum = this.MP3Player.Duration;
-                this.tb_currentpos.Maximum = this.MP3Player.Duration;
-                this.tb_currentpos1.Maximum = this.MP3Player.Duration;
+                this.l_PlayFileName.Text = str;
+                this.lpb_currentpos.Maximum = this.MP3Player.Duration;
+                this.lpb_currentpos1.Maximum = this.MP3Player.Duration;
+                this.ltb_currentpos.Maximum = this.MP3Player.Duration;
+                this.ltb_currentpos1.Maximum = this.MP3Player.Duration;
                 this.MP3Player.play();
                 this.MP3Player.SetVolume(base.tb_sound.Value.ToString());
                 this.Timer_Listening.Start();
@@ -8108,13 +5282,13 @@
             LinkLabel[] labelArray = new LinkLabel[0x20];
             int index = 0;
             int num3 = 0;
-            this.flp_passage.Controls.Clear();
+            this.lflp_passage.Controls.Clear();
             while (index < 0x20)
             {
                 labelArray[index] = new LinkLabel();
                 labelArray[index].AutoSize = true;
-                labelArray[index].Font = this.lnk_passage.Font;
-                labelArray[index].LinkBehavior = this.lnk_passage.LinkBehavior;
+                labelArray[index].Font = this.llnk_passage.Font;
+                labelArray[index].LinkBehavior = this.llnk_passage.LinkBehavior;
                 labelArray[index].LinkClicked += new LinkLabelLinkClickedEventHandler(this.linkLabel_Click);
                 int num4 = 0;
                 start = 0;
@@ -8139,12 +5313,12 @@
                     start += length;
                     if (num3 == (reader.LrcList.Count - 1))
                     {
-                        this.flp_passage.Controls.Add(labelArray[index]);
+                        this.lflp_passage.Controls.Add(labelArray[index]);
                         break;
                     }
                     if ((num4 == 0x1f) || lrc.sText.Trim().Equals(""))
                     {
-                        this.flp_passage.Controls.Add(labelArray[index]);
+                        this.lflp_passage.Controls.Add(labelArray[index]);
                         break;
                     }
                     num3++;
@@ -8230,13 +5404,13 @@
                             this.RtbSumAnswersToBeSelected[question.CorrectAnswer[num] - 1].BackColor = Color.LightPink;
                         }
                     }
-                    this.rtb_sumPassage.Height = 500;
-                    this.rtb_sumQuestion.Visible = !this.ShowPassage;
-                    this.rtb_sumPassage.Visible = this.ShowPassage;
+                    this.rrtb_sumPassage.Height = 500;
+                    this.rrtb_sumQuestion.Visible = !this.ShowPassage;
+                    this.rrtb_sumPassage.Visible = this.ShowPassage;
                     this.rtlp_answers.Visible = !this.ShowPassage;
-                    this.tlp_Summary.Visible = !this.ShowPassage;
-                    this.rtb_sumQuestion.Rtf = question.QuestionTitle;
-                    this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
+                    this.rtlp_Summary.Visible = !this.ShowPassage;
+                    this.rrtb_sumQuestion.Rtf = question.QuestionTitle;
+                    this.rrtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
                     TRANSLATION = this.RMaterial.Translation;
                     for (num = 0; (num < question.MyAnswer.Length) && (num < this.CkbSummary.Length); num++)
                     {
@@ -8263,14 +5437,14 @@
                     int num5;
                     this.tabf_test.SelectedIndex = LISTENING;
                     this.tabf_Listening.SelectedIndex = LTABLEQUESTION;
-                    this.rtb_sumPassage.Height = 500;
-                    this.rtb_sumQuestion.Visible = !this.ShowPassage;
-                    this.rtb_sumPassage.Visible = this.ShowPassage;
+                    this.rrtb_sumPassage.Height = 500;
+                    this.rrtb_sumQuestion.Visible = !this.ShowPassage;
+                    this.rrtb_sumPassage.Visible = this.ShowPassage;
                     this.rtlp_answers.Visible = !this.ShowPassage;
-                    this.tlp_Summary.Visible = !this.ShowPassage;
-                    this.rtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
+                    this.rtlp_Summary.Visible = !this.ShowPassage;
+                    this.rrtb_sumPassage.Rtf = this.RMaterial.ReadingPassageONQuestion(this.QuestionNO, this.RSpiltQuestionNO);
                     TRANSLATION = this.RMaterial.Translation;
-                    this.lrtbTableQuestion.Rtf = question.QuestionTitle;
+                    this.lrtb_TableQuestion.Rtf = question.QuestionTitle;
                     int count = question.ColStrs.Count;
                     int num4 = question.RowStrs.Count;
                     this.ltlp_table.RowCount = num4 + 1;
@@ -8293,12 +5467,12 @@
                     }
                     if (this.ckb_ShowAnswer.Checked)
                     {
-                        this.lbl_tableAnswer.Visible = true;
-                        this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
+                        this.llbl_tableAnswer.Visible = true;
+                        this.llbl_tableAnswer.Text = question.CorrectAnswersStr;
                     }
                     else
                     {
-                        this.lbl_tableAnswer.Visible = false;
+                        this.llbl_tableAnswer.Visible = false;
                     }
                 }
                 else
@@ -9370,12 +6544,12 @@
 
         private void tb_currentpos_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long)(this.tb_currentpos.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.ltb_currentpos.Value * 0x3e8));
         }
 
         private void tb_currentpos1_Scroll(object sender, EventArgs e)
         {
-            this.MP3Player.SetPlayTime((long)(this.tb_currentpos1.Value * 0x3e8));
+            this.MP3Player.SetPlayTime((long)(this.ltb_currentpos1.Value * 0x3e8));
         }
 
         private void tb_reading_Scroll(object sender, EventArgs e)
@@ -9398,10 +6572,10 @@
             {
                 currentPosition = this.MP3Player.CurrentPosition;
             }
-            this.tb_currentpos.Value = currentPosition;
-            this.pb_currentpos.Value = currentPosition;
-            this.tb_currentpos1.Value = currentPosition;
-            this.pb_currentpos1.Value = currentPosition;
+            this.ltb_currentpos.Value = currentPosition;
+            this.lpb_currentpos.Value = currentPosition;
+            this.ltb_currentpos1.Value = currentPosition;
+            this.lpb_currentpos1.Value = currentPosition;
             DateTime time = DateTime.ParseExact(base.lbl_timeremain.Text.ToString(), "mm:ss", null);
             if (time < DateTime.ParseExact("00:01", "mm:ss", null))
             {
@@ -9494,8 +6668,8 @@
                     DateTime time2 = DateTime.ParseExact(this.MP3Player.CurrentPosStr, "mm:ss", null);
                     if (length == 1)
                     {
-                        this.pb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[0]);
-                        this.pb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[0]);
+                        this.lpb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[0]);
+                        this.lpb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[0]);
                     }
                     else
                     {
@@ -9505,15 +6679,15 @@
                             DateTime time4 = DateTime.ParseExact(this.SPictureTimeLines[num4], "mm:ss", null);
                             if ((time3 <= time2) && (time2 <= time4))
                             {
-                                this.pb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[num4 - 1]);
-                                this.pb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[num4 - 1]);
+                                this.lpb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[num4 - 1]);
+                                this.lpb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[num4 - 1]);
                             }
                         }
                         DateTime time5 = DateTime.ParseExact(this.SPictureTimeLines[length - 1], "mm:ss", null);
                         if (time2 > time5)
                         {
-                            this.pb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[length - 1]);
-                            this.pb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[length - 1]);
+                            this.lpb_ListenScene.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[length - 1]);
+                            this.lpb_ListenScene1.Load(Application.StartupPath + @"\Tests\images\" + this.SPicturePaths[length - 1]);
                         }
                     }
                 }
@@ -9555,18 +6729,18 @@
                             case QuestionType.TABLE:
                                 if (!this.ckb_ShowAnswer.Checked)
                                 {
-                                    this.lbl_tableAnswer.Visible = false;
+                                    this.llbl_tableAnswer.Visible = false;
                                     break;
                                 }
-                                this.lbl_tableAnswer.Visible = true;
-                                this.lbl_tableAnswer.Text = question.CorrectAnswersStr;
+                                this.llbl_tableAnswer.Visible = true;
+                                this.llbl_tableAnswer.Text = question.CorrectAnswersStr;
                                 break;
 
                             case QuestionType.SORT:
                                 if (question.QuestionType == QuestionType.SORT)
                                 {
-                                    this.rtb_sumQuestion.Rtf = question.QuestionTitle;
-                                    this.rtb_sumQuestion.Visible = true;
+                                    this.rrtb_sumQuestion.Rtf = question.QuestionTitle;
+                                    this.rrtb_sumQuestion.Visible = true;
                                     num4 = 0;
                                     while ((num4 < question.MyAnswer.Length) && (num4 < this.CkbSummary.Length))
                                     {
