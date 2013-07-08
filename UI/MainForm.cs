@@ -92,12 +92,7 @@
         private Button btn_showexplanation;
         private Button btn_ShowText;
         private Button btn_showtranslation;
-        private Button btn_speakinganswer1;
-        private Button btn_speakinganswer2;
-        private Button btn_speakinganswer3;
-        private Button btn_speakinganswer4;
-        private Button btn_speakinganswer5;
-        private Button btn_speakinganswer6;
+       
         
         private Button[] BtnLoadTest;
         
@@ -115,8 +110,7 @@
         private int CurrentSpeakingStep;
         private int CurrentTPOPage;
         private int CurrentWritingStep;
-        private DataGridView dgv_listeninganswers;
-        private DataGridView dgv_readinganswers;
+        
         
         private ExplanationUI EXP;
         public static string EXPLANATION = "";
@@ -133,26 +127,6 @@
         private bool IsQuestionAfter;
         private bool IsRepeated;
         
-        private Label r_label1;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
-        private Label label16;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label lbl_listeningScorereport;
-        
-        private Label lbl_readingscorereport;
-        
-        
         private Label lbl_testingSection;
         private Label lbl_top1;
         private Label lbl_top10;
@@ -164,28 +138,14 @@
         private Label lbl_top7;
         private Label lbl_top8;
         private Label lbl_top9;
-        
-        
-        
-        
-        
-        
-       
-        
+                    
         private static int LDIRECTION1 = 0;
         private static int LDIRECTION2 = 1;
-        private static int LISTENING = 2;
-        
-        
-        private static int LMATERIALS = 2;
-        
-        private static int LMATERIALS1 = 3;
-        
+        private static int LISTENING = 2;     
+        private static int LMATERIALS = 2;     
+        private static int LMATERIALS1 = 3;     
         public bool LOADLASTQUESTION;
-        private static int LQUESTIONS = 4;
-        
-        
-        
+        private static int LQUESTIONS = 4; 
         private static int LTABLEQUESTION = 5;
         
         private MP3MCI MP3Player;
@@ -199,22 +159,8 @@
         private int PassageCount;
         private int PassageLastQuestionIndex;
         private int PassageNO;
+               
         
-        
-        
-        
-        
-        
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
-        
-       
-        
-        
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
         
         private int PreFormHeight;
         private int PreFormWidth;
@@ -237,9 +183,7 @@
         
         private RichTextBox rtb_Passage;
         
-        private RadioButton rtb_writing1;
-        private RadioButton rtb_writing2;
-        private RichTextBox rtb_writinganswers;
+        
         private RichTextBox RtbPreviousSelected;
         private RichTextBox[] RtbReadingAnswers;
         private RichTextBox[] RtbSumAnswersToBeSelected;
@@ -258,23 +202,18 @@
         private int SummarySelectedAnswerIndex;
         private int[] SummarySelectedAnswers;
         private TabPage tab_CoverForm;
-        private TabPage tab_Listening;
-        private TabPage atab_listeninganswers;
-        private TabPage tab_Reading;
-        private TabPage atab_readinganswer;
-        private TabPage tab_Speaking;
-        private TabPage atab_speakinganswers;
-        private TabPage tab_Writing;
-        private TabPage atab_writinganswers;
+        private TabPage tab_Listening;     
+        private TabPage tab_Reading;       
+        private TabPage tab_Speaking;       
+        private TabPage tab_Writing;   
         private TabControl tabf_answer;
-        private TabControl tabf_Listening;
-        
+        private TabControl tabf_Listening;     
         private TabControl tabf_speaking;
         private TabControl tabf_test;
         private TabControl tabf_tposelection;
         private TabControl tabf_writing;
         
-        private TableLayoutPanel tableLayoutPanel2;
+        
         
         private TabPage tab_Answers;
         
@@ -286,9 +225,6 @@
         private Timer Timer_Listening;
         private Timer Timer_reading;
         private Timer Timer_Speaking;
-        private TableLayoutPanel rtlp_answers;
-        private TableLayoutPanel rtlp_sumAnswers;
-        private TableLayoutPanel rtlp_Summary;
         private int TotalQuestions;
         private int TotalScore;
         private TabPage TPO10;
@@ -308,14 +244,13 @@
        
         private static int WSPEECH = 2;
         
-        private BindingSource bindingSource_Section;
+        
         
         #endregion
-        private DataGridView dgv_readingSelect;
-        private DataGridView dgv_listeningSelect;
+        
 
         private DbConnection dbConn;
-        private BindingSource bindingSource_Set;
+        
         private DataGridViewCheckBoxColumn isAnsweredDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn rightAnswersStrDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn userAnswersStrDataGridViewTextBoxColumn;
@@ -845,7 +780,7 @@
 
         private void btn_LoadTest_Click(object sender, EventArgs e)
         {
-            this.rtb_writinganswers.Text = "";
+            this.artb_writinganswers.Text = "";
             try
             {
                 for (int i = 1; i < 0x1c; i++)
@@ -2118,64 +2053,19 @@
             this.tab_Reading = new System.Windows.Forms.TabPage();
             
             this.tabf_Reading = new TPO.UI.TabControlReading();
-           
-            
-            
+          
             this.tab_Listening = new System.Windows.Forms.TabPage();
             
-            this.tab_Speaking = new System.Windows.Forms.TabPage();
-            
-            
+            this.tab_Speaking = new System.Windows.Forms.TabPage();           
             this.tab_Writing = new System.Windows.Forms.TabPage();
-            this.tabf_writing = new System.Windows.Forms.TabControl();
-            
+            this.tabf_writing = new System.Windows.Forms.TabControl();         
             this.tab_Answers = new System.Windows.Forms.TabPage();
             this.tabf_answer = new System.Windows.Forms.TabControl();
-            this.atab_readinganswer = new System.Windows.Forms.TabPage();
-            this.dgv_readingSelect = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_readingscorereport = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.dgv_readinganswers = new System.Windows.Forms.DataGridView();
-            this.atab_listeninganswers = new System.Windows.Forms.TabPage();
-            this.dgv_listeningSelect = new System.Windows.Forms.DataGridView();
-            this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
-            this.label16 = new System.Windows.Forms.Label();
-            this.dgv_listeninganswers = new System.Windows.Forms.DataGridView();
-            this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);
-            this.lbl_listeningScorereport = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.atab_speakinganswers = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btn_speakinganswer1 = new System.Windows.Forms.Button();
-            this.btn_speakinganswer2 = new System.Windows.Forms.Button();
-            this.btn_speakinganswer3 = new System.Windows.Forms.Button();
-            this.btn_speakinganswer4 = new System.Windows.Forms.Button();
-            this.btn_speakinganswer5 = new System.Windows.Forms.Button();
-            this.btn_speakinganswer6 = new System.Windows.Forms.Button();
-            this.atab_writinganswers = new System.Windows.Forms.TabPage();
-            this.rtb_writinganswers = new System.Windows.Forms.RichTextBox();
-            this.rtb_writing2 = new System.Windows.Forms.RadioButton();
-            this.rtb_writing1 = new System.Windows.Forms.RadioButton();
             
-            
-            
+
+            //this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
+            //this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);
+
             this.btn_ShowText = new System.Windows.Forms.Button();
             this.flash_timer = new System.Windows.Forms.Timer(this.components);
             this.Timer_Speaking = new System.Windows.Forms.Timer(this.components);
@@ -2215,29 +2105,14 @@
             
             this.tab_Answers.SuspendLayout();
             this.tabf_answer.SuspendLayout();
-            this.atab_readinganswer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingSelect)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).BeginInit();
-            this.atab_listeninganswers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.atab_speakinganswers.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.atab_writinganswers.SuspendLayout();
+            
+            
             
             this.SuspendLayout();
             // 
             // btn_continue
             // 
-            this.btn_continue.BackgroundImage = global::TPO.Properties.Resources._continue;
+            this.btn_continue.BackgroundImage = TPO.Properties.Resources._continue;
             this.btn_continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_continue.FlatAppearance.BorderSize = 0;
             this.btn_continue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -3619,527 +3494,7 @@
             this.tab_Answers.TabIndex = 5;
             this.tab_Answers.Text = "Answers";
             this.tab_Answers.UseVisualStyleBackColor = true;
-            // 
-            // tabf_answer
-            // 
-            this.tabf_answer.Controls.Add(this.atab_readinganswer);
-            this.tabf_answer.Controls.Add(this.atab_listeninganswers);
-            this.tabf_answer.Controls.Add(this.atab_speakinganswers);
-            this.tabf_answer.Controls.Add(this.atab_writinganswers);
-            this.tabf_answer.Location = new System.Drawing.Point(3, 3);
-            this.tabf_answer.Name = "tabf_answer";
-            this.tabf_answer.SelectedIndex = 0;
-            this.tabf_answer.Size = new System.Drawing.Size(781, 510);
-            this.tabf_answer.TabIndex = 0;
-            this.tabf_answer.SelectedIndexChanged += new System.EventHandler(this.tabf_answer_SelectedIndexChanged);
-            // 
-            // atab_readinganswer
-            // 
-            this.atab_readinganswer.Controls.Add(this.dgv_readingSelect);
-            this.atab_readinganswer.Controls.Add(this.label2);
-            this.atab_readinganswer.Controls.Add(this.lbl_readingscorereport);
-            this.atab_readinganswer.Controls.Add(this.label3);
-            this.atab_readinganswer.Controls.Add(this.pictureBox6);
-            this.atab_readinganswer.Controls.Add(this.label4);
-            this.atab_readinganswer.Controls.Add(this.pictureBox7);
-            this.atab_readinganswer.Controls.Add(this.label5);
-            this.atab_readinganswer.Controls.Add(this.pictureBox8);
-            this.atab_readinganswer.Controls.Add(this.dgv_readinganswers);
-            this.atab_readinganswer.Location = new System.Drawing.Point(4, 22);
-            this.atab_readinganswer.Name = "atab_readinganswer";
-            this.atab_readinganswer.Padding = new System.Windows.Forms.Padding(3);
-            this.atab_readinganswer.Size = new System.Drawing.Size(773, 484);
-            this.atab_readinganswer.TabIndex = 0;
-            this.atab_readinganswer.Text = "Reading";
-            this.atab_readinganswer.UseVisualStyleBackColor = true;
-            // 
-            // dgv_readingSelect
-            // 
-            this.dgv_readingSelect.AllowUserToAddRows = false;
-            this.dgv_readingSelect.AllowUserToDeleteRows = false;
-            this.dgv_readingSelect.AllowUserToResizeColumns = false;
-            this.dgv_readingSelect.AllowUserToResizeRows = false;
-            this.dgv_readingSelect.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_readingSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_readingSelect.Location = new System.Drawing.Point(513, 64);
-            this.dgv_readingSelect.MultiSelect = false;
-            this.dgv_readingSelect.Name = "dgv_readingSelect";
-            this.dgv_readingSelect.ReadOnly = true;
-            this.dgv_readingSelect.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_readingSelect.RowTemplate.Height = 23;
-            this.dgv_readingSelect.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_readingSelect.Size = new System.Drawing.Size(219, 341);
-            this.dgv_readingSelect.TabIndex = 15;
-            this.dgv_readingSelect.TabStop = false;
-            this.dgv_readingSelect.SelectionChanged += new System.EventHandler(this.dgv_readingSelect_SelectionChanged);
-            this.dgv_readingSelect.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_readingSelect_MouseDoubleClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 420);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(905, 12);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Note: Because the real IBT scoring policy will take all the students\' performance" +
-    " into account, the standard score gained here can\'t be very accurate!";
-            // 
-            // lbl_readingscorereport
-            // 
-            this.lbl_readingscorereport.AutoSize = true;
-            this.lbl_readingscorereport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_readingscorereport.Location = new System.Drawing.Point(61, 13);
-            this.lbl_readingscorereport.Name = "lbl_readingscorereport";
-            this.lbl_readingscorereport.Size = new System.Drawing.Size(97, 17);
-            this.lbl_readingscorereport.TabIndex = 13;
-            this.lbl_readingscorereport.Text = "scoreReport";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(332, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 12);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Wrong Answered";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox6.Location = new System.Drawing.Point(299, 38);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(215, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 12);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Right Answered";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Green;
-            this.pictureBox7.Location = new System.Drawing.Point(182, 38);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 12);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Not Answered";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Red;
-            this.pictureBox8.Location = new System.Drawing.Point(64, 38);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox8.TabIndex = 9;
-            this.pictureBox8.TabStop = false;
-            // 
-            // dgv_readinganswers
-            // 
-            this.dgv_readinganswers.AllowUserToAddRows = false;
-            this.dgv_readinganswers.AllowUserToDeleteRows = false;
-            this.dgv_readinganswers.AllowUserToResizeColumns = false;
-            this.dgv_readinganswers.AllowUserToResizeRows = false;
-            this.dgv_readinganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_readinganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_readinganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_readinganswers.Location = new System.Drawing.Point(64, 64);
-            this.dgv_readinganswers.MultiSelect = false;
-            this.dgv_readinganswers.Name = "dgv_readinganswers";
-            this.dgv_readinganswers.ReadOnly = true;
-            this.dgv_readinganswers.RowHeadersVisible = false;
-            this.dgv_readinganswers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_readinganswers.RowTemplate.Height = 23;
-            this.dgv_readinganswers.RowTemplate.ReadOnly = true;
-            this.dgv_readinganswers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_readinganswers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_readinganswers.Size = new System.Drawing.Size(393, 341);
-            this.dgv_readinganswers.TabIndex = 6;
-            this.dgv_readinganswers.TabStop = false;
-            this.dgv_readinganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
-            this.dgv_readinganswers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_readinganswers_MouseDoubleClick);
-            // 
-            // atab_listeninganswers
-            // 
-            this.atab_listeninganswers.Controls.Add(this.dgv_listeningSelect);
-            this.atab_listeninganswers.Controls.Add(this.label16);
-            this.atab_listeninganswers.Controls.Add(this.dgv_listeninganswers);
-            this.atab_listeninganswers.Controls.Add(this.lbl_listeningScorereport);
-            this.atab_listeninganswers.Controls.Add(this.label7);
-            this.atab_listeninganswers.Controls.Add(this.pictureBox9);
-            this.atab_listeninganswers.Controls.Add(this.label8);
-            this.atab_listeninganswers.Controls.Add(this.pictureBox10);
-            this.atab_listeninganswers.Controls.Add(this.label9);
-            this.atab_listeninganswers.Controls.Add(this.pictureBox11);
-            this.atab_listeninganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_listeninganswers.Name = "atab_listeninganswers";
-            this.atab_listeninganswers.Padding = new System.Windows.Forms.Padding(3);
-            this.atab_listeninganswers.Size = new System.Drawing.Size(773, 484);
-            this.atab_listeninganswers.TabIndex = 1;
-            this.atab_listeninganswers.Text = "Listening";
-            this.atab_listeninganswers.UseVisualStyleBackColor = true;
-            // 
-            // dgv_listeningSelect
-            // 
-            this.dgv_listeningSelect.AllowUserToAddRows = false;
-            this.dgv_listeningSelect.AllowUserToDeleteRows = false;
-            this.dgv_listeningSelect.AllowUserToResizeColumns = false;
-            this.dgv_listeningSelect.AllowUserToResizeRows = false;
-            this.dgv_listeningSelect.AutoGenerateColumns = false;
-            this.dgv_listeningSelect.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_listeningSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_listeningSelect.DataSource = this.bindingSource_Set;
-            this.dgv_listeningSelect.Location = new System.Drawing.Point(513, 64);
-            this.dgv_listeningSelect.MultiSelect = false;
-            this.dgv_listeningSelect.Name = "dgv_listeningSelect";
-            this.dgv_listeningSelect.ReadOnly = true;
-            this.dgv_listeningSelect.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_listeningSelect.RowTemplate.Height = 23;
-            this.dgv_listeningSelect.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_listeningSelect.Size = new System.Drawing.Size(219, 341);
-            this.dgv_listeningSelect.TabIndex = 24;
-            this.dgv_listeningSelect.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(26, 422);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(905, 12);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Note: Because the real IBT scoring policy will take all the students\' performance" +
-    " into account, the standard score gained here can\'t be very accurate!";
-            // 
-            // dgv_listeninganswers
-            // 
-            this.dgv_listeninganswers.AllowUserToAddRows = false;
-            this.dgv_listeninganswers.AllowUserToDeleteRows = false;
-            this.dgv_listeninganswers.AllowUserToResizeColumns = false;
-            this.dgv_listeninganswers.AllowUserToResizeRows = false;
-            this.dgv_listeninganswers.AutoGenerateColumns = false;
-            this.dgv_listeninganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_listeninganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgv_listeninganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_listeninganswers.DataSource = this.bindingSource_Section;
-            this.dgv_listeninganswers.Location = new System.Drawing.Point(64, 64);
-            this.dgv_listeninganswers.MultiSelect = false;
-            this.dgv_listeninganswers.Name = "dgv_listeninganswers";
-            this.dgv_listeninganswers.ReadOnly = true;
-            this.dgv_listeninganswers.RowHeadersVisible = false;
-            this.dgv_listeninganswers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_listeninganswers.RowTemplate.Height = 23;
-            this.dgv_listeninganswers.RowTemplate.ReadOnly = true;
-            this.dgv_listeninganswers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_listeninganswers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_listeninganswers.Size = new System.Drawing.Size(393, 341);
-            this.dgv_listeninganswers.TabIndex = 22;
-            this.dgv_listeninganswers.TabStop = false;
-            this.dgv_listeninganswers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_readinganswers_DataBindingComplete);
-            // 
-            // lbl_listeningScorereport
-            // 
-            this.lbl_listeningScorereport.AutoSize = true;
-            this.lbl_listeningScorereport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_listeningScorereport.Location = new System.Drawing.Point(61, 13);
-            this.lbl_listeningScorereport.Name = "lbl_listeningScorereport";
-            this.lbl_listeningScorereport.Size = new System.Drawing.Size(97, 17);
-            this.lbl_listeningScorereport.TabIndex = 21;
-            this.lbl_listeningScorereport.Text = "scoreReport";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(332, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 12);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Wrong Answered";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox9.Location = new System.Drawing.Point(299, 38);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox9.TabIndex = 16;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(215, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 12);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Right Answered";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Green;
-            this.pictureBox10.Location = new System.Drawing.Point(182, 38);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox10.TabIndex = 15;
-            this.pictureBox10.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(97, 46);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 12);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Not Answered";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Red;
-            this.pictureBox11.Location = new System.Drawing.Point(64, 38);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(27, 20);
-            this.pictureBox11.TabIndex = 17;
-            this.pictureBox11.TabStop = false;
-            // 
-            // atab_speakinganswers
-            // 
-            this.atab_speakinganswers.AutoScroll = true;
-            this.atab_speakinganswers.Controls.Add(this.tableLayoutPanel2);
-            this.atab_speakinganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_speakinganswers.Name = "atab_speakinganswers";
-            this.atab_speakinganswers.Size = new System.Drawing.Size(773, 484);
-            this.atab_speakinganswers.TabIndex = 2;
-            this.atab_speakinganswers.Text = "Speaking";
-            this.atab_speakinganswers.UseVisualStyleBackColor = true;
-            this.atab_speakinganswers.Click += new System.EventHandler(this.tab_speakinganswers_Click);
-            this.atab_speakinganswers.Leave += new System.EventHandler(this.tab_speakinganswers_Leave);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.2973F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.24324F));
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer4, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer5, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.btn_speakinganswer6, 1, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(84, 18);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(373, 422);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(6, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 66);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "SPEAKING 1";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(6, 72);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 66);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "SPEAKING 2";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(6, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 66);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "SPEAKING 3";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(6, 210);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 66);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "SPEAKING 4";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(6, 279);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 66);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "SPEAKING 5";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(6, 348);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 70);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "SPEAKING 6";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_speakinganswer1
-            // 
-            this.btn_speakinganswer1.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer1.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer1.Location = new System.Drawing.Point(142, 6);
-            this.btn_speakinganswer1.Name = "btn_speakinganswer1";
-            this.btn_speakinganswer1.Size = new System.Drawing.Size(65, 60);
-            this.btn_speakinganswer1.TabIndex = 1;
-            this.btn_speakinganswer1.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer1.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // btn_speakinganswer2
-            // 
-            this.btn_speakinganswer2.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer2.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer2.Location = new System.Drawing.Point(142, 75);
-            this.btn_speakinganswer2.Name = "btn_speakinganswer2";
-            this.btn_speakinganswer2.Size = new System.Drawing.Size(65, 60);
-            this.btn_speakinganswer2.TabIndex = 1;
-            this.btn_speakinganswer2.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer2.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // btn_speakinganswer3
-            // 
-            this.btn_speakinganswer3.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer3.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer3.Location = new System.Drawing.Point(142, 144);
-            this.btn_speakinganswer3.Name = "btn_speakinganswer3";
-            this.btn_speakinganswer3.Size = new System.Drawing.Size(65, 60);
-            this.btn_speakinganswer3.TabIndex = 1;
-            this.btn_speakinganswer3.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer3.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // btn_speakinganswer4
-            // 
-            this.btn_speakinganswer4.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer4.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer4.Location = new System.Drawing.Point(142, 213);
-            this.btn_speakinganswer4.Name = "btn_speakinganswer4";
-            this.btn_speakinganswer4.Size = new System.Drawing.Size(65, 60);
-            this.btn_speakinganswer4.TabIndex = 1;
-            this.btn_speakinganswer4.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer4.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // btn_speakinganswer5
-            // 
-            this.btn_speakinganswer5.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer5.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer5.Location = new System.Drawing.Point(142, 282);
-            this.btn_speakinganswer5.Name = "btn_speakinganswer5";
-            this.btn_speakinganswer5.Size = new System.Drawing.Size(65, 60);
-            this.btn_speakinganswer5.TabIndex = 1;
-            this.btn_speakinganswer5.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer5.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // btn_speakinganswer6
-            // 
-            this.btn_speakinganswer6.BackgroundImage = global::TPO.Properties.Resources.horn;
-            this.btn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_speakinganswer6.FlatAppearance.BorderSize = 0;
-            this.btn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speakinganswer6.Location = new System.Drawing.Point(142, 351);
-            this.btn_speakinganswer6.Name = "btn_speakinganswer6";
-            this.btn_speakinganswer6.Size = new System.Drawing.Size(65, 61);
-            this.btn_speakinganswer6.TabIndex = 1;
-            this.btn_speakinganswer6.UseVisualStyleBackColor = true;
-            this.btn_speakinganswer6.Click += new System.EventHandler(this.btn_speakinganswer_Click);
-            // 
-            // atab_writinganswers
-            // 
-            this.atab_writinganswers.Controls.Add(this.rtb_writinganswers);
-            this.atab_writinganswers.Controls.Add(this.rtb_writing2);
-            this.atab_writinganswers.Controls.Add(this.rtb_writing1);
-            this.atab_writinganswers.Location = new System.Drawing.Point(4, 22);
-            this.atab_writinganswers.Name = "atab_writinganswers";
-            this.atab_writinganswers.Size = new System.Drawing.Size(773, 484);
-            this.atab_writinganswers.TabIndex = 3;
-            this.atab_writinganswers.Text = "Writing";
-            this.atab_writinganswers.UseVisualStyleBackColor = true;
-            // 
-            // rtb_writinganswers
-            // 
-            this.rtb_writinganswers.Location = new System.Drawing.Point(55, 40);
-            this.rtb_writinganswers.Name = "rtb_writinganswers";
-            this.rtb_writinganswers.Size = new System.Drawing.Size(402, 394);
-            this.rtb_writinganswers.TabIndex = 1;
-            this.rtb_writinganswers.Text = "";
-            // 
-            // rtb_writing2
-            // 
-            this.rtb_writing2.AutoSize = true;
-            this.rtb_writing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rtb_writing2.Location = new System.Drawing.Point(213, 15);
-            this.rtb_writing2.Name = "rtb_writing2";
-            this.rtb_writing2.Size = new System.Drawing.Size(172, 21);
-            this.rtb_writing2.TabIndex = 0;
-            this.rtb_writing2.Text = "Independent Writing";
-            this.rtb_writing2.UseVisualStyleBackColor = true;
-            this.rtb_writing2.CheckedChanged += new System.EventHandler(this.rtb_writing2_CheckedChanged);
-            // 
-            // rtb_writing1
-            // 
-            this.rtb_writing1.AutoSize = true;
-            this.rtb_writing1.Checked = true;
-            this.rtb_writing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rtb_writing1.Location = new System.Drawing.Point(55, 15);
-            this.rtb_writing1.Name = "rtb_writing1";
-            this.rtb_writing1.Size = new System.Drawing.Size(152, 21);
-            this.rtb_writing1.TabIndex = 0;
-            this.rtb_writing1.TabStop = true;
-            this.rtb_writing1.Text = "Integrated Wrting";
-            this.rtb_writing1.UseVisualStyleBackColor = true;
+            
             
             
             // 
@@ -4405,13 +3760,7 @@
             this.TPO10.PerformLayout();
             this.tab_Reading.ResumeLayout(false);
             this.tabf_Reading.ResumeLayout(false);
-            
-            
-            
-            
-            this.rtlp_answers.ResumeLayout(false);
-            this.rtlp_answers.PerformLayout();
-            
+                   
             this.tab_Listening.ResumeLayout(false);
             this.tabf_Listening.ResumeLayout(false);
             
@@ -4423,28 +3772,8 @@
             this.tabf_writing.ResumeLayout(false);
             
             this.tab_Answers.ResumeLayout(false);
-            this.tabf_answer.ResumeLayout(false);
-            this.atab_readinganswer.ResumeLayout(false);
-            this.atab_readinganswer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readingSelect)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_readinganswers)).EndInit();
-            this.atab_listeninganswers.ResumeLayout(false);
-            this.atab_listeninganswers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeningSelect)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeninganswers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.atab_speakinganswers.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.atab_writinganswers.ResumeLayout(false);
-            this.atab_writinganswers.PerformLayout();
             
+     
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5451,11 +4780,11 @@
                     }
                 }
             }
-            this.dgv_readinganswers.DataSource = table;
+            this.adgv_readinganswers.DataSource = table;
             XMLReader reader2 = new XMLReader(@"Tests\Direction\Scoring.xml");
             num7 = int.Parse(reader2.GetAttr("//ScoreSections//Section[@NO=1]//Score[@TestScore='" + num4 + "']//@IBTScore"));
             string str9 = string.Concat(new object[] { "Your score is (total score): ", num4, "         Your standard score is (in 30 scores): ", num7, "\nRight answered: ", num2, "      Wrong answered: ", num3, "      Not answered: ", num6 });
-            this.lbl_readingscorereport.Text = str9;
+            this.albl_readingscorereport.Text = str9;
             DataTable table2 = new DataTable();
             column = new DataColumn("QuestionID", typeof(string));
             table2.Columns.Add(column);
@@ -5553,8 +4882,8 @@
             }
             num7 = int.Parse(reader2.GetAttr("//ScoreSections//Section[@NO=2]//Score[@TestScore='" + num4 + "']//@IBTScore"));
             str9 = string.Concat(new object[] { "Your score is (total score): ", num4, "         Your standard score is (in 30 scores): ", num7, "\nRight answered: ", num2, "      Wrong answered: ", num3, "      Not answered: ", num6 });
-            this.lbl_listeningScorereport.Text = str9;
-            this.dgv_listeninganswers.DataSource = table2;
+            this.albl_listeningScorereport.Text = str9;
+            this.adgv_listeninganswers.DataSource = table2;
             num = 0;
             path = string.Concat(new object[] { Application.StartupPath, @"\users\", USERNAME, @"\", this.TPONO, @"\Writing1.txt" });
             if (File.Exists(path))
@@ -5567,7 +4896,7 @@
                     {
                         num++;
                         str2 = reader.ReadToEnd();
-                        this.rtb_writinganswers.Text = str2;
+                        this.artb_writinganswers.Text = str2;
                     }
                     if (reader != null)
                     {
@@ -5664,7 +4993,7 @@
             {
                 int num = 0;
                 string path = "";
-                if (this.rtb_writing1.Checked)
+                if (this.artb_writing1.Checked)
                 {
                     path = string.Concat(new object[] { Application.StartupPath, @"\users\", USERNAME, @"\", this.TPONO, @"\Write1.txt" });
                 }
@@ -5677,7 +5006,7 @@
                 while (!reader.EndOfStream)
                 {
                     num++;
-                    this.rtb_writinganswers.Text = reader.ReadToEnd();
+                    this.artb_writinganswers.Text = reader.ReadToEnd();
                 }
                 if (reader != null)
                 {
@@ -5928,51 +5257,51 @@
             string str = string.Concat(new object[] { Application.StartupPath, @"\users\", USERNAME, @"\", this.TPONO });
             if (File.Exists(str + @"\SpeakingAnswer1.wav"))
             {
-                this.btn_speakinganswer1.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer1.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer1.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer1.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
             if (File.Exists(str + @"\SpeakingAnswer2.wav"))
             {
-                this.btn_speakinganswer2.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer2.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer2.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer2.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
             if (File.Exists(str + @"\SpeakingAnswer3.wav"))
             {
-                this.btn_speakinganswer3.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer3.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer3.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer3.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
             if (File.Exists(str + @"\SpeakingAnswer4.wav"))
             {
-                this.btn_speakinganswer4.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer4.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer4.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer4.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
             if (File.Exists(str + @"\SpeakingAnswer5.wav"))
             {
-                this.btn_speakinganswer5.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer5.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer5.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer5.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
             if (File.Exists(str + @"\SpeakingAnswer6.wav"))
             {
-                this.btn_speakinganswer6.BackgroundImage = (Image)this.resmgr.GetObject("horn");
+                this.abtn_speakinganswer6.BackgroundImage = (Image)this.resmgr.GetObject("horn");
             }
             else
             {
-                this.btn_speakinganswer6.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
+                this.abtn_speakinganswer6.BackgroundImage = (Image)this.resmgr.GetObject("horn1");
             }
         }
 
