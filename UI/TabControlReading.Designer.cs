@@ -1215,7 +1215,7 @@
             // 
             this.Controls.Add(this.tabf_Reading);
             this.Location = new System.Drawing.Point(4, 22);
-            this.Name = "tab_Reading";
+            this.Name = "TabControlReading";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Size = new System.Drawing.Size(780, 484);
             this.TabIndex = 0;

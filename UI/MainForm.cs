@@ -15,6 +15,7 @@
     using TPO.Quiz;
     using TPO.TPOFile;
     using TPO.Utility;
+    using TPO.UI;
     using System.Data.Common;
     using System.Data.SQLite;
     using System.Resources;
@@ -205,7 +206,8 @@
         private TabPage tab_Listening;     
         private TabPage tab_Reading;       
         private TabPage tab_Speaking;       
-        private TabPage tab_Writing;   
+        private TabPage tab_Writing;
+        private TabPage tab_Answers;
         private TabControl tabf_answer;
         private TabControl tabf_Listening;     
         private TabControl tabf_speaking;
@@ -215,7 +217,7 @@
         
         
         
-        private TabPage tab_Answers;
+        
         
         
         private int TestMode;
@@ -263,7 +265,7 @@
         #endregion event
 
         #region my module
-        private TabControlReading tabf_Reading;
+        //private TabControlReading tabf_Reading;
         #endregion my module
 
         public MainForm()
@@ -778,9 +780,30 @@
             }
         }
 
+        private void LoadTest_DataGrid_Click(object sender, EventArgs e)
+        {
+            DataGridViewCellEventArgs datagrid_e;
+            
+            try
+            {
+                datagrid_e = (DataGridViewCellEventArgs)e;
+            }
+            catch(InvalidCastException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            int TPO_NO = datagrid_e.RowIndex;
+            int TPO_Part = datagrid_e.ColumnIndex;
+            
+        }
+
         private void btn_LoadTest_Click(object sender, EventArgs e)
         {
-            this.artb_writinganswers.Text = "";
+            
+            
+            //this.artb_writinganswers.Text = "";
             try
             {
                 for (int i = 1; i < 0x1c; i++)
@@ -2088,17 +2111,17 @@
             this.tabf_tposelection.SuspendLayout();
             this.TPO10.SuspendLayout();
             this.tab_Reading.SuspendLayout();
-            this.tabf_Reading.SuspendLayout();
+            //this.tabf_Reading.SuspendLayout();
             
             
             
             
-            this.rtlp_answers.SuspendLayout();
+            //this.rtlp_answers.SuspendLayout();
            
             
             
             this.tab_Speaking.SuspendLayout();
-            this.tabf_speaking.SuspendLayout();
+            //this.tabf_speaking.SuspendLayout();
            
             this.tab_Writing.SuspendLayout();
             this.tabf_writing.SuspendLayout();
@@ -2258,6 +2281,8 @@
             // 
             this.Timer_Listening.Interval = 1000;
             this.Timer_Listening.Tick += new System.EventHandler(this.Timer_Listening_Tick);
+            
+            //Too dirty
             // 
             // tabf_test
             // 
@@ -3439,7 +3464,7 @@
             // 
             // tab_Reading
             // 
-            this.tab_Reading.Controls.Add(this.tabf_Reading);
+            //this.tab_Reading.Controls.Add(this.tabf_Reading);
             this.tab_Reading.Location = new System.Drawing.Point(4, 22);
             this.tab_Reading.Name = "tab_Reading";
             this.tab_Reading.Padding = new System.Windows.Forms.Padding(3);
@@ -3452,7 +3477,7 @@
             // 
             // tab_Listening
             // 
-            this.tab_Listening.Controls.Add(this.tabf_Listening);
+            //this.tab_Listening.Controls.Add(this.tabf_Listening);
             this.tab_Listening.Location = new System.Drawing.Point(4, 22);
             this.tab_Listening.Name = "tab_Listening";
             this.tab_Listening.Padding = new System.Windows.Forms.Padding(3);
@@ -3465,7 +3490,7 @@
             // 
             // tab_Speaking
             // 
-            this.tab_Speaking.Controls.Add(this.tabf_speaking);
+            //this.tab_Speaking.Controls.Add(this.tabf_speaking);
             this.tab_Speaking.Location = new System.Drawing.Point(4, 22);
             this.tab_Speaking.Name = "tab_Speaking";
             this.tab_Speaking.Size = new System.Drawing.Size(780, 484);
@@ -3476,7 +3501,7 @@
             // 
             // tab_Writing
             // 
-            this.tab_Writing.Controls.Add(this.tabf_writing);
+            //this.tab_Writing.Controls.Add(this.tabf_writing);
             this.tab_Writing.Location = new System.Drawing.Point(4, 22);
             this.tab_Writing.Name = "tab_Writing";
             this.tab_Writing.Size = new System.Drawing.Size(780, 484);
@@ -3487,7 +3512,7 @@
             // 
             // tab_Answers
             // 
-            this.tab_Answers.Controls.Add(this.tabf_answer);
+            //this.tab_Answers.Controls.Add(this.tabf_answer);
             this.tab_Answers.Location = new System.Drawing.Point(4, 22);
             this.tab_Answers.Name = "tab_Answers";
             this.tab_Answers.Size = new System.Drawing.Size(780, 484);
@@ -3759,13 +3784,13 @@
             this.TPO10.ResumeLayout(false);
             this.TPO10.PerformLayout();
             this.tab_Reading.ResumeLayout(false);
-            this.tabf_Reading.ResumeLayout(false);
+            //this.tabf_Reading.ResumeLayout(false);
                    
             this.tab_Listening.ResumeLayout(false);
-            this.tabf_Listening.ResumeLayout(false);
+            //this.tabf_Listening.ResumeLayout(false);
             
             this.tab_Speaking.ResumeLayout(false);
-            this.tabf_speaking.ResumeLayout(false);
+            //this.tabf_speaking.ResumeLayout(false);
             
             
             this.tab_Writing.ResumeLayout(false);

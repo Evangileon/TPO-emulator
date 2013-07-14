@@ -54,6 +54,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <EmbeddedResource Include="Common\FTabControl.resx">
+      <DependentUpon>FTabControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TabControlAnswer.resx">
       <DependentUpon>TabControlAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TabControlCoverForm.resx">
+      <DependentUpon>TabControlCoverForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TabControlListening.resx">
       <DependentUpon>TabControlListening.cs</DependentUpon>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="UI\TabControlAnswer.Designer.cs">
       <DependentUpon>TabControlAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TabControlCoverForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TabControlCoverForm.Designer.cs">
+      <DependentUpon>TabControlCoverForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TabControlListening.cs">
       <SubType>UserControl</SubType>
