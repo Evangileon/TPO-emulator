@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TPO.Quiz
 {
-	class TPOTest : IEnumerable
+	class TPOTest : IEnumerable/*, TPOTestAction*/
     {
         int TPONO;
 
@@ -25,5 +25,14 @@ namespace TPO.Quiz
         {
             this.Parts.Add(part);
         }
+    }
+
+    interface TPOTestAction
+    {
+        public bool IsTestNotPractice();
+        public int GetTPONO();
+        private void renewTPO(int no);
+        public void StartTest(int tpono);
+        public void StartTestFromPart(int tpono, string part);
     }
 }

@@ -104,6 +104,7 @@
     <EmbeddedResource Include="UI\TranslationUI.resx">
       <DependentUpon>TranslationUI.cs</DependentUpon>
     </EmbeddedResource>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.SQLite">
       <HintPath>SQLite\System.Data.SQLite.dll</HintPath>
     </Reference>
@@ -126,12 +127,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Quiz\TPODataCenter.cs" />
+    <Compile Include="Quiz\TPOTestProxy.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Common\FTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Common\IDisplayable.cs" />
-    <Compile Include="Common\Question.cs" />
+    <Compile Include="Quiz\TPOQuestion.cs" />
     <Compile Include="Quiz\TPOTest.cs" />
     <Compile Include="SQLite\CaseTestFunc.cs" />
     <Compile Include="SQLite\InconclusiveException.cs" />
@@ -211,7 +214,7 @@
     </Compile>
     <Compile Include="Utility\TestingSection.cs" />
     <Compile Include="Quiz\TPOPart.cs" />
-    <Compile Include="Common\Section.cs" />
+    <Compile Include="Quiz\TPOSection.cs" />
     <Compile Include="Media\MP3Record.cs" />
     <Compile Include="Utility\QuestionType.cs" />
     <Compile Include="Utility\ConstantValues.cs" />
@@ -221,7 +224,7 @@
     <Compile Include="TPOFile\XMLReader.cs" />
     <Compile Include="Common\Encode.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="TPOFile\RtfReader.cs" />
+    <Compile Include="TPOFile\RTFReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

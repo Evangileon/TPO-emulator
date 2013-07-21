@@ -598,7 +598,7 @@
             }
             if (this.QuestionNO > 0)
             {
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if ((question.QuestionType == QuestionType.SUMMARY) || (question.QuestionType == QuestionType.TABLE))
                 {
                     this.btn_ShowText.Visible = true;
@@ -901,14 +901,14 @@
                         this.RSpiltQuestionNO = int.Parse(reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@spiltQuestionNO"));
                         this.PassageCount = int.Parse(reader.GetAttr("//@passageCount"));
                         base.lbl_timeremain.Text = reader.GetAttr("//Passage[@NO=" + this.PassageNO + "]/@time");
-                        this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.RMaterial = new TPOPassage(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (!File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") || !ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
                             //this.rbtn_readText.Visible = false;
                         }
                         //this.rbtn_readText.Visible = true;
                         //this.rbtn_readText.Enabled = true;
-                        this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5)));
+                        this.TestQuestions.AddPart(new TPOPart(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5)));
                         //this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
                         if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
@@ -937,7 +937,7 @@
                         this.tabf_Listening.SelectedIndex = LDIRECTION1;
                         if (this.PassageNO <= 1)
                         {
-                            this.TestQuestions.AddPart(new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", ""));
+                            this.TestQuestions.AddPart(new TPOPart(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO.ToString() + @"\Listening\questions.xml", ""));
                         }
                         string str4 = reader.GetAttr("//part[@NO=" + this.PartNO + "]/@partDirection");
                         try
@@ -1394,7 +1394,7 @@
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
                     DataRow row = table.NewRow();
-                    Section question = (Section)this.TestQuestions.Questions[i];
+                    TPOSection question = (TPOSection)this.TestQuestions.Questions[i];
                     row["QuestionID"] = question.AnswerID;
                     box.Rtf = question.QuestionTitle;
                     string text = box.Text;
@@ -1447,7 +1447,7 @@
             else
             {
                 this.btn_ShowText.BackgroundImage = (Image)this.resmgr.GetObject("viewtext");
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (question.QuestionType == QuestionType.TABLE)
                 {
                     this.tabf_test.SelectedIndex = LISTENING;
@@ -1589,7 +1589,7 @@
 
         public void Ckb_CheckedChanged(object sender, EventArgs e)
         {
-            Section question;
+            TPOSection question;
             int num;
             CheckBox ckb = (CheckBox)sender;
             switch (this.TestSection)
@@ -1599,7 +1599,7 @@
                     {
                         return;
                     }
-                    question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                    question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                     this.SaveUserAnswers();
                     if (question.CorrectAnswer.Length == 1)
                     {
@@ -1618,7 +1618,7 @@
                 case TestingSection.LISTENING:
                     if (ckb.Checked)
                     {
-                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                         num = 0;
                         while (num < 9)
                         {
@@ -1654,7 +1654,7 @@
             try
             {
                 int num;
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (this.TestSection != TestingSection.READING)
                 {
                     goto Label_0185;
@@ -1957,7 +1957,7 @@
         private bool HasAnswered()
         {
             int num;
-            Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+            TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
             if ((question.QuestionType == QuestionType.SINGLE) || (question.QuestionType == QuestionType.MULTIPLE))
             {
                 for (num = 0; num < this.LCkbAnswers.Length; num++)
@@ -3885,7 +3885,7 @@
             this.lpb_ListenScene1.Image = null;
             if (this.PassageNO <= 1)
             {
-                this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
+                this.TestQuestions = new TPOPart(RTFReader.getRTF(@"Tests\" + this.TPONO + @"\Listening\questions.rtf"), @"Tests\" + this.TPONO + @"\Listening\questions.xml", "");
             }
             base.lbl_questionNO.Text = "Question " + this.QuestionNO.ToString() + " of 34";
             XMLReader reader = new XMLReader(@"Tests\" + this.TPONO + @"\Listening\questions.xml");
@@ -3929,7 +3929,7 @@
             {
                 this.LoadUserAnswer();
             }
-            Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+            TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
             base.lbl_questionNO.Text = "Question " + this.QuestionNO + " of 34";
             this.rlbl_rightAnswer.Visible = this.ckb_ShowAnswer.Checked;
             this.IsPassageMP3 = false;
@@ -4201,7 +4201,7 @@
                         this.btn_showtranslation.Visible = this.ckb_ShowAnswer.Visible;
                     }
                 }
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 EXPLANATION = question.QuestionExplanation;
                 if (question.QuestionType == QuestionType.SUMMARY)
                 {
@@ -4358,7 +4358,7 @@
         private void LoadSpeakingQuestion()
         {
             int num3;
-            string str = RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Speaking\questions.rtf");
+            string str = RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Speaking\questions.rtf");
             RichTextBox box = new RichTextBox();
             box.Rtf = str;
             string[] strArray = box.Text.Split(new string[] { "</Q>" }, StringSplitOptions.RemoveEmptyEntries);
@@ -4373,7 +4373,7 @@
                 this.SpeakingQuestions[num3] = box.SelectedRtf;
                 num += num2;
             }
-            str = RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Speaking\reading.rtf");
+            str = RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Speaking\reading.rtf");
             box.Rtf = str;
             strArray = box.Text.Split(new string[] { "</R>" }, StringSplitOptions.RemoveEmptyEntries);
             num = 0;
@@ -4415,7 +4415,7 @@
                     str2 = reader2.ReadLine();
                     if (num >= 2)
                     {
-                        Section question = (Section)this.TestQuestions.Questions[num - 2];
+                        TPOSection question = (TPOSection)this.TestQuestions.Questions[num - 2];
                         string str3 = str2.Substring(30, 15).TrimEnd(new char[0]);
                         question.UserAnswers.Clear();
                         for (int i = 0; i < str3.Length; i++)
@@ -4450,7 +4450,7 @@
 
         private void LoadWritingQuestion()
         {
-            string str = RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Writing\questions.rtf");
+            string str = RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Writing\questions.rtf");
             RichTextBox box = new RichTextBox();
             box.Rtf = str;
             string[] strArray = box.Text.Split(new string[] { "</Q>" }, StringSplitOptions.RemoveEmptyEntries);
@@ -4643,7 +4643,7 @@
                         this.tabf_test.SelectedIndex = READING;
                         this.tabf_Reading.SelectedIndex = RDIRECTION;
                         this.QuestionNO = 0;
-                        this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.RMaterial = new TPOPassage(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") && ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
                             this.rbtn_readText.Visible = true;
@@ -4653,7 +4653,7 @@
                         {
                             this.rbtn_readText.Visible = false;
                         }
-                        this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.TestQuestions = new TPOPart(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
                         if (this.rb_PracticeMode.Checked && (MessageBox.Show("Do you want to load the answers you saved last time?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK))
@@ -4952,7 +4952,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if ((question.QuestionType == QuestionType.INSERT) && this.rtb_Passage.Text[charIndexFromPosition].Equals('█'))
                 {
                     int textLength = 1;
@@ -4998,7 +4998,7 @@
             int charIndexFromPosition = this.rtb_Passage.GetCharIndexFromPosition(e.Location);
             if (this.QuestionNO > 0)
             {
-                Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                 if (question.QuestionType == QuestionType.INSERT)
                 {
                     char ch = this.rtb_Passage.Text[charIndexFromPosition];
@@ -5096,7 +5096,7 @@
 
         private void SaveUserAnswers()
         {
-            Section question;
+            TPOSection question;
             int num;
             int count;
             bool flag;
@@ -5106,7 +5106,7 @@
                 case TestingSection.READING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SUMMARY)
                         {
@@ -5158,7 +5158,7 @@
                 case TestingSection.LISTENING:
                     if (this.QuestionNO > 0)
                     {
-                        question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                         question.UserAnswers = new ArrayList();
                         if (question.QuestionType != QuestionType.SORT)
                         {
@@ -5214,7 +5214,7 @@
 
         private string scoreReport(int type)
         {
-            Section question = null;
+            TPOSection question = null;
             XMLReader reader = new XMLReader(@"Tests\Direction\Scoring.xml");
             int num = 0;
             int num2 = 0;
@@ -5222,7 +5222,7 @@
             int num4 = 0;
             for (int i = 0; i < this.TestQuestions.Questions.Count; i++)
             {
-                question = (Section)this.TestQuestions.Questions[i];
+                question = (TPOSection)this.TestQuestions.Questions[i];
                 if (question.MyAnswersStr.Equals(question.CorrectAnswersStr))
                 {
                     num4 += question.Score;
@@ -5436,7 +5436,7 @@
                         this.tabf_test.SelectedIndex = READING;
                         this.tabf_Reading.SelectedIndex = RDIRECTION;
                         this.QuestionNO = 0;
-                        this.RMaterial = new TPOPassage(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.RMaterial = new TPOPassage(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\" + this.PassageNO.ToString() + ".txt").Substring(0xb5), RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\P" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         if (File.Exists(@"Explanations\" + this.TPONO.ToString() + @"\Reading\" + this.ReadingPassageNo.ToString() + ".mp3") && ConstantValues.TPOEXPLANATION[this.TPONO])
                         {
                             this.rbtn_readText.Visible = true;
@@ -5446,7 +5446,7 @@
                         {
                             this.rbtn_readText.Visible = false;
                         }
-                        this.TestQuestions = new TPOPart(RtfReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RtfReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
+                        this.TestQuestions = new TPOPart(RTFReader.getRTF(@"Tests\" + this.TPONO.ToString() + @"\Reading\questions" + this.PassageNO.ToString() + ".txt").Substring(0xb5), "", RTFReader.getRTF(@"Explanations\" + this.TPONO.ToString() + @"\Reading\Q" + this.PassageNO.ToString() + ".txt").Substring(0xb5));
                         this.QuestionCount = this.TestQuestions.QuestionCount;
                         this.LoadReadingMaterialAndQA();
                     }
@@ -5543,7 +5543,7 @@
                     }
                     if (this.QuestionNO >= 1)
                     {
-                        Section question = (Section)this.TestQuestions.Questions[this.QuestionNO - 1];
+                        TPOSection question = (TPOSection)this.TestQuestions.Questions[this.QuestionNO - 1];
                         switch (question.QuestionType)
                         {
                             case QuestionType.TABLE:
@@ -6298,7 +6298,7 @@
             {
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
-                    Section question = (Section)this.TestQuestions.Questions[i];
+                    TPOSection question = (TPOSection)this.TestQuestions.Questions[i];
 
                     DbCommand cmd = conn.CreateCommand();
                     cmd.CommandText = "insert　into　Answers　values(@QuestionNo,@QuestionType,@YourAnswers,@StandardAnswers,@Score);";
@@ -6332,7 +6332,7 @@
                 writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { "QuestionNo".PadRight(15), "QuestionType".PadRight(15), "YourAnswers".PadRight(15), "StandardAnswers".PadRight(15), "Score".PadRight(15) }));
                 for (int i = 0; i < this.TestQuestions.QuestionCount; i++)
                 {
-                    Section question = (Section)this.TestQuestions.Questions[i];
+                    TPOSection question = (TPOSection)this.TestQuestions.Questions[i];
                     writer.Write(string.Format("{0}{1}{2}{3}{4}\r\n", new object[] { question.AnswerID.ToString().PadRight(15), question.QuestionType.ToString().PadRight(15), question.MyAnswersStr.ToString().PadRight(15), question.CorrectAnswersStr.ToString().PadRight(15), question.Score.ToString().PadRight(15) }));
                 }
             }

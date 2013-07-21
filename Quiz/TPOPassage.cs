@@ -3,8 +3,10 @@
     using System;
     using System.Windows.Forms;
     using TPO.Utility;
+    using System.Collections.Generic;
+    using System.Collections;
 
-    internal class TPOPassage
+    internal class TPOPassage : IEnumerable
     {
         public string FullRTF;
         public string FullTranslation;
@@ -12,10 +14,17 @@
         public int QuestionCount;
         public string Translation;
 
+        List<TPOQuestion> Questions;
+
         public TPOPassage(string fullRTF, string translation)
         {
             this.FullRTF = fullRTF;
             this.FullTranslation = translation;
+        }
+
+        public TPOPassage(string filepath)
+        {
+            
         }
 
         public string ReadingPassageONQuestion(int questionNO, int spiltQuestionNO)
@@ -186,6 +195,14 @@
             string rtf = box.Rtf;
             box.Dispose();
             return rtf;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            foreach(TPOQuestion q in Questions)
+            {
+                yield return q;
+            }
         }
     }
 }

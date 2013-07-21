@@ -12,7 +12,9 @@
     {
         public int QuestionCount = 0;
         //public ArrayList Questions = new ArrayList();
-        public List<Section> Sections;
+        public List<TPOSection> Sections;
+
+        private string filepath;
 
         private string rtfStr = "";
 
@@ -20,7 +22,20 @@
         {
             this.rtfStr = rtfStr;
             this.ExtractQuestions(mp3XML, explanationStr);
-            this.Sections = new List<Section>(3);
+            this.Sections = new List<TPOSection>(3);
+        }
+
+        public TPOPart(string filepath)
+        {
+            this.filepath = filepath;
+            var reader = new XMLReader(this.filepath);
+            var sectionCount = int.Parse(reader.GetAttr("//@sectionCount"));
+
+            for (int i = 0; i < sectionCount; i++)
+            {
+                var s = new TPOSection(filepath);
+                this.Sections.Add(s);
+            }
         }
 
         public void ExtractQuestions(string mp3XML, string explanationStr)
@@ -43,7 +58,7 @@
                 num += num2;
                 box2.Rtf = selectedRtf;
                 string[] strArray2 = box2.Text.Split(new char[] { '\n' });
-                Section section = new Section();
+                TPOSection section = new TPOSection();
                 section.AnswerID = num3 + 1;
                 section.MyAnswer = new ArrayList(strArray2.Length - 3);
                 int num4 = 0;
@@ -106,7 +121,7 @@
                     num11 = strArray4[num3].Length + 4;
                     box.SelectionStart = num10;
                     box.SelectionLength = num11 - 4;
-                    ((Section) this.Sections[num3]).QuestionExplanation = box.SelectedRtf;
+                    ((TPOSection) this.Sections[num3]).QuestionExplanation = box.SelectedRtf;
                     num10 += num11;
                 }
             }
@@ -116,7 +131,7 @@
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            foreach (Section s in Sections)
+            foreach (TPOSection s in Sections)
             {
                 yield return s;
             }

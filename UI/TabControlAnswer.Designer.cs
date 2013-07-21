@@ -69,41 +69,23 @@
             this.artb_writinganswers = new System.Windows.Forms.RichTextBox();
             this.artb_writing2 = new System.Windows.Forms.RadioButton();
             this.artb_writing1 = new System.Windows.Forms.RadioButton();
-
-            ///need to be edited
-            //this.bindingSource_Set = new System.Windows.Forms.BindingSource(this.components);
-            //this.bindingSource_Section = new System.Windows.Forms.BindingSource(this.components);       
-            this.SuspendLayout();         
+            this.tabf_answer.SuspendLayout();
+            this.atab_readinganswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adgv_readingSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adgv_readinganswers)).BeginInit();
-            
+            this.atab_listeninganswers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adgv_listeningSelect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adgv_listeninganswers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox6)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).BeginInit();
-            this.atab_readinganswer.SuspendLayout();
-            this.atab_listeninganswers.SuspendLayout();
-            this.atab_speakinganswers.SuspendLayout();           
-            this.atab_writinganswers.SuspendLayout();
+            this.atab_speakinganswers.SuspendLayout();
             this.a_tableLayoutPanel1.SuspendLayout();
-            // 
-            // TabControlAnswer
-            // 
-            this.Controls.Add(this.tabf_answer);
-            this.Location = new System.Drawing.Point(4, 22);
-            this.Name = "tab_Answer";
-            this.Padding = new System.Windows.Forms.Padding(3);
-            this.Size = new System.Drawing.Size(780, 484);
-            this.TabIndex = 0;
-            this.Text = "Answer";      
-            //this.ResumeLayout(false);
-
+            this.atab_writinganswers.SuspendLayout();
+            this.SuspendLayout();
             // 
             // tabf_answer
             // 
@@ -284,10 +266,8 @@
             this.adgv_listeningSelect.AllowUserToDeleteRows = false;
             this.adgv_listeningSelect.AllowUserToResizeColumns = false;
             this.adgv_listeningSelect.AllowUserToResizeRows = false;
-            this.adgv_listeningSelect.AutoGenerateColumns = false;
             this.adgv_listeningSelect.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.adgv_listeningSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            //this.adgv_listeningSelect.DataSource = this.bindingSource_Set;
             this.adgv_listeningSelect.Location = new System.Drawing.Point(513, 64);
             this.adgv_listeningSelect.MultiSelect = false;
             this.adgv_listeningSelect.Name = "adgv_listeningSelect";
@@ -315,11 +295,9 @@
             this.adgv_listeninganswers.AllowUserToDeleteRows = false;
             this.adgv_listeninganswers.AllowUserToResizeColumns = false;
             this.adgv_listeninganswers.AllowUserToResizeRows = false;
-            this.adgv_listeninganswers.AutoGenerateColumns = false;
             this.adgv_listeninganswers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.adgv_listeninganswers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.adgv_listeninganswers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            //this.adgv_listeninganswers.DataSource = this.bindingSource_Section;
             this.adgv_listeninganswers.Location = new System.Drawing.Point(64, 64);
             this.adgv_listeninganswers.MultiSelect = false;
             this.adgv_listeninganswers.Name = "adgv_listeninganswers";
@@ -505,7 +483,7 @@
             // 
             // abtn_speakinganswer1
             // 
-            this.abtn_speakinganswer1.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer1.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer1.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -518,7 +496,7 @@
             // 
             // abtn_speakinganswer2
             // 
-            this.abtn_speakinganswer2.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer2.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer2.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -531,7 +509,7 @@
             // 
             // abtn_speakinganswer3
             // 
-            this.abtn_speakinganswer3.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer3.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer3.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -544,7 +522,7 @@
             // 
             // abtn_speakinganswer4
             // 
-            this.abtn_speakinganswer4.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer4.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer4.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -557,7 +535,7 @@
             // 
             // abtn_speakinganswer5
             // 
-            this.abtn_speakinganswer5.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer5.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer5.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -570,7 +548,7 @@
             // 
             // abtn_speakinganswer6
             // 
-            this.abtn_speakinganswer6.BackgroundImage = TPO.Properties.Resources.horn;
+            this.abtn_speakinganswer6.BackgroundImage = global::TPO.Properties.Resources.horn;
             this.abtn_speakinganswer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.abtn_speakinganswer6.FlatAppearance.BorderSize = 0;
             this.abtn_speakinganswer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -625,7 +603,14 @@
             this.artb_writing1.TabStop = true;
             this.artb_writing1.Text = "Integrated Wrting";
             this.artb_writing1.UseVisualStyleBackColor = true;
-
+            // 
+            // TabControlAnswer
+            // 
+            this.Controls.Add(this.tabf_answer);
+            this.Location = new System.Drawing.Point(4, 22);
+            this.Name = "TabControlAnswer";
+            this.Padding = new System.Windows.Forms.Padding(3);
+            this.Size = new System.Drawing.Size(780, 484);
             this.tabf_answer.ResumeLayout(false);
             this.atab_readinganswer.ResumeLayout(false);
             this.atab_readinganswer.PerformLayout();
@@ -641,14 +626,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.a_pictureBox6)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bindingSource_Set)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bindingSource_Section)).EndInit();
             this.atab_speakinganswers.ResumeLayout(false);
             this.a_tableLayoutPanel1.ResumeLayout(false);
             this.atab_writinganswers.ResumeLayout(false);
             this.atab_writinganswers.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
+
         }
 
         #endregion

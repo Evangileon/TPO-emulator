@@ -1,4 +1,4 @@
-﻿namespace TPO.Common
+﻿namespace TPO.Quiz
 {
     using System;
     using System.Collections;
@@ -7,10 +7,10 @@
 
 
     /// <summary>
-    /// 一场考试包含四个Part，一个Part包含二或三个Section，一个Section包含若干个Question
+    /// 一场考试包含四个Part，一个Part包含二或三个Section，一个Section包含一至三个Passage，一个Section包含若干个Question
     /// Section是一个测试单元，包含一段题目（一篇文章，听力或者作文），和若干个问题(Question)
     /// </summary>
-    public class Section : IEnumerable
+    public class TPOSection : IEnumerable
     {
         #region 原来
         public int AnswerID;//no need
@@ -28,15 +28,20 @@
         public ArrayList ColStrs = new ArrayList();   
         #endregion 原来
 
-        List<Question> Questions;
+        List<TPOPassage> Passages;
         private int timeLimitMin;
 
-        public Section()
+        public TPOSection()
         {
             //this.ColStrs = new ArrayList();
             //this.RowStrs = new ArrayList();
             this.MyAnswer = new ArrayList();
             this.CorrectAnswer = new ArrayList();
+        }
+
+        public TPOSection(string filepath)
+        {
+            
         }
 
         public bool IsAnswered
@@ -131,30 +136,30 @@
 
         public IEnumerator GetEnumerator()
         {
-            foreach (Question q in Questions)
+            foreach (var q in Passages)
             {
                 yield return q;
             }
         }
     }
 
-    class ReadingSection : Section
+    class ReadingSection : TPOSection
     {
          
     }
 
-    class ListeningSection : Section
+    class ListeningSection : TPOSection
     {
         public string MP3Path;
         public string RepeatMP3Path; 
     }
 
-    class SpeakingSection : Section
+    class SpeakingSection : TPOSection
     {
         public string MP3Path;
     }
 
-    class WritingSection : Section
+    class WritingSection : TPOSection
     {
         public string MP3Path;
     }

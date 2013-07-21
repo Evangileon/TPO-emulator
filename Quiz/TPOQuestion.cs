@@ -3,24 +3,24 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 
-namespace TPO.Common
+namespace TPO.Quiz
 {
-	public class Question
+	public class TPOQuestion
 	{
         private string question;
         private ArrayList options;
         private ArrayList answers;
         
-        public Question()
+        public TPOQuestion()
         {
             question = "";
             options = new ArrayList(4);
         }
 
-        public Question(string questionStr)
+        public TPOQuestion(string filepath)
         {
-            this.question = questionStr;
-            this.options = new ArrayList(4);
+            //this.question = questionStr;
+            //this.options = new ArrayList(4);
         }
 
         public void AddOption(String option)
@@ -55,33 +55,33 @@ namespace TPO.Common
         }
 	}
 
-    class QuestionSingle : Question
+    class QuestionSingle : TPOQuestion
     {
         
     }
 
-    class QuestionMulti : Question
+    class QuestionMulti : TPOQuestion
     {
         int AnsNumRequired;
 
     }
 
-    class QuestionInsert : Question
+    class QuestionInsert : TPOQuestion
     {
 
     }
 
-    class QuestionSummary : Question
+    class QuestionSummary : TPOQuestion
     {
 
     }
 
-    class QuestionTable : Question
+    class QuestionTable : TPOQuestion
     {
 
     }
 
-    class QuestionSort : Question
+    class QuestionSort : TPOQuestion
     {
 
     }

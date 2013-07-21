@@ -408,10 +408,10 @@
             for (num = 1; num < 0x19; num++)
             {
                 Exception exception;
-                string str = RtfReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\1.rtf");
-                string str2 = RtfReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\2.rtf");
-                string str3 = RtfReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\Questions1.rtf");
-                string str4 = RtfReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\Questions2.rtf");
+                string str = RTFReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\1.rtf");
+                string str2 = RTFReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\2.rtf");
+                string str3 = RTFReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\Questions1.rtf");
+                string str4 = RTFReader.getRTF(@"Tests\" + num.ToString() + @"\Reading\Questions2.rtf");
                 str = str.Substring(0, 0xb5) + str;
                 str2 = str.Substring(0, 0xb5) + str2;
                 str3 = str.Substring(0, 0xb5) + str3;
@@ -515,10 +515,10 @@
             for (num = 1; num < 0x19; num++)
             {
                 Exception exception;
-                string str = RtfReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\P1.rtf");
-                string str2 = RtfReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\P2.rtf");
-                string str3 = RtfReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\Q1.rtf");
-                string str4 = RtfReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\Q2.rtf");
+                string str = RTFReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\P1.rtf");
+                string str2 = RTFReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\P2.rtf");
+                string str3 = RTFReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\Q1.rtf");
+                string str4 = RTFReader.getRTF(@"Explanations\" + num.ToString() + @"\Reading\Q2.rtf");
                 str = str.Substring(0, 0xb5) + str;
                 str2 = str.Substring(0, 0xb5) + str2;
                 str3 = str.Substring(0, 0xb5) + str3;

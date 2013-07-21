@@ -25,8 +25,9 @@
                 document.Load(this.path);
                 str = document.SelectSingleNode(xpath).Value;
             }
-            catch
+            catch(Exception ex)
             {
+                throw ex;
             }
             return str;
         }

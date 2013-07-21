@@ -3,7 +3,7 @@
     using System;
     using System.IO;
 
-    internal class RtfReader
+    internal class RTFReader
     {
         public static string getRTF(string path)
         {
@@ -11,9 +11,9 @@
             {
                 return File.ReadAllText(path);
             }
-            catch
+            catch(Exception ex)
             {
-                return "";
+                throw ex;
             }
         }
     }
